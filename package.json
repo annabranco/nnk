@@ -1,0 +1,42 @@
+{
+  "name": "nnk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "No Named Kitchen: Supporting People on the Move",
+  "repository": "https://github.com/annabranco/nnk",
+  "author": "Anna Branco <anna.branco@outlook.com>",
+  "license": "MIT",
+  "keywords": [
+    "nnk",
+    "frontity"
+  ],
+  "scripts": {
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@frontity/core": "^1.9.0",
+    "@frontity/html2react": "^1.4.0",
+    "@frontity/mars-theme": "./packages/mars-theme",
+    "@frontity/tiny-router": "^1.2.2",
+    "@frontity/wp-source": "^1.9.1",
+    "frontity": "^1.12.0",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "prettier": "^2.1.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

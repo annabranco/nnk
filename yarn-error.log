@@ -1,0 +1,49 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D eslint-config-airbnb
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Anna Branco Araujo\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Anna Branco Araujo\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Anna Branco Araujo\AppData\Local\Programs\Python\Python37;C:\tizen-studio\tools\ide\bin;C:\Users\Anna Branco Araujo\AppData\Local\Microsoft\WindowsApps;C:\Users\Anna Branco Araujo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Anna Branco Araujo\AppData\Roaming\npm;C:\Users\Anna Branco Araujo\AppData\Local\Microsoft\WindowsApps;C:\Users\Anna Branco Araujo\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  10.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND intersinopia intersinopia:4873
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+
+npm manifest: 
+  {
+    "name": "nnk",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Frontity project",
+    "keywords": [
+      "frontity"
+    ],
+    "scripts": {
+      "dev": "frontity dev",
+      "build": "frontity build",
+      "serve": "frontity serve"
+    },
+    "prettier": {},
+    "dependencies": {
+      "frontity": "^1.12.0",
+      "@frontity/core": "^1.9.0",
+      "@frontity/wp-source": "^1.9.1",
+      "@frontity/tiny-router": "^1.2.2",
+      "@frontity/html2react": "^1.4.0",
+      "@frontity/mars-theme": "./packages/mars-theme"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
