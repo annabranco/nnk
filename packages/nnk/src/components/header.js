@@ -2,7 +2,7 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import { connect, styled } from 'frontity';
 import Link from './core/Nav/Link';
 import Nav from './core/Nav';
-import MobileMenu from './menu';
+// import MobileMenu from './menu';
 import LogoPng from '../assets/images/logo/Logo_NNK_trans_smaller.png';
 import SpanishFlag from '../assets/images/other/flag-3d-round-250.png';
 

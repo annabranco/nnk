@@ -59,6 +59,7 @@ const CollapsableItems = styled.div`
   background: yellow;
   width: auto;
   transition: visibility ease 0.3s;
+  z-index: 900;
 `;
 
 const ItemsList = styled.ul`

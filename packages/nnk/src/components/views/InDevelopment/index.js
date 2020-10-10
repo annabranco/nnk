@@ -32,7 +32,8 @@ const InDevelopmentContainer = styled.div`
         color: red;
         opacity: 0.9;
         text-align: right;
-        transform: translate(60px, 0px);
+        font-size: 0.7rem;
+        transform: translate(10px, 0px);
       }
     `}
 `;
