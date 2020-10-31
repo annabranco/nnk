@@ -1,6 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { styled } from 'frontity';
 import { string, func } from 'prop-types';
+import { SocialLogo } from './styles';
+import Link from '../../core/Link';
 
 const SocialLink = ({ type, link = '', onClick }) => {
   let socialClassName;
@@ -14,15 +15,21 @@ const SocialLink = ({ type, link = '', onClick }) => {
     case 'Instagram':
       socialClassName = 'fab fa-instagram';
       break;
+    case 'Youtube':
+      socialClassName = 'fab fa-youtube';
+      break;
+    case 'Email':
+      socialClassName = 'far fa-envelope';
+      break;
     default:
       break;
   }
 
   return (
     <SocialLogo onClick={onClick}>
-      <a href={link}>
+      <Link href={link}>
         <i className={socialClassName} />
-      </a>
+      </Link>
     </SocialLogo>
   );
 };
@@ -40,23 +47,3 @@ SocialLink.defaultProps = {
 };
 
 export default SocialLink;
-
-const SocialLogo = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  color: black;
-  background: white;
-  font-size: 2rem;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all ease 0.2s;
-  &:hover {
-    color: crimson;
-    transform: scale(1.2);
-  }
-`;
