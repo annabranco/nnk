@@ -24,6 +24,11 @@ const MainPage = () => {
             type="Instagram"
             link="https://www.instagram.com/no_name_kitchen/"
           />
+          <SocialLink
+            type="Youtube"
+            link="https://www.youtube.com/no_name_kitchen/"
+          />
+          <SocialLink type="Email" link="mailto:nnk@nnk.org" />
         </SocialContainer>
       </PhotoContainer>
       <PageSection size="large">
