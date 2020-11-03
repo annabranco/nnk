@@ -32,7 +32,7 @@ const NavItem = ({ colors, item }) => {
         <Title
           isActive={isActive}
           colors={colors}
-          onClick={() => toggleIsActive(true)}
+          onMouseOver={() => toggleIsActive(true)}
         >
           {styleTitle(item.title)}
         </Title>

@@ -39,7 +39,7 @@ export const ItemsList = styled.ul`
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0;
+  padding: 12px 0 0;
   font-size: 1.6rem;
   margin: 0;
   background: ${({ colors }) => colors.primary};
