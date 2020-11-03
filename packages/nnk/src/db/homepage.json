@@ -1,0 +1,23 @@
+{
+  "en": {
+      "description": "No Name Kitchen is a grassroots independent organization working to support human beings who decide to migrate in the pursuit of a better life.",
+      "subItems": [
+        {
+          "title": "our projects",
+          "link": "/players/",
+          "image": ""
+        },
+        {
+          "title": "make a donation",
+          "link": "/the-club/",
+          "image": ""
+
+        },
+        {
+          "title": "latest posts",
+          "link": "/category/matches/",
+          "image": ""
+        }
+      ]
+    }
+}
