@@ -30,6 +30,7 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const Image = styled.img`
+  height: 190px;
   width: 300px;
   margin: 0 5px;
 `;

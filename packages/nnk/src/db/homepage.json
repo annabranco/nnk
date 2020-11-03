@@ -5,20 +5,20 @@
         {
           "title": "our projects",
           "link": "/players/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/feature/9_main_module/packages/nnk/src/assets/images/spots/base01.jpeg?token=AJPTBXRVNFJTE23ZH2TY5DC7UGOXS",
+          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base01.jpeg?token=AJPTBXVQKZHRCQBNY535YCK7UGWMA",
           "description": "our projects image alt"
         },
         {
           "title": "make a donation",
           "link": "/the-club/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/feature/9_main_module/packages/nnk/src/assets/images/spots/base02.jpeg?token=AJPTBXUI3HLSTHN2T2JX2J27UGOZM",
+          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base02.jpeg?token=AJPTBXW2O6YMWKXGDONQGMS7UGWR6",
           "description": "make a donation image alt"
 
         },
         {
           "title": "latest posts",
           "link": "/category/matches/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/feature/9_main_module/packages/nnk/src/assets/images/spots/base03.jpeg?token=AJPTBXWF2IT6BNEA2ORQJY27UGO2A",
+          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base03.jpeg?token=AJPTBXQIGML2LH5V6DEIVFC7UGWS6",
           "description": "latest posts image alt"
         }
       ]
