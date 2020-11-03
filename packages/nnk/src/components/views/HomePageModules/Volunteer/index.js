@@ -2,6 +2,6 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import MainMockImage from '../../../../assets/images/mocks/mainPageMock02.jpg';
 import { MockImage } from './styles';
 
-const VolunteerSection = () => <MockImage src={MainMockImage} />;
+const VolunteerModule = () => <MockImage src={MainMockImage} />;
 
-export default VolunteerSection;
+export default VolunteerModule;

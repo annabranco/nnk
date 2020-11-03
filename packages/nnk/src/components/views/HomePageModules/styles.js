@@ -3,7 +3,7 @@ import { styled, css } from 'frontity';
 export const SectionContainer = styled.div`
   border-top: 4px solid crimson;
   border-radius: 2px;
-  background: black;
+  background-color: ${({ colors }) => colors && colors.primary};
   min-height: 50px;
   max-width: 100vw;
   display: flex;
@@ -23,6 +23,9 @@ export const SectionContainer = styled.div`
     }
     if (size === 'medium') {
       margins = '400px';
+    }
+    if (size === 'large') {
+      margins = '100px';
     }
     if (size === 'full') {
       margins = '0px';

@@ -2,12 +2,15 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import { string } from 'prop-types';
 import { SectionContainer } from './styles';
 
-const PageSection = ({ size, children }) => (
-  <SectionContainer size={size}>{children}</SectionContainer>
+const PageSection = ({ size, children, colors }) => (
+  <SectionContainer size={size} colors={colors}>
+    {children}
+  </SectionContainer>
 );
 
 PageSection.propTypes = {
   children: string,
+  colors: string.isRequired,
   size: string
 };
 

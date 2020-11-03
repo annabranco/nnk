@@ -1,18 +1,23 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import { any } from 'prop-types';
-
+import MAIN_SECTIONS from '../../../db/nav.json';
 // import Link from '../../core/Link';
 import NavItem from '../../views/NavItem';
-import { MAIN_SECTIONS } from '../../core/sections';
+// import { MAIN_SECTIONS } from '../../core/sections';
 import { NavContainer } from './styles';
 
 const Nav = ({ state }) => {
-  const { colors } = state.theme;
+  const { colors, language } = state.theme;
+  let navSections = MAIN_SECTIONS[language];
+
+  useEffect(() => {
+    navSections = MAIN_SECTIONS[language];
+  }, [language]);
 
   return (
     <NavContainer>
-      {MAIN_SECTIONS.map(item => (
+      {navSections.map(item => (
         <NavItem key={item.title} item={item} colors={colors} />
       ))}
     </NavContainer>

@@ -8,7 +8,7 @@ import Post from '../../core/Post';
 import Loading from '../../core/Loading';
 import Title from '../../core/HtmlTitle';
 import PageError from '../../core/ErrorComponent';
-import MainPage from '../../views/MainPage';
+import MainPage from '../MainPage';
 import Footer from '../../views/Footer';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';

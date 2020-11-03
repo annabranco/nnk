@@ -1,5 +1,5 @@
 import { styled, css } from 'frontity';
-import { BaseTitleStyle } from '../../../setup/themes';
+import { BaseTitle } from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const LittleSmaller = styled.span`
@@ -18,7 +18,7 @@ export const Item = styled.div`
   margin-bottom: 15px;
 `;
 
-export const Title = styled(BaseTitleStyle)`
+export const Title = styled(BaseTitle)`
   margin-bottom: 0;
   cursor: pointer;
   transition: color ease 0.3s;

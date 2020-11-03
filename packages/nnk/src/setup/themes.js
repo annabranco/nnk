@@ -27,13 +27,20 @@ export const fontText = "'Bebas Neue', sans-serif";
 /* Sizes */
 
 export const sizeSmall = '1rem';
-export const sizeMedium = '1.6rem';
+export const sizeMedium = '1.5rem';
 export const sizeLarge = '2rem';
-export const sizeXLarge = '2.5rem';
+export const sizeXLarge = '2.8rem';
 
-export const BaseTitleStyle = styled.h2`
+export const BaseTitle = styled.h2`
   font-family: ${fontTitle};
   font-size: ${sizeLarge};
+  font-weight: normal;
+  text-transform: uppercase;
+`;
+
+export const BaseText = styled.p`
+  font-family: ${fontText};
+  font-size: ${sizeMedium};
   font-weight: normal;
   text-transform: uppercase;
 `;
