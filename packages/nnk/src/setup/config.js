@@ -6,7 +6,7 @@ export default {
   theme: LIGHT,
   mainPadding: '10px',
   headerPadding: '80px',
-  buttonsBackground: THEMES[LIGHT].primary,
+  buttonsBackground: THEMES[LIGHT].purewWhite,
   buttonsText: THEMES[LIGHT].secondary,
   buttonsHighlight: THEMES[LIGHT].terciary,
   socialLinks: [

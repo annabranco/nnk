@@ -5,8 +5,7 @@ import PageSection from '../../views/HomePageModules';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
-import HOMEPAGE_TEXTS from '../../../db/homepage.json';
-import WHY_TEXTS from '../../../db/why.json';
+import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
 
 import { MainContainer } from './styles';
 
@@ -14,10 +13,12 @@ const MainPage = ({ state }) => {
   const { colors, language } = state.theme;
   let homepageTexts = HOMEPAGE_TEXTS[language];
   let whyTexts = WHY_TEXTS[language];
+  let volunteerText = VOLUNTEER_TEXTS[language];
 
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
     whyTexts = WHY_TEXTS[language];
+    volunteerText = VOLUNTEER_TEXTS[language];
   }, [language]);
 
   return (
@@ -31,7 +32,7 @@ const MainPage = ({ state }) => {
         />
       </PageSection>
       <PageSection size="large">
-        <VolunteerModule />
+        <VolunteerModule texts={volunteerText} colors={colors} />
       </PageSection>
     </MainContainer>
   );

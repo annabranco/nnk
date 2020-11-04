@@ -11,6 +11,9 @@ import {
   ImagesWrapper
 } from './styles';
 import Link from '../../../core/Link';
+import { Photo01, Photo02, Photo03 } from '../../../../assets/images';
+
+const photos = [Photo01, Photo02, Photo03];
 
 const BasicModule = ({ texts, whyTexts, colors }) => (
   <BasicModuleWrapper>
@@ -19,9 +22,9 @@ const BasicModule = ({ texts, whyTexts, colors }) => (
     </DescriptionWrapper>
 
     <ImagesWrapper>
-      {texts.subItems.map(item => (
-        <Link href={item.link} key={item.link}>
-          <Image src={item.image} alt={item.description} />
+      {texts.subItems.map((item, index) => (
+        <Link link={item.link} key={item.link}>
+          <Image src={photos[index]} alt={item.description} />
           <ImageTitle colors={colors}>{item.title}</ImageTitle>
         </Link>
       ))}

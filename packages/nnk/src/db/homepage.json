@@ -5,21 +5,18 @@
         {
           "title": "our projects",
           "link": "/players/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base01.jpeg?token=AJPTBXVQKZHRCQBNY535YCK7UGWMA",
-          "description": "our projects image alt"
+          "description": "Kurd serving food for refugees"
         },
         {
           "title": "make a donation",
           "link": "/the-club/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base02.jpeg?token=AJPTBXW2O6YMWKXGDONQGMS7UGWR6",
-          "description": "make a donation image alt"
+          "description": "Camping gear on the snow"
 
         },
         {
           "title": "latest posts",
           "link": "/category/matches/",
-          "image": "https://raw.githubusercontent.com/annabranco/nnk/develop/packages/nnk/src/assets/images/spots/base03.jpeg?token=AJPTBXQIGML2LH5V6DEIVFC7UGWS6",
-          "description": "latest posts image alt"
+          "description": "Young Pakistani receiving food from volunteers"
         }
       ]
     }
