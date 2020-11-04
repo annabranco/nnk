@@ -8,57 +8,59 @@ export const MockImage = styled.img`
 export const BasicModuleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 `;
 
 export const Description = styled(BaseText)`
   margin: 20px 0;
-  text-align: center;
-  line-height: 1.5;
   white-space: pre;
+  line-height: 1.5;
   color: ${({ colors }) => colors && colors.secondary};
+  text-align: center;
 `;
 
 export const DescriptionWrapper = styled.div`
-  padding: 20px 0;
-  max-width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  padding: 20px 0;
 `;
 
 export const Image = styled.img`
+  border-radius: 4px;
+  margin: 0 10px 10px;
   height: 190px;
   width: 300px;
-  margin: 0 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
 `;
 
 export const ImageTitle = styled(BaseTitle)`
   font-size: ${sizeXLarge};
-  text-align: center;
   color: ${({ colors }) => colors && colors.secondary};
+  text-align: center;
 `;
 
 export const ImagesWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 `;
 
 export const TextWrapper = styled(DescriptionWrapper)`
-  max-width: 80%;
-  margin-top: 20px;
-  padding-top: 30px;
   border-top: 6px solid ${({ colors }) => colors && colors.terciary};
   border-radius: 2px;
+  margin-top: 20px;
+  max-width: 80%;
+  padding-top: 30px;
 `;
 
 export const Text = styled(BaseText)`
-  line-height: 1.2;
   white-space: pre;
-  text-align: center;
+  line-height: 1.2;
   color: ${({ colors }) => colors && colors.secondary};
+  text-align: center;
 `;

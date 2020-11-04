@@ -2,16 +2,14 @@ import { styled } from 'frontity';
 import config from '../../../setup/config';
 
 export const HeaderContainer = styled.header`
-  /* position: fixed; */
-  width: 100%;
-  box-sizing: border-box;
+  z-index: 100;
   display: flex;
   flex-direction: line;
-  align-items: flex-end;
   justify-content: space-around;
-  z-index: 100;
-  height: 100px;
+  align-items: flex-end;
   background-color: ${({ colors }) => colors.primary};
+  height: 100px;
+  width: 100%;
   padding: 0 ${config.headerPadding};
 `;
 
@@ -20,7 +18,7 @@ export const Logo = styled.img`
 `;
 
 export const LanguageFlag = styled.img`
-  width: 30px;
   margin-bottom: 30px;
+  width: 30px;
   cursor: pointer;
 `;

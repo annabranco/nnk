@@ -1,18 +1,19 @@
 import { styled, css } from 'frontity';
 
 export const SectionContainer = styled.div`
-  border-top: 4px solid crimson;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid ${({ colors }) => colors && colors.terciary};
   border-radius: 2px;
   background-color: ${({ colors }) => colors && colors.primary};
   min-height: 50px;
   max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 10px;
   box-sizing: border-box;
+  padding: 10px;
+  color: ${({ colors }) => colors && colors.secondary};
+
   ${({ size }) => {
     let margins = '100px';
     if (size === 'xsmall') {

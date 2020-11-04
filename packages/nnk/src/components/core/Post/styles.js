@@ -2,8 +2,8 @@ import { styled } from 'frontity';
 import Link from '../Link';
 
 export const Container = styled.div`
-  width: 800px;
   margin: 0;
+  width: 800px;
   padding: 24px;
 `;
 
@@ -19,15 +19,15 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
   display: inline;
+  font-size: 0.9em;
+  color: rgba(12, 17, 43, 0.9);
 `;
 
 export const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
   display: inline;
+  font-size: 0.9em;
+  color: rgba(12, 17, 43, 0.9);
 `;
 
 /**
@@ -35,8 +35,34 @@ export const DateWrapper = styled.p`
  * selectors to style that HTML.
  */
 export const Content = styled.div`
-  color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
+  color: rgba(12, 17, 43, 0.8);
+
+  /* WordPress Core Align Classes */
+
+  @media (min-width: 420px) {
+    img.aligncenter,
+    img.alignleft,
+    img.alignright {
+      width: auto;
+    }
+
+    .aligncenter {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .alignright {
+      margin-left: 24px;
+      float: right;
+    }
+
+    .alignleft {
+      margin-right: 24px;
+      float: left;
+    }
+  }
 
   * {
     max-width: 100%;
@@ -68,15 +94,15 @@ export const Content = styled.div`
   }
 
   blockquote {
+    border-left: 4px solid rgba(12, 17, 43);
     margin: 16px 0;
     background-color: rgba(0, 0, 0, 0.1);
-    border-left: 4px solid rgba(12, 17, 43);
     padding: 4px 16px;
   }
 
   a {
-    color: rgb(31, 56, 197);
     text-decoration: underline;
+    color: rgb(31, 56, 197);
   }
 
   /* Input fields styles */
@@ -90,18 +116,18 @@ export const Content = styled.div`
   textarea,
   select {
     display: block;
-    padding: 6px 12px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
+    outline-color: transparent;
     border: 1px solid #ced4da;
     border-radius: 4px;
-    outline-color: transparent;
-    transition: outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin: 8px 0 4px 0;
+    background-color: #fff;
+    background-clip: padding-box;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #495057;
+    transition: outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:focus {
       outline-color: #1f38c5;
@@ -110,47 +136,21 @@ export const Content = styled.div`
 
   input[type='submit'] {
     display: inline-block;
+    border: 1px solid #1f38c5;
+    border-radius: 4px;
     margin-bottom: 0;
-    font-weight: 400;
-    text-align: center;
+    background-image: none;
+    background-color: #1f38c5;
+    padding: 12px 36px;
     white-space: nowrap;
     vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid #1f38c5;
-    padding: 12px 36px;
     font-size: 14px;
     line-height: 1.42857143;
-    border-radius: 4px;
+    font-weight: 400;
     color: #fff;
-    background-color: #1f38c5;
-  }
-
-  /* WordPress Core Align Classes */
-
-  @media (min-width: 420px) {
-    img.aligncenter,
-    img.alignleft,
-    img.alignright {
-      width: auto;
-    }
-
-    .aligncenter {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .alignright {
-      float: right;
-      margin-left: 24px;
-    }
-
-    .alignleft {
-      float: left;
-      margin-right: 24px;
-    }
+    cursor: pointer;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
   }
 `;

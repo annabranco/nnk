@@ -1,20 +1,20 @@
 import { styled } from 'frontity';
 
 export const MenuToggle = styled.button`
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  background: transparent;
-  border: 0;
-  color: white;
   z-index: 5;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: none;
+  border: 0;
+  background: transparent;
   height: 40px;
   width: 40px;
-  display: none;
+  color: white;
 
   @media (max-width: 560px) {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 `;
