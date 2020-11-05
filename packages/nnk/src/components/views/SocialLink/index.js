@@ -28,21 +28,19 @@ const SocialLink = ({ type, link = '', onClick }) => {
   return (
     <SocialLogo onClick={onClick}>
       <Link href={link}>
-        <i className={socialClassName} />
+        <i aria-hidden className={socialClassName} />
       </Link>
     </SocialLogo>
   );
 };
 
 SocialLink.propTypes = {
-  type: string,
-  link: string,
+  type: string.isRequired,
+  link: string.isRequired,
   onClick: func
 };
 
 SocialLink.defaultProps = {
-  type: '',
-  link: '',
   onClick: () => null
 };
 

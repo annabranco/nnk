@@ -1,9 +1,9 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect, Global } from 'frontity';
-import { any } from 'prop-types';
 import { CloseIcon, HamburgerIcon } from '../MenuIcon';
 import MenuModal from '../MenuModal';
 import { MenuToggle } from './styles';
+import { ActionsPropType, StatePropType } from '../../../types';
 
 function MobileMenu({ state, actions }) {
   const { isMobileMenuOpen } = state.theme;
@@ -28,8 +28,8 @@ function MobileMenu({ state, actions }) {
 }
 
 MobileMenu.propTypes = {
-  state: any.isRequired,
-  actions: any.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired
 };
 
 export default connect(MobileMenu);

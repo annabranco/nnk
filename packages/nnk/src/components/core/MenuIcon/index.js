@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { any } from 'prop-types';
+import { string } from 'prop-types';
 
 export const HamburgerIcon = ({ size, color }) => {
   return (
@@ -20,8 +20,8 @@ export const HamburgerIcon = ({ size, color }) => {
   );
 };
 HamburgerIcon.propTypes = {
-  size: any.isRequired,
-  color: any.isRequired
+  size: string.isRequired,
+  color: string.isRequired
 };
 
 export const CloseIcon = ({ size, color }) => {
@@ -41,6 +41,6 @@ export const CloseIcon = ({ size, color }) => {
   );
 };
 CloseIcon.propTypes = {
-  size: any.isRequired,
-  color: any.isRequired
+  size: string.isRequired,
+  color: string.isRequired
 };

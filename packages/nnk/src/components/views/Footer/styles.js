@@ -7,7 +7,7 @@ export const FooterContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   background: ${({ colors }) => colors && colors.primary};
-  min-height: 40px;
+  height: 55px;
   padding: 0 100px;
   padding-top: 10px;
 `;

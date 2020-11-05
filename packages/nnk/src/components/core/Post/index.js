@@ -11,6 +11,11 @@ import {
   StyledLink,
   Title
 } from './styles';
+import {
+  ActionsPropType,
+  LibrariesPropTypes,
+  StatePropType
+} from '../../../types';
 
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
@@ -74,9 +79,9 @@ const Post = ({ state, actions, libraries }) => {
 };
 
 Post.propTypes = {
-  state: any.isRequired,
-  actions: any.isRequired,
-  libraries: any.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired,
+  libraries: LibrariesPropTypes.isRequired
 };
 
 export default connect(Post);

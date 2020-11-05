@@ -1,7 +1,8 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { string } from 'prop-types';
+import { arrayOf } from 'prop-types';
 import SocialLink from '../SocialLink';
 import { SocialContainer } from './styles';
+import { ConfigSocialLinksPropType } from '../../../types';
 
 const SocialModule = ({ socialLinks }) => (
   <SocialContainer>
@@ -13,7 +14,7 @@ const SocialModule = ({ socialLinks }) => (
 );
 
 SocialModule.propTypes = {
-  socialLinks: string.isRequired
+  socialLinks: arrayOf(ConfigSocialLinksPropType).isRequired
 };
 
 export default SocialModule;

@@ -7,8 +7,9 @@ import {
   Highlighted,
   ImgLink
 } from './styles';
+import { ColorsPropType, TextsVolunteerPropType } from '../../../../types';
 
-const VolunteerModule = ({ texts, colors }) => {
+const VolunteerModule = ({ colors, texts }) => {
   const styleTitle = title => {
     const words = title.split(' ');
     const lastWord = words.pop();
@@ -28,6 +29,11 @@ const VolunteerModule = ({ texts, colors }) => {
       </ImgLink>
     </ModuleWrapper>
   );
+};
+
+VolunteerModule.propTypes = {
+  colors: ColorsPropType.isRequired,
+  texts: TextsVolunteerPropType.isRequired
 };
 
 export default VolunteerModule;

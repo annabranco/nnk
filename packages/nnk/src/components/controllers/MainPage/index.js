@@ -1,6 +1,5 @@
 import { connect } from 'frontity';
 import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { any } from 'prop-types';
 import PageSection from '../../views/HomePageModules';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
@@ -8,6 +7,7 @@ import VolunteerModule from '../../views/HomePageModules/Volunteer';
 import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
 
 import { MainContainer } from './styles';
+import { StatePropType } from '../../../types';
 
 const MainPage = ({ state }) => {
   const { colors, language } = state.theme;
@@ -39,7 +39,7 @@ const MainPage = ({ state }) => {
 };
 
 MainPage.propTypes = {
-  state: any.isRequired
+  state: StatePropType.isRequired
 };
 
 export default connect(MainPage);

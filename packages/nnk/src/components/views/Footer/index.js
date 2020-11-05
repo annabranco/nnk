@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { any } from 'prop-types';
 import InDevelopment from '../InDevelopment';
 import { FooterContainer, FooterLink } from './styles';
+import { ColorsPropType } from '../../../types';
 
 const Footer = ({ colors }) => (
   <FooterContainer colors={colors}>
@@ -29,7 +29,7 @@ const Footer = ({ colors }) => (
 );
 
 Footer.propTypes = {
-  colors: any.isRequired
+  colors: ColorsPropType.isRequired
 };
 
 export default Footer;

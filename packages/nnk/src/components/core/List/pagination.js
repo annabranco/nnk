@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
-import { any } from 'prop-types';
 import Link from '../Link';
 import { Text } from './styles';
+import { ActionsPropType, StatePropType } from '../../../types';
 
 /**
  * Pagination Component
@@ -45,8 +45,8 @@ const Pagination = ({ state, actions }) => {
 };
 
 Pagination.propTypes = {
-  state: any.isRequired,
-  actions: any.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired
 };
 
 /**

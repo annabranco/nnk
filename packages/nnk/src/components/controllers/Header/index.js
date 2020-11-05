@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { any } from 'prop-types';
 import Nav from '../Nav';
 // import MobileMenu from './menu';
 import LogoPng from '../../../assets/images/logo/logo-small.png';
@@ -10,6 +9,7 @@ import { HeaderContainer, LanguageFlag, Logo } from './styles';
 import config from '../../../setup/config';
 import { LIGHT, DARK } from '../../../constants/theme';
 import Link from '../../core/Link';
+import { StatePropType, ActionsPropType } from '../../../types';
 
 const Header = ({ state, actions }) => {
   const [activeLanguage, changeLanguage] = useState('es');
@@ -45,8 +45,8 @@ const Header = ({ state, actions }) => {
 };
 
 Header.propTypes = {
-  state: any.isRequired,
-  actions: any.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired
 };
 
 // Connect the Header component to get access to the `state` in it's `props`

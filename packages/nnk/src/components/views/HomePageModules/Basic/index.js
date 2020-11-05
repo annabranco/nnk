@@ -12,6 +12,11 @@ import {
 } from './styles';
 import Link from '../../../core/Link';
 import { Photo01, Photo02, Photo03 } from '../../../../assets/images';
+import {
+  ColorsPropType,
+  TextsHomePagePropType,
+  TextsWhyPropType
+} from '../../../../types';
 
 const photos = [Photo01, Photo02, Photo03];
 
@@ -36,9 +41,9 @@ const BasicModule = ({ texts, whyTexts, colors }) => (
 );
 
 BasicModule.propTypes = {
-  texts: any.isRequired,
-  whyTexts: any.isRequired,
-  colors: any.isRequired
+  texts: TextsHomePagePropType.isRequired,
+  whyTexts: TextsWhyPropType.isRequired,
+  colors: ColorsPropType.isRequired
 };
 
 export default BasicModule;

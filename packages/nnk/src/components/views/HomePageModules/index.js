@@ -1,6 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { string } from 'prop-types';
+import { node, string } from 'prop-types';
 import { SectionContainer } from './styles';
+import { ColorsPropType } from '../../../types';
 
 const PageSection = ({ size, children, colors }) => (
   <SectionContainer size={size} colors={colors}>
@@ -9,13 +10,14 @@ const PageSection = ({ size, children, colors }) => (
 );
 
 PageSection.propTypes = {
-  children: string,
-  colors: string.isRequired,
+  children: node,
+  colors: ColorsPropType,
   size: string
 };
 
 PageSection.defaultProps = {
   children: undefined,
+  colors: null,
   size: 'default'
 };
 
