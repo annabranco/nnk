@@ -31,7 +31,7 @@ const MainPage = ({ state }) => {
           colors={colors}
         />
       </PageSection>
-      <PageSection size="large">
+      <PageSection size="large" colors={colors}>
         <VolunteerModule texts={volunteerText} colors={colors} />
       </PageSection>
     </MainContainer>
