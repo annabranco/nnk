@@ -1,27 +1,29 @@
 import { styled } from 'frontity';
+import Link from '../../core/Link';
 
 export const FooterContainer = styled.div`
-  background: black;
-  min-height: 40px;
   display: flex;
   flex-direction: line;
-  align-items: center;
   justify-content: space-around;
-  box-sizing: border-box;
+  align-items: center;
+  background: ${({ colors }) => colors && colors.primary};
+  height: 55px;
   padding: 0 100px;
+  padding-top: 10px;
 `;
 
 export const FooterLink = styled.p`
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: normal;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: ${({ isActive }) => (isActive ? 'red' : 'white')};
-  transition: color ease 0.3s;
-  text-transform: uppercase;
   margin: 10px 0;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: ${({ colors }) => colors && colors.secondary};
+  cursor: pointer;
+
+  transition: color ease 0.3s;
 
   &:hover {
-    color: red;
+    color: ${({ colors }) => colors && colors.terciary};
   }
 `;

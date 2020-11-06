@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { any } from 'prop-types';
 import { connect } from 'frontity';
 import { MenuContent, MenuLink, MenuOverlay } from './styles';
+import { StatePropType } from '../../../types';
 
 const MenuModal = ({ state }) => {
   const { menu } = state.theme;
@@ -27,7 +27,7 @@ const MenuModal = ({ state }) => {
 };
 
 MenuModal.propTypes = {
-  state: any.isRequired
+  state: StatePropType.isRequired
 };
 
 export default connect(MenuModal);

@@ -1,10 +1,13 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { connect, styled } from 'frontity';
-import Image from '@frontity/components/image';
+import { connect } from 'frontity';
+import { number } from 'prop-types';
+import { Container, StyledImage } from './styles';
+import { StatePropType } from '../../../types';
 
 const FeaturedMedia = ({ state, id }) => {
   const media = state.source.attachment[id];
 
+  console.log('$$$ id', id);
   if (!media) {
     return null;
   }
@@ -33,16 +36,9 @@ const FeaturedMedia = ({ state, id }) => {
   );
 };
 
+FeaturedMedia.propTypes = {
+  state: StatePropType.isRequired,
+  id: number.isRequired
+};
+
 export default connect(FeaturedMedia);
-
-const Container = styled.div`
-  margin-top: 16px;
-  height: 300px;
-`;
-
-const StyledImage = styled(Image)`
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;

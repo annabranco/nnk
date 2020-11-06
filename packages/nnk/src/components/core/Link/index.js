@@ -1,7 +1,8 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { any } from 'prop-types';
+import { node, string } from 'prop-types';
 import { StyledLink } from './styles';
+import { ActionsPropType, StatePropType } from '../../../types';
 
 const Link = ({
   state,
@@ -43,12 +44,18 @@ const Link = ({
 };
 
 Link.propTypes = {
-  state: any.isRequired,
-  actions: any.isRequired,
-  link: any.isRequired,
-  className: any.isRequired,
-  children: any.isRequired,
-  'aria-current': any.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired,
+  link: string,
+  className: string,
+  children: node.isRequired,
+  'aria-current': string
+};
+
+Link.defaultProps = {
+  className: null,
+  link: null,
+  'aria-current': null
 };
 
 export default connect(Link);

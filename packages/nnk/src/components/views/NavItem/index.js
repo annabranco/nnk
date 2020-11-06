@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { any } from 'prop-types';
 import Link from '../../core/Link';
 import {
   LittleSmaller,
@@ -11,10 +10,10 @@ import {
   ItemLink,
   SubItem
 } from './styles';
+import { ColorsPropType, NavSectionPropType } from '../../../types';
 
-const NavItem = ({ colors, item }) => {
+const NavItem = ({ colors, section }) => {
   const [isActive, toggleIsActive] = useState(false);
-
   const styleTitle = title => {
     if (title === 'our 3Ws') {
       return (
@@ -28,19 +27,19 @@ const NavItem = ({ colors, item }) => {
 
   return (
     <Item onMouseOut={() => toggleIsActive(false)}>
-      <Link link={!item.subItems && item.link ? item.link : undefined}>
+      <Link link={!section.subItems && section.link ? section.link : undefined}>
         <Title
           isActive={isActive}
           colors={colors}
-          onClick={() => toggleIsActive(true)}
+          onMouseOver={() => toggleIsActive(true)}
         >
-          {styleTitle(item.title)}
+          {styleTitle(section.title)}
         </Title>
       </Link>
       <CollapsableItems isActive={isActive}>
         <ItemsList onMouseOver={() => toggleIsActive(true)} colors={colors}>
-          {item.subItems &&
-            item.subItems.map(subItem => (
+          {section.subItems &&
+            section.subItems.map(subItem => (
               <SubItem key={subItem.title} link={subItem.link}>
                 <ItemLink
                   key={subItem.title}
@@ -58,8 +57,8 @@ const NavItem = ({ colors, item }) => {
 };
 
 NavItem.propTypes = {
-  colors: any.isRequired,
-  item: any.isRequired
+  colors: ColorsPropType.isRequired,
+  section: NavSectionPropType.isRequired
 };
 
 export default NavItem;

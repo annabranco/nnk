@@ -4,6 +4,7 @@ import { any } from 'prop-types';
 import Link from '../Link';
 import FeaturedMedia from '../FeaturedMedia';
 import { AuthorName, Excerpt, PublishDate, StyledLink, Title } from './styles';
+import { ItemPropType, StatePropType } from '../../../types';
 
 /**
  * Item Component
@@ -17,6 +18,7 @@ const Item = ({ state, item }) => {
   const author = state.source.author[item.author];
   const date = new Date(item.date);
 
+  console.log('$$$ item', item);
   return (
     <article>
       <Link link={item.link}>
@@ -55,8 +57,8 @@ const Item = ({ state, item }) => {
 };
 
 Item.propTypes = {
-  state: any.isRequired,
-  item: any.isRequired
+  state: StatePropType.isRequired,
+  item: ItemPropType.isRequired
 };
 
 // Connect the Item to gain access to `state` as a prop

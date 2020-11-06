@@ -1,5 +1,6 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Head, connect, decode } from 'frontity';
+import { StatePropType } from '../../../types';
 
 const Title = ({ state }) => {
   // Get data about the current URL.
@@ -40,6 +41,10 @@ const Title = ({ state }) => {
       <title>{title}</title>
     </Head>
   );
+};
+
+Title.propTypes = {
+  state: StatePropType.isRequired
 };
 
 export default connect(Title);

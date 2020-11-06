@@ -1,6 +1,7 @@
 import image from '@frontity/html2react/processors/image';
 import iframe from '@frontity/html2react/processors/iframe';
 import App from './components/controllers/App';
+import config from './setup/config';
 import { THEMES } from './setup/themes';
 
 const nnkTheme = {
@@ -20,7 +21,7 @@ const nnkTheme = {
      */
 
     theme: {
-      test: 'temp',
+      language: config.defaultLanguage,
       colors: THEMES.dark,
       menu: [],
       isMobileMenuOpen: false,

@@ -7,24 +7,24 @@ const scale = keyframes`
 `;
 
 export const bar = index => css`
-  background-color: rgba(12, 17, 43, 0.3);
-  width: 4px;
-  height: 24px;
-  margin: 3px;
-  border-radius: 0;
   display: inline-block;
+  border-radius: 0;
+  margin: 3px;
+  background-color: rgba(12, 17, 43, 0.3);
+  height: 24px;
+  width: 4px;
   animation: ${scale} 1s ${index * 0.1}s infinite
     cubic-bezier(0.2, 0.68, 0.18, 1.08);
   animation-fill-mode: both;
 `;
 
 export const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  width: 800px;
+  padding: 24px;
 
   & > * {
     margin-top: 24px;

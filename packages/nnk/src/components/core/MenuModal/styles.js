@@ -2,14 +2,14 @@ import { styled } from 'frontity';
 import Link from '../Link';
 
 export const MenuOverlay = styled.div`
-  background-color: #1f38c5;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden auto;
-  position: fixed;
   z-index: 2;
+  position: fixed;
   top: 0;
   left: 0;
+  background-color: #1f38c5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden auto;
 `;
 
 export const MenuContent = styled.div`
@@ -17,12 +17,12 @@ export const MenuContent = styled.div`
 `;
 
 export const MenuLink = styled(Link)`
-  width: 100%;
   display: inline-block;
   outline: 0;
+  width: 100%;
+  padding: 1.2rem 0;
   font-size: 20px;
   text-align: center;
-  padding: 1.2rem 0;
 
   &:hover,
   &:focus {
@@ -30,8 +30,8 @@ export const MenuLink = styled(Link)`
   }
   /* styles for active link */
   &[aria-current='page'] {
-    color: yellow;
     font-weight: bold;
+    color: yellow;
     /* border-bottom: 4px solid yellow; */
   }
 `;

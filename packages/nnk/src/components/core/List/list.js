@@ -4,6 +4,7 @@ import { any } from 'prop-types';
 import Item from './list-item';
 import Pagination from './pagination';
 import { Container, Header } from './styles';
+import { StatePropType } from '../../../types';
 
 const List = ({ state }) => {
   // Get the data of the current list.
@@ -38,7 +39,7 @@ const List = ({ state }) => {
 };
 
 List.propTypes = {
-  state: any.isRequired
+  state: StatePropType.isRequired
 };
 
 export default connect(List);

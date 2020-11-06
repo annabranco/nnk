@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { Container } from './styles';
+import { bar, Container } from './styles';
 
 const Loading = () => (
   <Container>
