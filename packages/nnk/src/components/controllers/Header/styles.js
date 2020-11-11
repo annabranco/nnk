@@ -1,4 +1,4 @@
-import { styled } from 'frontity';
+import { styled, css } from 'frontity';
 import config from '../../../setup/config';
 
 export const HeaderContainer = styled.header`
@@ -12,6 +12,13 @@ export const HeaderContainer = styled.header`
   width: 100%;
   overflow: hidden;
   padding: 0 ${config.headerPadding};
+
+  ${({ activeLanguage, colors }) =>
+    activeLanguage === 'es' &&
+    css`
+      margin-bottom: 10px;
+      border-bottom: 4px solid ${colors.terciary};
+    `}
 `;
 
 export const Logo = styled.img`

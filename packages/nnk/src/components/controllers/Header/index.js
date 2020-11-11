@@ -18,19 +18,19 @@ const Header = ({ state, actions }) => {
 
   const onClickFlag = () => {
     changeLanguage(activeLanguage === 'en' ? 'es' : 'en');
-    changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
+    changeTheme(activeLanguage === 'en' ? DARK : DARK);
   };
 
   useEffect(() => {
     if (activeLanguage === 'es') {
-      config.theme = LIGHT;
+      config.theme = DARK;
     } else {
       config.theme = DARK;
     }
   }, [activeLanguage]);
 
   return (
-    <HeaderContainer colors={colors}>
+    <HeaderContainer activeLanguage={activeLanguage} colors={colors}>
       <Link link="/">
         <Logo src={LogoPng} />
       </Link>
