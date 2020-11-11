@@ -12,6 +12,7 @@ import Footer from '../../views/Footer';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
+import WhatSection from '../../views/What';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -50,7 +51,10 @@ const App = ({ state }) => {
       on the type of URL we are in. */}
       <MainArea colors={colors}>
         <Switch>
+          {/* <WhatSection path="/what/" /> */}
+
           <MainPage when={data.link === '/'} />
+          <WhatSection when={state.router.link === '/what/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

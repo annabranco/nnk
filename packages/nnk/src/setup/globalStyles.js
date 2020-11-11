@@ -100,8 +100,8 @@ export const globalStyles = css`
     border-spacing: 0;
   }
   #root {
-    width: 100vw;
-    background: ${window.frontity.state.theme.colors.primary};
+    width: 100%;
+    background: #212121;
   }
 `;
 

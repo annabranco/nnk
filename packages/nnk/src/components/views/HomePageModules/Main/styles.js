@@ -5,10 +5,9 @@ export const PhotoContainer = styled.div`
   height: calc(100vh - 100px);
   width: 100%;
 
-  ${({ img }) => css`
-    border: 1px solid black;
+  ${({ img, position = 'center 15%' }) => css`
     background-image: ${`url(${img})`};
-    background-position: center 15%;
+    background-position: ${position};
     background-size: 100%;
     background-repeat: no-repeat;
   `}

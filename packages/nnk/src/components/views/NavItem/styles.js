@@ -1,5 +1,5 @@
 import { styled, css } from 'frontity';
-import { BaseTitle } from '../../../setup/themes';
+import { BaseTitle, sizeLarge, sizeXLarge } from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const LittleSmaller = styled.span`

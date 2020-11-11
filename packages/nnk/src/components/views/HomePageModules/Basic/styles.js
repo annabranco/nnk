@@ -1,5 +1,10 @@
 import { styled } from 'frontity';
-import { BaseText, BaseTitle, sizeXLarge } from '../../../../setup/themes';
+import {
+  BaseText,
+  BaseTitle,
+  sizeLarge,
+  sizeXLarge
+} from '../../../../setup/themes';
 
 export const MockImage = styled.img`
   margin-top: 20px;
@@ -52,6 +57,7 @@ export const TextWrapper = styled(DescriptionWrapper)`
 `;
 
 export const Text = styled(BaseText)`
+  font-size: ${sizeLarge};
   white-space: pre;
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;

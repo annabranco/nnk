@@ -32,7 +32,7 @@ const Header = ({ state, actions }) => {
   return (
     <HeaderContainer activeLanguage={activeLanguage} colors={colors}>
       <Link link="/">
-        <Logo src={LogoPng} />
+        <Logo activeLanguage={activeLanguage} src={LogoPng} />
       </Link>
       {/* <MobileMenu /> */}
       <Nav />

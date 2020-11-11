@@ -10,12 +10,12 @@ export const HeaderContainer = styled.header`
   background-color: ${({ colors }) => colors.primary};
   height: 100px;
   width: 100%;
-  overflow: hidden;
   padding: 0 ${config.headerPadding};
 
   ${({ activeLanguage, colors }) =>
-    activeLanguage === 'es' &&
+    activeLanguage === 'en' &&
     css`
+      height: 110px;
       margin-bottom: 10px;
       border-bottom: 4px solid ${colors.terciary};
     `}
@@ -24,6 +24,12 @@ export const HeaderContainer = styled.header`
 export const Logo = styled.img`
   width: 110px;
   transform: translate(0, 10px);
+
+  ${({ activeLanguage }) =>
+    activeLanguage === 'en' &&
+    css`
+      transform: translate(0, 7px);
+    `}
 `;
 
 export const LanguageFlag = styled.img`

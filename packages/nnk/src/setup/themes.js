@@ -30,15 +30,19 @@ export const fontText = "'Century Gothic', sans-serif";
 
 /* Sizes */
 
-export const sizeSmall = '1rem';
-export const sizeMedium = '1.3rem';
-export const sizeLarge = '2rem';
+export const sizeSmall = '0.7rem';
+export const sizeMedium = '1rem';
+export const sizeLarge = '1.3rem';
 export const sizeXLarge = '2.8rem';
 export const sizeXXLarge = '3.4rem';
 
+export const sizeMediumTitle = '2rem';
+export const sizeLargeTitle = '2.6rem';
+export const sizeHugeTitle = '8rem';
+
 export const BaseTitle = styled.h2`
   font-family: ${fontTitle};
-  font-size: ${sizeLarge};
+  font-size: ${sizeMediumTitle};
   font-weight: normal;
   text-transform: uppercase;
 `;
