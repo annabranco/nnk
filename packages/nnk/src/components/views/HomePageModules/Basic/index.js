@@ -23,7 +23,7 @@ const photos = [Photo01, Photo02, Photo03];
 const BasicModule = ({ texts, whyTexts, colors }) => (
   <BasicModuleWrapper>
     <DescriptionWrapper>
-      <Description colors={colors}>{texts.description}</Description>
+      <Text colors={colors}>{texts.description}</Text>
     </DescriptionWrapper>
 
     <ImagesWrapper>

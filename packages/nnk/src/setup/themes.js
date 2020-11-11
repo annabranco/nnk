@@ -26,12 +26,12 @@ export const THEMES = {
 
 /* Fonts */
 export const fontTitle = "'Bebas Neue', sans-serif";
-export const fontText = "'Bebas Neue', sans-serif";
+export const fontText = "'Century Gothic', sans-serif";
 
 /* Sizes */
 
 export const sizeSmall = '1rem';
-export const sizeMedium = '1.5rem';
+export const sizeMedium = '1.3rem';
 export const sizeLarge = '2rem';
 export const sizeXLarge = '2.8rem';
 export const sizeXXLarge = '3.4rem';
@@ -47,5 +47,5 @@ export const BaseText = styled.p`
   font-family: ${fontText};
   font-size: ${sizeMedium};
   font-weight: normal;
-  text-transform: uppercase;
+  line-height: 2.2;
 `;

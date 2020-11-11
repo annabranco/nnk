@@ -24,12 +24,13 @@ export default {
     },
     {
       type: 'Youtube',
-      link: 'https://www.youtube.com/no_name_kitchen/'
+      link: 'https://www.youtube.com/no_name_kitchen/',
+      hide: false
     },
     {
       type: 'Email',
       link: 'mailto:nnk@nnk.org',
-      hide: true
+      hide: false
     }
   ]
 };

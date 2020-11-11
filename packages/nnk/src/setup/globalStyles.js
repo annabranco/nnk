@@ -5,7 +5,6 @@ export const globalStyles = css`
   body,
   div,
   span,
-  applet,
   object,
   iframe,
   h1,
@@ -19,34 +18,7 @@ export const globalStyles = css`
   pre,
   a,
   abbr,
-  acronym,
-  address,
-  big,
-  cite,
-  code,
-  del,
-  dfn,
-  em,
   img,
-  ins,
-  kbd,
-  q,
-  s,
-  samp,
-  small,
-  strike,
-  strong,
-  sub,
-  sup,
-  tt,
-  var,
-  b,
-  u,
-  i,
-  center,
-  dl,
-  dt,
-  dd,
   ol,
   ul,
   li,
@@ -73,9 +45,8 @@ export const globalStyles = css`
   header,
   hgroup,
   menu,
+  main,
   nav,
-  output,
-  ruby,
   section,
   summary,
   time,
@@ -88,21 +59,23 @@ export const globalStyles = css`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    box-sizing: border-box;
   }
-  /* HTML5 display-role reset for older browsers */
+
   article,
   aside,
   details,
+  div,
   figcaption,
   figure,
   footer,
   header,
   hgroup,
+  main,
   menu,
   nav,
   section {
     display: block;
+    box-sizing: border-box;
   }
   body {
     line-height: 1;
@@ -125,6 +98,9 @@ export const globalStyles = css`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  #root {
+    width: 100vw;
   }
 `;
 

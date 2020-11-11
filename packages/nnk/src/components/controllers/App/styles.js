@@ -6,4 +6,5 @@ export const MainArea = styled.main`
   justify-content: center;
   background-color: ${({ colors }) => colors.primary};
   padding: 0 ${config.mainPadding};
+  width: 100%;
 `;

@@ -12,15 +12,8 @@ export const BasicModuleWrapper = styled.div`
   align-items: center;
 `;
 
-export const Description = styled(BaseText)`
-  margin: 20px 0;
-  white-space: pre;
-  line-height: 1.5;
-  color: ${({ colors }) => colors && colors.secondary};
-  text-align: center;
-`;
-
 export const DescriptionWrapper = styled.div`
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +53,6 @@ export const TextWrapper = styled(DescriptionWrapper)`
 
 export const Text = styled(BaseText)`
   white-space: pre;
-  line-height: 1.2;
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 `;
