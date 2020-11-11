@@ -10,11 +10,13 @@ export const HeaderContainer = styled.header`
   background-color: ${({ colors }) => colors.primary};
   height: 100px;
   width: 100%;
+  overflow: hidden;
   padding: 0 ${config.headerPadding};
 `;
 
 export const Logo = styled.img`
-  width: 100px;
+  width: 110px;
+  transform: translate(0, 10px);
 `;
 
 export const LanguageFlag = styled.img`
