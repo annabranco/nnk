@@ -18,3 +18,6 @@ export const WhatBG = require('./bgs/what.jpeg');
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.png');
+
+// Where
+export const Mapv1 = require('./maps/mapv1.jpg');

@@ -18,14 +18,14 @@ const Header = ({ state, actions }) => {
 
   const onClickFlag = () => {
     changeLanguage(activeLanguage === 'en' ? 'es' : 'en');
-    changeTheme(activeLanguage === 'en' ? DARK : DARK);
+    changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
   };
 
   useEffect(() => {
     if (activeLanguage === 'es') {
       config.theme = DARK;
     } else {
-      config.theme = DARK;
+      config.theme = LIGHT;
     }
   }, [activeLanguage]);
 

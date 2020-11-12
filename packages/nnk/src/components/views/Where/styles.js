@@ -2,6 +2,7 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   BaseTitle,
+  sizeHugeTitle,
   sizeLarge,
   sizeLargeTitle
 } from '../../../setup/themes';
@@ -36,6 +37,10 @@ export const Intro = styled(BaseText)`
   color: ${({ colors }) => colors && colors.secondary};
 `;
 
+export const Map = styled.img`
+  width: 100%;
+`;
+
 export const Program = styled.div`
   display: flex;
   flex-direction: row;
@@ -58,4 +63,17 @@ export const SubTitle = styled(BaseTitle)`
 export const Text = styled(BaseText)`
   text-align: justify;
   color: ${({ colors }) => colors && colors.secondary};
+`;
+
+export const Title = styled(BaseTitle)`
+  font-size: ${sizeHugeTitle};
+  color: ${({ colors }) => colors && colors.secondary};
+  width: fit-content;
+`;
+
+export const TitleWrapper = styled.div`
+  position: absolute;
+  bottom: 10%;
+  background: ${({ colors }) => colors && colors.primary};
+  padding: 0 30px;
 `;

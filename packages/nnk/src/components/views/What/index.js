@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
-import SocialModule from '../SocialContainer';
+import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHAT_TEXTS } from '../../../db';
 import {
@@ -13,16 +13,13 @@ import {
   Content,
   DescriptionArea,
   DescriptionTitle,
-  TitleWrapper,
   Image,
+  Intro,
   Program,
   Section,
   SubTitle,
-  Text,
-  Title,
-  Intro
+  Text
 } from './styles';
-import { PhotoContainer } from '../HomePageModules/Main/styles';
 import { StatePropType } from '../../../types';
 
 const WhatSection = ({ state }) => {
@@ -37,12 +34,13 @@ const WhatSection = ({ state }) => {
 
   return (
     <Section colors={colors}>
-      <PhotoContainer img={WhatBG} position="0 76%">
-        <SocialModule socialLinks={socialLinks} />
-        <TitleWrapper colors={colors}>
-          <Title>{texts.title}</Title>
-        </TitleWrapper>
-      </PhotoContainer>
+      <SectionHeader
+        colors={colors}
+        img={WhatBG}
+        position="0 76%"
+        socialLinks={socialLinks}
+        title={texts.title}
+      />
       <Content>
         <Intro>{texts.intro}</Intro>
         <SubTitle colors={colors}>{texts.programsTitle}</SubTitle>

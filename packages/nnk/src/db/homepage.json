@@ -4,18 +4,18 @@
       "subItems": [
         {
           "title": "our projects",
-          "link": "/players/",
+          "link": "/what/",
           "description": "Kurd serving food for refugees"
         },
         {
           "title": "make a donation",
-          "link": "/the-club/",
+          "link": "/help-us/",
           "description": "Camping gear on the snow"
 
         },
         {
           "title": "latest posts",
-          "link": "/category/matches/",
+          "link": "/news/",
           "description": "Young Pakistani receiving food from volunteers"
         }
       ]

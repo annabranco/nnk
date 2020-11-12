@@ -58,7 +58,7 @@ export const TextWrapper = styled(DescriptionWrapper)`
 
 export const Text = styled(BaseText)`
   font-size: ${sizeLarge};
-  white-space: pre;
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
+  white-space: pre;
 `;
