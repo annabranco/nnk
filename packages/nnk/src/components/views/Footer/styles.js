@@ -11,6 +11,7 @@ export const FooterContainer = styled.div`
   padding: 0 100px;
   padding-top: 10px;
 `;
+FooterContainer.displayName = 'FooterContainer';
 
 export const FooterLink = styled.p`
   margin: 10px 0;
@@ -27,3 +28,4 @@ export const FooterLink = styled.p`
     color: ${({ colors }) => colors && colors.terciary};
   }
 `;
+FooterLink.displayName = 'FooterLink';

@@ -1,14 +1,16 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Global, connect, Head } from 'frontity';
 import Switch from '@frontity/components/switch';
+import Footer from '../../views/Footer';
 import Header from '../Header';
 import List from '../../core/List';
-import Post from '../../core/Post';
 import Loading from '../../core/Loading';
-import Title from '../../core/HtmlTitle';
-import PageError from '../../core/ErrorComponent';
 import MainPage from '../MainPage';
-import Footer from '../../views/Footer';
+import PageError from '../../core/ErrorComponent';
+import Post from '../../core/Post';
+import Title from '../../core/HtmlTitle';
+import WhatSection from '../../views/What';
+import WhereSection from '../../views/Where';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
@@ -42,6 +44,7 @@ const App = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's.
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
+      <Global styles={{ body: { background: colors.primary } }} />
 
       {/* Add the header of the site. */}
       <Header />
@@ -50,7 +53,11 @@ const App = ({ state }) => {
       on the type of URL we are in. */}
       <MainArea colors={colors}>
         <Switch>
+          {/* <WhatSection path="/what/" /> */}
+
           <MainPage when={data.link === '/'} />
+          <WhatSection when={state.router.link === '/what/'} />
+          <WhereSection when={state.router.link === '/where/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

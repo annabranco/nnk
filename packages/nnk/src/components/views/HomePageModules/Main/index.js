@@ -1,10 +1,16 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { HomeBG } from '../../../../assets/images';
+import { getSocialLinks } from '../../../../utils';
 import SocialModule from '../../SocialContainer';
-import config from '../../../../setup/config';
 import { PhotoContainer } from './styles';
 
-const { socialLinks } = config;
+const socialLinks = getSocialLinks([
+  'Facebook',
+  'Twitter',
+  'Instagram',
+  'Youtube',
+  'Email'
+]);
 
 const MainModule = () => (
   <PhotoContainer img={HomeBG}>

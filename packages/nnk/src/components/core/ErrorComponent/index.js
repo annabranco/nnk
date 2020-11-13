@@ -1,39 +1,25 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { Container, Description } from './styles';
-import { Title } from '../../views/NavItem/styles';
+import { ERROR_TEXTS } from '../../../db';
+import { Container, Description, Text, Title } from './styles';
 import { StatePropType } from '../../../types';
 
-const description404 = (
-  <>
-    That page can’t be found{' '}
-    <span role="img" aria-label="confused face">
-      😕
-    </span>
-  </>
-);
-
-const description = (
-  <>
-    Don&apos;t panic! Seems like you encountered an error. If this persists,
-    <a href="https://community.frontity.org"> let us know </a> or try refreshing
-    your browser.
-  </>
-);
-
-// The 404 page component
 const Page404 = ({ state }) => {
   const data = state.source.get(state.router.link);
-  const { colors } = state.theme;
+  const { colors, language } = state.theme;
+  let texts = ERROR_TEXTS[language];
 
-  const title = 'Oops! Something went wrong';
-  const title404 = 'Oops! 404';
+  useEffect(() => {
+    texts = ERROR_TEXTS[language];
+  }, [language]);
 
   return (
     <Container>
-      <Title colors={colors}>{data.is404 ? title404 : title}</Title>
-      <Description colors={colors}>
-        {data.is404 ? description404 : description}
+      <Title colors={colors}>{texts.title}</Title>
+      <Description>
+        <Text colors={colors}>
+          {data.is404 ? texts.message404 : texts.message}
+        </Text>
       </Description>
     </Container>
   );

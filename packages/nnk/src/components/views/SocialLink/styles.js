@@ -6,6 +6,7 @@ export const SocialLogo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #acacac;
   border-radius: 50%;
   margin: 10px;
   background: ${config.buttonsBackground};
@@ -21,3 +22,4 @@ export const SocialLogo = styled.div`
     color: ${config.buttonsHighlight};
   }
 `;
+SocialLogo.displayName = 'SocialLogo';

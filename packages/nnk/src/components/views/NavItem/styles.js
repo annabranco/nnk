@@ -2,30 +2,6 @@ import { styled, css } from 'frontity';
 import { BaseTitle } from '../../../setup/themes';
 import Link from '../../core/Link';
 
-export const LittleSmaller = styled.span`
-  font-size: 1.8rem;
-`;
-
-export const Smaller = styled.span`
-  font-size: 1.4rem;
-`;
-
-export const Item = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-`;
-
-export const Title = styled(BaseTitle)`
-  margin-bottom: 0;
-  color: ${({ isActive, colors }) =>
-    isActive ? colors.terciary : colors.secondary};
-  cursor: pointer;
-  transition: color ease 0.3s;
-`;
-
 export const CollapsableItems = styled.div`
   z-index: 900;
   position: relative;
@@ -34,17 +10,16 @@ export const CollapsableItems = styled.div`
   width: auto;
   transition: visibility ease 0.3s;
 `;
+CollapsableItems.displayName = 'CollapsableItems';
 
-export const ItemsList = styled.ul`
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  background: ${({ colors }) => colors.primary};
-  min-width: 130px;
-  padding: 12px 0 0;
-  font-size: 1.6rem;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 `;
+Item.displayName = 'Item';
 
 export const ItemLink = styled.li`
   margin: 0 10px;
@@ -64,12 +39,24 @@ export const ItemLink = styled.li`
       }
     `}
 `;
+ItemLink.displayName = 'ItemLink';
 
-export const SubItem = styled(Link)`
-  &:first-of-type {
-    margin-top: 20px;
-  }
+export const ItemsList = styled.ul`
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: ${({ colors }) => colors.primary};
+  min-width: 130px;
+  padding: 12px 0 0;
+  font-size: 1.6rem;
 `;
+ItemsList.displayName = 'ItemsList';
+
+export const LittleSmaller = styled.span`
+  font-size: 1.8rem;
+`;
+LittleSmaller.displayName = 'LittleSmaller';
 
 export const NavItem2 = styled.div`
   flex-shrink: 0;
@@ -104,3 +91,25 @@ export const NavItem2 = styled.div`
     }
   }
 `;
+NavItem2.displayName = 'NavItem2';
+
+export const Smaller = styled.span`
+  font-size: 1.4rem;
+`;
+Smaller.displayName = 'Smaller';
+
+export const SubItem = styled(Link)`
+  &:first-of-type {
+    margin-top: 20px;
+  }
+`;
+SubItem.displayName = 'SubItem';
+
+export const Title = styled(BaseTitle)`
+  margin-bottom: 0;
+  color: ${({ isActive, colors }) =>
+    isActive ? colors.terciary : colors.secondary};
+  cursor: pointer;
+  transition: color ease 0.3s;
+`;
+Title.displayName = 'Title';

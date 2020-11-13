@@ -5,36 +5,36 @@
       "subItems": [
         {
           "title": "What",
-          "link": "/players/"
+          "link": "/what/"
         },
         {
           "title": "Why",
-          "link": "/the-club/"
+          "link": "/why/"
         },
         {
           "title": "Where",
-          "link": "/category/matches/"
+          "link": "/where/"
         }
       ]
     },
     {
       "title": "No Name News",
-      "link": "/"
+      "link": "/news/"
     },
     {
       "title": "Support the Move",
       "subItems": [
         {
           "title": "Make a Donation",
-          "link": "/players/merida/"
+          "link": "/help-us/"
         },
         {
           "title": "Jump to the Field",
-          "link": "/tag/junior/"
+          "link": "/join-us/"
         },
         {
           "title": "Store",
-          "link": "/contact-us/"
+          "link": "/store/"
         }
       ]
     }

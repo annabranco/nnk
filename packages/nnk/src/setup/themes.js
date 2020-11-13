@@ -5,8 +5,8 @@ import { DARK, LIGHT } from '../constants/theme';
 
 export const THEMES = {
   [DARK]: {
-    primary: '#212121',
-    secondary: '#f8f8ff',
+    primary: 'black',
+    secondary: 'white',
     terciary: '#da002b',
     neutral: '#868686',
     purewWhite: '#ffffff',
@@ -14,31 +14,37 @@ export const THEMES = {
     highlights: '#ebe101'
   },
   [LIGHT]: {
-    primary: '#f8f8ff',
-    secondary: '#212121',
+    primary: '#212121',
+    secondary: '#f8f8ff',
     terciary: '#da002b',
     neutral: '#868686',
     purewWhite: '#ffffff',
     pureBlack: '#000000',
-    highlights: '#bfaf00'
+    highlights: '#ebe101'
   }
 };
 
 /* Fonts */
 export const fontTitle = "'Bebas Neue', sans-serif";
-export const fontText = "'Bebas Neue', sans-serif";
+export const fontText = "'Century Gothic', sans-serif";
 
 /* Sizes */
 
-export const sizeSmall = '1rem';
-export const sizeMedium = '1.5rem';
-export const sizeLarge = '2rem';
+export const sizeSmall = '0.7rem';
+export const sizeMedium = '1rem';
+export const sizeLarge = '1.3rem';
 export const sizeXLarge = '2.8rem';
 export const sizeXXLarge = '3.4rem';
 
+export const sizeMediumTitle = '2rem';
+export const sizeLargeTitle = '2.6rem';
+export const sizeXLargeTitle = '4rem';
+export const sizeXXLargeTitle = '6rem';
+export const sizeHugeTitle = '8rem';
+
 export const BaseTitle = styled.h2`
   font-family: ${fontTitle};
-  font-size: ${sizeLarge};
+  font-size: ${sizeMediumTitle};
   font-weight: normal;
   text-transform: uppercase;
 `;
@@ -47,5 +53,6 @@ export const BaseText = styled.p`
   font-family: ${fontText};
   font-size: ${sizeMedium};
   font-weight: normal;
-  text-transform: uppercase;
+  line-height: 2.2;
+  white-space: wrap;
 `;

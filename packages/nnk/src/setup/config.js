@@ -5,9 +5,8 @@ export default {
   defaultLanguage: 'en',
   theme: LIGHT,
   mainPadding: '10px',
-  headerPadding: '80px',
   buttonsBackground: THEMES[LIGHT].purewWhite,
-  buttonsText: THEMES[LIGHT].secondary,
+  buttonsText: THEMES[LIGHT].primary,
   buttonsHighlight: THEMES[LIGHT].terciary,
   socialLinks: [
     {
@@ -24,12 +23,13 @@ export default {
     },
     {
       type: 'Youtube',
-      link: 'https://www.youtube.com/no_name_kitchen/'
+      link: 'https://www.youtube.com/no_name_kitchen/',
+      hide: false
     },
     {
       type: 'Email',
       link: 'mailto:nnk@nnk.org',
-      hide: true
+      hide: false
     }
   ]
 };

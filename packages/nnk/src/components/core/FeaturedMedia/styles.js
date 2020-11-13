@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin-top: 16px;
   height: 300px;
 `;
+Container.displayName = 'Container';
 
 export const StyledImage = styled(Image)`
   display: block;
@@ -12,3 +13,4 @@ export const StyledImage = styled(Image)`
   width: 100%;
   object-fit: cover;
 `;
+StyledImage.displayName = 'StyledImage';

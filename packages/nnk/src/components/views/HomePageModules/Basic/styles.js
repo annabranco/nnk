@@ -1,5 +1,10 @@
 import { styled } from 'frontity';
-import { BaseText, BaseTitle, sizeXLarge } from '../../../../setup/themes';
+import {
+  BaseText,
+  BaseTitle,
+  sizeLarge,
+  sizeXLarge
+} from '../../../../setup/themes';
 
 export const MockImage = styled.img`
   margin-top: 20px;
@@ -12,15 +17,8 @@ export const BasicModuleWrapper = styled.div`
   align-items: center;
 `;
 
-export const Description = styled(BaseText)`
-  margin: 20px 0;
-  white-space: pre;
-  line-height: 1.5;
-  color: ${({ colors }) => colors && colors.secondary};
-  text-align: center;
-`;
-
 export const DescriptionWrapper = styled.div`
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,6 +40,7 @@ export const ImageTitle = styled(BaseTitle)`
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 `;
+ImageTitle.displayName = 'ImageTitle';
 
 export const ImagesWrapper = styled.div`
   display: flex;
@@ -49,6 +48,15 @@ export const ImagesWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+ImagesWrapper.displayName = 'ImagesWrapper';
+
+export const Text = styled(BaseText)`
+  font-size: ${sizeLarge};
+  color: ${({ colors }) => colors && colors.secondary};
+  text-align: center;
+  white-space: pre;
+`;
+Text.displayName = 'Text';
 
 export const TextWrapper = styled(DescriptionWrapper)`
   border-top: 6px solid ${({ colors }) => colors && colors.terciary};
@@ -57,10 +65,4 @@ export const TextWrapper = styled(DescriptionWrapper)`
   max-width: 80%;
   padding-top: 30px;
 `;
-
-export const Text = styled(BaseText)`
-  white-space: pre;
-  line-height: 1.2;
-  color: ${({ colors }) => colors && colors.secondary};
-  text-align: center;
-`;
+TextWrapper.displayName = 'TextWrapper';
