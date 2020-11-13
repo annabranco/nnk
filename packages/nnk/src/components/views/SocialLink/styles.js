@@ -22,3 +22,4 @@ export const SocialLogo = styled.div`
     color: ${config.buttonsHighlight};
   }
 `;
+SocialLogo.displayName = 'SocialLogo';

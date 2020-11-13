@@ -12,19 +12,23 @@ export const Container = styled.div`
   padding: 24px;
   text-align: center;
 `;
+Container.displayName = 'Container';
 
 export const Title = styled(BaseTitle)`
   margin: 0 auto 20px;
   font-size: ${sizeXLargeTitle};
   color: ${({ colors }) => colors && colors.terciary};
 `;
+Title.displayName = 'Title';
 
 export const Description = styled.div`
   margin: 24px 0;
   line-height: 1.6em;
 `;
+Description.displayName = 'Description';
 
 export const Text = styled(BaseText)`
   color: ${({ colors }) => colors && colors.secondary};
   white-space: pre;
 `;
+Text.displayName = 'Text';

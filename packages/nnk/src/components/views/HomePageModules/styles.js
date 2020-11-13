@@ -37,3 +37,4 @@ export const SectionContainer = styled.div`
     `;
   }}
 `;
+SectionContainer.displayName = 'SectionContainer';

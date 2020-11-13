@@ -5,7 +5,6 @@ export default {
   defaultLanguage: 'en',
   theme: LIGHT,
   mainPadding: '10px',
-  headerPadding: '80px',
   buttonsBackground: THEMES[LIGHT].purewWhite,
   buttonsText: THEMES[LIGHT].primary,
   buttonsHighlight: THEMES[LIGHT].terciary,

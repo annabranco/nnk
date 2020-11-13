@@ -12,3 +12,4 @@ export const NavContainer = styled.nav`
     display: none;
   }
 `;
+NavContainer.displayName = 'NavContainer';

@@ -8,3 +8,4 @@ export const MainContainer = styled.div`
   background-color: ${({ colors }) => colors && colors.primary};
   width: 100%;
 `;
+MainContainer.displayName = 'MainContainer';

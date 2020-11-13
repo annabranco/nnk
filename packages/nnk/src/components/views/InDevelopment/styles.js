@@ -20,3 +20,4 @@ export const InDevelopmentContainer = styled.div`
       }
     `}
 `;
+InDevelopmentContainer.displayName = 'InDevelopmentContainer';

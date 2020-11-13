@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 800px;
   padding: 24px;
 `;
+Container.displayName = 'Container';
 
 export const Title = styled.h1`
   margin: 0;
@@ -13,22 +14,26 @@ export const Title = styled.h1`
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
 `;
+Title.displayName = 'Title';
 
 export const StyledLink = styled(Link)`
   padding: 15px 0;
 `;
+StyledLink.displayName = 'StyledLink';
 
 export const Author = styled.p`
   display: inline;
   font-size: 0.9em;
   color: rgba(12, 17, 43, 0.9);
 `;
+Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
   display: inline;
   font-size: 0.9em;
   color: rgba(12, 17, 43, 0.9);
 `;
+DateWrapper.displayName = 'DateWrapper';
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested

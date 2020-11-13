@@ -10,3 +10,4 @@ export const SocialContainer = styled.div`
   align-items: center;
   margin: 80px 40px;
 `;
+SocialContainer.displayName = 'SocialContainer';

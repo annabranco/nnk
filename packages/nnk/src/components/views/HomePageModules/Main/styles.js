@@ -12,3 +12,4 @@ export const PhotoContainer = styled.div`
     background-repeat: no-repeat;
   `}
 `;
+PhotoContainer.displayName = 'PhotoContainer';

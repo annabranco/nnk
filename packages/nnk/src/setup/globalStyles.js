@@ -99,9 +99,8 @@ export const globalStyles = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  #root {
-    width: 100%;
-    background: #212121;
+  button {
+    outline: none;
   }
 `;
 

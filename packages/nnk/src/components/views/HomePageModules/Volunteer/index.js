@@ -24,7 +24,7 @@ const VolunteerModule = ({ colors, texts }) => {
   return (
     <ModuleWrapper>
       {styleTitle(texts.question)}
-      <ImgLink link="/players">
+      <ImgLink link="/join-us/">
         <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
       </ImgLink>
     </ModuleWrapper>

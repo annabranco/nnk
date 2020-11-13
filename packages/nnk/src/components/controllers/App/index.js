@@ -44,6 +44,7 @@ const App = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's.
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
+      <Global styles={{ body: { background: colors.primary } }} />
 
       {/* Add the header of the site. */}
       <Header />

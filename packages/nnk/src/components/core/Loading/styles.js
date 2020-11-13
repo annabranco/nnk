@@ -17,6 +17,7 @@ export const bar = index => css`
     cubic-bezier(0.2, 0.68, 0.18, 1.08);
   animation-fill-mode: both;
 `;
+bar.displayName = 'bar';
 
 export const Container = styled.div`
   display: flex;
@@ -30,3 +31,4 @@ export const Container = styled.div`
     margin-top: 24px;
   }
 `;
+Container.displayName = 'Container';
