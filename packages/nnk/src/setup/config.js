@@ -8,6 +8,7 @@ export default {
   buttonsBackground: THEMES[LIGHT].purewWhite,
   buttonsText: THEMES[LIGHT].primary,
   buttonsHighlight: THEMES[LIGHT].terciary,
+  latestReportsNum: 2,
   socialLinks: [
     {
       type: 'Facebook',

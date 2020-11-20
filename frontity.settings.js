@@ -24,8 +24,7 @@ const settings = {
       name: '@frontity/wp-source',
       state: {
         source: {
-          api:
-            'https://public-api.wordpress.com/wp/v2/sites/threebunniesfc.wordpress.com'
+          api: 'https://www.borderviolence.eu/wp-json/'
         }
       }
     },

@@ -11,6 +11,7 @@ import Post from '../../core/Post';
 import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
+import WhySection from '../../views/Why';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
@@ -58,6 +59,7 @@ const App = ({ state }) => {
           <MainPage when={data.link === '/'} />
           <WhatSection when={state.router.link === '/what/'} />
           <WhereSection when={state.router.link === '/where/'} />
+          <WhySection when={state.router.link === '/why/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

@@ -7,7 +7,6 @@ import { THEMES } from './setup/themes';
 const nnkTheme = {
   name: '@frontity/nnk-theme',
   roots: {
-
     /**
      *  In Frontity, any package can add React components to the site.
      *  We use roots for that, scoped to the `theme` namespace.
@@ -16,7 +15,6 @@ const nnkTheme = {
     theme: App
   },
   state: {
-
     /**
      * State is where the packages store their default settings and other
      * relevant state. It is scoped to the `theme` namespace.
@@ -39,6 +37,10 @@ const nnkTheme = {
           isFetching: false
         },
         '/where/': {
+          isReady: true,
+          isFetching: false
+        },
+        '/why/': {
           isReady: true,
           isFetching: false
         }
@@ -68,7 +70,6 @@ const nnkTheme = {
   },
   libraries: {
     html2react: {
-
       /**
        * Add a processor to `html2react` so it processes the `<img>` tags
        * inside the content HTML. You can add your own processors too

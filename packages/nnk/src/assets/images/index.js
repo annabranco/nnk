@@ -21,3 +21,7 @@ export const Program03 = require('./spots/program03.png');
 
 // Where
 export const Mapv1 = require('./maps/mapv1.jpg');
+export const WhereBG = require('./bgs/where01.jpg');
+
+// Why
+export const WhyBG = require('./bgs/group01.jpg');
