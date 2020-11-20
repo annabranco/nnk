@@ -1,5 +1,4 @@
 import { styled } from 'frontity';
-import Link from '../../core/Link';
 
 export const FooterContainer = styled.div`
   display: flex;

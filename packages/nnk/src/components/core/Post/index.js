@@ -9,26 +9,25 @@ import {
   Content,
   DateWrapper,
   StyledLink,
-  Title
+  Title,
+  BackToReports
 } from './styles';
 import {
   ActionsPropType,
   LibrariesPropTypes,
   StatePropType
 } from '../../../types';
+import { ACTIONS_TEXTS } from '../../../db';
 
 const Post = ({ state, actions, libraries }) => {
-  // Get information about the current URL.
+  const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
-  // Get the data of the post.
   const post = state.source[data.type][data.id];
-  // Get the data of the author.
   const author = state.source.author[post.author];
-  // Get a human readable date.
   const date = new Date(post.date);
-
-  // Get the html2react component.
   const Html2React = libraries.html2react.Component;
+  const isReport = post.slug.includes('report');
+  const texts = ACTIONS_TEXTS[language];
 
   /**
    * Once the post has loaded in the DOM, prefetch both the
@@ -40,25 +39,33 @@ const Post = ({ state, actions, libraries }) => {
     List.preload();
   }, []);
 
-  // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container>
+      {isReport && (
+        <BackToReports colors={colors} link="/category/monthly-report/">
+          {`<< ${texts.backToReports}`}
+        </BackToReports>
+      )}
       <div>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+        <Title
+          colors={colors}
+          isReport={isReport}
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        />
 
         {/* Only display author and date on posts */}
         {data.isPost && (
           <div>
             {author && (
               <StyledLink link={author.link}>
-                <Author>
+                <Author colors={colors}>
                   By <b>{author.name}</b>
                 </Author>
               </StyledLink>
             )}
-            <DateWrapper>
+            <DateWrapper colors={colors} isReport={isReport}>
               {' '}
-              on <b>{date.toDateString()}</b>
+              Published on <b>{date.toDateString()}</b>
             </DateWrapper>
           </div>
         )}
@@ -71,7 +78,7 @@ const Post = ({ state, actions, libraries }) => {
 
       {/* Render the content using the Html2React component so the HTML is processed
        by the processors we included in the libraries.html2react.processors array. */}
-      <Content>
+      <Content colors={colors} isReport={isReport}>
         <Html2React html={post.content.rendered} />
       </Content>
     </Container>

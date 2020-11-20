@@ -5,8 +5,8 @@ import { DARK, LIGHT } from '../constants/theme';
 
 export const THEMES = {
   [DARK]: {
-    primary: 'black',
-    secondary: 'white',
+    primary: '#212121',
+    secondary: '#f8f8ff',
     terciary: '#da002b',
     neutral: '#868686',
     purewWhite: '#ffffff',

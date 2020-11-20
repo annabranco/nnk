@@ -11,9 +11,11 @@ import Post from '../../core/Post';
 import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
+import WhySection from '../../views/Why';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
+import { fontText, fontTitle } from '../../../setup/themes';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -21,9 +23,8 @@ import { StatePropType } from '../../../types';
  */
 const App = ({ state }) => {
   const { colors } = state.theme;
-
-  // Get information about the current URL.
   const data = state.source.get(state.router.link);
+
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -44,7 +45,15 @@ const App = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's.
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
-      <Global styles={{ body: { background: colors.primary } }} />
+      <Global
+        styles={{
+          body: { background: colors.primary, fontFamily: fontText },
+          p: { color: colors.secondary },
+          h1: { color: colors.terciary, fontFamily: fontTitle },
+          h2: { color: colors.secondary, fontFamily: fontTitle },
+          h3: { color: colors.secondary, fontFamily: fontTitle }
+        }}
+      />
 
       {/* Add the header of the site. */}
       <Header />
@@ -58,6 +67,7 @@ const App = ({ state }) => {
           <MainPage when={data.link === '/'} />
           <WhatSection when={state.router.link === '/what/'} />
           <WhereSection when={state.router.link === '/where/'} />
+          <WhySection when={state.router.link === '/why/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

@@ -7,7 +7,6 @@ import { StatePropType } from '../../../types';
 const FeaturedMedia = ({ state, id }) => {
   const media = state.source.attachment[id];
 
-  console.log('$$$ id', id);
   if (!media) {
     return null;
   }

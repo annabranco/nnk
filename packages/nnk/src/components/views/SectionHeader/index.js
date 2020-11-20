@@ -3,6 +3,7 @@ import { arrayOf, string } from 'prop-types';
 import SocialModule from '../SocialContainer';
 import { PhotoContainer } from '../HomePageModules/Main/styles';
 import { Title, TitleWrapper } from './styles';
+import { ColorsPropType, ConfigSocialLinksPropType } from '../../../types';
 
 const SectionHeader = ({ colors, img, socialLinks, position, title }) => (
   <PhotoContainer img={img} position={position}>
@@ -14,10 +15,10 @@ const SectionHeader = ({ colors, img, socialLinks, position, title }) => (
 );
 
 SectionHeader.propTypes = {
-  colors: string.isRequired,
+  colors: ColorsPropType.isRequired,
   img: string.isRequired,
   position: string,
-  socialLinks: arrayOf(string).isRequired,
+  socialLinks: arrayOf(ConfigSocialLinksPropType).isRequired,
   title: string.isRequired
 };
 

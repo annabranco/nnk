@@ -15,7 +15,6 @@ export const HeaderContainer = styled.header`
     activeLanguage === 'en' &&
     css`
       height: 110px;
-      margin-bottom: 10px;
       border-bottom: 4px solid ${colors.terciary};
     `}
 

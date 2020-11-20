@@ -1,4 +1,5 @@
-import { styled } from 'frontity';
+import { css, styled } from 'frontity';
+import { sizeLargeTitle } from '../../../setup/themes';
 import Link from '../Link';
 
 export const Container = styled.div`
@@ -12,7 +13,13 @@ export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
+  color: ${({ colors }) => colors && colors.terciary};
+
+  ${({ isReport }) =>
+    isReport &&
+    css`
+      font-size: ${sizeLargeTitle};
+    `}
 `;
 Title.displayName = 'Title';
 
@@ -21,17 +28,22 @@ export const StyledLink = styled(Link)`
 `;
 StyledLink.displayName = 'StyledLink';
 
+export const BackToReports = styled.div`
+  color: ${({ colors }) => colors && colors.terciary};
+`;
+BackToReports.displayName = 'BackToReports';
+
 export const Author = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: rgba(12, 17, 43, 0.9);
+  color: ${({ colors }) => colors && colors.secondary};
 `;
 Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: rgba(12, 17, 43, 0.9);
+  color: ${({ colors }) => colors && colors.secondary};
 `;
 DateWrapper.displayName = 'DateWrapper';
 
@@ -41,7 +53,13 @@ DateWrapper.displayName = 'DateWrapper';
  */
 export const Content = styled.div`
   word-break: break-word;
-  color: rgba(12, 17, 43, 0.8);
+  color: ${({ colors }) => colors && colors.secondary};
+  ${({ isReport }) =>
+    isReport &&
+    css`
+      margin: 40px auto;
+      text-align: justify;
+    `}
 
   /* WordPress Core Align Classes */
 
@@ -74,7 +92,31 @@ export const Content = styled.div`
   }
 
   p {
-    line-height: 1.6em;
+    line-height: 2;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  span {
+    line-height: 2;
+    margin: 20px auto;
+  }
+
+  li:not([class]),
+  a[class=''] {
+    line-height: 1.5;
+    margin-left: 50px;
+    list-style: disc;
+  }
+
+  span {
+    line-height: 2;
+    margin: 20px auto;
+  }
+
+  form {
+    margin: 30px auto;
+    margin-left: 50px;
   }
 
   img {
@@ -106,8 +148,27 @@ export const Content = styled.div`
   }
 
   a {
-    text-decoration: underline;
-    color: rgb(31, 56, 197);
+    text-decoration: none;
+    color: #26b9ff;
+    width: 100%;
+
+    & button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+  }
+
+  button {
+    margin: 10px auto 40px;
+    background: crimson;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
   }
 
   /* Input fields styles */
@@ -143,7 +204,7 @@ export const Content = styled.div`
     display: inline-block;
     border: 1px solid #1f38c5;
     border-radius: 4px;
-    margin-bottom: 0;
+    margin: 30px 0 10px 0;
     background-image: none;
     background-color: #1f38c5;
     padding: 12px 36px;

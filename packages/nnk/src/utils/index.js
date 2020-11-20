@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import { DESKTOP, MOBILE, TABLET } from '../constants/devices';
 import config from '../setup/config';
 
@@ -16,4 +18,12 @@ export const getMediaQuery = () => {
     }
   }
   return DESKTOP;
+};
+
+export const fetchData = URL => {
+  const request = axios
+    .get(URL)
+    .then(resp => resp.data)
+    .catch(error => console.error(`Failed to get data from ${URL}. ${error}.`));
+  return request;
 };

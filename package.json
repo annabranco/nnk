@@ -1,6 +1,6 @@
 {
   "name": "nnk",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "No Named Kitchen: Supporting People on the Move",
   "repository": "https://github.com/annabranco/nnk",
@@ -22,6 +22,7 @@
     "@frontity/nnk": "./packages/nnk",
     "@frontity/tiny-router": "^1.2.2",
     "@frontity/wp-source": "^1.9.1",
+    "axios": "^0.21.0",
     "frontity": "^1.12.0",
     "prop-types": "^15.7.2"
   },
