@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { DESKTOP, MOBILE, TABLET } from '../constants/devices';
 import config from '../setup/config';
 

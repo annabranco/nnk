@@ -13,6 +13,7 @@ import { ActionsPropType, StatePropType } from '../../../types';
  * when we wrap this component in `connect(...)`
  */
 const Pagination = ({ state, actions }) => {
+  const { colors } = state.theme;
   // Get the total posts to be displayed based for the current link
   const { next, previous } = state.source.get(state.router.link);
 
@@ -28,7 +29,7 @@ const Pagination = ({ state, actions }) => {
       {/* If there's a next page, render this link */}
       {next && (
         <Link link={next}>
-          <Text>← Older posts</Text>
+          <Text colors={colors}>← Older posts</Text>
         </Link>
       )}
 
@@ -37,7 +38,7 @@ const Pagination = ({ state, actions }) => {
       {/* If there's a previous page, render this link */}
       {previous && (
         <Link link={previous}>
-          <Text>Newer posts →</Text>
+          <Text colors={colors}>Newer posts →</Text>
         </Link>
       )}
     </div>

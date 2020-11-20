@@ -35,12 +35,14 @@ const WhySection = ({ state }) => {
     if (Object.keys(categories).length > 0) {
       const reports = [];
       const latests = [];
+      // eslint-disable-next-line no-unused-vars
       Object.entries(categories).forEach(([id, category]) => {
         if (category.link.includes('monthly-report')) {
           reports.push(category);
         }
       });
       const latestIds = Object.keys(reports).splice(-config.latestReportsNum);
+
       latestIds.forEach(id => {
         // eslint-disable-next-line no-underscore-dangle
         const URL = reports[id]._links['wp:post_type'][0].href;

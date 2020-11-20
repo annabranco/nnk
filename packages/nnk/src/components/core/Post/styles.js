@@ -1,4 +1,5 @@
-import { styled } from 'frontity';
+import { css, styled } from 'frontity';
+import { sizeLargeTitle } from '../../../setup/themes';
 import Link from '../Link';
 
 export const Container = styled.div`
@@ -12,7 +13,13 @@ export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
+  color: ${({ colors }) => colors && colors.terciary};
+
+  ${({ isReport }) =>
+    isReport &&
+    css`
+      font-size: ${sizeLargeTitle};
+    `}
 `;
 Title.displayName = 'Title';
 
@@ -21,17 +28,22 @@ export const StyledLink = styled(Link)`
 `;
 StyledLink.displayName = 'StyledLink';
 
+export const BackToReports = styled.div`
+  color: ${({ colors }) => colors && colors.terciary};
+`;
+BackToReports.displayName = 'BackToReports';
+
 export const Author = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: rgba(12, 17, 43, 0.9);
+  color: ${({ colors }) => colors && colors.secondary};
 `;
 Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: rgba(12, 17, 43, 0.9);
+  color: ${({ colors }) => colors && colors.secondary};
 `;
 DateWrapper.displayName = 'DateWrapper';
 
@@ -41,7 +53,13 @@ DateWrapper.displayName = 'DateWrapper';
  */
 export const Content = styled.div`
   word-break: break-word;
-  color: rgba(12, 17, 43, 0.8);
+  color: ${({ colors }) => colors && colors.secondary};
+  ${({ isReport }) =>
+    isReport &&
+    css`
+      margin: 40px auto;
+      text-align: justify;
+    `}
 
   /* WordPress Core Align Classes */
 

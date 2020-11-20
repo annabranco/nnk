@@ -14,7 +14,7 @@ const settings = {
         theme: {
           menu: [],
           featured: {
-            showOnList: false,
+            showOnList: true,
             showOnPost: false
           }
         }

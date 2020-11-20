@@ -7,6 +7,7 @@ import { THEMES } from './setup/themes';
 const nnkTheme = {
   name: '@frontity/nnk-theme',
   roots: {
+
     /**
      *  In Frontity, any package can add React components to the site.
      *  We use roots for that, scoped to the `theme` namespace.
@@ -15,19 +16,14 @@ const nnkTheme = {
     theme: App
   },
   state: {
-    /**
-     * State is where the packages store their default settings and other
-     * relevant state. It is scoped to the `theme` namespace.
-     */
-
     theme: {
       language: config.defaultLanguage,
       colors: THEMES.dark,
       menu: [],
       isMobileMenuOpen: false,
       featured: {
-        showOnList: false,
-        showOnPost: false
+        showOnList: true,
+        showOnPost: true
       }
     },
     source: {
@@ -47,12 +43,6 @@ const nnkTheme = {
       }
     }
   },
-
-  /**
-   * Actions are functions that modify the state or deal with other parts of
-   * Frontity like libraries.
-   */
-
   actions: {
     theme: {
       toggleMobileMenu: ({ state }) => {
@@ -62,19 +52,12 @@ const nnkTheme = {
         state.theme.isMobileMenuOpen = false;
       },
       changeTheme: ({ state }) => newTheme => {
-        console.log('$$$ newTheme', newTheme);
-        console.log('$$$ state', state);
         state.theme.colors = THEMES[newTheme];
       }
     }
   },
   libraries: {
     html2react: {
-      /**
-       * Add a processor to `html2react` so it processes the `<img>` tags
-       * inside the content HTML. You can add your own processors too
-       */
-
       processors: [image, iframe]
     }
   }
