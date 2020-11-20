@@ -4,7 +4,7 @@ import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHAT_TEXTS } from '../../../db';
 import {
-  WhatBG,
+  Photo01,
   Program01,
   Program02,
   Program03
@@ -36,8 +36,8 @@ const WhatSection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={WhatBG}
-        position="0 76%"
+        img={Photo01}
+        position="0 20%"
         socialLinks={socialLinks}
         title={texts.title}
       />

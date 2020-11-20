@@ -3,7 +3,7 @@ import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
-import { Mapv1, Photo01 } from '../../../assets/images';
+import { Mapv1, Photo05 } from '../../../assets/images';
 import { Content, Map, Section } from './styles';
 import { StatePropType } from '../../../types';
 
@@ -20,8 +20,8 @@ const WhereSection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={Photo01}
-        position="0 20%"
+        img={Photo05}
+        position="0 30%"
         socialLinks={socialLinks}
         title={texts.title}
       />

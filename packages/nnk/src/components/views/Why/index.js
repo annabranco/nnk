@@ -3,7 +3,7 @@ import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
-import { WhyBG, Program03 } from '../../../assets/images';
+import { Photo07, Program03 } from '../../../assets/images';
 import {
   BorderViolenceArea,
   Content,
@@ -64,8 +64,8 @@ const WhySection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={WhyBG}
-        position="0 30%"
+        img={Photo07}
+        position="0 80%"
         socialLinks={socialLinks}
         title={texts.title}
       />
