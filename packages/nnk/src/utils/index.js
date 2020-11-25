@@ -27,3 +27,25 @@ export const fetchData = URL => {
     .catch(error => console.error(`Failed to get data from ${URL}. ${error}.`));
   return request;
 };
+
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+export const validateForm = (type, value) => {
+  switch (type) {
+    case 'email':
+      return emailRegex.test(value.toLowerCase());
+    case 'name':
+      return value.length >= 4 && !!/\s/.exec(value) && !/\d/.exec(value);
+    case 'message':
+    default:
+      return value.length > 2;
+  }
+};
+
+export const allValidated = form =>
+  Object.keys(form).every(field => {
+    console.log('$$$ field', field);
+    console.log('$$$ form[field]', form[field]);
+    console.log('$$$ form[field]', form[field].isValid);
+    return form[field].isValid;
+  });
