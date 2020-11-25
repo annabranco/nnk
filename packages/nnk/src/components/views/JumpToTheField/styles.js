@@ -88,7 +88,7 @@ export const InfoDescription = styled(BaseTitle)`
 `;
 InfoDescription.displayName = 'InfoDescription';
 
-export const FormArea = styled.div`
+export const FormArea = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,3 +148,37 @@ export const SendButton = styled.button`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 SendButton.displayName = 'SendButton';
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: calc(100vh - 155px);
+  width: 800px;
+  padding: 24px;
+  text-align: center;
+`;
+Container.displayName = 'Container';
+
+export const Title = styled(BaseTitle)`
+  margin: 0 auto 20px;
+  font-size: ${sizeXLargeTitle};
+  color: ${({ colors }) => colors && colors.terciary};
+`;
+Title.displayName = 'Title';
+
+export const Description = styled.div`
+  margin: 24px 0;
+  line-height: 1.6em;
+  white-space: pre;
+`;
+Description.displayName = 'Description';
+
+export const TextEmail = styled(BaseText)`
+  text-align: center;
+  font-size: ${sizeLarge};
+  color: ${({ colors }) => colors && colors.secondary};
+`;
+TextEmail.displayName = 'TextEmail';

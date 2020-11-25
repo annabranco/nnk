@@ -41,6 +41,7 @@ const App = ({ state }) => {
           src="https://kit.fontawesome.com/7d8d592f81.js"
           crossOrigin="anonymous"
         />
+        <script src="https://smtpjs.com/v3/smtp.js" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's.

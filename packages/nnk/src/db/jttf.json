@@ -26,6 +26,10 @@
       "email": "E-Mail",
       "message": "Message",
       "send": "Send"
+    },
+    "messageSent": {
+      "title": "You message has been sent",
+      "msgSent": "Thank you for writing us.\nWe'll contact you as soon as possible."
     }
   }
 }
