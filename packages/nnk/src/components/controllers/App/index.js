@@ -77,7 +77,7 @@ const App = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </MainArea>
-      <Footer colors={colors} />
+      {/* <Footer colors={colors} /> */}
     </>
   );
 };
