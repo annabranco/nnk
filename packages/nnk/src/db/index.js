@@ -2,6 +2,7 @@ export { default as ACTIONS_TEXTS } from './actions.json';
 export { default as ERROR_TEXTS } from './error404.json';
 export { default as HEADER_TEXTS } from './header.json';
 export { default as HOMEPAGE_TEXTS } from './homepage.json';
+export { default as JTTF_TEXTS } from './jttf.json';
 export { default as MAIN_SECTIONS } from './nav.json';
 export { default as VOLUNTEER_TEXTS } from './volunteer.json';
 export { default as WHAT_TEXTS } from './what.json';

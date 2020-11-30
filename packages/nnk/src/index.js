@@ -39,6 +39,10 @@ const nnkTheme = {
         '/why/': {
           isReady: true,
           isFetching: false
+        },
+        '/join-us/': {
+          isReady: true,
+          isFetching: false
         }
       }
     }

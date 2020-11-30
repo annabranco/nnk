@@ -12,6 +12,7 @@ import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
 import WhySection from '../../views/Why';
+import JumpToTheFieldSection from '../../views/JumpToTheField';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
@@ -40,6 +41,7 @@ const App = ({ state }) => {
           src="https://kit.fontawesome.com/7d8d592f81.js"
           crossOrigin="anonymous"
         />
+        <script src="https://smtpjs.com/v3/smtp.js" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's.
@@ -68,13 +70,14 @@ const App = ({ state }) => {
           <WhatSection when={state.router.link === '/what/'} />
           <WhereSection when={state.router.link === '/where/'} />
           <WhySection when={state.router.link === '/why/'} />
+          <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </MainArea>
-      <Footer colors={colors} />
+      {/* <Footer colors={colors} /> */}
     </>
   );
 };
