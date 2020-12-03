@@ -1,0 +1,29 @@
+{
+  "en": {
+    "title": "Support the move",
+    "values": [
+      {
+        "title": "100% INDEPENDENT",
+        "description": "Nobody´s agenda influences our freedom to act and to denounce the injustice."
+      },
+      {
+        "title": "HIGH IMPACT",
+        "description": "Each donation is needed to boost our actions and to provide a rapid response for emergencies."
+      },
+      {
+        "title": "FULL TRANSPARENCY",
+        "description": "Our accountability is open and free-access. Feel free to ask how we spend each euro. For more info, please contact $[mail]."
+      }
+    ],
+    "transfer": "If you prefer it, make a bank transfer to:",
+    "accountName": "Account Name:",
+    "address": "Address:",
+    "iban": "IBAN:",
+    "swift": "SWIFT Code / BIC:",
+    "justice": "Justice",
+    "hope": "Hope",
+    "dignity": "Dignity",
+    "subscribe": "Subscribe to No Name News",
+    "subscribeButton": "Subscribe to No Name News"
+  }
+}
