@@ -18,6 +18,7 @@ export const Photo07 = require('./spots/base07.png');
 export const Photo08 = require('./spots/base07.png');
 
 export const VolunteersInAction = require('./spots/volunteers.jpeg');
+export const CrossedFork = require('./icons/crossedFork.png');
 
 // What
 export const Program01 = require('./spots/program01.jpeg');

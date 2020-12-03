@@ -1,4 +1,4 @@
-import { styled } from 'frontity';
+import { styled, css } from 'frontity';
 
 export const SocialContainer = styled.div`
   position: absolute;
@@ -9,5 +9,12 @@ export const SocialContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 80px 40px;
+
+  ${({ size }) =>
+    size === 'small' &&
+    css`
+      position: normal;
+      margin: 20px;
+    `}
 `;
 SocialContainer.displayName = 'SocialContainer';
