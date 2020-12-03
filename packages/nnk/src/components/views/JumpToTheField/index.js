@@ -124,7 +124,7 @@ const JumpToTheFieldSection = ({ state }) => {
               enctype="text/plain"
             >
               <Field>
-                <Label for="name">{texts.form.fullName}</Label>
+                <Label htmlFor="name">{texts.form.fullName}</Label>
                 <TextField
                   onKeyUp={event => updateForm(event.target.value, 'name')}
                   id="name"
@@ -133,7 +133,7 @@ const JumpToTheFieldSection = ({ state }) => {
                 />
               </Field>
               <Field>
-                <Label for="email">{texts.form.email}</Label>
+                <Label htmlFor="email">{texts.form.email}</Label>
                 <TextField
                   onKeyUp={event => updateForm(event.target.value, 'email')}
                   id="email"
@@ -142,7 +142,7 @@ const JumpToTheFieldSection = ({ state }) => {
                 />
               </Field>
               <Field>
-                <Label for="message">{texts.form.message}</Label>
+                <Label htmlFor="message">{texts.form.message}</Label>
                 <MessageField
                   onKeyUp={event => updateForm(event.target.value, 'message')}
                   id="message"

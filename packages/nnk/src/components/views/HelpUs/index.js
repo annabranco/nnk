@@ -162,7 +162,7 @@ const HelpUs = ({ state }) => {
               enctype="text/plain"
             >
               <Field>
-                <Label hidden for="name">
+                <Label hidden htmlFor="name">
                   {texts.form.name}
                 </Label>
                 <TextField
@@ -174,7 +174,7 @@ const HelpUs = ({ state }) => {
                 />
               </Field>
               <Field>
-                <Label hidden for="email">
+                <Label hidden htmlFor="email">
                   {texts.form.email}
                 </Label>
                 <TextField

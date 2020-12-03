@@ -283,6 +283,7 @@ export const SectionFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto 40px;
   padding: 30px 5px;
   width: 60%;
 

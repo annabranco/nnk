@@ -32,5 +32,12 @@ export default {
       link: 'mailto:nnk@nnk.org',
       hide: false
     }
-  ]
+  ],
+  partnersEmail: 'partners@nonamekitchen.org',
+  account: {
+    name: 'NO NAMED KITCHEN',
+    address: 'C/ Jovellanos 8 – Gijon (Spain)',
+    iban: 'ES90 0081 5155 7100 0198 4102',
+    swift: 'BSABESBBXXX'
+  }
 };

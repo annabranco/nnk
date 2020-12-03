@@ -17,6 +17,7 @@ import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import { StatePropType } from '../../../types';
 import { fontText, fontTitle } from '../../../setup/themes';
+import HelpUs from '../../views/HelpUs';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -71,6 +72,8 @@ const App = ({ state }) => {
           <WhereSection when={state.router.link === '/where/'} />
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
+          <HelpUs when={state.router.link === '/help-us/'} />
+
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

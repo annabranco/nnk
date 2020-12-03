@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'; // eslint-disable-line impor
 import { connect } from 'frontity';
 import Nav from '../Nav';
 import MobileNav from '../MobileNav';
-import LogoPng from '../../../assets/images/logo/logo-small.png';
 import SpanishFlag from '../../../assets/images/icons/es.png';
 import EnglishFlag from '../../../assets/images/icons/uk.png';
 import { HeaderContainer, LanguageFlag, Logo } from './styles';
@@ -12,6 +11,7 @@ import Link from '../../core/Link';
 import { StatePropType, ActionsPropType } from '../../../types';
 import { getMediaQuery } from '../../../utils';
 import { MOBILE } from '../../../constants/devices';
+import { LogoSmall } from '../../../assets/images';
 
 const Header = ({ state, actions }) => {
   const [activeLanguage, changeLanguage] = useState('es');
@@ -37,7 +37,7 @@ const Header = ({ state, actions }) => {
   return (
     <HeaderContainer activeLanguage={activeLanguage} colors={colors}>
       <Link link="/">
-        <Logo activeLanguage={activeLanguage} src={LogoPng} />
+        <Logo activeLanguage={activeLanguage} src={LogoSmall} />
       </Link>
       {MOBILE_VERSION ? <MobileNav /> : <Nav />}
       <LanguageFlag
