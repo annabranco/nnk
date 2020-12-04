@@ -25,11 +25,6 @@ export const PayPal = require('./logos/paypal.png');
 export const GoFundMe = require('./logos/gofundme.png');
 export const Teaming = require('./logos/teaming.png');
 
-// Partners
-export const PayPal = require('./logos/paypal.png');
-export const GoFundMe = require('./logos/gofundme.png');
-export const Teaming = require('./logos/teaming.png');
-
 // What
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');

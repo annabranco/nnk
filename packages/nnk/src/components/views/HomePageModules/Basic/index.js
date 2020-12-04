@@ -2,7 +2,6 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import { any } from 'prop-types';
 import {
   BasicModuleWrapper,
-  Description,
   TextWrapper,
   Text,
   DescriptionWrapper,

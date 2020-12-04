@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Global, connect, Head } from 'frontity';
 import Switch from '@frontity/components/switch';
-import Footer from '../../views/Footer';
+// import Footer from '../../views/Footer';
 import Header from '../Header';
 import List from '../../core/List';
 import Loading from '../../core/Loading';
