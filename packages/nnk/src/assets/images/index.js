@@ -18,6 +18,12 @@ export const Photo07 = require('./spots/base07.png');
 export const Photo08 = require('./spots/base08.png');
 export const Photo09 = require('./spots/base09.jpeg');
 export const VolunteersInAction = require('./spots/volunteers.jpeg');
+export const CrossedFork = require('./icons/crossedFork.png');
+
+// Partners
+export const PayPal = require('./logos/paypal.png');
+export const GoFundMe = require('./logos/gofundme.png');
+export const Teaming = require('./logos/teaming.png');
 
 // Partners
 export const PayPal = require('./logos/paypal.png');

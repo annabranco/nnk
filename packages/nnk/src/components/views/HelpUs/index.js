@@ -1,12 +1,21 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
 import config from '../../../setup/config';
-import { getSocialLinks } from '../../../utils';
+import { getSocialLinks, validateForm } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
-import { Photo09, PayPal, GoFundMe, Teaming } from '../../../assets/images';
+import {
+  Photo09,
+  PayPal,
+  GoFundMe,
+  Teaming,
+  CrossedFork
+} from '../../../assets/images';
 import {
   Content,
+  SectionFooter,
+  FooterText,
+  FooterSeparator,
   Section,
   SubsectionWrapper,
   Values,
@@ -20,14 +29,62 @@ import {
   ItemDescription,
   DonorBox,
   Subscription,
-  ValueItem
+  ValueItem,
+  SubscriptionTitle,
+  FormArea,
+  Field,
+  Label,
+  TextField,
+  SendButton,
+  SubscriptionTitleHighlight
 } from './styles';
 import { StatePropType } from '../../../types';
+import SocialModule from '../SocialContainer';
 
 const HelpUs = ({ state }) => {
   const { colors, language } = state.theme;
   let texts = DONATION_TEXTS[language];
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
+
+  const INITIAL_FORM_DATA = {
+    name: {
+      value: null,
+      isValid: false
+    },
+    email: {
+      value: null,
+      isValid: false
+    }
+  };
+
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+
+  const updateForm = (value, field) => {
+    const updatedData = { ...formData };
+    updatedData[field] = {
+      value,
+      isValid: validateForm(field, value)
+    };
+    setFormData(updatedData);
+  };
+
+  const sendEmail = event => {
+    event.preventDefault();
+    // eslint-disable-next-line no-undef
+    // Email.send({
+    //   SecureToken: 'a8424171-6a2c-42f8-a17e-24ff3da22895',
+    //   To: 'lady.anna.lannister@gmail.com',
+    //   From: 'lady.anna.lannister@gmail.com',
+    //   Subject: 'New volunteer contact',
+    //   Body: `<html><h2>Contact</h2><p>Name: <strong>${formData.name.value}</strong></p><p>E-mail: <strong>${formData.email.value}</strong></p><p>Message: <em>${formData.message.value}</em></p></html>`
+    // }).then(message => {
+    //   if (message === 'OK') {
+    //     toggleEmailSent(true);
+    //   } else {
+    //     console.warn('Failed sending message though server', message);
+    //   }
+    // });
+  };
 
   useEffect(() => {
     texts = DONATION_TEXTS[language];
@@ -90,9 +147,65 @@ const HelpUs = ({ state }) => {
         </SubsectionWrapper>
         <SubsectionWrapper>
           <DonorBox>DonorBox</DonorBox>
-          <Subscription>Subscribe!</Subscription>
+          <Subscription>
+            <SocialModule size="small" socialLinks={socialLinks} />
+            <SubscriptionTitle colors={colors}>
+              {texts.subscribeTo}
+            </SubscriptionTitle>
+            <SubscriptionTitleHighlight colors={colors}>
+              {texts.noNameNews}
+            </SubscriptionTitleHighlight>
+            <FormArea
+              colors={colors}
+              // action="mailto:you@yourdmainhere.com"
+              // method="post"
+              enctype="text/plain"
+            >
+              <Field>
+                <Label hidden htmlFor="name">
+                  {texts.form.name}
+                </Label>
+                <TextField
+                  onKeyUp={event => updateForm(event.target.value, 'name')}
+                  id="name"
+                  name="name"
+                  placeholder={texts.form.name}
+                  type="text"
+                />
+              </Field>
+              <Field>
+                <Label hidden htmlFor="email">
+                  {texts.form.email}
+                </Label>
+                <TextField
+                  onKeyUp={event => updateForm(event.target.value, 'email')}
+                  id="email"
+                  name="email"
+                  placeholder={texts.form.email}
+                  type="email"
+                />
+              </Field>
+              <SendButton
+                // type="submit"
+                // name="submit"
+                // value="Submit"
+                colors={colors}
+                onClick={sendEmail}
+                // disabled={!allValidated(formData)}
+              >
+                {texts.form.send}
+              </SendButton>
+            </FormArea>
+          </Subscription>
         </SubsectionWrapper>
       </Content>
+      <SectionFooter colors={colors}>
+        <FooterText>{texts.justice}</FooterText>
+        <FooterSeparator src={CrossedFork} />
+        <FooterText>{texts.hope}</FooterText>
+        <FooterSeparator src={CrossedFork} />
+        <FooterText>{texts.dignity}</FooterText>
+      </SectionFooter>
     </Section>
   );
 };

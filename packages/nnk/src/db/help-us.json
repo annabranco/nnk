@@ -23,7 +23,12 @@
     "justice": "Justice",
     "hope": "Hope",
     "dignity": "Dignity",
-    "subscribe": "Subscribe to No Name News",
-    "subscribeButton": "Subscribe to No Name News"
+    "subscribeTo": "Subscribe to",
+    "noNameNews": "No Name News",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "send": "Subscribe"
+    }
   }
 }

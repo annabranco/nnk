@@ -8,15 +8,18 @@ import {
   sizeSmallTitle,
   sizeMediumTitle,
   fontTitle,
-  sizeMedium
+  sizeMedium,
+  sizeSmall,
+  sizeXXLargeTitle,
+  sizeXLargeTitle
 } from '../../../setup/themes';
 
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 60%;
+  width: 75%;
   padding: 20px 80px;
 `;
 Content.displayName = 'Content';
@@ -110,10 +113,11 @@ export const SubsectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
+  margin: 20px 30px;
+  width: 60%;
 
   &:last-child {
-    width: 35%;
+    width: 40%;
   }
 `;
 SubsectionWrapper.displayName = 'SubsectionWrapper';
@@ -152,13 +156,17 @@ export const PartnersLogos = styled.div`
 PartnersLogos.displayName = 'PartnersLogos';
 
 export const Logo = styled.img`
-  width: 100px;
+  margin: 20px 40px;
+  height: 70px;
 `;
 Logo.displayName = 'Logo';
 
 export const TransferInfo = styled.div`
-  background: red;
+  margin: 30px auto;
+  width: 70%;
+  background: ${({ colors }) => colors && colors.terciary};
   padding: 10px;
+  text-align: center;
   color: ${({ colors }) => colors && colors.secondary};
 `;
 TransferInfo.displayName = 'TransferInfo';
@@ -180,12 +188,26 @@ export const ItemDescription = styled.span`
 ItemDescription.displayName = 'ItemDescription';
 
 export const DonorBox = styled.div`
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  height: 400px;
+  width: 100%;
 `;
 DonorBox.displayName = 'DonorBox';
 
 export const Subscription = styled.div`
-  border: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 10px 0 0 90px;
+  border: 1px solid gray;
+  width: 100%;
 `;
 Subscription.displayName = 'Subscription';
 
@@ -194,3 +216,94 @@ export const ValueItem = styled.div`
   padding: 10px;
 `;
 ValueItem.displayName = 'ValueItem';
+
+export const SubscriptionTitle = styled(BaseTitle)`
+  color: ${({ colors }) => colors && colors.secondary};
+`;
+SubscriptionTitle.displayName = 'SubscriptionTitle';
+
+export const SubscriptionTitleHighlight = styled(BaseTitle)`
+  color: ${({ colors }) => colors && colors.terciary};
+`;
+SubscriptionTitleHighlight.displayName = 'SubscriptionTitleHighlight';
+
+export const FormArea = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  width: 80%;
+  padding: 10px 0;
+  color: ${({ colors }) => colors && colors.secondary};
+`;
+FormArea.displayName = 'FormArea';
+
+export const Field = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  width: 100%;
+`;
+Field.displayName = 'Field';
+
+export const Label = styled.label`
+  display: none;
+`;
+Label.displayName = 'Label';
+
+export const TextField = styled.input`
+  height: 30px;
+  width: 82%;
+  background: gainsboro;
+  padding: 5px 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: ${sizeMedium};
+`;
+TextField.displayName = 'TextField';
+
+export const SendButton = styled.button`
+  margin: 10px auto;
+  height: 30px;
+  width: 100px;
+  color: ${({ colors }) => colors && colors.secondary};
+  background: ${({ disabled, colors }) =>
+    disabled ? 'gray' : colors && colors.terciary};
+  text-transform: uppercase;
+  font-size: ${sizeSmall};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+`;
+SendButton.displayName = 'SendButton';
+
+export const SectionFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 40px;
+  padding: 30px 5px;
+  width: 60%;
+
+  ${({ colors }) =>
+    colors &&
+    css`
+      border-radius: 5px;
+      border-top: 2px solid ${colors.secondary};
+      border-bottom: 4px solid ${colors.secondary};
+    `};
+`;
+SectionFooter.displayName = 'SectionFooter';
+
+export const FooterText = styled(BaseTitle)`
+  font-size: ${sizeXLargeTitle};
+  letter-spacing: 0.5rem;
+`;
+FooterText.displayName = 'FooterText';
+
+export const FooterSeparator = styled.img`
+  width: 40px;
+`;
+FooterSeparator.displayName = 'FooterSeparator';

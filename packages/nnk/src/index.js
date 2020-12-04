@@ -46,15 +46,15 @@ const nnkTheme = {
         '/help-us/': {
           isReady: true,
           isFetching: false
-        },
-        '/store/': {
-          isReady: true,
-          isFetching: false
-        },
-        '/news/': {
-          isReady: true,
-          isFetching: false
         }
+        // '/store/': {
+        //   isReady: true,
+        //   isFetching: false
+        // },
+        // '/news/': {
+        //   isReady: true,
+        //   isFetching: false
+        // }
       }
     }
   },
