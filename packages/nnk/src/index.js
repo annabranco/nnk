@@ -7,6 +7,7 @@ import { THEMES } from './setup/themes';
 const nnkTheme = {
   name: '@frontity/nnk-theme',
   roots: {
+
     /**
      *  In Frontity, any package can add React components to the site.
      *  We use roots for that, scoped to the `theme` namespace.
@@ -46,15 +47,15 @@ const nnkTheme = {
         '/help-us/': {
           isReady: true,
           isFetching: false
-        },
-        '/store/': {
-          isReady: true,
-          isFetching: false
-        },
-        '/news/': {
-          isReady: true,
-          isFetching: false
         }
+        // '/store/': {
+        //   isReady: true,
+        //   isFetching: false
+        // },
+        // '/news/': {
+        //   isReady: true,
+        //   isFetching: false
+        // }
       }
     }
   },
