@@ -5,9 +5,12 @@ import {
   MainImage,
   Title,
   Highlighted,
-  ImgLink
+  ImgLink,
+  MainImageAsBg
 } from './styles';
 import { ColorsPropType, TextsVolunteerPropType } from '../../../../types';
+import { getMediaQuery } from '../../../../utils';
+import { MOBILE } from '../../../../constants/devices';
 
 const VolunteerModule = ({ colors, texts }) => {
   const styleTitle = title => {
@@ -25,7 +28,11 @@ const VolunteerModule = ({ colors, texts }) => {
     <ModuleWrapper>
       {styleTitle(texts.question)}
       <ImgLink link="/join-us/">
-        <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
+        {getMediaQuery() === MOBILE ? (
+          <MainImageAsBg img={VolunteersInAction} alt={texts.altMainImage} />
+        ) : (
+          <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
+        )}
       </ImgLink>
     </ModuleWrapper>
   );

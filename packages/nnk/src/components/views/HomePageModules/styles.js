@@ -10,7 +10,6 @@ export const SectionContainer = styled.div`
   background-color: ${({ colors }) => colors && colors.primary};
   min-height: 50px;
   max-width: 100vw;
-  box-sizing: border-box;
   padding: 10px;
   color: ${({ colors }) => colors && colors.secondary};
 

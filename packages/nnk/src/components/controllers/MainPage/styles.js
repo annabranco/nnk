@@ -7,5 +7,6 @@ export const MainContainer = styled.div`
   align-items: center;
   background-color: ${({ colors }) => colors && colors.primary};
   width: 100%;
+  overflow-y: hidden;
 `;
 MainContainer.displayName = 'MainContainer';

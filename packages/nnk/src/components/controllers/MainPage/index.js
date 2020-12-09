@@ -8,6 +8,8 @@ import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
 
 import { MainContainer } from './styles';
 import { StatePropType } from '../../../types';
+import { getMediaQuery } from '../../../utils';
+import { MOBILE } from '../../../constants/devices';
 
 const MainPage = ({ state }) => {
   const { colors, language } = state.theme;
@@ -24,7 +26,10 @@ const MainPage = ({ state }) => {
   return (
     <MainContainer colors={colors}>
       <MainModule />
-      <PageSection size="large" colors={colors}>
+      <PageSection
+        size={getMediaQuery() === MOBILE ? 'full' : 'large'}
+        colors={colors}
+      >
         <BasicModule
           texts={homepageTexts}
           whyTexts={whyTexts}

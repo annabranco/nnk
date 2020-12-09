@@ -5,7 +5,7 @@ import { DARK, LIGHT } from '../constants/theme';
 
 export const THEMES = {
   [DARK]: {
-    primary: '#212121',
+    primary: '#0c0c0c',
     secondary: '#f8f8ff',
     terciary: '#da002b',
     neutral: '#868686',

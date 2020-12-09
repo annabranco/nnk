@@ -8,7 +8,7 @@ export const SocialContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 40px;
+  margin-top: 5px;
 
   ${({ size }) =>
     size === 'small' &&
@@ -16,5 +16,13 @@ export const SocialContainer = styled.div`
       position: normal;
       margin: 20px;
     `}
+
+  @media only screen and (min-width: 375px) {
+    margin-top: 15px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin: 80px 40px;
+  }
 `;
 SocialContainer.displayName = 'SocialContainer';

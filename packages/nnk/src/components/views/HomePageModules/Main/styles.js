@@ -1,12 +1,17 @@
 import { styled, css } from 'frontity';
-import { BaseText, sizeLargeTitle } from '../../../../setup/themes';
+import {
+  BaseText,
+  sizeLargeTitle,
+  sizeMediumTitle,
+  sizeSmallTitle
+} from '../../../../setup/themes';
 
 export const MainText = styled(BaseText)`
   position: absolute;
-  bottom: 15vh;
+  bottom: 10px;
   right: 6vw;
   white-space: pre;
-  font-size: ${sizeLargeTitle};
+  font-size: ${sizeSmallTitle};
   font-style: italic;
   font-weight: 900;
   line-height: 1.5;
@@ -18,6 +23,16 @@ export const MainText = styled(BaseText)`
     0 -2px 5px black, 0 0 5px black, 0 2px 5px black, 2px -2px 5px black,
     2px 0 5px black, 2px 2px 5px black;
   letter-spacing: -0.15rem;
+  color: ${({ colors }) => colors && colors.secondary};
+
+  @media only screen and (min-width: 375px) {
+    font-size: ${sizeMediumTitle};
+  }
+
+  @media only screen and (min-width: 768px) {
+    bottom: 15vh;
+    font-size: ${sizeLargeTitle};
+  }
 `;
 MainText.displayName = 'MainText';
 // white-space forces line breaks \n
@@ -28,14 +43,23 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  height: calc(100vh - 100px);
+  height: 50vh;
   width: 100%;
+  background-position: 20% 15%;
 
-  ${({ img, position = 'center 15%' }) => css`
+  ${({ img }) => css`
     background-image: ${`url(${img})`};
-    background-position: ${position};
-    background-size: 100%;
+    background-size: 200%;
     background-repeat: no-repeat;
   `}
+
+  @media only screen and (min-width: 768px) {
+    height: calc(100vh - 100px);
+
+    ${({ position = 'center 15%' }) => css`
+      background-position: ${position};
+      background-size: 100%;
+    `}
+  }
 `;
 PhotoContainer.displayName = 'PhotoContainer';
