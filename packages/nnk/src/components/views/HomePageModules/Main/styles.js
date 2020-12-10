@@ -51,13 +51,13 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  height: 50vh;
+  height: 41vh;
   width: 100%;
   background-position: 20% 15%;
 
-  ${({ img }) => css`
+  ${({ img, section }) => css`
     background-image: ${`url(${img})`};
-    background-size: 200%;
+    background-size: ${section ? '100%' : '200%'};
     background-repeat: no-repeat;
   `}
 

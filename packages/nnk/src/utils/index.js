@@ -35,7 +35,7 @@ export const validateForm = (type, value) => {
     case 'email':
       return emailRegex.test(value.toLowerCase());
     case 'name':
-      return value.length >= 4 && !!/\s/.exec(value) && !/\d/.exec(value);
+      return value.length >= 4 && !!/\s/.exec(value);
     case 'message':
     default:
       return value.length > 2;

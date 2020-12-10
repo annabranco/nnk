@@ -81,7 +81,7 @@ const HelpUs = ({ state }) => {
     //   if (message === 'OK') {
     //     toggleEmailSent(true);
     //   } else {
-    //     console.warn('Failed sending message though server', message);
+    //     console.warn('Failed sending message through server', message);
     //   }
     // });
   };
