@@ -55,5 +55,5 @@ export const BaseText = styled.p`
   font-size: ${sizeMedium};
   font-weight: normal;
   line-height: 2.2;
-  white-space: wrap;
+  white-space: normal;
 `;

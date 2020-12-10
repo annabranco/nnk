@@ -26,6 +26,7 @@ import HelpUs from '../../views/HelpUs';
 const App = ({ state }) => {
   const { colors } = state.theme;
   const data = state.source.get(state.router.link);
+  // console.log('$$$ navigator.userAgent', window.navigator.userAgent);
 
   return (
     <>

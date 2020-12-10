@@ -59,7 +59,7 @@ export const ModuleWrapper = styled.div`
   margin-bottom: 30px;
   overflow-y: hidden;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     max-width: 70%;
   }
 `;

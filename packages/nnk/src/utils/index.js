@@ -10,10 +10,10 @@ export const getSocialLinks = linksToDisplay => {
 
 export const getMediaQuery = () => {
   if (typeof window !== 'undefined' && window.document) {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth < 768) {
       return MOBILE;
     }
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth < 1024) {
       return TABLET;
     }
   }

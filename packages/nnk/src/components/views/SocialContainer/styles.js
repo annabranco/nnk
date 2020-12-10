@@ -22,6 +22,10 @@ export const SocialContainer = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
+    margin: 20px 40px;
+  }
+
+  @media only screen and (min-width: 1024px) {
     margin: 80px 40px;
   }
 `;

@@ -9,9 +9,5 @@ export const MainArea = styled.main`
   /* min-height: calc(100vh - 80px - 76px); Header & Footer */
   min-height: calc(100vh - 80px); /* Header & Footer */
   width: 100%;
-
-  @media only screen and (min-width: 768px) {
-    width: 100vw;
-  }
 `;
 MainArea.displayName = 'MainArea';

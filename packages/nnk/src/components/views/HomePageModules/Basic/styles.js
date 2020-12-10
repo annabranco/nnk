@@ -31,6 +31,11 @@ export const DescriptionWrapper = styled.div`
     `}
 
   @media only screen and (min-width: 768px) {
+    margin: 20px 0 40px;
+    border: 0;
+  }
+
+  @media only screen and (min-width: 1024px) {
     margin: 20px 0;
     max-width: 60%;
     padding: 20px 0;
@@ -51,6 +56,12 @@ export const Image = styled.img`
   }
 
   @media only screen and (min-width: 768px) {
+    margin: 0 10px 10px;
+    height: 150px;
+    width: 230px;
+  }
+
+  @media only screen and (min-width: 1024px) {
     margin: 0 10px 10px;
     height: 190px;
     width: 300px;
@@ -87,7 +98,7 @@ export const Text = styled(BaseText)`
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1200px) {
     white-space: pre;
   }
 `;

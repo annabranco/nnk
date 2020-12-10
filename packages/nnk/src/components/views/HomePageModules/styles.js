@@ -9,7 +9,7 @@ export const SectionContainer = styled.div`
   border-radius: 2px;
   background-color: ${({ colors }) => colors && colors.primary};
   min-height: 50px;
-  max-width: 100vw;
+  max-width: 100%;
   padding: 10px;
   color: ${({ colors }) => colors && colors.secondary};
 
