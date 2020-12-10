@@ -104,7 +104,7 @@ const HelpUs = ({ state }) => {
       <SectionHeader
         colors={colors}
         img={Photo09}
-        position="0 30%"
+        position="100% 30%"
         socialLinks={socialLinks}
         title={texts.title}
       />
