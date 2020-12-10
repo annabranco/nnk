@@ -8,7 +8,7 @@ import {
 
 export const MainText = styled(BaseText)`
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   right: 4vw;
   white-space: pre;
   font-size: ${sizeLarge};
@@ -23,6 +23,10 @@ export const MainText = styled(BaseText)`
   letter-spacing: -0.1rem;
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
+
+  @media only screen and (min-height: 400px) {
+    bottom: 10px;
+  }
 
   @media only screen and (min-width: 375px) {
     font-size: ${sizeMediumTitle};
@@ -51,9 +55,9 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  height: 41vh;
+  height: 70vh;
   width: 100%;
-  background-position: 20% 15%;
+  background-position: 20% 8%;
 
   ${({ img, section }) => css`
     background-image: ${`url(${img})`};
@@ -61,16 +65,26 @@ export const PhotoContainer = styled.div`
     background-repeat: no-repeat;
   `}
 
+  @media only screen and (min-height: 400px) {
+    height: ${({ section }) => (section ? '41vh' : '60vh')};
+    background-position: 20% 15%;
+  }
+
   @media only screen and (min-width: 768px) {
     height: 45vh;
+
+    ${({ position = '10% 15%' }) => css`
+      background-position: ${position};
+      background-size: 150%;
+    `}
+  }
+  @media only screen and (min-width: 1024px) {
+    height: calc(100vh - 100px);
 
     ${({ position = 'center 15%' }) => css`
       background-position: ${position};
       background-size: 100%;
     `}
-  }
-  @media only screen and (min-width: 1024px) {
-    height: calc(100vh - 100px);
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';

@@ -13,7 +13,7 @@ export const getMediaQuery = () => {
     if (window.innerWidth < 768) {
       return MOBILE;
     }
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1200) {
       return TABLET;
     }
   }

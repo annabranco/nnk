@@ -5,13 +5,13 @@ import { PhotoContainer } from '../HomePageModules/Main/styles';
 import { Title, TitleWrapper } from './styles';
 import { ColorsPropType, ConfigSocialLinksPropType } from '../../../types';
 import { getMediaQuery } from '../../../utils';
-import { MOBILE } from '../../../constants/devices';
+import { DESKTOP } from '../../../constants/devices';
 
-const IS_MOBILE = getMediaQuery() === MOBILE;
+const IS_DESKTOP = getMediaQuery() === DESKTOP;
 
 const SectionHeader = ({ colors, img, socialLinks, position, title }) => (
   <PhotoContainer img={img} position={position} section>
-    {!IS_MOBILE && <SocialModule socialLinks={socialLinks} />}
+    {IS_DESKTOP && <SocialModule socialLinks={socialLinks} />}
 
     <TitleWrapper colors={colors}>
       <Title>{title}</Title>

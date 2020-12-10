@@ -29,6 +29,10 @@ export const TitleWrapper = styled.div`
     right: 0;
   } */
 
+  @media only screen and (min-width: 375px) {
+    bottom: 5%;
+  }
+
   @media only screen and (min-width: 768px) {
     right: unset;
     left: 0;
