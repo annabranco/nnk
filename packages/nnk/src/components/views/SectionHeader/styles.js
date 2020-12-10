@@ -11,6 +11,7 @@ Title.displayName = 'Title';
 export const TitleWrapper = styled.div`
   position: absolute;
   bottom: 10%;
+  left: 0;
   background: ${({ colors }) => colors && colors.primary};
   padding: 10px 20px 0px;
 `;
