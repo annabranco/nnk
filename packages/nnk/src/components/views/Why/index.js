@@ -22,6 +22,7 @@ import {
 import { StatePropType } from '../../../types';
 import config from '../../../setup/config';
 import ReportItem from '../ReportItem';
+import Link from '../../core/Link';
 
 const WhySection = ({ state }) => {
   const { colors, language } = state.theme;
@@ -48,6 +49,8 @@ const WhySection = ({ state }) => {
         const URL = reports[id]._links['wp:post_type'][0].href;
         latests.push(URL);
       });
+      latests.reverse();
+      console.log('$$$ latests', latests);
       setLatestReports(latests);
     }
   };
@@ -59,7 +62,7 @@ const WhySection = ({ state }) => {
   useEffect(() => {
     getLatestMonthlyReports();
   }, [state]);
-
+  console.log('$$$ latestReports', latestReports);
   return (
     <Section colors={colors}>
       <SectionHeader
@@ -78,20 +81,25 @@ const WhySection = ({ state }) => {
           <TextVictim>{texts.victim}</TextVictim>
         </TestimonialArea>
         <BorderViolenceArea>
-          <Title colors={colors}>{texts.borderViolence}</Title>
-          <LatestReportsArea>
-            {latestReports &&
-              latestReports.map(reportUrl => (
-                <ReportItem key={reportUrl} url={reportUrl} />
-              ))}
-          </LatestReportsArea>
-          <ReportLink colors={colors} link="/category/monthly-report/">
-            {texts.moreReports}
-          </ReportLink>
+          <Link link="/category/monthly-report/">
+            <Title colors={colors}>{texts.borderViolence}</Title>
+          </Link>
+          {latestReports.length > 0 && (
+            <>
+              <LatestReportsArea>
+                {latestReports.map(reportUrl => (
+                  <ReportItem key={reportUrl} url={reportUrl} />
+                ))}
+              </LatestReportsArea>
+              <ReportLink colors={colors} link="/category/monthly-report/">
+                {texts.moreReports}
+              </ReportLink>
+            </>
+          )}
         </BorderViolenceArea>
-        <RecentArea>
+        {/* <RecentArea>
           <Title colors={colors}>{texts.recentTestimonials}</Title>
-        </RecentArea>
+        </RecentArea> */}
       </Content>
     </Section>
   );

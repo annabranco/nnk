@@ -1,11 +1,19 @@
 import { css, styled } from 'frontity';
-import { sizeLargeTitle } from '../../../setup/themes';
+import {
+  sizeLarge,
+  sizeLargeTitle,
+  sizeSmallTitle
+} from '../../../setup/themes';
 import Link from '../Link';
 
 export const Container = styled.div`
   margin: 0;
-  width: 800px;
+  width: 100%;
   padding: 24px;
+
+  @media only screen and (min-width: 768px) {
+    width: 800px;
+  }
 `;
 Container.displayName = 'Container';
 
@@ -61,6 +69,11 @@ export const Content = styled.div`
       text-align: justify;
     `}
 
+  font-size: ${sizeSmallTitle};
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeLarge};
+  }
+
   /* WordPress Core Align Classes */
 
   @media (min-width: 420px) {
@@ -100,6 +113,7 @@ export const Content = styled.div`
   span {
     line-height: 2;
     margin: 20px auto;
+    font-size: ${sizeSmallTitle};
   }
 
   li:not([class]),
@@ -109,14 +123,12 @@ export const Content = styled.div`
     list-style: disc;
   }
 
-  span {
-    line-height: 2;
-    margin: 20px auto;
-  }
-
   form {
     margin: 30px auto;
-    margin-left: 50px;
+
+    @media only screen and (min-width: 768px) {
+      margin-left: 50px;
+    }
   }
 
   img {

@@ -76,6 +76,10 @@ export const Intro = styled(BaseText)`
   text-align: justify;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
+
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeLarge};
+  }
 `;
 Intro.displayName = 'Intro';
 
