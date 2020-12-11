@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
-import { getSocialLinks, validateForm } from '../../../utils';
+import {
+  allValidated,
+  getMediaQuery,
+  getSocialLinks,
+  validateForm
+} from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
 import { VolunteersInAction } from '../../../assets/images';
 import {
@@ -25,6 +30,7 @@ import {
   TextEmail
 } from './styles';
 import { StatePropType } from '../../../types';
+import { MOBILE, TABLET } from '../../../constants/devices';
 
 const INITIAL_FORM_DATA = {
   name: {
@@ -41,6 +47,8 @@ const INITIAL_FORM_DATA = {
   }
 };
 
+const DEVICE_VERSION = getMediaQuery() === MOBILE || getMediaQuery() === TABLET;
+
 const JumpToTheFieldSection = ({ state }) => {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [emailSent, toggleEmailSent] = useState(false);
@@ -53,9 +61,9 @@ const JumpToTheFieldSection = ({ state }) => {
     event.preventDefault();
     // eslint-disable-next-line no-undef
     Email.send({
-      SecureToken: 'a8424171-6a2c-42f8-a17e-24ff3da22895',
-      To: 'lady.anna.lannister@gmail.com',
-      From: 'lady.anna.lannister@gmail.com',
+      SecureToken: '5ee1f4fa-251a-4319-8cd5-71bb061b263a',
+      To: 'nnk56478991032@outlook.com',
+      From: 'nnk56478991032@outlook.com',
       Subject: 'New volunteer contact',
       Body: `<html><h2>Contact</h2><p>Name: <strong>${formData.name.value}</strong></p><p>E-mail: <strong>${formData.email.value}</strong></p><p>Message: <em>${formData.message.value}</em></p></html>`
     }).then(message => {
@@ -94,9 +102,9 @@ const JumpToTheFieldSection = ({ state }) => {
           <SectionHeader
             colors={colors}
             img={VolunteersInAction}
-            position="0 20%"
+            position="50% 20%"
             socialLinks={socialLinks}
-            title={texts.title}
+            title={DEVICE_VERSION ? texts.titleAlt : texts.title}
           />
           <Content>
             <Text>{texts.text1}</Text>
@@ -117,12 +125,7 @@ const JumpToTheFieldSection = ({ state }) => {
                 </Info>
               ))}
             </MoreInfo>
-            <FormArea
-              colors={colors}
-              // action="mailto:you@yourdmainhere.com"
-              // method="post"
-              enctype="text/plain"
-            >
+            <FormArea colors={colors} enctype="text/plain">
               <Field>
                 <Label htmlFor="name">{texts.form.fullName}</Label>
                 <TextField
@@ -151,12 +154,9 @@ const JumpToTheFieldSection = ({ state }) => {
                 />
               </Field>
               <SendButton
-                // type="submit"
-                // name="submit"
-                // value="Submit"
                 colors={colors}
                 onClick={sendEmail}
-                // disabled={!allValidated(formData)}
+                disabled={!allValidated(formData)}
               >
                 {texts.form.send}
               </SendButton>

@@ -21,6 +21,7 @@ export const TitleWrapper = styled.div`
   bottom: 10%;
   right: unset;
   left: 0;
+  min-width: 120px;
   background: ${({ colors }) => colors && colors.primary};
   padding: 10px 20px 0px;
 
@@ -30,6 +31,7 @@ export const TitleWrapper = styled.div`
   } */
 
   @media only screen and (min-width: 375px) {
+    left: 0;
     bottom: 5%;
   }
 
