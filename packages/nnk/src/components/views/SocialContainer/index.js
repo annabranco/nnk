@@ -8,7 +8,7 @@ const SocialModule = ({ size, socialLinks }) => (
   <SocialContainer size={size}>
     {socialLinks.map(
       ({ type, link, hide }) =>
-        !hide && <SocialLink key={type} type={type} link={link} size={size} />
+        !hide && <SocialLink key={type} link={link} size={size} type={type} />
     )}
   </SocialContainer>
 );

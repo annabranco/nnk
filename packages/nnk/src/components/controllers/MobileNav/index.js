@@ -2,8 +2,8 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import { connect, Global } from 'frontity';
 import { CloseIcon, HamburgerIcon } from '../Header/MenuIcon';
 import MenuModal from '../../views/MenuModal';
-import { MenuToggle } from './styles';
 import { ActionsPropType, StatePropType } from '../../../types';
+import { MenuToggle } from './styles';
 
 const MobileMenu = ({ state, actions }) => {
   const { colors, isMobileMenuOpen, language } = state.theme;

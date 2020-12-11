@@ -19,50 +19,8 @@ export const ArticleWrapper = styled.article`
     `}
 `;
 
-export const Title = styled.h3`
-  font-size: 2rem;
-  margin: 0;
-  padding-top: 24px;
-  padding-bottom: 8px;
-  box-sizing: border-box;
-
-  ${({ isReport, colors }) =>
-    isReport &&
-    css`
-      width: 100%;
-      text-align: center;
-      color: ${colors.terciary};
-    `}
-`;
-
 export const AuthorName = styled.span`
   font-size: 0.9em;
-`;
-
-export const InfoBox = styled.div`
-  ${({ isReport }) =>
-    isReport &&
-    css`
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      align-items: center;
-      text-align: justify;
-    `}
-`;
-
-export const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
-
-export const PublishDate = styled.span`
-  font-size: 0.9em;
-  ${({ isReport, colors }) =>
-    isReport &&
-    css`
-      color: ${colors.secondary};
-      text-align: center;
-    `}
 `;
 
 export const Excerpt = styled.div`
@@ -79,6 +37,47 @@ export const Excerpt = styled.div`
     `}
 `;
 
+export const InfoBox = styled.div`
+  ${({ isReport }) =>
+    isReport &&
+    css`
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      align-items: center;
+      text-align: justify;
+    `}
+`;
+
+export const PublishDate = styled.span`
+  font-size: 0.9em;
+  ${({ isReport, colors }) =>
+    isReport &&
+    css`
+      color: ${colors.secondary};
+      text-align: center;
+    `}
+`;
+
+export const StyledLink = styled(Link)`
+  padding: 15px 0;
+`;
+
+export const Title = styled.h3`
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+
+  ${({ isReport, colors }) =>
+    isReport &&
+    css`
+      width: 100%;
+      text-align: center;
+      color: ${colors.terciary};
+    `}
+`;
 // --- List
 
 export const Container = styled.section`

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
-import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
+import SectionHeader from '../SectionHeader';
 import { Mapv1, Photo05 } from '../../../assets/images';
-import { Content, Map, Section } from './styles';
 import { StatePropType } from '../../../types';
+import { Content, Map, Section } from './styles';
 
 const WhereSection = ({ state }) => {
   const { colors, language } = state.theme;

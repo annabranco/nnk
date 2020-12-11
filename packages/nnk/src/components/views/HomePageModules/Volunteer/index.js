@@ -1,13 +1,16 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { VolunteersInAction } from '../../../../assets/images';
-import {
-  ModuleWrapper,
-  MainImage,
-  Title,
-  Highlighted,
-  ImgLink
-} from './styles';
+import { getMediaQuery } from '../../../../utils';
+import { MOBILE } from '../../../../constants/devices';
 import { ColorsPropType, TextsVolunteerPropType } from '../../../../types';
+import {
+  Highlighted,
+  ImgLink,
+  MainImage,
+  MainImageAsBg,
+  ModuleWrapper,
+  Title
+} from './styles';
 
 const VolunteerModule = ({ colors, texts }) => {
   const styleTitle = title => {
@@ -25,7 +28,11 @@ const VolunteerModule = ({ colors, texts }) => {
     <ModuleWrapper>
       {styleTitle(texts.question)}
       <ImgLink link="/join-us/">
-        <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
+        {getMediaQuery() === MOBILE ? (
+          <MainImageAsBg img={VolunteersInAction} alt={texts.altMainImage} />
+        ) : (
+          <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
+        )}
       </ImgLink>
     </ModuleWrapper>
   );

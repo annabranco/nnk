@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import SectionHeader from '../SectionHeader';
+import config from '../../../setup/config';
 import { getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
+import ReportItem from '../ReportItem';
+import SectionHeader from '../SectionHeader';
 import { Photo07, Program03 } from '../../../assets/images';
+import { StatePropType } from '../../../types';
+import Link from '../../core/Link';
 import {
   BorderViolenceArea,
   Content,
   Intro,
+  LatestReportsArea,
   Photo,
-  RecentArea,
+  ReportLink,
   Section,
   SubTitle,
   TestimonialArea,
-  Title,
   TextTestimonial,
   TextVictim,
-  LatestReportsArea,
-  ReportLink
+  Title
 } from './styles';
-import { StatePropType } from '../../../types';
-import config from '../../../setup/config';
-import ReportItem from '../ReportItem';
 
 const WhySection = ({ state }) => {
   const { colors, language } = state.theme;
@@ -48,6 +48,7 @@ const WhySection = ({ state }) => {
         const URL = reports[id]._links['wp:post_type'][0].href;
         latests.push(URL);
       });
+      latests.reverse();
       setLatestReports(latests);
     }
   };
@@ -78,20 +79,25 @@ const WhySection = ({ state }) => {
           <TextVictim>{texts.victim}</TextVictim>
         </TestimonialArea>
         <BorderViolenceArea>
-          <Title colors={colors}>{texts.borderViolence}</Title>
-          <LatestReportsArea>
-            {latestReports &&
-              latestReports.map(reportUrl => (
-                <ReportItem key={reportUrl} url={reportUrl} />
-              ))}
-          </LatestReportsArea>
-          <ReportLink colors={colors} link="/category/monthly-report/">
-            {texts.moreReports}
-          </ReportLink>
+          <Link link="/category/monthly-report/">
+            <Title colors={colors}>{texts.borderViolence}</Title>
+          </Link>
+          {latestReports.length > 0 && (
+            <>
+              <LatestReportsArea>
+                {latestReports.map(reportUrl => (
+                  <ReportItem key={reportUrl} url={reportUrl} />
+                ))}
+              </LatestReportsArea>
+              <ReportLink colors={colors} link="/category/monthly-report/">
+                {texts.moreReports}
+              </ReportLink>
+            </>
+          )}
         </BorderViolenceArea>
-        <RecentArea>
+        {/* <RecentArea>
           <Title colors={colors}>{texts.recentTestimonials}</Title>
-        </RecentArea>
+        </RecentArea> */}
       </Content>
     </Section>
   );

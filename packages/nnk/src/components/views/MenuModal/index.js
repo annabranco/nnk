@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { func, string } from 'prop-types';
+import { string } from 'prop-types';
 import { ACTIONS_TEXTS, MAIN_SECTIONS } from '../../../db';
-import {
-  BackTitle,
-  Item,
-  LittleSmaller,
-  MenuContent,
-  MenuOverlay,
-  ModalWindow,
-  NavHeader,
-  ParentTitle,
-  Smaller,
-  Title
-} from './styles';
-import { ColorsPropType } from '../../../types';
 import Link from '../../core/Link';
+import { ColorsPropType } from '../../../types';
+import {
+  Title,
+  Smaller,
+  ParentTitle,
+  NavHeader,
+  ModalWindow,
+  MenuOverlay,
+  MenuContent,
+  LittleSmaller,
+  Item,
+  BackTitle
+} from './styles';
 
 const MenuModal = ({ colors, currentPage, language }) => {
   let navSections = MAIN_SECTIONS[language];

@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'frontity';
-import { any } from 'prop-types';
 import Link from '../Link';
 import FeaturedMedia from '../FeaturedMedia';
+import { ItemPropType, StatePropType } from '../../../types';
 import {
   ArticleWrapper,
   AuthorName,
@@ -12,7 +12,6 @@ import {
   Title,
   InfoBox
 } from './styles';
-import { ItemPropType, StatePropType } from '../../../types';
 
 /**
  * Item Component

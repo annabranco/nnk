@@ -1,13 +1,18 @@
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
+import { getMediaQuery } from '../../../utils';
+import { DESKTOP } from '../../../constants/devices';
 import SocialModule from '../SocialContainer';
+import { ColorsPropType, ConfigSocialLinksPropType } from '../../../types';
 import { PhotoContainer } from '../HomePageModules/Main/styles';
 import { Title, TitleWrapper } from './styles';
-import { ColorsPropType, ConfigSocialLinksPropType } from '../../../types';
 
-const SectionHeader = ({ colors, img, socialLinks, position, title }) => (
-  <PhotoContainer img={img} position={position}>
-    <SocialModule socialLinks={socialLinks} />
+const IS_DESKTOP = getMediaQuery() === DESKTOP;
+
+const SectionHeader = ({ colors, img, position, socialLinks, title }) => (
+  <PhotoContainer img={img} position={position} section>
+    {IS_DESKTOP && <SocialModule socialLinks={socialLinks} />}
+
     <TitleWrapper colors={colors}>
       <Title>{title}</Title>
     </TitleWrapper>

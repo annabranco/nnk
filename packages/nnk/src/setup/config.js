@@ -35,7 +35,7 @@ export default {
   ],
   partnersEmail: 'partners@nonamekitchen.org',
   account: {
-    name: 'NO NAMED KITCHEN',
+    name: 'NO NAME KITCHEN',
     address: 'C/ Jovellanos 8 – Gijon (Spain)',
     iban: 'ES90 0081 5155 7100 0198 4102',
     swift: 'BSABESBBXXX'

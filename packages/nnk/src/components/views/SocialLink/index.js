@@ -1,9 +1,9 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { string, func } from 'prop-types';
-import { SocialLogo } from './styles';
 import Link from '../../core/Link';
+import { SocialLogo } from './styles';
 
-const SocialLink = ({ type, link = '', onClick }) => {
+const SocialLink = ({ link = '', onClick, type }) => {
   let socialClassName;
   switch (type) {
     case 'Facebook':
@@ -35,9 +35,9 @@ const SocialLink = ({ type, link = '', onClick }) => {
 };
 
 SocialLink.propTypes = {
-  type: string.isRequired,
   link: string.isRequired,
-  onClick: func
+  onClick: func,
+  type: string.isRequired
 };
 
 SocialLink.defaultProps = {

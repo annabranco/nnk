@@ -5,7 +5,7 @@ import { DARK, LIGHT } from '../constants/theme';
 
 export const THEMES = {
   [DARK]: {
-    primary: '#212121',
+    primary: '#0c0c0c',
     secondary: '#f8f8ff',
     terciary: '#da002b',
     neutral: '#868686',
@@ -55,5 +55,5 @@ export const BaseText = styled.p`
   font-size: ${sizeMedium};
   font-weight: normal;
   line-height: 2.2;
-  white-space: wrap;
+  white-space: normal;
 `;

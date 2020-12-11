@@ -5,7 +5,9 @@ import {
   fontText,
   sizeLarge,
   sizeLargeTitle,
-  sizeXLargeTitle
+  sizeSmallTitle,
+  sizeXLargeTitle,
+  sizeXXLarge
 } from '../../../setup/themes';
 import Link from '../../core/Link';
 
@@ -19,35 +21,59 @@ const WhyArea = styled.div`
   text-align: justify;
 `;
 
-export const BorderViolenceArea = styled(WhyArea)``;
+export const BorderViolenceArea = styled(WhyArea)`
+  width: 100%;
+
+  @media only screen and (min-width: 1200px) {
+    width: 80%;
+  }
+`;
 BorderViolenceArea.displayName = 'BorderViolenceArea';
 
 export const Content = styled.div`
-  padding: 20px 80px;
+  padding: 20px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 20px 80px;
+  }
 `;
 Content.displayName = 'Content';
 
 export const Intro = styled(BaseText)`
   text-align: justify;
-  font-size: ${sizeLarge};
+  font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
+
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeLarge};
+  }
 `;
 Intro.displayName = 'Intro';
 
 export const LatestReportsArea = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 `;
 LatestReportsArea.displayName = 'LatestReportsArea';
 
 export const Photo = styled.div`
   margin: 20px auto;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   overflow: hidden;
+
+  @media only screen and (min-width: 1200px) {
+    height: 200px;
+    width: 200px;
+  }
+
   ${({ img }) =>
     css`
       border-radius: 50%;
@@ -87,7 +113,11 @@ SubTitle.displayName = 'SubTitle';
 
 export const TestimonialArea = styled(WhyArea)`
   margin: 20px auto;
-  width: 50%;
+  width: 100%;
+
+  @media only screen and (min-width: 1200px) {
+    width: 50%;
+  }
 `;
 TestimonialArea.displayName = 'TestimonialArea';
 
@@ -99,22 +129,35 @@ Text.displayName = 'Text';
 
 export const TextTestimonial = styled(Text)`
   text-align: center;
-  font-size: ${sizeLarge};
+  font-size: ${sizeSmallTitle};
   font-style: italic;
+
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeLarge};
+  }
 `;
 Intro.displayName = 'Intro';
 
 export const TextVictim = styled(Text)`
   margin: 20px auto;
   text-align: center;
-  font-size: ${sizeLarge};
+  font-size: ${sizeSmallTitle};
   font-weight: 700;
+
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeLarge};
+  }
 `;
 Intro.displayName = 'Intro';
 
 export const Title = styled(BaseTitle)`
   margin: 50px auto;
-  font-size: ${sizeXLargeTitle};
+  font-size: ${sizeXXLarge};
   color: ${({ colors }) => colors && colors.terciary};
+  text-align: center;
+
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeXLargeTitle};
+  }
 `;
 Title.displayName = 'Title';

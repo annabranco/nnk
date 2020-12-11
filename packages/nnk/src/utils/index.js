@@ -10,10 +10,10 @@ export const getSocialLinks = linksToDisplay => {
 
 export const getMediaQuery = () => {
   if (typeof window !== 'undefined' && window.document) {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth < 768) {
       return MOBILE;
     }
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth < 1200) {
       return TABLET;
     }
   }
@@ -35,7 +35,7 @@ export const validateForm = (type, value) => {
     case 'email':
       return emailRegex.test(value.toLowerCase());
     case 'name':
-      return value.length >= 4 && !!/\s/.exec(value) && !/\d/.exec(value);
+      return value.length >= 4 && !/\d/.exec(value);
     case 'message':
     default:
       return value.length > 2;
@@ -43,9 +43,4 @@ export const validateForm = (type, value) => {
 };
 
 export const allValidated = form =>
-  Object.keys(form).every(field => {
-    console.log('$$$ field', field);
-    console.log('$$$ form[field]', form[field]);
-    console.log('$$$ form[field]', form[field].isValid);
-    return form[field].isValid;
-  });
+  Object.keys(form).every(field => form[field].isValid);
