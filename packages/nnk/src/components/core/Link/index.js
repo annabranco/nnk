@@ -1,8 +1,8 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import { node, string } from 'prop-types';
-import { StyledLink } from './styles';
 import { ActionsPropType, StatePropType } from '../../../types';
+import { StyledLink } from './styles';
 
 const Link = ({
   state,

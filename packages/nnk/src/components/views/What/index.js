@@ -9,6 +9,7 @@ import {
   Program02,
   Program03
 } from '../../../assets/images';
+import { StatePropType } from '../../../types';
 import {
   Content,
   DescriptionArea,
@@ -20,7 +21,6 @@ import {
   SubTitle,
   Text
 } from './styles';
-import { StatePropType } from '../../../types';
 
 const WhatSection = ({ state }) => {
   const { colors, language } = state.theme;

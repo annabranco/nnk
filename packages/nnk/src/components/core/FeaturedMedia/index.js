@@ -1,8 +1,8 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import { number } from 'prop-types';
-import { Container, StyledImage } from './styles';
 import { StatePropType } from '../../../types';
+import { Container, StyledImage } from './styles';
 
 const FeaturedMedia = ({ state, id }) => {
   const media = state.source.attachment[id];

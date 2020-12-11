@@ -1,45 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import SectionHeader from '../SectionHeader';
 import config from '../../../setup/config';
 import { getSocialLinks, validateForm } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
+import SectionHeader from '../SectionHeader';
+import SocialModule from '../SocialContainer';
 import {
-  Photo09,
-  PayPal,
+  CrossedFork,
   GoFundMe,
-  Teaming,
-  CrossedFork
+  PayPal,
+  Photo09,
+  Teaming
 } from '../../../assets/images';
+import { StatePropType } from '../../../types';
 import {
   Content,
-  SectionFooter,
-  FooterText,
-  FooterSeparator,
-  Section,
-  SubsectionWrapper,
-  Values,
-  ValueTitle,
-  ValueDescription,
-  PartnersLogos,
-  Logo,
-  TransferInfo,
-  Instructions,
-  ItemTitle,
-  ItemDescription,
   DonorBox,
-  Subscription,
-  ValueItem,
-  SubscriptionTitle,
-  FormArea,
   Field,
+  FooterSeparator,
+  FooterText,
+  FormArea,
+  Instructions,
+  ItemDescription,
+  ItemTitle,
   Label,
-  TextField,
+  Logo,
+  PartnersLogos,
+  Section,
+  SectionFooter,
   SendButton,
-  SubscriptionTitleHighlight
+  Subscription,
+  SubscriptionTitle,
+  SubscriptionTitleHighlight,
+  SubsectionWrapper,
+  TextField,
+  TransferInfo,
+  ValueDescription,
+  ValueItem,
+  ValueTitle,
+  Values
 } from './styles';
-import { StatePropType } from '../../../types';
-import SocialModule from '../SocialContainer';
 
 const HelpUs = ({ state }) => {
   const { colors, language } = state.theme;
@@ -166,9 +166,9 @@ const HelpUs = ({ state }) => {
                   {texts.form.name}
                 </Label>
                 <TextField
-                  onKeyUp={event => updateForm(event.target.value, 'name')}
                   id="name"
                   name="name"
+                  onKeyUp={event => updateForm(event.target.value, 'name')}
                   placeholder={texts.form.name}
                   type="text"
                 />
@@ -178,9 +178,9 @@ const HelpUs = ({ state }) => {
                   {texts.form.email}
                 </Label>
                 <TextField
-                  onKeyUp={event => updateForm(event.target.value, 'email')}
                   id="email"
                   name="email"
+                  onKeyUp={event => updateForm(event.target.value, 'email')}
                   placeholder={texts.form.email}
                   type="email"
                 />

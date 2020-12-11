@@ -2,8 +2,8 @@ import React from 'react';
 import { connect, decode } from 'frontity';
 import Item from './list-item';
 import Pagination from './pagination';
-import { Container, Header } from './styles';
 import { StatePropType } from '../../../types';
+import { Container, Header } from './styles';
 
 const List = ({ state }) => {
   const { colors } = state.theme;

@@ -1,16 +1,16 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { VolunteersInAction } from '../../../../assets/images';
-import {
-  ModuleWrapper,
-  MainImage,
-  Title,
-  Highlighted,
-  ImgLink,
-  MainImageAsBg
-} from './styles';
-import { ColorsPropType, TextsVolunteerPropType } from '../../../../types';
 import { getMediaQuery } from '../../../../utils';
 import { MOBILE } from '../../../../constants/devices';
+import { ColorsPropType, TextsVolunteerPropType } from '../../../../types';
+import {
+  Highlighted,
+  ImgLink,
+  MainImage,
+  MainImageAsBg,
+  ModuleWrapper,
+  Title
+} from './styles';
 
 const VolunteerModule = ({ colors, texts }) => {
   const styleTitle = title => {

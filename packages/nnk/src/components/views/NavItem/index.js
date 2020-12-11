@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Link from '../../core/Link';
+import { ColorsPropType, NavSectionPropType } from '../../../types';
 import {
+  CollapsableItems,
+  Item,
+  ItemLink,
+  ItemsList,
   LittleSmaller,
   Smaller,
-  Item,
-  Title,
-  CollapsableItems,
-  ItemsList,
-  ItemLink,
-  SubItem
+  SubItem,
+  Title
 } from './styles';
-import { ColorsPropType, NavSectionPropType } from '../../../types';
 
 const NavItem = ({ colors, section }) => {
   const [isActive, toggleIsActive] = useState(false);
@@ -29,22 +29,22 @@ const NavItem = ({ colors, section }) => {
     <Item onMouseOut={() => toggleIsActive(false)}>
       <Link link={!section.subItems && section.link ? section.link : undefined}>
         <Title
-          isActive={isActive}
           colors={colors}
+          isActive={isActive}
           onMouseOver={() => toggleIsActive(true)}
         >
           {styleTitle(section.title)}
         </Title>
       </Link>
       <CollapsableItems isActive={isActive}>
-        <ItemsList onMouseOver={() => toggleIsActive(true)} colors={colors}>
+        <ItemsList colors={colors} onMouseOver={() => toggleIsActive(true)}>
           {section.subItems &&
             section.subItems.map(subItem => (
               <SubItem key={subItem.title} link={subItem.link}>
                 <ItemLink
-                  key={subItem.title}
-                  isLengthy={subItem.title.length > 7}
                   colors={colors}
+                  isLengthy={subItem.title.length > 7}
+                  key={subItem.title}
                 >
                   {subItem.title.toUpperCase()}
                 </ItemLink>

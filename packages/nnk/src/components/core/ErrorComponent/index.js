@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import { ERROR_TEXTS } from '../../../db';
-import { Container, Description, Text, Title } from './styles';
 import { StatePropType } from '../../../types';
+import { Container, Description, Text, Title } from './styles';
 
 const Page404 = ({ state }) => {
   const data = state.source.get(state.router.link);

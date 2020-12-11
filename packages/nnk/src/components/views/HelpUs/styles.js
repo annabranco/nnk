@@ -2,17 +2,17 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   BaseTitle,
+  fontTitle,
   sizeHugeTitle,
   sizeLarge,
   sizeLargeTitle,
-  sizeSmallTitle,
-  fontTitle,
   sizeMedium,
-  sizeSmall,
-  sizeXLargeTitle,
   sizeMediumTitle,
-  sizeXXLarge,
-  sizeXLarge
+  sizeSmall,
+  sizeSmallTitle,
+  sizeXLarge,
+  sizeXLargeTitle,
+  sizeXXLarge
 } from '../../../setup/themes';
 
 export const Content = styled.div`

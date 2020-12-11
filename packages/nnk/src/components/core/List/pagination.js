@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
 import Link from '../Link';
-import { Text } from './styles';
 import { ActionsPropType, StatePropType } from '../../../types';
+import { Text } from './styles';
 
 /**
  * Pagination Component

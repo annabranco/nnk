@@ -2,7 +2,10 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 import { Global, connect, Head } from 'frontity';
 import Switch from '@frontity/components/switch';
 // import Footer from '../../views/Footer';
+import { fontText, fontTitle } from '../../../setup/themes';
 import Header from '../Header';
+import HelpUs from '../../views/HelpUs';
+import JumpToTheFieldSection from '../../views/JumpToTheField';
 import List from '../../core/List';
 import Loading from '../../core/Loading';
 import MainPage from '../MainPage';
@@ -12,12 +15,9 @@ import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
 import WhySection from '../../views/Why';
-import JumpToTheFieldSection from '../../views/JumpToTheField';
+import { StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
-import { StatePropType } from '../../../types';
-import { fontText, fontTitle } from '../../../setup/themes';
-import HelpUs from '../../views/HelpUs';
 
 /**
  * Theme is the root React component of our theme. The one we will export

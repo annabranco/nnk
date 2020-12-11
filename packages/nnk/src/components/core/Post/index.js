@@ -1,25 +1,24 @@
 import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { any } from 'prop-types';
-import List from '../List';
+import { ACTIONS_TEXTS } from '../../../db';
 import FeaturedMedia from '../FeaturedMedia';
-import {
-  Author,
-  Container,
-  Content,
-  DateWrapper,
-  StyledLink,
-  Title,
-  BackToReports
-} from './styles';
+import List from '../List';
 import {
   ActionsPropType,
   LibrariesPropTypes,
   StatePropType
 } from '../../../types';
-import { ACTIONS_TEXTS } from '../../../db';
+import {
+  Author,
+  BackToReports,
+  Container,
+  Content,
+  DateWrapper,
+  StyledLink,
+  Title
+} from './styles';
 
-const Post = ({ state, actions, libraries }) => {
+const Post = ({ actions, libraries, state }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
@@ -49,8 +48,8 @@ const Post = ({ state, actions, libraries }) => {
       <div>
         <Title
           colors={colors}
-          isReport={isReport}
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+          isReport={isReport}
         />
 
         {/* Only display author and date on posts */}

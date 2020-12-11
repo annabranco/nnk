@@ -1,15 +1,14 @@
 import { connect } from 'frontity';
 import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import PageSection from '../../views/HomePageModules';
+import { getMediaQuery } from '../../../utils';
+import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
+import { MOBILE } from '../../../constants/devices';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
+import PageSection from '../../views/HomePageModules';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
-import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
-
-import { MainContainer } from './styles';
 import { StatePropType } from '../../../types';
-import { getMediaQuery } from '../../../utils';
-import { MOBILE } from '../../../constants/devices';
+import { MainContainer } from './styles';
 
 const MainPage = ({ state }) => {
   const { colors, language } = state.theme;

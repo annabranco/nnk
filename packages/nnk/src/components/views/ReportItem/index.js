@@ -30,10 +30,10 @@ const ReportItem = ({ state, url }) => {
               dangerouslySetInnerHTML={{ __html: report.title.rendered }}
             />
             <ReportImage
-              src={state.source.attachment[report.featured_media].source_url}
               alt={
                 state.source.attachment[report.featured_media].title.rendered
               }
+              src={state.source.attachment[report.featured_media].source_url}
             />
           </Report>
         </Link>

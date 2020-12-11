@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import Nav from '../Nav';
-import MobileNav from '../MobileNav';
-import SpanishFlag from '../../../assets/images/icons/es.png';
-import EnglishFlag from '../../../assets/images/icons/uk.png';
-import { HeaderContainer, LanguageFlag, Logo } from './styles';
 import config from '../../../setup/config';
-import { LIGHT, DARK } from '../../../constants/theme';
-import Link from '../../core/Link';
-import { StatePropType, ActionsPropType } from '../../../types';
 import { getMediaQuery } from '../../../utils';
 import { MOBILE } from '../../../constants/devices';
+import Link from '../../core/Link';
+import MobileNav from '../MobileNav';
+import Nav from '../Nav';
+import EnglishFlag from '../../../assets/images/icons/uk.png';
+import SpanishFlag from '../../../assets/images/icons/es.png';
+import { LIGHT, DARK } from '../../../constants/theme';
 import { LogoSmall } from '../../../assets/images';
+import { StatePropType, ActionsPropType } from '../../../types';
+import { HeaderContainer, LanguageFlag, Logo } from './styles';
 
 const Header = ({ state, actions }) => {
   const [activeLanguage, changeLanguage] = useState('es');

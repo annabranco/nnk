@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import SectionHeader from '../SectionHeader';
+import config from '../../../setup/config';
 import { getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
+import ReportItem from '../ReportItem';
+import SectionHeader from '../SectionHeader';
 import { Photo07, Program03 } from '../../../assets/images';
+import { StatePropType } from '../../../types';
+import Link from '../../core/Link';
 import {
   BorderViolenceArea,
   Content,
   Intro,
+  LatestReportsArea,
   Photo,
-  RecentArea,
+  ReportLink,
   Section,
   SubTitle,
   TestimonialArea,
-  Title,
   TextTestimonial,
   TextVictim,
-  LatestReportsArea,
-  ReportLink
+  Title
 } from './styles';
-import { StatePropType } from '../../../types';
-import config from '../../../setup/config';
-import ReportItem from '../ReportItem';
-import Link from '../../core/Link';
 
 const WhySection = ({ state }) => {
   const { colors, language } = state.theme;
@@ -50,7 +49,6 @@ const WhySection = ({ state }) => {
         latests.push(URL);
       });
       latests.reverse();
-      console.log('$$$ latests', latests);
       setLatestReports(latests);
     }
   };
@@ -62,7 +60,7 @@ const WhySection = ({ state }) => {
   useEffect(() => {
     getLatestMonthlyReports();
   }, [state]);
-  console.log('$$$ latestReports', latestReports);
+
   return (
     <Section colors={colors}>
       <SectionHeader

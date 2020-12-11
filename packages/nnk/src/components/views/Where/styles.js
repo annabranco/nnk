@@ -1,11 +1,4 @@
-import { styled, css } from 'frontity';
-import {
-  BaseText,
-  BaseTitle,
-  sizeHugeTitle,
-  sizeLarge,
-  sizeLargeTitle
-} from '../../../setup/themes';
+import { styled } from 'frontity';
 
 export const Content = styled.div`
   padding: 20px 0;

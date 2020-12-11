@@ -2,48 +2,48 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
 import {
-  allValidated,
-  getMediaQuery,
+  validateForm,
   getSocialLinks,
-  validateForm
+  getMediaQuery,
+  allValidated
 } from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
-import { VolunteersInAction } from '../../../assets/images';
-import {
-  Content,
-  Text,
-  Section,
-  MoreInfo,
-  Info,
-  Icon,
-  InfoTitle,
-  InfoDescription,
-  FormArea,
-  Field,
-  Label,
-  TextField,
-  SendButton,
-  MessageField,
-  Container,
-  Title,
-  Description,
-  TextEmail
-} from './styles';
-import { StatePropType } from '../../../types';
 import { MOBILE, TABLET } from '../../../constants/devices';
+import { VolunteersInAction } from '../../../assets/images';
+import { StatePropType } from '../../../types';
+import {
+  Container,
+  Content,
+  Description,
+  Field,
+  FormArea,
+  Icon,
+  Info,
+  InfoDescription,
+  InfoTitle,
+  Label,
+  MessageField,
+  MoreInfo,
+  Section,
+  SendButton,
+  Text,
+  TextEmail,
+  TextField,
+  Title
+} from './styles';
 
 const INITIAL_FORM_DATA = {
-  name: {
-    value: null,
-    isValid: false
-  },
   email: {
-    value: null,
-    isValid: false
+    isValid: false,
+    value: null
   },
   message: {
-    value: null,
-    isValid: false
+    isValid: false,
+    value: null
+  },
+  name: {
+    isValid: false,
+    value: null
   }
 };
 

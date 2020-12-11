@@ -1,14 +1,6 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { any } from 'prop-types';
-import {
-  BasicModuleWrapper,
-  TextWrapper,
-  Text,
-  DescriptionWrapper,
-  ImageTitle,
-  Image,
-  ImagesWrapper
-} from './styles';
+import { MOBILE } from '../../../../constants/devices';
+import { getMediaQuery } from '../../../../utils';
 import Link from '../../../core/Link';
 import { Photo01, Photo02, Photo03 } from '../../../../assets/images';
 import {
@@ -16,12 +8,19 @@ import {
   TextsHomePagePropType,
   TextsWhyPropType
 } from '../../../../types';
-import { getMediaQuery } from '../../../../utils';
-import { MOBILE } from '../../../../constants/devices';
+import {
+  BasicModuleWrapper,
+  DescriptionWrapper,
+  Image,
+  ImageTitle,
+  ImagesWrapper,
+  Text,
+  TextWrapper
+} from './styles';
 
 const photos = [Photo01, Photo02, Photo03];
 
-const BasicModule = ({ texts, whyTexts, colors }) => (
+const BasicModule = ({ colors, texts, whyTexts }) => (
   <BasicModuleWrapper>
     <DescriptionWrapper colors={colors}>
       <Text colors={colors}>{texts.description}</Text>
@@ -55,9 +54,9 @@ const BasicModule = ({ texts, whyTexts, colors }) => (
 );
 
 BasicModule.propTypes = {
+  colors: ColorsPropType.isRequired,
   texts: TextsHomePagePropType.isRequired,
-  whyTexts: TextsWhyPropType.isRequired,
-  colors: ColorsPropType.isRequired
+  whyTexts: TextsWhyPropType.isRequired
 };
 
 export default BasicModule;
