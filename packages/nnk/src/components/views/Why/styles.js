@@ -58,7 +58,12 @@ export const LatestReportsArea = styled.div`
   margin: auto;
 
   @media only screen and (min-width: 1200px) {
-    flex-direction: row;
+    ${({ items }) => css`
+      display: grid;
+      grid-template-columns: repeat(${items}, 1fr);
+      justify-items: start;
+      align-items: start;
+    `}/* flex-direction: row; */
   }
 `;
 LatestReportsArea.displayName = 'LatestReportsArea';
@@ -88,13 +93,18 @@ Photo.displayName = 'Photo';
 export const RecentArea = styled(WhyArea)``;
 RecentArea.displayName = 'RecentArea';
 
-export const ReportLink = styled(Link)`
+export const ReportLink = styled.a`
   margin: 40px auto 20px;
   font-size: ${sizeLarge};
   font-family: ${fontText};
   color: ${({ colors }) => colors && colors.secondary};
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ colors }) => colors && colors.terciary};
+    font-weight: 700;
+  }
 `;
 ReportLink.displayName = 'ReportLink';
 

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
-import { getSocialLinks } from '../../../utils';
+import { fetchData, getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
@@ -25,6 +25,9 @@ import {
 } from './styles';
 import Carroussel from '../Carroussel';
 
+const BORDER_VIOLENCE_URL = 'https://www.borderviolence.eu';
+const MONTHLY_REPORTS_URL = `${BORDER_VIOLENCE_URL}/wp-json/wp/v2/posts?categories=28`;
+
 const WhySection = ({ state }) => {
   const { colors, language } = state.theme;
   const [latestReports, setLatestReports] = useState([]);
@@ -32,26 +35,19 @@ const WhySection = ({ state }) => {
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
 
   const getLatestMonthlyReports = () => {
-    const categories = state.source.category;
-
-    if (Object.keys(categories).length > 0) {
-      const reports = [];
-      const latests = [];
-      // eslint-disable-next-line no-unused-vars
-      Object.entries(categories).forEach(([id, category]) => {
-        if (category.link.includes('monthly-report')) {
-          reports.push(category);
-        }
-      });
-      const latestIds = Object.keys(reports).splice(-config.latestReportsNum);
-
-      latestIds.forEach(id => {
-        // eslint-disable-next-line no-underscore-dangle
-        const URL = reports[id]._links['wp:post_type'][0].href;
-        latests.push(URL);
-      });
-      latests.reverse();
-      setLatestReports(latests);
+    // const categories = state.source.category;
+    if (latestReports.length === 0) {
+      fetchData(MONTHLY_REPORTS_URL)
+        .then(resp => {
+          const reports = resp;
+          if (reports.length > 0) {
+            reports.sort().splice(config.latestReportsNum);
+            setLatestReports(reports);
+          }
+        })
+        .catch(error =>
+          console.error(`Failed to get report from ${URL}. ${error}.`)
+        );
     }
   };
 
@@ -79,17 +75,26 @@ const WhySection = ({ state }) => {
           <Carroussel items={texts.testimonials} />
         </TestimonialArea>
         <BorderViolenceArea>
-          <Link link="/category/monthly-report/">
+          <Link link={`${BORDER_VIOLENCE_URL}/category/monthly-report/`}>
             <Title colors={colors}>{texts.borderViolence}</Title>
           </Link>
           {latestReports.length > 0 && (
             <>
-              <LatestReportsArea>
-                {latestReports.map(reportUrl => (
-                  <ReportItem key={reportUrl} url={reportUrl} />
+              <LatestReportsArea items={config.latestReportsNum}>
+                {latestReports.map(report => (
+                  <ReportItem
+                    colors={colors}
+                    key={report.id}
+                    rel="noreferrer"
+                    report={report}
+                    target="_blank"
+                  />
                 ))}
               </LatestReportsArea>
-              <ReportLink colors={colors} link="/category/monthly-report/">
+              <ReportLink
+                colors={colors}
+                href={`${BORDER_VIOLENCE_URL}/category/monthly-report/`}
+              >
                 {texts.moreReports}
               </ReportLink>
             </>
