@@ -8,23 +8,25 @@ export const HeaderContainer = styled.header`
   align-items: flex-start;
   background-color: ${({ colors }) => colors.primary};
   width: 100%;
-  padding: 0 20px;
+  padding: 2px 20px;
+  height: 100px;
+  border-bottom: ${({ colors }) => `4px solid ${colors.terciary}`};
 
-  ${({ activeLanguage, colors }) =>
+  /* ${({ activeLanguage, colors }) =>
     activeLanguage === 'en' &&
     css`
       height: 110px;
       border-bottom: 4px solid ${colors.terciary};
-    `}
+    `} */
 
   @media only screen and (min-width: 768px) {
     justify-content: space-around;
     align-items: flex-end;
-    padding: 0 40px;
+    padding: 2px 40px;
   }
 
   @media only screen and (min-width: 1200px) {
-    padding: 0 80px;
+    padding: 2px 80px;
   }
 `;
 HeaderContainer.displayName = 'HeaderContainer';

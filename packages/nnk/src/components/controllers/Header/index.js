@@ -14,15 +14,17 @@ import { StatePropType, ActionsPropType } from '../../../types';
 import { HeaderContainer, LanguageFlag, Logo } from './styles';
 
 const Header = ({ state, actions }) => {
+  // eslint-disable-next-line no-unused-vars
   const [activeLanguage, changeLanguage] = useState('es');
   const { colors } = state.theme;
+  // eslint-disable-next-line no-unused-vars
   const { changeTheme } = actions.theme;
   const MOBILE_VERSION = getMediaQuery() === MOBILE;
 
-  const onClickFlag = () => {
-    changeLanguage(activeLanguage === 'en' ? 'es' : 'en');
-    changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
-  };
+  // const onClickFlag = () => {
+  //   changeLanguage(activeLanguage === 'en' ? 'es' : 'en');
+  //   changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
+  // };
 
   useEffect(() => {
     if (activeLanguage === 'es') {
@@ -32,18 +34,16 @@ const Header = ({ state, actions }) => {
     }
   }, [activeLanguage]);
 
-  console.log('$$$ getMediaQuery()', getMediaQuery());
-
   return (
     <HeaderContainer activeLanguage={activeLanguage} colors={colors}>
       <Link link="/">
         <Logo activeLanguage={activeLanguage} src={LogoSmall} />
       </Link>
       {MOBILE_VERSION ? <MobileNav /> : <Nav />}
-      <LanguageFlag
+      {/* <LanguageFlag
         src={activeLanguage === 'en' ? EnglishFlag : SpanishFlag}
         onClick={onClickFlag}
-      />
+      /> */}
     </HeaderContainer>
   );
 };

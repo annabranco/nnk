@@ -1,13 +1,13 @@
-import { LIGHT } from '../constants/theme';
+import { DARK } from '../constants/theme';
 import { THEMES } from './themes';
 
 export default {
   defaultLanguage: 'en',
-  theme: LIGHT,
+  theme: DARK,
   mainPadding: '10px',
-  buttonsBackground: THEMES[LIGHT].purewWhite,
-  buttonsText: THEMES[LIGHT].primary,
-  buttonsHighlight: THEMES[LIGHT].terciary,
+  buttonsBackground: THEMES[DARK].purewWhite,
+  buttonsText: THEMES[DARK].primary,
+  buttonsHighlight: THEMES[DARK].terciary,
   latestReportsNum: 2,
   socialLinks: [
     {
