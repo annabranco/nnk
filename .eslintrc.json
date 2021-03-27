@@ -6,8 +6,7 @@
     "plugin:import/recommended",
     "plugin:react/recommended",
     "prettier",
-    "prettier/react",
-    "react-app"
+    "prettier/react"
   ],
 
   "plugins" : ["react", "react-hooks", "prettier", "jsx-a11y", "import"],

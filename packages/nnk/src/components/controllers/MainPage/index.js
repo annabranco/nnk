@@ -9,6 +9,7 @@ import PageSection from '../../views/HomePageModules';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
 import { StatePropType } from '../../../types';
 import { MainContainer } from './styles';
+import SubscriptionArea from '../../views/Subscribe';
 
 const MainPage = ({ state }) => {
   const { colors, language } = state.theme;
@@ -38,6 +39,7 @@ const MainPage = ({ state }) => {
       <PageSection size="large" colors={colors}>
         <VolunteerModule texts={volunteerText} colors={colors} />
       </PageSection>
+      <SubscriptionArea colors={colors} />
     </MainContainer>
   );
 };
