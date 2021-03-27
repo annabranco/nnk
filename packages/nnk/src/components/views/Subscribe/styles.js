@@ -7,3 +7,12 @@ export const SubscribeContainer = styled.div`
   align-items: center;
 `;
 SubscribeContainer.displayName = 'SubscribeContainer';
+
+export const SubscribeFrame = styled.iframe`
+  width: 640;
+  height: 800;
+  frameborder: 0;
+  marginheight: 0;
+  marginwidth: 0;
+`;
+SubscribeContainer.displayName = 'SubscribeContainer';

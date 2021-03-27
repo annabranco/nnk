@@ -1,23 +1,41 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import React from 'react';
+import React, { useRef } from 'react';
 import { ColorsPropType } from '../../../types';
-import { SubscribeContainer } from './styles';
+import { SubscribeContainer, SubscribeFrame } from './styles';
 
-const SubscriptionArea = ({ colors }) => (
-  <SubscribeContainer colors={colors}>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfDAwap34je_R2Kt-H3QvK6tLAxRB3TMNGFmmo3_Yn5Xd3IPg/viewform?embedded=true"
-      width="640"
-      height="800"
-      frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
-      title="subscription"
-    >
-      Loading…
-    </iframe>
-  </SubscribeContainer>
-);
+const SubscriptionArea = ({ colors }) => {
+  const FrameElement = useRef();
+
+  const setAttributes = attrs => {
+    Object.entries(attrs).forEach(([key, value]) => {
+      FrameElement.current.setAttribute(key, value);
+    });
+  };
+
+  const onLoad = () => {
+    setAttributes({
+      width: 640,
+      height: 800,
+      frameborder: 0,
+      marginheight: 0,
+      marginwidth: 0
+    });
+  };
+
+  return (
+    <SubscribeContainer colors={colors}>
+      <SubscribeFrame
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfDAwap34je_R2Kt-H3QvK6tLAxRB3TMNGFmmo3_Yn5Xd3IPg/viewform?embedded=true"
+        frameBorder="0"
+        title="subscription"
+        ref={FrameElement}
+        onLoad={onLoad}
+      >
+        Loading…
+      </SubscribeFrame>
+    </SubscribeContainer>
+  );
+};
 
 SubscriptionArea.propTypes = {
   colors: ColorsPropType.isRequired

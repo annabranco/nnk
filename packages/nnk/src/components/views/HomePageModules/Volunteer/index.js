@@ -16,11 +16,11 @@ import {
 const VolunteerModule = ({ colors, texts }) => {
   const styleTitle = title => {
     const words = title.split(' ');
-    const lastWord = words.pop();
+    const lastWords = words.splice(-2);
     return (
       <Title colors={colors}>
         {words.join(' ')}
-        <Highlighted colors={colors}> {lastWord}</Highlighted>?
+        <Highlighted colors={colors}> {lastWords.join(' ')}</Highlighted>?
       </Title>
     );
   };

@@ -12,6 +12,7 @@ export const Home = require('./bgs/home.jpg');
 export const Photo01 = require('./spots/base01.jpeg');
 export const Photo02 = require('./spots/base02.jpeg');
 export const Photo03 = require('./spots/base03.jpeg');
+
 export const Photo04 = require('./spots/base04.jpg');
 export const Photo05 = require('./spots/base05.jpg');
 export const Photo06 = require('./spots/base06.jpeg');
@@ -27,6 +28,7 @@ export const GoFundMe = require('./logos/gofundme.png');
 export const Teaming = require('./logos/teaming.png');
 
 // What
+export const WhatHero = require('./spots/cooking.jpeg');
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.jpeg');

@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
   background: ${({ colors }) => colors && colors.primary};
   height: 55px;
   padding: 0 100px;
-  padding-top: 10px;
+  padding-top: 20px;
 `;
 FooterContainer.displayName = 'FooterContainer';
 
@@ -17,8 +17,8 @@ export const FooterText = styled.p`
   margin: 10px 0;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  font-weight: normal;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: ${({ colors }) => colors && colors.secondary};
 `;
 FooterText.displayName = 'FooterText';
@@ -27,8 +27,8 @@ export const FooterLink = styled(Link)`
   margin: 10px 0;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  font-weight: normal;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: ${({ colors }) => colors && colors.secondary};
   cursor: pointer;
 
