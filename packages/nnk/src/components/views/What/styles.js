@@ -7,7 +7,6 @@ import {
   sizeMedium,
   sizeMediumTitle,
   sizeSmallTitle,
-  sizeXLarge,
   sizeXLargeTitle
 } from '../../../setup/themes';
 
@@ -89,7 +88,7 @@ export const Program = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   margin: 10px auto 30px;
-  max-width: 80vw;
+  /* max-width: 80vw; */
 
   @media only screen and (min-width: 768px) {
     margin: 20px auto 50px;
@@ -97,12 +96,12 @@ export const Program = styled.div`
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
-    margin: 50px 20px;
+    margin: 50px 0;
   }
 
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
-    margin: 30px 50px;
+    margin: 30px 0;
   }
 `;
 Program.displayName = 'Program';
