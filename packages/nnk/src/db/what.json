@@ -1,18 +1,18 @@
 {
   "en": {
     "title": "What?",
-    "intro": "No Name Kitchen is an independent organization working to support the basic needs of human beings who decide to migrate in the pursuit of a better life. Our actions are oriented to ensure that equal treatment is a resource available to everyone and that no injustice remain hidden. NNK teams are in border crossing spots where people on-the-move need more support to face violent push-backs, fatigue and sickness, and our program includes a threefold intervention. ",
+    "intro": "Our actions are oriented to support People on the Move who are facing violent push-backs, fatigue and sickness at the stepdoor of the EU. NNK runs a threefold intervention to ensure that equal treatment is a resource available to everyone and that no injustice is hidden.",
     "programsTitle": "Our Programs to support people´s rights",
     "programs": [
       {
         "id": "healthProgram",
         "title": "HEALTH ON THE MOVE",
-        "description": "NNK volunteers provide First Aid to PoM who cannot access the public healthcare systems in the hosting countries. In addition, NNK distribute hygiene kits to promote healthy practices, and for cases in need of specialists (dentist, ophthalmologist…), NNK covers the treatment through donations of its supporters."
+        "description": "NNK provides First Aid on the spot to PoM who cannot access public healthcare systems. In addition, NNK distribute hygiene kits to promote healthy practices and covers cases in need of specialized treatments (dentist, ophthalmologist…)."
       },
       {
         "id": "foodProgram",
         "title": "FOOD & MORE",
-        "description": "Every day, volunteers distribute hot meals, food packs and vouchers to mitigate the hunger, while providing non-food items such as clothes, shoes or sleeping bags, to support PoM during their journeys."
+        "description": "NNK teams on the field distribute food, clothes, blankets and sleeping bags to provide the people with means to their protection. Also, in Bosnia NNK has a food vouchers empowering people in need to buy what they need in local supermarkets."
       },
               {
         "id": "advocacyProgram",
