@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
 import { getMediaQuery } from '../../../utils';
@@ -10,7 +11,7 @@ import { Title, TitleWrapper } from './styles';
 const IS_DESKTOP = getMediaQuery() === DESKTOP;
 
 const SectionHeader = ({ colors, img, position, socialLinks, title }) => (
-  <PhotoContainer img={img} position={position} section>
+  <PhotoContainer colors={colors} img={img} position={position} section>
     {IS_DESKTOP && <SocialModule socialLinks={socialLinks} />}
 
     <TitleWrapper colors={colors}>

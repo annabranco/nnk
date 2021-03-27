@@ -58,6 +58,7 @@ export const PhotoContainer = styled.div`
   height: 70vh;
   width: 100%;
   background-position: 20% 8%;
+  border-bottom: 4px solid ${({ colors }) => colors && colors.terciary};
 
   ${({ img, section }) => css`
     background-image: ${`url(${img})`};

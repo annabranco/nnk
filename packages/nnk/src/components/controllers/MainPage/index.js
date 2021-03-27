@@ -27,8 +27,9 @@ const MainPage = ({ state }) => {
     <MainContainer colors={colors}>
       <MainModule />
       <PageSection
-        size={getMediaQuery() === MOBILE ? 'full' : 'large'}
         colors={colors}
+        noBorder
+        size={getMediaQuery() === MOBILE ? 'full' : 'large'}
       >
         <BasicModule
           texts={homepageTexts}
