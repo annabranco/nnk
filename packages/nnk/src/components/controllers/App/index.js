@@ -1,8 +1,9 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Global, connect, Head } from 'frontity';
+// eslint-disable-next-line import/no-unresolved
 import Switch from '@frontity/components/switch';
-// import Footer from '../../views/Footer';
 import { fontText, fontTitle } from '../../../setup/themes';
+import Footer from '../../views/Footer';
 import Header from '../Header';
 import HelpUs from '../../views/HelpUs';
 import JumpToTheFieldSection from '../../views/JumpToTheField';
@@ -24,7 +25,7 @@ import { MainArea } from './styles';
  * in roots.
  */
 const App = ({ state }) => {
-  const { colors } = state.theme;
+  const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
   // console.log('$$$ navigator.userAgent', window.navigator.userAgent);
 
@@ -81,7 +82,7 @@ const App = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </MainArea>
-      {/* <Footer colors={colors} /> */}
+      <Footer colors={colors} language={language} />
     </>
   );
 };

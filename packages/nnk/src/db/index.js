@@ -1,5 +1,6 @@
 export { default as ACTIONS_TEXTS } from './actions.json';
 export { default as ERROR_TEXTS } from './error404.json';
+export { default as FOOTER_TEXTS } from './footer.json';
 export { default as HEADER_TEXTS } from './header.json';
 export { default as DONATION_TEXTS } from './help-us.json';
 export { default as HOMEPAGE_TEXTS } from './homepage.json';

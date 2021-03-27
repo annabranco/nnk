@@ -1,4 +1,5 @@
 import { styled } from 'frontity';
+import Link from '../../core/Link';
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -12,7 +13,17 @@ export const FooterContainer = styled.div`
 `;
 FooterContainer.displayName = 'FooterContainer';
 
-export const FooterLink = styled.p`
+export const FooterText = styled.p`
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: ${({ colors }) => colors && colors.secondary};
+`;
+FooterText.displayName = 'FooterText';
+
+export const FooterLink = styled(Link)`
   margin: 10px 0;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
