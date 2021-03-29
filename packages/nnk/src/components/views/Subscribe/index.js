@@ -1,9 +1,10 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import { string } from 'prop-types';
 import React, { useRef } from 'react';
 import { ColorsPropType } from '../../../types';
 import { SubscribeContainer, SubscribeFrame } from './styles';
 
-const SubscriptionArea = ({ colors }) => {
+const SubscriptionArea = ({ colors, size }) => {
   const FrameElement = useRef();
 
   const setAttributes = attrs => {
@@ -14,7 +15,7 @@ const SubscriptionArea = ({ colors }) => {
 
   const onLoad = () => {
     setAttributes({
-      width: 640,
+      width: size === 'small' ? 340 : 640,
       height: 800,
       frameborder: 0,
       marginheight: 0,
@@ -38,7 +39,12 @@ const SubscriptionArea = ({ colors }) => {
 };
 
 SubscriptionArea.propTypes = {
-  colors: ColorsPropType.isRequired
+  colors: ColorsPropType.isRequired,
+  size: string
+};
+
+SubscriptionArea.defaultProps = {
+  size: 'large'
 };
 
 export default SubscriptionArea;
