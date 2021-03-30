@@ -21,4 +21,4 @@ export const SubscribeFrame = styled.iframe`
   marginheight: 0;
   marginwidth: 0;
 `;
-SubscribeContainer.displayName = 'SubscribeContainer';
+SubscribeFrame.displayName = 'SubscribeFrame';

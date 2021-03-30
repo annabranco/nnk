@@ -24,15 +24,8 @@ export const FooterText = styled.p`
 `;
 FooterText.displayName = 'FooterText';
 
-export const FooterLink = styled(Link)`
-  margin: 10px 0;
-  text-transform: uppercase;
-  font-family: ${fontTitle};
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: ${({ colors }) => colors && colors.secondary};
+export const FooterLink = styled(FooterText)`
   cursor: pointer;
-
   transition: color ease 0.3s;
 
   &:hover {
