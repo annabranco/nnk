@@ -122,11 +122,11 @@ const HelpUs = ({ state }) => {
               </ValueItem>
             ))}
           </Values>
-          <PartnersLogos>
+          {/* <PartnersLogos>
             <Logo src={PayPal} />
             <Logo src={GoFundMe} />
             <Logo src={Teaming} />
-          </PartnersLogos>
+          </PartnersLogos> */}
           <TransferInfo colors={colors}>
             <Instructions>{texts.transfer}</Instructions>
             <ItemTitle>
@@ -202,13 +202,13 @@ const HelpUs = ({ state }) => {
           </Subscription> */}
         </SubsectionWrapper>
       </Content>
-      <SectionFooter colors={colors}>
+      {/* <SectionFooter colors={colors}>
         <FooterText>{texts.justice}</FooterText>
         <FooterSeparator src={CrossedFork} />
         <FooterText>{texts.hope}</FooterText>
         <FooterSeparator src={CrossedFork} />
         <FooterText>{texts.dignity}</FooterText>
-      </SectionFooter>
+      </SectionFooter> */}
     </Section>
   );
 };

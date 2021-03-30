@@ -1,10 +1,16 @@
 import { styled } from 'frontity';
 
+export const LoadingSpinner = styled.img`
+  width: 40px;
+`;
+LoadingSpinner.displayName = 'LoadingSpinner';
+
 export const SubscribeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  overflow-y: auto;
 `;
 SubscribeContainer.displayName = 'SubscribeContainer';
 

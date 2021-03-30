@@ -6,12 +6,12 @@ import { MOBILE } from '../../../constants/devices';
 import Link from '../../core/Link';
 import MobileNav from '../MobileNav';
 import Nav from '../Nav';
-import EnglishFlag from '../../../assets/images/icons/uk.png';
-import SpanishFlag from '../../../assets/images/icons/es.png';
+// import EnglishFlag from '../../../assets/images/icons/uk.png';
+// import SpanishFlag from '../../../assets/images/icons/es.png';
 import { LIGHT, DARK } from '../../../constants/theme';
 import { LogoSmall } from '../../../assets/images';
 import { StatePropType, ActionsPropType } from '../../../types';
-import { HeaderContainer, LanguageFlag, Logo } from './styles';
+import { HeaderContainer, Logo } from './styles';
 
 const Header = ({ state, actions }) => {
   // eslint-disable-next-line no-unused-vars

@@ -1,26 +1,35 @@
 import { connect } from 'frontity';
-import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { getMediaQuery } from '../../../utils';
-import { HOMEPAGE_TEXTS, WHY_TEXTS, VOLUNTEER_TEXTS } from '../../../db';
+import {
+  HOMEPAGE_TEXTS,
+  WHY_TEXTS,
+  VOLUNTEER_TEXTS,
+  DONATION_TEXTS
+} from '../../../db';
 import { MOBILE } from '../../../constants/devices';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
 import PageSection from '../../views/HomePageModules';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
 import { StatePropType } from '../../../types';
-import { MainContainer } from './styles';
+import { MainContainer, SubscriptionButton } from './styles';
 import SubscriptionArea from '../../views/Subscribe';
+import AppModal from '../../core/AppModal';
 
 const MainPage = ({ state }) => {
+  const [displayModal, toggleModal] = useState(false);
   const { colors, language } = state.theme;
   let homepageTexts = HOMEPAGE_TEXTS[language];
   let whyTexts = WHY_TEXTS[language];
-  let volunteerText = VOLUNTEER_TEXTS[language];
+  let volunteerTexts = VOLUNTEER_TEXTS[language];
+  let donationTexts = DONATION_TEXTS[language];
 
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
     whyTexts = WHY_TEXTS[language];
-    volunteerText = VOLUNTEER_TEXTS[language];
+    volunteerTexts = VOLUNTEER_TEXTS[language];
+    donationTexts = DONATION_TEXTS[language];
   }, [language]);
 
   return (
@@ -38,9 +47,16 @@ const MainPage = ({ state }) => {
         />
       </PageSection>
       <PageSection size="large" colors={colors}>
-        <VolunteerModule texts={volunteerText} colors={colors} />
+        <VolunteerModule texts={volunteerTexts} colors={colors} />
       </PageSection>
-      <SubscriptionArea colors={colors} />
+      <SubscriptionButton colors={colors} onClick={toggleModal}>
+        {donationTexts.subscribeTo} {donationTexts.noNameNews}
+      </SubscriptionButton>
+      {displayModal && (
+        <AppModal closeAction={() => toggleModal(false)}>
+          <SubscriptionArea colors={colors} />
+        </AppModal>
+      )}
     </MainContainer>
   );
 };

@@ -384,7 +384,7 @@ export const TitleWrapper = styled.div`
 TitleWrapper.displayName = 'TitleWrapper';
 
 export const TransferInfo = styled.div`
-  margin: 30px auto;
+  margin: 0 auto;
   width: 100%;
   background: ${({ colors }) => colors && colors.terciary};
   padding: 10px;
@@ -398,7 +398,7 @@ export const TransferInfo = styled.div`
   }
 
   @media only screen and (min-width: 1200px) {
-    width: 70%;
+    width: 90%;
     text-align: center;
     border-radius: 0;
   }
