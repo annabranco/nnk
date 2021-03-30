@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import { connect } from 'frontity';
@@ -29,12 +30,17 @@ const ReportItem = ({ state, url }) => {
             <ReportTitle
               dangerouslySetInnerHTML={{ __html: report.title.rendered }}
             />
-            <ReportImage
-              alt={
-                state.source.attachment[report.featured_media].title.rendered
-              }
-              src={state.source.attachment[report.featured_media].source_url}
-            />
+            {state.source.attachment[report.featured_media].source_url && (
+              <ReportImage
+                alt={
+                  state.source.attachment[report.featured_media].title
+                    ? state.source.attachment[report.featured_media].title
+                        .rendered
+                    : ''
+                }
+                src={state.source.attachment[report.featured_media].source_url}
+              />
+            )}
           </Report>
         </Link>
       )}

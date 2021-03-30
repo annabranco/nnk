@@ -16,7 +16,6 @@ export const Photo03 = require('./spots/base03.jpeg');
 export const Photo04 = require('./spots/base04.jpg');
 export const Photo05 = require('./spots/base05.jpg');
 export const Photo06 = require('./spots/base06.jpeg');
-export const Photo07 = require('./spots/base07.png');
 export const Photo08 = require('./spots/base08.png');
 export const Photo09 = require('./spots/base09.jpeg');
 export const VolunteersInAction = require('./spots/volunteers.jpeg');
@@ -35,6 +34,12 @@ export const Program03 = require('./spots/program03.jpeg');
 
 // Where
 export const Mapv1 = require('./maps/mapv1.jpg');
+
+// Why
+export const WhyPhoto = require('./spots/base07.jpg');
+export const Testimony01 = require('./spots/testimony01.png');
+export const Testimony02 = require('./spots/testimony02.jpg');
+export const Testimony03 = require('./spots/testimony03.png');
 
 // Other
 export const Loading = require('./icons/loading.gif');

@@ -6,7 +6,7 @@ import { getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { Photo07, Program03 } from '../../../assets/images';
+import { WhyPhoto, Testimony01 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
 import {
@@ -66,8 +66,8 @@ const WhySection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={Photo07}
-        position="0 80%"
+        img={WhyPhoto}
+        position="0 70%"
         socialLinks={socialLinks}
         title={texts.title}
       />
@@ -75,7 +75,7 @@ const WhySection = ({ state }) => {
         <Intro>{texts.fullInto}</Intro>
         <SubTitle colors={colors}>{texts.programsTitle}</SubTitle>
         <TestimonialArea colors={colors}>
-          <Photo img={Program03} />
+          <Photo img={Testimony01} />
           <TextTestimonial>{texts.testimonial}</TextTestimonial>
           <TextVictim>{texts.victim}</TextVictim>
         </TestimonialArea>
