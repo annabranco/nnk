@@ -1,4 +1,5 @@
 import { styled } from 'frontity';
+import { fontTitle } from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const FooterContainer = styled.div`
@@ -16,7 +17,7 @@ FooterContainer.displayName = 'FooterContainer';
 export const FooterText = styled.p`
   margin: 10px 0;
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: ${fontTitle};
   font-size: 1.4rem;
   font-weight: 400;
   color: ${({ colors }) => colors && colors.secondary};
@@ -26,7 +27,7 @@ FooterText.displayName = 'FooterText';
 export const FooterLink = styled(Link)`
   margin: 10px 0;
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: ${fontTitle};
   font-size: 1.4rem;
   font-weight: 400;
   color: ${({ colors }) => colors && colors.secondary};

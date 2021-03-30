@@ -131,7 +131,6 @@ Intro.displayName = 'Intro';
 
 export const ItemDescription = styled.span`
   display: block;
-
   margin-left: 15px;
   font-family: ${fontTitle};
   font-size: ${sizeLarge};

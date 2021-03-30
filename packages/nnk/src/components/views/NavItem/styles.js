@@ -1,5 +1,5 @@
 import { styled, css } from 'frontity';
-import { BaseTitle } from '../../../setup/themes';
+import { BaseTitle, fontTitle } from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const CollapsableItems = styled.div`
@@ -26,7 +26,7 @@ export const ItemLink = styled.li`
   height: 40px;
   width: ${({ isLengthy }) => (isLengthy ? '160px' : 'auto')};
   list-style: none;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: ${fontTitle};
   cursor: pointer;
 
   ${({ colors }) =>
@@ -62,7 +62,7 @@ export const NavItem2 = styled.div`
   flex-shrink: 0;
   margin: 0 16px;
   padding: 0;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: ${fontTitle};
   font-size: 1.6rem;
   color: #fff;
 

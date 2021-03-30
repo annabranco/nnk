@@ -1,22 +1,23 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { node, string } from 'prop-types';
-import { ModalOverlay } from './styles';
+import React from 'react';
+import { node, func } from 'prop-types';
+import { CloseButton, ModalOverlay } from './styles';
 
-const AppModal = ({ children }) => {
-  const [a, b] = useState();
-
-  return <ModalOverlay>{children}</ModalOverlay>;
-};
+const AppModal = ({ children, closeAction }) => (
+  <ModalOverlay>
+    {closeAction && <CloseButton onClick={closeAction} />}
+    {children}
+  </ModalOverlay>
+);
 
 AppModal.propTypes = {
-  children: node
+  children: node,
+  closeAction: func
 };
 
 AppModal.defaultProps = {
-  children: undefined
+  children: undefined,
+  closeAction: null
 };
 
 export default AppModal;

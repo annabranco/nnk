@@ -8,6 +8,21 @@ import {
 } from '../../../setup/themes';
 import Link from '../Link';
 
+export const CloseButton = styled.p`
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 100;
+  color: crimson;
+  cursor: pointer;
+
+  &::before {
+    content: 'x';
+    font-size: 2rem;
+  }
+`;
+CloseButton.displayName = 'CloseButton';
+
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
