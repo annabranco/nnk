@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';

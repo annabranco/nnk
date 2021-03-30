@@ -38,7 +38,7 @@ const WhatSection = ({ state }) => {
       <SectionHeader
         colors={colors}
         img={WhatHero}
-        position="0 20%"
+        position="0 62%"
         socialLinks={socialLinks}
         title={texts.title}
       />

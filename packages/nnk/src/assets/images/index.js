@@ -3,7 +3,7 @@
 // Header
 export const IconES = require('./icons/es.png');
 export const IconUK = require('./icons/uk.png');
-export const LogoSmall = require('./logos/logo-small.png');
+export const LogoSmall = require('./logos/logo-small-alt.png');
 export const Logo = require('./logos/logo.png');
 
 // Main
@@ -28,10 +28,13 @@ export const GoFundMe = require('./logos/gofundme.png');
 export const Teaming = require('./logos/teaming.png');
 
 // What
-export const WhatHero = require('./spots/cooking.jpeg');
+export const WhatHero = require('./spots/logistics.jpeg');
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.jpeg');
 
 // Where
 export const Mapv1 = require('./maps/mapv1.jpg');
+
+// Other
+export const Loading = require('./icons/loading.gif');
