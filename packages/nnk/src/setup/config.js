@@ -16,7 +16,7 @@ export default {
     },
     {
       type: 'Twitter',
-      link: 'https://www.twitter.com/nonamekitchen1'
+      link: 'https://www.twitter.com/NoNameKitchen1'
     },
     {
       type: 'Instagram',
@@ -24,12 +24,12 @@ export default {
     },
     {
       type: 'Youtube',
-      link: 'https://www.youtube.com/no_name_kitchen/',
+      link: 'https://www.youtube.com/channel/UCfhpNwjUjUxnN1ala_lKlYQ',
       hide: false
     },
     {
       type: 'Email',
-      link: 'mailto:nnk@nnk.org',
+      link: 'mailto:info@nonamekitchen.org',
       hide: false
     }
   ],
