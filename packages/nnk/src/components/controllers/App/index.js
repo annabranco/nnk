@@ -19,7 +19,6 @@ import WhySection from '../../views/Why';
 import { StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
-import PrivacyDeclaration from '../../views/PrivacyDeclaration';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -76,7 +75,7 @@ const App = ({ state }) => {
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
-          <PrivacyDeclaration when={state.router.link === '/news/'} />
+          {/* <PrivacyDeclaration when={state.router.link === '/news/'} /> */}
 
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />

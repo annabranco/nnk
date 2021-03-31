@@ -5,14 +5,17 @@
     "fullInto": "Many people are forced to escape from armed conflicts, discrimination or poverty. Most of them flee to find in Europe the peace and civil rights that they are missing at home. However, there are no safe pathways to migrate and people are exposed to hunger, pain and trauma while authorities reject them applying violence instead of sustainable solutions.",
     "testimonials": [
       {
+        "imageId": "Testimony01",
         "text": "\"It was midnight. We were in the forest in Croatia when the police stopped us. I told them I need asylum, because my life is in danger, but they laugh at me and started to hit us with their sticks...\"",
         "victim": "Ava, 26, moving from Iran to Germany"
       },
-            {
+      {
+        "imageId": "Testimony02",
         "text": "\"They beat us one by one and then they told us to go to Bosnia. There was a river to cross to enter Bosnia. So each of us crossed the river after being beaten up. Some people got beaten up hard, some people got beaten up less. Me, the last one, they beat a lot. The first and the last ones get beaten up the most. One grabbed my shirt and another one punched me. Like that I couldn’t protect my face. When the policeman got tired from beating, the second one grabbed the back of my shirt. I told them: “Stop! You’re hurting me. I cannot breathe.” He grabbed me like that and kicked my face two times with his leg.\"",
         "victim": "Khalida, 18, moving from Algeria to France"
       },
-            {
+      {
+        "imageId": "Testimony03",
         "text": "\"After [the electric shock], I don’t see anything. I was like sleep...like a dream. When I woke up, the police hit me in my hand and in my face. After the police hurt me, I can’t walk. I was crawling on the ground and when the police see me, they came to me and started kicking me in the legs\"",
         "victim": "Mohamed, 16, moving from Iraq to the Netherlands"
       }

@@ -283,6 +283,12 @@ export const StatePropType = shape({
   frontity: FrontityPropType.isRequired
 });
 
+export const TestimonialPropType = shape({
+  imageId: string.isRequired,
+  text: string.isRequired,
+  victim: string.isRequired
+});
+
 export const TextsHomePagePropType = shape({
   description: string.isRequired,
   subItems: arrayOf(TextSubItemsPropType)

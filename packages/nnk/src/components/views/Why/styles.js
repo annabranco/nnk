@@ -157,7 +157,7 @@ export const Title = styled(BaseTitle)`
   text-align: center;
 
   @media only screen and (min-width: 1200px) {
-    font-size: ${sizeXLargeTitle};
+    font-size: ${sizeLargeTitle};
   }
 `;
 Title.displayName = 'Title';

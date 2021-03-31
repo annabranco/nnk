@@ -6,7 +6,7 @@ import { getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { WhyPhoto, Testimony01 } from '../../../assets/images';
+import { WhyPhoto } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
 import {
@@ -23,6 +23,7 @@ import {
   TextVictim,
   Title
 } from './styles';
+import Carroussel from '../Carroussel';
 
 const WhySection = ({ state }) => {
   const { colors, language } = state.theme;
@@ -59,7 +60,7 @@ const WhySection = ({ state }) => {
   }, [language]);
 
   useEffect(() => {
-    getLatestMonthlyReports();
+    // getLatestMonthlyReports();
   }, [state]);
 
   return (
@@ -75,9 +76,7 @@ const WhySection = ({ state }) => {
         <Intro>{texts.fullInto}</Intro>
         <SubTitle colors={colors}>{texts.programsTitle}</SubTitle>
         <TestimonialArea colors={colors}>
-          <Photo img={Testimony01} />
-          <TextTestimonial>{texts.testimonial}</TextTestimonial>
-          <TextVictim>{texts.victim}</TextVictim>
+          <Carroussel items={texts.testimonials} />
         </TestimonialArea>
         <BorderViolenceArea>
           <Link link="/category/monthly-report/">
