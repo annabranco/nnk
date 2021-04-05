@@ -16,6 +16,7 @@ import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
 import WhySection from '../../views/Why';
+import Favicon from '../../../assets/images/favicon.png';
 import { StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
@@ -36,6 +37,8 @@ const App = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
+        <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
           rel="stylesheet"
