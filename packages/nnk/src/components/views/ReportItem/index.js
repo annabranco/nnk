@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import { fetchData } from '../../../utils';
+import { BorderViolence } from '../../../assets/images';
 import { ColorsPropType, ItemPropType } from '../../../types';
 import { Report, ReportImage, ReportLink, ReportTitle } from './styles';
 
@@ -31,12 +32,20 @@ const ReportItem = ({ colors, report }) => {
           <Report colors={colors}>
             <ReportTitle
               colors={colors}
-              dangerouslySetInnerHTML={{ __html: report.title.rendered }}
+              dangerouslySetInnerHTML={{
+                __html: report.title.rendered.replace(
+                  'Balkan Region Report &#8211; ',
+                  ''
+                )
+              }}
             />
-            {featMedia && (
+            {true && (
               <ReportImage
-                alt={featMedia.title.rendered}
-                src={featMedia.source_url}
+                alt={
+                  (featMedia && featMedia.title && featMedia.title.rendered) ||
+                  'Border Violence Report'
+                }
+                img={(featMedia && featMedia.source_url) || BorderViolence}
               />
             )}
           </Report>

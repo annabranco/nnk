@@ -22,12 +22,13 @@ export const VolunteersInAction = require('./spots/volunteers.jpeg');
 export const CrossedFork = require('./icons/crossedFork.png');
 
 // Partners
-export const PayPal = require('./logos/paypal.png');
+export const BorderViolence = require('./icons/border-violence.jpg');
 export const GoFundMe = require('./logos/gofundme.png');
+export const PayPal = require('./logos/paypal.png');
 export const Teaming = require('./logos/teaming.png');
 
 // What
-export const WhatHero = require('./spots/logistics.jpeg');
+export const HeroWhat = require('./spots/logistics.jpeg');
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.jpeg');
@@ -36,7 +37,7 @@ export const Program03 = require('./spots/program03.jpeg');
 export const Mapv1 = require('./maps/mapv1.jpg');
 
 // Why
-export const WhyPhoto = require('./spots/base07.jpg');
+export const HeroWhy = require('./spots/base07.jpg');
 export const Testimony01 = require('./spots/testimony01.png');
 export const Testimony02 = require('./spots/testimony02.jpg');
 export const Testimony03 = require('./spots/testimony03.png');

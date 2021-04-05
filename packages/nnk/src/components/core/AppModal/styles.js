@@ -2,6 +2,7 @@
 
 import { css, styled } from 'frontity';
 import {
+  fontText,
   sizeLarge,
   sizeLargeTitle,
   sizeSmallTitle
@@ -13,13 +14,29 @@ export const CloseButton = styled.p`
   top: 20px;
   right: 50px;
   z-index: 100;
-  color: crimson;
-  cursor: pointer;
+  color: red;
+  color: ${({ colors }) => colors.terciary};
 
-  &::before {
-    content: 'x';
-    font-size: 2rem;
+  cursor: pointer;
+  border: ${({ colors }) => `2px solid ${colors.terciary}`};
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px white;
   }
+
+  ${({ text }) =>
+    text &&
+    css`
+      &::before {
+        content: '${text}';
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: ${fontText};
+        font-size: 1rem;
+      }
+    `};
 `;
 CloseButton.displayName = 'CloseButton';
 

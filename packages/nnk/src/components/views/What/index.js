@@ -5,7 +5,7 @@ import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHAT_TEXTS } from '../../../db';
 import {
-  WhatHero,
+  HeroWhat,
   Program01,
   Program02,
   Program03
@@ -37,7 +37,7 @@ const WhatSection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={WhatHero}
+        img={HeroWhat}
         position="0 62%"
         socialLinks={socialLinks}
         title={texts.title}

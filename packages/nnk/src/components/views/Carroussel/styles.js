@@ -1,10 +1,5 @@
 import { styled, css } from 'frontity';
-import {
-  fontText,
-  sizeLarge,
-  sizeMedium,
-  sizeSmall
-} from '../../../setup/themes';
+import { fontText, sizeLarge, sizeMedium } from '../../../setup/themes';
 
 export const CarrousselWrapper = styled.div`
   display: flex;
@@ -14,7 +9,13 @@ export const CarrousselWrapper = styled.div`
 `;
 CarrousselWrapper.displayName = 'CarrousselWrapper';
 
-export const CurrentTestimonial = styled.div``;
+export const CurrentTestimonial = styled.div`
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 CurrentTestimonial.displayName = 'CurrentTestimonial';
 
 export const NextTestimonial = styled.div``;

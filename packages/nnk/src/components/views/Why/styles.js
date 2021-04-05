@@ -22,7 +22,7 @@ const WhyArea = styled.div`
 `;
 
 export const BorderViolenceArea = styled(WhyArea)`
-  width: 100%;
+  max-width: 100%;
 
   @media only screen and (min-width: 1200px) {
     width: 80%;
@@ -56,14 +56,10 @@ export const LatestReportsArea = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+  flex-wrap: wrap;
 
   @media only screen and (min-width: 1200px) {
-    ${({ items }) => css`
-      display: grid;
-      grid-template-columns: repeat(${items}, 1fr);
-      justify-items: start;
-      align-items: start;
-    `}/* flex-direction: row; */
+    flex-direction: row;
   }
 `;
 LatestReportsArea.displayName = 'LatestReportsArea';
@@ -163,7 +159,7 @@ Intro.displayName = 'Intro';
 export const Title = styled(BaseTitle)`
   margin: 50px auto;
   font-size: ${sizeXXLarge};
-  color: ${({ colors }) => colors && colors.terciary};
+  color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 
   @media only screen and (min-width: 1200px) {

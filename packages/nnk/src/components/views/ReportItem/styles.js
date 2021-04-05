@@ -12,8 +12,9 @@ export const Report = styled.div`
     & > h3 {
       color: ${({ colors }) => colors && colors.terciary};
     }
-    & > img {
+    & > div {
       border: 1px solid red;
+      box-shadow: 0 0 5px 0 red;
     }
   }
 `;
@@ -33,9 +34,15 @@ export const ReportTitle = styled.h3`
 `;
 ReportTitle.displayName = 'ReportTitle';
 
-export const ReportImage = styled.img`
-  min-height: 110px;
+export const ReportImage = styled.div`
+  min-height: 260px;
+  min-width: 160px;
   width: 100%;
   border: 1px solid white;
+  border-radius: 5px;
+  background-image: ${({ img }) => `url(${img})`};
+  background-position: 10% bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 ReportImage.displayName = 'ReportImage';

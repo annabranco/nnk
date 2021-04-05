@@ -28,6 +28,9 @@ const Post = ({ actions, libraries, state }) => {
   const isReport = post.slug.includes('report');
   const texts = ACTIONS_TEXTS[language];
 
+  console.log('$$$ data', data);
+  console.log('$$$ post: ', post);
+
   /**
    * Once the post has loaded in the DOM, prefetch both the
    * home posts and the list component so if the user visits

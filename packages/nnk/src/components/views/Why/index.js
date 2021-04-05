@@ -6,7 +6,7 @@ import { fetchData, getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { WhyPhoto } from '../../../assets/images';
+import { HeroWhy } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
 import {
@@ -14,13 +14,10 @@ import {
   Content,
   Intro,
   LatestReportsArea,
-  Photo,
   ReportLink,
   Section,
   SubTitle,
   TestimonialArea,
-  TextTestimonial,
-  TextVictim,
   Title
 } from './styles';
 import Carroussel from '../Carroussel';
@@ -56,14 +53,16 @@ const WhySection = ({ state }) => {
   }, [language]);
 
   useEffect(() => {
-    // getLatestMonthlyReports();
+    getLatestMonthlyReports();
   }, [state]);
+
+  console.log('$$$ latestReports', latestReports);
 
   return (
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={WhyPhoto}
+        img={HeroWhy}
         position="0 70%"
         socialLinks={socialLinks}
         title={texts.title}
