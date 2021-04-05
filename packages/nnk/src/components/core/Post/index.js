@@ -9,12 +9,10 @@ import {
   StatePropType
 } from '../../../types';
 import {
-  Author,
   BackToReports,
   Container,
   Content,
   DateWrapper,
-  StyledLink,
   Title
 } from './styles';
 
@@ -22,7 +20,7 @@ const Post = ({ actions, libraries, state }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
-  const author = state.source.author[post.author];
+  // const author = state.source.author[post.author];
   const date = new Date(post.date);
   const Html2React = libraries.html2react.Component;
   const isReport = post.slug.includes('report');
@@ -58,13 +56,13 @@ const Post = ({ actions, libraries, state }) => {
         {/* Only display author and date on posts */}
         {data.isPost && (
           <div>
-            {author && (
+            {/* {author && (
               <StyledLink link={author.link}>
                 <Author colors={colors}>
                   By <b>{author.name}</b>
                 </Author>
               </StyledLink>
-            )}
+            )} */}
             <DateWrapper colors={colors} isReport={isReport}>
               {' '}
               Published on <b>{date.toDateString()}</b>

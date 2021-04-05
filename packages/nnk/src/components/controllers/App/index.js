@@ -20,6 +20,7 @@ import Favicon from '../../../assets/images/favicon.png';
 import { StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
+import News from '../News';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -28,7 +29,6 @@ import { MainArea } from './styles';
 const App = ({ state }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
-  // console.log('$$$ navigator.userAgent', window.navigator.userAgent);
 
   return (
     <>
@@ -78,6 +78,8 @@ const App = ({ state }) => {
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
+          {/* <News when={state.router.link === '/news/'} /> */}
+
           {/* <PrivacyDeclaration when={state.router.link === '/news/'} /> */}
 
           <Loading when={data.isFetching} />

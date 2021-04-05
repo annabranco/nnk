@@ -4,6 +4,40 @@ import App from './components/controllers/App';
 import config from './setup/config';
 import { THEMES } from './setup/themes';
 
+const newsListHandler = {
+  name: 'newsList',
+  priority: 1,
+  pattern: '/news/',
+  func: async ({ link, state, libraries, force }) => {
+    const { page } = libraries.source.parse(link);
+
+    const response = await libraries.source.api.get({
+      endpoint: 'posts',
+      params: { page }
+      // params: { per_page: 100 }
+      // params: { categories: 262 }
+    });
+
+    const items = await libraries.source.populate({
+      response,
+      state,
+      force
+    });
+
+    const totalItems = await libraries.source.getTotal(response, items.length);
+    const totalPages = await libraries.source.getTotalPages(response, 0);
+
+    Object.assign(state.source.data[link], {
+      // id: 262,
+      isArchive: true,
+      isCategory: true,
+      items,
+      totalItems,
+      totalPages
+    });
+  }
+};
+
 const nnkTheme = {
   name: '@frontity/nnk-theme',
   roots: {
@@ -47,19 +81,24 @@ const nnkTheme = {
           isReady: true,
           isFetching: false
         }
+        // '/news/': {
+        //   id: 262,
+        //   isReady: false,
+        //   isFetching: false,
+        //   type: 'category'
+        // }
         // '/store/': {
         //   isReady: true,
         //   isFetching: false
         // },
-        // '/news/': {
-        //   isReady: true,
-        //   isFetching: false
-        // }
       }
     }
   },
   actions: {
     theme: {
+      init: ({ libraries }) => {
+        libraries.source.handlers.push(newsListHandler);
+      },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
       },

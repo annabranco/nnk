@@ -56,8 +56,6 @@ const WhySection = ({ state }) => {
     getLatestMonthlyReports();
   }, [state]);
 
-  console.log('$$$ latestReports', latestReports);
-
   return (
     <Section colors={colors}>
       <SectionHeader
