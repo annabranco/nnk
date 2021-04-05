@@ -1,5 +1,5 @@
 import { styled } from 'frontity';
-import { fontText, sizeMedium } from '../../../setup/themes';
+import { fontText, fontTitle, sizeMedium } from '../../../setup/themes';
 
 export const Report = styled.div`
   display: flex;
@@ -26,11 +26,11 @@ export const ReportLink = styled.a`
 ReportLink.displayName = 'ReportLink';
 
 export const ReportTitle = styled.h3`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: ${sizeMedium};
   color: ${({ colors }) => colors && colors.secondary};
-  font-family: ${fontText};
-  font-weight: 700;
+  font-family: ${fontTitle};
+  /* font-weight: 700; */
 `;
 ReportTitle.displayName = 'ReportTitle';
 
