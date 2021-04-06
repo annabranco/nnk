@@ -8,7 +8,7 @@ export const HamburgerIcon = ({ size, color }) => {
       width={size}
       color={color}
       viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="https://www.w3.org/2000/svg"
     >
       <title>Open menu</title>
       <g fill="currentColor">
@@ -31,7 +31,7 @@ export const CloseIcon = ({ size, color }) => {
       width={size}
       viewBox="0 0 24 24"
       color={color}
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="https://www.w3.org/2000/svg"
     >
       <title>Close Menu</title>
       <g fill="currentColor">

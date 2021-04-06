@@ -6,7 +6,7 @@ import { StatePropType } from '../../../types';
 import { Container, StyledImage } from './styles';
 import { fetchData } from '../../../utils';
 
-const MEDIA_PATH = 'http://www.nonamekitchen.org/wp-json/wp/v2/media';
+const MEDIA_PATH = 'https://www.nonamekitchen.org/wp-json/wp/v2/media';
 
 const FeaturedMedia = ({ state, id, news, read }) => {
   const [media, updateMedia] = useState(state.source.attachment[id]);
