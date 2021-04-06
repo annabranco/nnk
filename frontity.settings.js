@@ -24,7 +24,7 @@ const settings = {
       name: '@frontity/wp-source',
       state: {
         source: {
-          api: 'http://www.nonamekitchen.org/wp-json/'
+          api: 'https://www.nonamekitchen.org/wp-json/'
         }
       }
     },
