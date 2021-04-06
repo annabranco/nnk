@@ -2,14 +2,28 @@ import { css, styled } from 'frontity';
 import {
   sizeLarge,
   sizeLargeTitle,
+  sizeMedium,
+  sizeSmall,
   sizeSmallTitle
 } from '../../../setup/themes';
 import Link from '../Link';
+
+export const PostWrapper = styled.div`
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+PostWrapper.displayName = 'PostWrapper';
 
 export const Container = styled.div`
   margin: 0;
   width: 100%;
   padding: 24px;
+  background: ${({ colors }) => colors && colors.secondary};
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
 
   @media only screen and (min-width: 768px) {
     width: 800px;
@@ -22,12 +36,9 @@ export const Title = styled.h1`
   margin-top: 24px;
   margin-bottom: 8px;
   color: ${({ colors }) => colors && colors.terciary};
-
-  ${({ isReport }) =>
-    isReport &&
-    css`
-      font-size: ${sizeLargeTitle};
-    `}
+  font-size: ${sizeLargeTitle};
+  text-align: justify;
+  padding: 5px 15px;
 `;
 Title.displayName = 'Title';
 
@@ -36,22 +47,47 @@ export const StyledLink = styled(Link)`
 `;
 StyledLink.displayName = 'StyledLink';
 
-export const BackToReports = styled.div`
-  color: ${({ colors }) => colors && colors.terciary};
+export const BackToReports = styled.p`
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  border: ${({ colors }) => `2px solid ${colors.terciary}`};
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: ${({ colors }) => colors && colors.terciary};
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: ${sizeMedium};
+  width: 15%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+
+    & > i {
+      transform: translate(-5px, 0);
+      transition: transform ease 0.5s;
+    }
+  }
 `;
 BackToReports.displayName = 'BackToReports';
+
+export const BackToReportsArrow = styled.i`
+  transition: transform ease 0.2s;
+`;
+BackToReportsArrow.displayName = 'BackToReportsArrow';
 
 export const Author = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: ${({ colors }) => colors && colors.secondary};
+  color: ${({ colors }) => colors && colors.primary};
 `;
 Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
   display: inline;
   font-size: 0.9em;
-  color: ${({ colors }) => colors && colors.secondary};
+  color: ${({ colors }) => colors && colors.primary};
 `;
 DateWrapper.displayName = 'DateWrapper';
 
@@ -61,14 +97,14 @@ DateWrapper.displayName = 'DateWrapper';
  */
 export const Content = styled.div`
   word-break: break-word;
-  color: ${({ colors }) => colors && colors.secondary};
+  color: ${({ colors }) => colors && colors.primary};
   ${({ isReport }) =>
     isReport &&
     css`
       margin: 40px auto;
       text-align: justify;
     `}
-
+  padding: 0 5px;
   font-size: ${sizeSmallTitle};
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
@@ -108,6 +144,8 @@ export const Content = styled.div`
     line-height: 2;
     margin: 20px auto;
     width: 100%;
+    color: ${({ colors }) => colors && colors.primary};
+    text-align: justify;
   }
 
   span {

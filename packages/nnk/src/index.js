@@ -13,8 +13,8 @@ const newsListHandler = {
 
     const response = await libraries.source.api.get({
       endpoint: 'posts',
-      params: { page }
-      // params: { per_page: 100 }
+      // params: { page }
+      params: { page, per_page: 12 }
       // params: { categories: 262 }
     });
 
@@ -29,7 +29,7 @@ const newsListHandler = {
 
     Object.assign(state.source.data[link], {
       // id: 262,
-      isArchive: true,
+      isNews: true,
       isCategory: true,
       items,
       totalItems,
@@ -53,6 +53,7 @@ const nnkTheme = {
       language: config.defaultLanguage,
       colors: THEMES.dark,
       menu: [],
+      postsRead: [],
       isMobileMenuOpen: false,
       featured: {
         showOnList: true,
@@ -107,6 +108,9 @@ const nnkTheme = {
       },
       changeTheme: ({ state }) => newTheme => {
         state.theme.colors = THEMES[newTheme];
+      },
+      updateRead: ({ state }) => postsArray => {
+        state.theme.postsRead = postsArray;
       }
     }
   },

@@ -1,24 +1,36 @@
-import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies
+import React, { useEffect } from 'react';
 import { connect } from 'frontity';
-import { MAIN_SECTIONS } from '../../../db';
+import Pagination from '../../core/List/pagination';
 import { StatePropType } from '../../../types';
+import { Container } from './styles';
+import { NEWS_SECTIONS } from '../../../db';
+import NewsItem from '../../views/NewsItem';
 
 const News = ({ state }) => {
-  const { colors, language } = state.theme;
-  const news = state.source.data['/news/'].items;
-  let navSections = MAIN_SECTIONS[language];
-
-  console.log('$$$ state.source.data', state.source.data);
-  console.log('$$$ news', news);
+  const { colors, language, postsRead } = state.theme;
+  const data = state.source.get(state.router.link);
+  let newsSection = NEWS_SECTIONS[language];
 
   useEffect(() => {
-    navSections = MAIN_SECTIONS[language];
+    newsSection = NEWS_SECTIONS[language];
   }, [language]);
 
   return (
-    <div>
-      <p>Hello!</p>
-    </div>
+    <Container colors={colors}>
+      {data.items.map(({ type, id }) => {
+        const item = state.source[type][id];
+        return (
+          <NewsItem
+            key={item.id}
+            item={item}
+            read={postsRead.includes(item.id)}
+            texts={newsSection}
+          />
+        );
+      })}
+      <Pagination />
+    </Container>
   );
 };
 

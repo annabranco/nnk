@@ -17,7 +17,8 @@ const ActionSourcePropType = shape({
 const ActionThemePropType = shape({
   toggleMobileMenu: func.isRequired,
   closeMobileMenu: func.isRequired,
-  changeTheme: func.isRequired
+  changeTheme: func.isRequired,
+  updateRead: func.isRequired
 });
 
 const FeaturedPropType = shape({
@@ -313,4 +314,12 @@ export const TextsWhyPropType = shape({
 
 export const TextsWhyFullPropType = shape({
   en: TextsWhyPropType
+});
+
+export const TextsNewsPropType = shape({
+  publishedOn: string.isRequired
+});
+
+export const TextsNewsFullPropType = shape({
+  en: TextsNewsPropType
 });

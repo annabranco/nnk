@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Global, connect, Head } from 'frontity';
 // eslint-disable-next-line import/no-unresolved
 import Switch from '@frontity/components/switch';
@@ -17,18 +17,23 @@ import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
 import WhySection from '../../views/Why';
 import Favicon from '../../../assets/images/favicon.png';
-import { StatePropType } from '../../../types';
+import { ActionsPropType, StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
 import News from '../News';
+import { updatedReadPosts } from '../../../utils';
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const App = ({ state }) => {
+const App = ({ state, actions }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
+
+  useEffect(() => {
+    actions.theme.updateRead(updatedReadPosts());
+  }, []);
 
   return (
     <>
@@ -78,7 +83,7 @@ const App = ({ state }) => {
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
-          {/* <News when={state.router.link === '/news/'} /> */}
+          <News when={data.isNews} />
 
           {/* <PrivacyDeclaration when={state.router.link === '/news/'} /> */}
 
@@ -94,7 +99,8 @@ const App = ({ state }) => {
 };
 
 App.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired
 };
 
 export default connect(App);

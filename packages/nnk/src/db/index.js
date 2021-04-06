@@ -6,6 +6,7 @@ export { default as DONATION_TEXTS } from './help-us.json';
 export { default as HOMEPAGE_TEXTS } from './homepage.json';
 export { default as JTTF_TEXTS } from './jttf.json';
 export { default as MAIN_SECTIONS } from './nav.json';
+export { default as NEWS_SECTIONS } from './news.json';
 export { default as VOLUNTEER_TEXTS } from './volunteer.json';
 export { default as WHAT_TEXTS } from './what.json';
 export { default as WHERE_TEXTS } from './where.json';

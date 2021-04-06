@@ -9,6 +9,7 @@ export default {
   buttonsText: THEMES[DARK].primary,
   buttonsHighlight: THEMES[DARK].terciary,
   latestReportsNum: 9,
+  dateFormat: 'mMm D', // mMm keeps the default month format
   socialLinks: [
     {
       type: 'Facebook',

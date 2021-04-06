@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useState, useEffect } from 'react';
 import { connect } from 'frontity';
-import { number } from 'prop-types';
+import { bool, number } from 'prop-types';
 import { StatePropType } from '../../../types';
 import { Container, StyledImage } from './styles';
 import { fetchData } from '../../../utils';
 
 const MEDIA_PATH = 'http://www.nonamekitchen.org/wp-json/wp/v2/media';
 
-const FeaturedMedia = ({ state, id }) => {
+const FeaturedMedia = ({ state, id, news, read }) => {
   const [media, updateMedia] = useState(state.source.attachment[id]);
 
   const srcset =
@@ -40,11 +41,12 @@ const FeaturedMedia = ({ state, id }) => {
   return (
     <>
       {media && media !== 'not_found' && (
-        <Container>
+        <Container news={news}>
           <StyledImage
             alt={media.title.rendered}
             src={media.source_url}
             srcSet={srcset}
+            read={read}
           />
         </Container>
       )}
@@ -54,7 +56,13 @@ const FeaturedMedia = ({ state, id }) => {
 
 FeaturedMedia.propTypes = {
   state: StatePropType.isRequired,
-  id: number.isRequired
+  id: number.isRequired,
+  news: bool,
+  read: bool.isRequired
+};
+
+FeaturedMedia.defaultProps = {
+  news: false
 };
 
 export default connect(FeaturedMedia);
