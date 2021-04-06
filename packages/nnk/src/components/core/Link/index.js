@@ -14,7 +14,7 @@ const Link = ({
 }) => {
   const onClick = event => {
     // Do nothing if it's an external link
-    if (link.startsWith('http')) {
+    if (link.startsWith('https')) {
       return;
     }
 
