@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import { getSocialLinks } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
 import { Mapv1, Photo05 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
-import { Content, Map, Section } from './styles';
+import { Content, Map, ModalImage, Section } from './styles';
+import AppModal from '../../core/AppModal';
 
 const WhereSection = ({ state }) => {
+  const [displayModal, toggleModal] = useState(false);
   const { colors, language } = state.theme;
-  let texts = WHERE_TEXTS[language];
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
+  let texts = WHERE_TEXTS[language];
 
   useEffect(() => {
     texts = WHERE_TEXTS[language];
@@ -18,6 +21,15 @@ const WhereSection = ({ state }) => {
 
   return (
     <Section colors={colors}>
+      {displayModal && (
+        <AppModal>
+          <ModalImage
+            src={Mapv1}
+            alt={texts.mapAlt}
+            onClick={() => toggleModal(false)}
+          />
+        </AppModal>
+      )}
       <SectionHeader
         colors={colors}
         img={Photo05}
@@ -26,7 +38,7 @@ const WhereSection = ({ state }) => {
         title={texts.title}
       />
       <Content>
-        <Map src={Mapv1} alt={texts.mapAlt} />
+        <Map src={Mapv1} alt={texts.mapAlt} onClick={() => toggleModal(true)} />
       </Content>
     </Section>
   );

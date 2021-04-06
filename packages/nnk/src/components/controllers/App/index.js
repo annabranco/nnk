@@ -1,8 +1,9 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Global, connect, Head } from 'frontity';
+// eslint-disable-next-line import/no-unresolved
 import Switch from '@frontity/components/switch';
-// import Footer from '../../views/Footer';
 import { fontText, fontTitle } from '../../../setup/themes';
+import Footer from '../../views/Footer';
 import Header from '../Header';
 import HelpUs from '../../views/HelpUs';
 import JumpToTheFieldSection from '../../views/JumpToTheField';
@@ -15,18 +16,24 @@ import Title from '../../core/HtmlTitle';
 import WhatSection from '../../views/What';
 import WhereSection from '../../views/Where';
 import WhySection from '../../views/Why';
-import { StatePropType } from '../../../types';
+import Favicon from '../../../assets/images/favicon.png';
+import { ActionsPropType, StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
+import News from '../News';
+import { updatedReadPosts } from '../../../utils';
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const App = ({ state }) => {
-  const { colors } = state.theme;
+const App = ({ state, actions }) => {
+  const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
-  // console.log('$$$ navigator.userAgent', window.navigator.userAgent);
+
+  useEffect(() => {
+    actions.theme.updateRead(updatedReadPosts());
+  }, []);
 
   return (
     <>
@@ -35,6 +42,8 @@ const App = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
+        <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
           rel="stylesheet"
@@ -74,6 +83,9 @@ const App = ({ state }) => {
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
+          <News when={data.isNews} />
+
+          {/* <PrivacyDeclaration when={state.router.link === '/news/'} /> */}
 
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
@@ -81,13 +93,14 @@ const App = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </MainArea>
-      {/* <Footer colors={colors} /> */}
+      <Footer colors={colors} language={language} />
     </>
   );
 };
 
 App.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType.isRequired,
+  actions: ActionsPropType.isRequired
 };
 
 export default connect(App);

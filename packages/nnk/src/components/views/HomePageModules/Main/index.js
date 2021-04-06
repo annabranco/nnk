@@ -22,7 +22,7 @@ const MainModule = ({ state }) => {
   }, [language]);
 
   return (
-    <PhotoContainer img={Home}>
+    <PhotoContainer colors={colors} img={Home}>
       <MainText colors={colors}>{homepageTexts.mainText}</MainText>
       <SocialModule socialLinks={socialLinks} />
     </PhotoContainer>

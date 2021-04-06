@@ -1,35 +1,41 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import InDevelopment from '../InDevelopment';
+import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { string } from 'prop-types';
+// import InDevelopment from '../InDevelopment';
+import { FOOTER_TEXTS } from '../../../db';
 import { ColorsPropType } from '../../../types';
-import { FooterContainer, FooterLink } from './styles';
+import { FooterContainer, FooterLink, FooterText } from './styles';
+import AppModal from '../../core/AppModal';
+import PrivacyDeclaration from '../PrivacyDeclaration';
 
-const Footer = ({ colors }) => (
-  <FooterContainer colors={colors}>
-    <InDevelopment>
-      <FooterLink colors={colors} link="/players">
-        Copyright NNK 2020
+const Footer = ({ colors, language }) => {
+  const [displayModal, toggleModal] = useState(false);
+  let texts = FOOTER_TEXTS[language];
+
+  useEffect(() => {
+    texts = FOOTER_TEXTS[language];
+  }, [language]);
+
+  return (
+    <FooterContainer colors={colors}>
+      <FooterLink colors={colors} onClick={toggleModal}>
+        {texts.privacyInfo}
       </FooterLink>
-    </InDevelopment>
-    <InDevelopment>
-      <FooterLink colors={colors} link="/players">
-        Contact
-      </FooterLink>
-    </InDevelopment>
-    <InDevelopment>
-      <FooterLink colors={colors} link="/players">
-        Privacy Policy
-      </FooterLink>
-    </InDevelopment>
-    <InDevelopment>
-      <FooterLink colors={colors} link="/players">
-        Cookies Policy
-      </FooterLink>
-    </InDevelopment>
-  </FooterContainer>
-);
+      <FooterText colors={colors} link="">
+        NO NAME KITCHEN © 2021
+      </FooterText>
+      {displayModal && (
+        <AppModal closeAction={() => toggleModal(false)}>
+          <PrivacyDeclaration colors={colors} />
+        </AppModal>
+      )}
+    </FooterContainer>
+  );
+};
 
 Footer.propTypes = {
-  colors: ColorsPropType.isRequired
+  colors: ColorsPropType.isRequired,
+  language: string.isRequired
 };
 
 export default Footer;

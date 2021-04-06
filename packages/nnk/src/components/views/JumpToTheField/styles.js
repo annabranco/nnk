@@ -2,6 +2,7 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   BaseTitle,
+  fontTitle,
   sizeLarge,
   sizeLargeTitle,
   sizeMedium,
@@ -108,12 +109,13 @@ export const Info = styled.div`
 Info.displayName = 'Info';
 
 export const InfoDescription = styled(BaseTitle)`
-  font-size: ${sizeMediumTitle};
-  color: ${({ colors }) => colors && colors.terciary};
+  font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeMediumTitle)};
+  color: ${({ colors, subItem }) =>
+    subItem ? 'gray' : colors && colors.terciary};
   text-transform: uppercase;
 
   @media only screen and (min-width: 768px) {
-    font-size: ${sizeLargeTitle};
+    font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeLargeTitle)};
   }
 `;
 InfoDescription.displayName = 'InfoDescription';
@@ -127,6 +129,20 @@ export const InfoTitle = styled(BaseTitle)`
   }
 `;
 InfoTitle.displayName = 'InfoTitle';
+
+export const JoinButton = styled.button`
+  margin: 10px auto;
+  height: 40px;
+  width: 200px;
+  color: white;
+  background: green;
+  text-transform: uppercase;
+  font-size: ${sizeLarge};
+  font-family: ${fontTitle};
+  cursor: pointer;
+  border-radius: 5px;
+`;
+JoinButton.displayName = 'JoinButton';
 
 export const Label = styled.label`
   margin: 5px auto;
@@ -166,10 +182,11 @@ export const MoreInfo = styled.div`
 `;
 MoreInfo.displayName = 'MoreInfo';
 
-export const Section = styled.section`
+export const JTTFSection = styled.section`
   color: ${({ colors }) => colors && colors.secondary};
+  text-align: center;
 `;
-Section.displayName = 'Section';
+JTTFSection.displayName = 'JTTFSection';
 
 export const SendButton = styled.button`
   margin: 10px auto;

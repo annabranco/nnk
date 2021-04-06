@@ -1,10 +1,11 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
 import SectionHeader from '../SectionHeader';
 import { getSocialLinks } from '../../../utils';
 import { WHAT_TEXTS } from '../../../db';
 import {
-  Photo01,
+  HeroWhat,
   Program01,
   Program02,
   Program03
@@ -36,8 +37,8 @@ const WhatSection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={Photo01}
-        position="0 20%"
+        img={HeroWhat}
+        position="0 62%"
         socialLinks={socialLinks}
         title={texts.title}
       />

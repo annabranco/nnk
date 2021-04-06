@@ -1,14 +1,15 @@
-import { LIGHT } from '../constants/theme';
+import { DARK } from '../constants/theme';
 import { THEMES } from './themes';
 
 export default {
   defaultLanguage: 'en',
-  theme: LIGHT,
+  theme: DARK,
   mainPadding: '10px',
-  buttonsBackground: THEMES[LIGHT].purewWhite,
-  buttonsText: THEMES[LIGHT].primary,
-  buttonsHighlight: THEMES[LIGHT].terciary,
-  latestReportsNum: 2,
+  buttonsBackground: THEMES[DARK].purewWhite,
+  buttonsText: THEMES[DARK].primary,
+  buttonsHighlight: THEMES[DARK].terciary,
+  latestReportsNum: 9,
+  dateFormat: 'mMm D', // mMm keeps the default month format
   socialLinks: [
     {
       type: 'Facebook',
@@ -16,7 +17,7 @@ export default {
     },
     {
       type: 'Twitter',
-      link: 'https://www.twitter.com/nonamekitchen1'
+      link: 'https://www.twitter.com/NoNameKitchen1'
     },
     {
       type: 'Instagram',
@@ -24,12 +25,12 @@ export default {
     },
     {
       type: 'Youtube',
-      link: 'https://www.youtube.com/no_name_kitchen/',
+      link: 'https://www.youtube.com/channel/UCfhpNwjUjUxnN1ala_lKlYQ',
       hide: false
     },
     {
       type: 'Email',
-      link: 'mailto:nnk@nnk.org',
+      link: 'mailto:info@nonamekitchen.org',
       hide: false
     }
   ],

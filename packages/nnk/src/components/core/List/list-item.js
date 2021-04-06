@@ -1,17 +1,10 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import React from 'react';
 import { connect } from 'frontity';
 import Link from '../Link';
 import FeaturedMedia from '../FeaturedMedia';
 import { ItemPropType, StatePropType } from '../../../types';
-import {
-  ArticleWrapper,
-  AuthorName,
-  Excerpt,
-  PublishDate,
-  StyledLink,
-  Title,
-  InfoBox
-} from './styles';
+import { ArticleWrapper, Excerpt, PublishDate, Title, InfoBox } from './styles';
 
 /**
  * Item Component
@@ -22,7 +15,7 @@ import {
  * - FeaturedMedia: the featured image/video of the post
  */
 const Item = ({ state, item }) => {
-  const author = state.source.author[item.author];
+  // const author = state.source.author[item.author];
   const { colors } = state.theme;
   const date = new Date(item.date);
   const isReport = item.slug.includes('report');
@@ -41,13 +34,13 @@ const Item = ({ state, item }) => {
       </Link>
 
       <InfoBox isReport={isReport}>
-        {author && (
+        {/* {author && (
           <StyledLink colors={colors} link={author.link}>
             <AuthorName>
               By <b>{author.name}</b>
             </AuthorName>
           </StyledLink>
-        )}
+        )} */}
         <PublishDate colors={colors} isReport={isReport}>
           {date.toDateString()}
         </PublishDate>

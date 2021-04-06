@@ -22,7 +22,7 @@ const WhyArea = styled.div`
 `;
 
 export const BorderViolenceArea = styled(WhyArea)`
-  width: 100%;
+  max-width: 100%;
 
   @media only screen and (min-width: 1200px) {
     width: 80%;
@@ -56,6 +56,7 @@ export const LatestReportsArea = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+  flex-wrap: wrap;
 
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
@@ -88,13 +89,18 @@ Photo.displayName = 'Photo';
 export const RecentArea = styled(WhyArea)``;
 RecentArea.displayName = 'RecentArea';
 
-export const ReportLink = styled(Link)`
+export const ReportLink = styled.a`
   margin: 40px auto 20px;
   font-size: ${sizeLarge};
   font-family: ${fontText};
   color: ${({ colors }) => colors && colors.secondary};
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ colors }) => colors && colors.terciary};
+    font-weight: 700;
+  }
 `;
 ReportLink.displayName = 'ReportLink';
 
@@ -153,11 +159,11 @@ Intro.displayName = 'Intro';
 export const Title = styled(BaseTitle)`
   margin: 50px auto;
   font-size: ${sizeXXLarge};
-  color: ${({ colors }) => colors && colors.terciary};
+  color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 
   @media only screen and (min-width: 1200px) {
-    font-size: ${sizeXLargeTitle};
+    font-size: ${sizeLargeTitle};
   }
 `;
 Title.displayName = 'Title';

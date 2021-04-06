@@ -19,7 +19,7 @@
     },
     {
       "title": "No Name News",
-      "link": "/nnnews/"
+      "link": "/news/"
     },
     {
       "title": "Support the Move",
@@ -31,10 +31,6 @@
         {
           "title": "Jump to the Field",
           "link": "/join-us/"
-        },
-        {
-          "title": "Store",
-          "link": "/store/"
         }
       ]
     }

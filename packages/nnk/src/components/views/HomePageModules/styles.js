@@ -5,7 +5,12 @@ export const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 4px solid ${({ colors }) => colors && colors.terciary};
+  border-top: ${({ colors, noBorder }) => {
+    if (!noBorder && colors) {
+      return `4px solid ${colors.terciary}`;
+    }
+    return 0;
+  }};
   border-radius: 2px;
   background-color: ${({ colors }) => colors && colors.primary};
   min-height: 50px;

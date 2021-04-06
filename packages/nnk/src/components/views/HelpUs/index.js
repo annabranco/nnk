@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
@@ -40,6 +41,7 @@ import {
   ValueTitle,
   Values
 } from './styles';
+import SubscriptionArea from '../Subscribe';
 
 const HelpUs = ({ state }) => {
   const { colors, language } = state.theme;
@@ -120,11 +122,11 @@ const HelpUs = ({ state }) => {
               </ValueItem>
             ))}
           </Values>
-          <PartnersLogos>
+          {/* <PartnersLogos>
             <Logo src={PayPal} />
             <Logo src={GoFundMe} />
             <Logo src={Teaming} />
-          </PartnersLogos>
+          </PartnersLogos> */}
           <TransferInfo colors={colors}>
             <Instructions>{texts.transfer}</Instructions>
             <ItemTitle>
@@ -146,7 +148,8 @@ const HelpUs = ({ state }) => {
           </TransferInfo>
         </SubsectionWrapper>
         <SubsectionWrapper>
-          <DonorBox>DonorBox</DonorBox>
+          <SubscriptionArea colors={colors} size="small" />
+          {/* <DonorBox>DonorBox</DonorBox>
           <Subscription>
             <SocialModule size="small" socialLinks={socialLinks} />
             <SubscriptionTitle colors={colors}>
@@ -196,16 +199,16 @@ const HelpUs = ({ state }) => {
                 {texts.form.send}
               </SendButton>
             </FormArea>
-          </Subscription>
+          </Subscription> */}
         </SubsectionWrapper>
       </Content>
-      <SectionFooter colors={colors}>
+      {/* <SectionFooter colors={colors}>
         <FooterText>{texts.justice}</FooterText>
         <FooterSeparator src={CrossedFork} />
         <FooterText>{texts.hope}</FooterText>
         <FooterSeparator src={CrossedFork} />
         <FooterText>{texts.dignity}</FooterText>
-      </SectionFooter>
+      </SectionFooter> */}
     </Section>
   );
 };

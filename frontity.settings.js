@@ -24,7 +24,7 @@ const settings = {
       name: '@frontity/wp-source',
       state: {
         source: {
-          api: 'https://www.borderviolence.eu/wp-json/'
+          api: 'http://www.nonamekitchen.org/wp-json/'
         }
       }
     },

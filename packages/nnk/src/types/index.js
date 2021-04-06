@@ -17,7 +17,8 @@ const ActionSourcePropType = shape({
 const ActionThemePropType = shape({
   toggleMobileMenu: func.isRequired,
   closeMobileMenu: func.isRequired,
-  changeTheme: func.isRequired
+  changeTheme: func.isRequired,
+  updateRead: func.isRequired
 });
 
 const FeaturedPropType = shape({
@@ -283,6 +284,12 @@ export const StatePropType = shape({
   frontity: FrontityPropType.isRequired
 });
 
+export const TestimonialPropType = shape({
+  imageId: string.isRequired,
+  text: string.isRequired,
+  victim: string.isRequired
+});
+
 export const TextsHomePagePropType = shape({
   description: string.isRequired,
   subItems: arrayOf(TextSubItemsPropType)
@@ -307,4 +314,12 @@ export const TextsWhyPropType = shape({
 
 export const TextsWhyFullPropType = shape({
   en: TextsWhyPropType
+});
+
+export const TextsNewsPropType = shape({
+  publishedOn: string.isRequired
+});
+
+export const TextsNewsFullPropType = shape({
+  en: TextsNewsPropType
 });
