@@ -10,7 +10,6 @@ const newsListHandler = {
   pattern: '/news/',
   func: async ({ link, state, libraries, force }) => {
     const { page } = libraries.source.parse(link);
-
     const response = await libraries.source.api.get({
       endpoint: 'posts',
       // params: { page }
@@ -27,13 +26,18 @@ const newsListHandler = {
     const totalItems = await libraries.source.getTotal(response, items.length);
     const totalPages = await libraries.source.getTotalPages(response, 0);
 
+    const hasNewerPosts = page < totalPages;
+    const hasOlderPosts = page > 1;
+
     Object.assign(state.source.data[link], {
       // id: 262,
-      isNews: true,
+      isNewsList: true,
       isCategory: true,
       items,
       totalItems,
-      totalPages
+      totalPages,
+      ...(hasOlderPosts && { previous: `/news/page/${page - 1}` }),
+      ...(hasNewerPosts && { next: `/news/page/${page + 1}` })
     });
   }
 };

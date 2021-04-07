@@ -1,6 +1,7 @@
 import { css, styled } from 'frontity';
 import {
   BaseTitle,
+  sizeLargeTitle,
   sizeXLargeTitle,
   sizeXXLarge
 } from '../../../../setup/themes';
@@ -67,9 +68,13 @@ ModuleWrapper.displayName = 'ModuleWrapper';
 
 export const Title = styled(BaseTitle)`
   margin: 20px auto;
-  font-size: ${sizeXLargeTitle};
+  font-size: ${sizeXXLarge};
   color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
+
+  @media only screen and (min-width: 400px) {
+    font-size: ${sizeXXLarge};
+  }
 
   @media only screen and (min-width: 768px) {
     font-size: ${sizeXXLarge};

@@ -5,20 +5,21 @@ import {
   fontText,
   sizeLarge,
   sizeLargeTitle,
+  sizeMedium,
   sizeSmallTitle
 } from '../../../setup/themes';
 import Link from '../Link';
 
 export const CloseButton = styled.p`
+  z-index: 100;
   position: fixed;
-  top: 20px;
-  right: 50px;
+  top: 0;
+  right: 0;
   z-index: 100;
   color: red;
   color: ${({ colors }) => colors.terciary};
-
+  background: ${({ colors }) => colors && colors.primary};
   cursor: pointer;
-  border: ${({ colors }) => `2px solid ${colors.terciary}`};
   border-radius: 5px;
   padding: 5px 10px;
 
@@ -30,13 +31,32 @@ export const CloseButton = styled.p`
     text &&
     css`
       &::before {
-        content: '${text}';
+        content: 'x';
         text-transform: uppercase;
         font-weight: 900;
         font-family: ${fontText};
-        font-size: 1rem;
+        font-size: ${sizeSmallTitle};
       }
     `};
+
+  @media all and (min-width: 768px) {
+    ${({ colors, text }) =>
+      text &&
+      css`
+        top: 20px;
+        right: 50px;
+        border: ${`2px solid ${colors.terciary}`};
+        background: none;
+
+        &::before {
+          content: '${text}';
+          text-transform: uppercase;
+          font-weight: 900;
+          font-family: ${fontText};
+          font-size: ${sizeMedium};
+        }
+      `};
+  }
 `;
 CloseButton.displayName = 'CloseButton';
 
@@ -52,7 +72,11 @@ export const ModalOverlay = styled.div`
   width: 100vw;
   z-index: 100;
   background: rgba(0, 0, 0, 0.85);
-  overlay-x: auto;
-  padding: 30px;
+  overflow-x: auto;
+  padding: 0;
+
+  @media all and (min-width: 768px) {
+    padding: 30px;
+  }
 `;
 ModalOverlay.displayName = 'ModalOverlay';

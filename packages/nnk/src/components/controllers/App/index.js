@@ -23,10 +23,6 @@ import { MainArea } from './styles';
 import News from '../News';
 import { updatedReadPosts } from '../../../utils';
 
-/**
- * Theme is the root React component of our theme. The one we will export
- * in roots.
- */
 const App = ({ state, actions }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
@@ -37,7 +33,6 @@ const App = ({ state, actions }) => {
 
   return (
     <>
-      {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
@@ -45,7 +40,7 @@ const App = ({ state, actions }) => {
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
         <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue"
           rel="stylesheet"
         />
         <script
@@ -54,9 +49,6 @@ const App = ({ state, actions }) => {
         />
         <script src="https://smtpjs.com/v3/smtp.js" />
       </Head>
-
-      {/* Add some global styles for the whole site, like body or a's.
-      Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
       <Global
         styles={{
@@ -68,25 +60,17 @@ const App = ({ state, actions }) => {
         }}
       />
 
-      {/* Add the header of the site. */}
       <Header />
 
-      {/* Add the main section. It renders a different component depending
-      on the type of URL we are in. */}
       <MainArea colors={colors}>
         <Switch>
-          {/* <WhatSection path="/what/" /> */}
-
           <MainPage when={data.link === '/'} />
           <WhatSection when={state.router.link === '/what/'} />
           <WhereSection when={state.router.link === '/where/'} />
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
-          <News when={data.isNews} />
-
-          {/* <PrivacyDeclaration when={state.router.link === '/news/'} /> */}
-
+          <News when={data.isNewsList} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

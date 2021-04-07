@@ -6,6 +6,7 @@ export const CarrousselWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  max-width: 80vw;
 `;
 CarrousselWrapper.displayName = 'CarrousselWrapper';
 
@@ -18,20 +19,22 @@ export const CurrentTestimonial = styled.div`
 `;
 CurrentTestimonial.displayName = 'CurrentTestimonial';
 
-export const NextTestimonial = styled.div``;
+export const NextTestimonial = styled.div`
+  ${({ device }) =>
+    device &&
+    css`
+      transform: translate(-80%, 0);
+    `}
+`;
 NextTestimonial.displayName = 'NextTestimonial';
 
 export const Photo = styled.div`
+  z-index: 5;
   margin: 20px 50px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
-
-  @media only screen and (min-width: 1200px) {
-    height: 200px;
-    width: 200px;
-  }
 
   ${({ img, position, size }) =>
     css`
@@ -46,13 +49,13 @@ export const Photo = styled.div`
     img &&
     small &&
     css`
-      border-radius: 50%;
+      z-index: 4;
       height: 70px;
       width: 70px;
       margin-top: 40%;
       border: none;
       cursor: pointer;
-
+      filter: sepia(0.6) opacity(0.6);
       &:hover {
         border: 3px solid rgba(255, 255, 255, 0.2);
 
@@ -60,16 +63,45 @@ export const Photo = styled.div`
           color: white;
         }
       }
+    `};
 
-      @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 768px) {
+    height: 150px;
+    width: 150px;
+
+    ${({ img, small }) =>
+      img &&
+      small &&
+      css`
+        filter: none;
+        transform: none;
         height: 100px;
         width: 100px;
-      }
-    `}
+      `}
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 200px;
+    width: 200px;
+
+    ${({ img, small }) =>
+      img &&
+      small &&
+      css`
+        height: 100px;
+        width: 100px;
+      `}
+  }
 `;
 Photo.displayName = 'Photo';
 
-export const PreviousTestimonial = styled.div``;
+export const PreviousTestimonial = styled.div`
+  ${({ device }) =>
+    device &&
+    css`
+      transform: translate(80%, 0);
+    `}
+`;
 PreviousTestimonial.displayName = 'PreviousTestimonial';
 
 export const Text = styled.p`

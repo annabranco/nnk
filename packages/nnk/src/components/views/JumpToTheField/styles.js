@@ -103,16 +103,21 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: ${({ colors }) => colors && colors.secondary};
+  width: 30%;
 `;
 Info.displayName = 'Info';
 
 export const InfoDescription = styled(BaseTitle)`
-  font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeMediumTitle)};
+  font-size: ${({ subItem }) => (subItem ? sizeLarge : sizeSmallTitle)};
   color: ${({ colors, subItem }) =>
     subItem ? 'gray' : colors && colors.terciary};
   text-transform: uppercase;
+
+  @media only screen and (min-width: 768px) {
+    font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeMediumTitle)};
+  }
 
   @media only screen and (min-width: 768px) {
     font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeLargeTitle)};
@@ -167,7 +172,7 @@ MessageField.displayName = 'MessageField';
 export const MoreInfo = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   margin: 30px auto;
   width: 100%;

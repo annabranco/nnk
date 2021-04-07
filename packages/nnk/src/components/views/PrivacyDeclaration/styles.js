@@ -66,11 +66,16 @@ export const PrivacyContainer = styled.div`
   text-align: justify;
   color: ${({ colors }) => colors.secondary};
   background: ${({ colors }) => colors && 'rgba(0, 0, 0, 0.6)'};
-  padding: 40px;
+  padding: 10px;
   line-height: 2;
   font-family: ${fontText};
   font-size: ${sizeMedium};
   border-radius: 10px;
   margin-top: -30px;
+  width: 98vw;
+
+  @media all and (min-width: 768px) {
+    padding: 40px 20%;
+  }
 `;
 PrivacyContainer.displayName = 'PrivacyContainer';

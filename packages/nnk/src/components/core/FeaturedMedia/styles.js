@@ -4,7 +4,11 @@ import { sizeSmall } from '../../../setup/themes';
 
 export const Container = styled.div`
   margin-top: ${({ news }) => (news ? 0 : '16px')};
-  height: 300px;
+  height: 20vh;
+
+  @media all and (min-width: 768px) {
+    height: 300px;
+  }
 `;
 Container.displayName = 'Container';
 

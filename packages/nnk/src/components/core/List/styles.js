@@ -1,6 +1,7 @@
 import { css, styled } from 'frontity';
-import { sizeMedium } from '../../../setup/themes';
+import { sizeMedium, sizeSmall } from '../../../setup/themes';
 import Link from '../Link';
+import { BackToReports, BackToReportsArrow } from '../Post/styles';
 
 // --- List Item
 
@@ -100,3 +101,65 @@ export const Text = styled.em`
   margin-top: 30px;
   color: ${({ colors }) => colors && colors.terciary};
 `;
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+`;
+ButtonsWrapper.displayName = 'ButtonsWrapper';
+
+export const PageButton = styled.p`
+  text-align: center;
+  font-size: ${sizeMedium};
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: -15px;
+
+  color: ${({ colors }) => colors && colors.terciary};
+
+  @media all and (min-width: 1200px) {
+    font-size: 0.8rem;
+    margin-top: -30px;
+  }
+
+  &:hover {
+    box-shadow: none;
+    & > i {
+      transform: translate(-10px, 0);
+      transition: transform ease 0.5s;
+    }
+  }
+
+  ${({ right }) =>
+    right &&
+    css`
+      &:hover {
+        box-shadow: none;
+        & > i {
+          transform: translate(10px, 0);
+          transition: transform ease 0.5s;
+        }
+      }
+    `}
+  ${({ alone }) =>
+    alone &&
+    css`
+      position: absolute;
+      right: 20px;
+    `}
+`;
+PageButton.displayName = 'PageButton';
+
+export const PageButtonArrow = styled(BackToReportsArrow)`
+  margin: ${({ right }) => (right ? '0 0 0 5px' : '0 5px 0 0')};
+  font-size: 0.9rem;
+
+  @media all and (min-width: 1200px) {
+    font-size: ${sizeMedium};
+  }
+`;
+PageButtonArrow.displayName = 'PageButtonArrow';
