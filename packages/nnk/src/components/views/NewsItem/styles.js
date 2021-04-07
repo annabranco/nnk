@@ -19,17 +19,19 @@ export const ArticleWrapper = styled.article`
       }
     `}
 
-  ${({ highlight }) =>
-    highlight &&
-    css`
-      grid-column: span 2;
-      border: 1px solid rgba(0, 0, 0, 0.2);
+  @media all and (min-width: 768px) {
+    ${({ highlight }) =>
+      highlight &&
+      css`
+        grid-column: span 2;
+        border: 1px solid rgba(0, 0, 0, 0.2);
 
-      &:hover {
-        background: rgba(255, 255, 204, 0.3);
-      }
-    `}
-  :
+        &:hover {
+          background: rgba(255, 255, 204, 0.3);
+        }
+      `}
+    :
+  }
 `;
 
 export const AuthorName = styled.span`
