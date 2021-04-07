@@ -13,7 +13,7 @@ const newsListHandler = {
     const response = await libraries.source.api.get({
       endpoint: 'posts',
       // params: { page }
-      params: { page, per_page: 12 }
+      params: { page, per_page: 10, categories: 262 }
       // params: { categories: 262 }
     });
 

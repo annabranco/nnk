@@ -4,7 +4,9 @@ import {
   sizeLargeTitle,
   sizeMedium,
   sizeSmall,
-  sizeSmallTitle
+  sizeSmallTitle,
+  sizeMediumTitle,
+  fontTitleNews
 } from '../../../setup/themes';
 import Link from '../Link';
 
@@ -35,10 +37,12 @@ export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: ${({ colors }) => colors && colors.terciary};
-  font-size: ${sizeLargeTitle};
-  text-align: justify;
+  color: ${({ colors }) => colors && colors.primary};
+  font-size: ${sizeMediumTitle};
+  text-align: left;
+  font-family: ${fontTitleNews};
   padding: 5px 15px;
+  font-weight: 700;
 `;
 Title.displayName = 'Title';
 
@@ -102,12 +106,13 @@ export const Content = styled.div`
     isReport &&
     css`
       margin: 40px auto;
-      text-align: justify;
+      text-align: left;
     `}
   padding: 0 5px;
-  font-size: ${sizeSmallTitle};
+  font-size: ${sizeLarge};
+
   @media only screen and (min-width: 1200px) {
-    font-size: ${sizeLarge};
+    font-size: ${sizeMedium};
   }
 
   /* WordPress Core Align Classes */
@@ -145,7 +150,7 @@ export const Content = styled.div`
     margin: 20px auto;
     width: 100%;
     color: ${({ colors }) => colors && colors.primary};
-    text-align: justify;
+    text-align: left;
   }
 
   span {
