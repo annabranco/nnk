@@ -53,14 +53,6 @@ export const Excerpt = styled.div`
     font-size: ${sizeDefaultText};
     padding: 5px 10px;
   }
-
-  ${({ read }) =>
-    read &&
-    css`
-      & > p {
-        color: gray;
-      }
-    `}
 `;
 
 export const InfoBox = styled.div`

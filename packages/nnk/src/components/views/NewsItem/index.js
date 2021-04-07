@@ -20,7 +20,7 @@ const NewsItem = ({ state, item, read, texts }) => {
       {item.featured_media !== 0 && (
         <ArticleWrapper colors={colors} highlight={item.tags.includes(263)}>
           <Link link={item.link}>
-            <FeaturedMedia id={item.featured_media} news read={read} />
+            <FeaturedMedia id={item.featured_media} news />
             <Title
               colors={colors}
               dangerouslySetInnerHTML={{ __html: item.title.rendered }}
@@ -41,7 +41,6 @@ const NewsItem = ({ state, item, read, texts }) => {
                 dangerouslySetInnerHTML={{
                   __html: clearOriginalLink(item.excerpt.rendered)
                 }}
-                read={read}
               />
             </Link>
           )}
