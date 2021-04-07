@@ -40,7 +40,7 @@ const App = ({ state, actions }) => {
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
         <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700"
           rel="stylesheet"
         />
         <script

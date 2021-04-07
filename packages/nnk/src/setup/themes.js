@@ -26,11 +26,13 @@ export const THEMES = {
 
 /* Fonts */
 export const fontTitle = "'Bebas Neue', sans-serif";
+export const fontTitleNews = "'Poppins', sans-serif";
 export const fontText = "'Century Gothic', sans-serif";
 
 /* Sizes */
 
 export const sizeSmall = '0.7rem';
+export const sizeDefaultText = '0.9rem';
 export const sizeMedium = '1rem';
 export const sizeLarge = '1.3rem';
 export const sizeXLarge = '2.8rem';

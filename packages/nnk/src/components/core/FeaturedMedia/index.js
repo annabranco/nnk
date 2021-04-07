@@ -8,7 +8,7 @@ import { fetchData } from '../../../utils';
 
 const MEDIA_PATH = 'https://www.nonamekitchen.org/wp-json/wp/v2/media';
 
-const FeaturedMedia = ({ state, id, news, read }) => {
+const FeaturedMedia = ({ state, id, news }) => {
   const [media, updateMedia] = useState(state.source.attachment[id]);
 
   const srcset =
@@ -46,7 +46,6 @@ const FeaturedMedia = ({ state, id, news, read }) => {
             alt={media.title.rendered}
             src={media.source_url}
             srcSet={srcset}
-            read={read}
           />
         </Container>
       )}
@@ -57,8 +56,7 @@ const FeaturedMedia = ({ state, id, news, read }) => {
 FeaturedMedia.propTypes = {
   state: StatePropType.isRequired,
   id: number.isRequired,
-  news: bool,
-  read: bool.isRequired
+  news: bool
 };
 
 FeaturedMedia.defaultProps = {
