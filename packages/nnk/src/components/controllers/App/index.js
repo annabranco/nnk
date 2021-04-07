@@ -70,7 +70,7 @@ const App = ({ state, actions }) => {
           <WhySection when={state.router.link === '/why/'} />
           <JumpToTheFieldSection when={state.router.link === '/join-us/'} />
           <HelpUs when={state.router.link === '/help-us/'} />
-          <News when={data.isNews} />
+          <News when={data.isNewsList} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />

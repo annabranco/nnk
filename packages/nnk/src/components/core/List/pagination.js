@@ -1,8 +1,9 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
 import Link from '../Link';
 import { ActionsPropType, StatePropType } from '../../../types';
-import { Text } from './styles';
+import { PageButton, PageButtonArrow, ButtonsWrapper } from './styles';
 
 /**
  * Pagination Component
@@ -25,23 +26,24 @@ const Pagination = ({ state, actions }) => {
   }, []);
 
   return (
-    <div>
-      {/* If there's a next page, render this link */}
-      {next && (
-        <Link link={next}>
-          <Text colors={colors}>← Older posts</Text>
-        </Link>
-      )}
-
-      {previous && next && ' - '}
-
-      {/* If there's a previous page, render this link */}
+    <ButtonsWrapper>
       {previous && (
         <Link link={previous}>
-          <Text colors={colors}>Newer posts →</Text>
+          <PageButton colors={colors}>
+            <PageButtonArrow className="fas fa-chevron-circle-left" />
+            Newer posts
+          </PageButton>
         </Link>
       )}
-    </div>
+      {next && (
+        <Link link={next}>
+          <PageButton alone={!previous} colors={colors} right>
+            Older posts
+            <PageButtonArrow className="fas fa-chevron-circle-right" right />
+          </PageButton>
+        </Link>
+      )}
+    </ButtonsWrapper>
   );
 };
 
