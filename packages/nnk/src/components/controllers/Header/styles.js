@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   background-color: ${({ colors }) => colors.primary};
   width: 100%;
   padding: 2px 20px;
-  height: 100px;
+  height: 92px;
   border-bottom: ${({ colors }) => `4px solid ${colors.terciary}`};
 
   /* ${({ activeLanguage, colors }) =>

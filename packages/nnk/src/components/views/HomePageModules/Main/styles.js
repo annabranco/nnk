@@ -2,8 +2,8 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   sizeLarge,
-  sizeLargeTitle,
-  sizeMediumTitle
+  sizeMediumTitle,
+  sizeSmallTitle
 } from '../../../../setup/themes';
 
 export const MainText = styled(BaseText)`
@@ -29,7 +29,7 @@ export const MainText = styled(BaseText)`
   }
 
   @media only screen and (min-width: 375px) {
-    font-size: ${sizeMediumTitle};
+    font-size: 1.45rem;
     letter-spacing: -0.05rem;
     text-shadow: -2px -2px 5px black, -2px 0 5px black, -2px 2px 5px black,
       0 -2px 5px black, 0 0 5px black, 0 2px 5px black, 2px -2px 5px black,
@@ -37,6 +37,7 @@ export const MainText = styled(BaseText)`
   }
 
   @media only screen and (min-width: 768px) {
+    font-size: ${sizeMediumTitle};
     bottom: 50px;
     right: 6vw;
   }
@@ -67,8 +68,16 @@ export const PhotoContainer = styled.div`
   `}
 
   @media only screen and (min-height: 400px) {
-    height: ${({ section }) => (section ? '41vh' : '60vh')};
+    height: ${({ section }) => (section ? '35vh' : '60vh')};
     background-position: 20% 15%;
+  }
+
+  @media only screen and (min-height: 411px) {
+    height: ${({ section }) => (section ? '35vh' : '50vh')};
+  }
+
+  @media only screen and (min-height: 60px) {
+    height: ${({ section }) => (section ? '28vh' : '40vh')};
   }
 
   @media only screen and (min-width: 768px) {
@@ -79,6 +88,7 @@ export const PhotoContainer = styled.div`
       background-size: 150%;
     `}
   }
+
   @media only screen and (min-width: 1024px) {
     height: calc(100vh - 100px);
 
@@ -86,6 +96,14 @@ export const PhotoContainer = styled.div`
       background-position: ${position};
       background-size: 100%;
     `}
+  }
+
+  @media (min-width: 1024px) and (min-height: 1300px) {
+    height: 40vh;
+  }
+
+  @media (min-height: 1024px) and (min-width: 1300px) {
+    height: 780vh;
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';

@@ -54,7 +54,10 @@ const MainPage = ({ state }) => {
       </SubscriptionButton>
       {displayModal && (
         <AppModal closeAction={() => toggleModal(false)}>
-          <SubscriptionArea colors={colors} />
+          <SubscriptionArea
+            colors={colors}
+            size={getMediaQuery() === MOBILE ? 'small' : 'large'}
+          />
         </AppModal>
       )}
     </MainContainer>

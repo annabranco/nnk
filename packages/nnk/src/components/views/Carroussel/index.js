@@ -14,6 +14,8 @@ import {
   Marker
 } from './styles';
 import { TestimonialPropType } from '../../../types';
+import { getMediaQuery } from '../../../utils';
+import { MOBILE, TABLET } from '../../../constants/devices';
 
 const testimonialPhotos = {
   Testimony01: {
@@ -32,6 +34,8 @@ const testimonialPhotos = {
     position: '60% 85%'
   }
 };
+
+const DEVICE_VERSION = getMediaQuery() === MOBILE || getMediaQuery() === TABLET;
 
 const Carroussel = ({ items }) => {
   const [updatedItems, updateItems] = useState();
@@ -54,17 +58,19 @@ const Carroussel = ({ items }) => {
     <>
       {updatedItems && (
         <CarrousselWrapper>
-          <PreviousTestimonial>
+          <PreviousTestimonial device={DEVICE_VERSION}>
             <Photo
               img={testimonialPhotos[updatedItems[1].imageId].img}
               size={testimonialPhotos[updatedItems[1].imageId].size}
-              position={testimonialPhotos[updatedItems[1].imageId].position}
               small
+              position={testimonialPhotos[updatedItems[1].imageId].position}
               onClick={() => sortItems(1)}
             />
-            <LineMarker>
-              <Marker />
-            </LineMarker>
+            {!DEVICE_VERSION && (
+              <LineMarker>
+                <Marker />
+              </LineMarker>
+            )}
           </PreviousTestimonial>
           <CurrentTestimonial>
             <Photo
@@ -75,17 +81,19 @@ const Carroussel = ({ items }) => {
             <Text>{updatedItems[0].text}</Text>
             <Victim>{updatedItems[0].victim}</Victim>
           </CurrentTestimonial>
-          <NextTestimonial>
+          <NextTestimonial device={DEVICE_VERSION}>
             <Photo
               img={testimonialPhotos[updatedItems[2].imageId].img}
-              small
               size={testimonialPhotos[updatedItems[2].imageId].size}
+              small
               position={testimonialPhotos[updatedItems[2].imageId].position}
               onClick={() => sortItems(2)}
             />
-            <LineMarker right>
-              <Marker right />
-            </LineMarker>
+            {!DEVICE_VERSION && (
+              <LineMarker right>
+                <Marker right />
+              </LineMarker>
+            )}
           </NextTestimonial>
         </CarrousselWrapper>
       )}
