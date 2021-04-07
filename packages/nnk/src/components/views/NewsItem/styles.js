@@ -3,7 +3,9 @@ import {
   sizeMedium,
   sizeSmall,
   sizeSmallTitle,
-  sizeDefaultText
+  sizeDefaultText,
+  fontTitleNews,
+  fontTitle
 } from '../../../setup/themes';
 import Link from '../../core/Link';
 
@@ -79,6 +81,9 @@ export const Title = styled.h3`
   width: 100%;
   text-align: left;
   color: ${({ colors }) => colors && colors.primary};
+  font-size: ${sizeSmallTitle};
+  font-family: ${fontTitleNews};
+  font-weight: 500;
 
   ${({ read }) =>
     read &&
@@ -91,6 +96,7 @@ export const Title = styled.h3`
         vertical-align: middle;
         text-transform: uppercase;
         color: red;
+        font-family: ${fontTitle};
       }
     `}
 `;
