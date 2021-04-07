@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { ACTIONS_TEXTS } from '../../../db';
+import { ACTIONS_TEXTS, NEWS_SECTIONS } from '../../../db';
 import FeaturedMedia from '../FeaturedMedia';
 import List from '../List';
 import {
@@ -17,7 +17,7 @@ import {
   PostWrapper,
   BackToReportsArrow
 } from './styles';
-import { updatedReadPosts } from '../../../utils';
+import { getFormatedDate, updatedReadPosts } from '../../../utils';
 import Link from '../Link';
 
 const Post = ({ actions, libraries, state }) => {
@@ -29,7 +29,13 @@ const Post = ({ actions, libraries, state }) => {
   const date = new Date(post.date);
   const Html2React = libraries.html2react.Component;
   const isReport = post.slug.includes('report');
-  const texts = ACTIONS_TEXTS[language];
+  let texts = ACTIONS_TEXTS[language];
+  let newsSection = NEWS_SECTIONS[language];
+
+  useEffect(() => {
+    newsSection = NEWS_SECTIONS[language];
+    texts = ACTIONS_TEXTS[language];
+  }, [language]);
 
   console.log('$$$ data', data);
   console.log('$$$ post: ', post);
@@ -96,8 +102,10 @@ const Post = ({ actions, libraries, state }) => {
               </StyledLink>
             )} */}
               <DateWrapper colors={colors} isReport={isReport}>
-                {' '}
-                Published on <b>{date.toDateString()}</b>
+                {`${newsSection.publishedOn} ${getFormatedDate(
+                  date,
+                  language
+                )}`}{' '}
               </DateWrapper>
             </div>
           )}

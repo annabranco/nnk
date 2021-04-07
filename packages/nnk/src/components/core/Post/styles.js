@@ -4,7 +4,8 @@ import {
   sizeLargeTitle,
   sizeMedium,
   sizeSmall,
-  sizeSmallTitle
+  sizeSmallTitle,
+  sizeMediumTitle
 } from '../../../setup/themes';
 import Link from '../Link';
 
@@ -36,7 +37,7 @@ export const Title = styled.h1`
   margin-top: 24px;
   margin-bottom: 8px;
   color: ${({ colors }) => colors && colors.terciary};
-  font-size: ${sizeLargeTitle};
+  font-size: ${sizeMediumTitle};
   text-align: justify;
   padding: 5px 15px;
 `;
@@ -105,9 +106,10 @@ export const Content = styled.div`
       text-align: justify;
     `}
   padding: 0 5px;
-  font-size: ${sizeSmallTitle};
+  font-size: ${sizeLarge};
+
   @media only screen and (min-width: 1200px) {
-    font-size: ${sizeLarge};
+    font-size: ${sizeMedium};
   }
 
   /* WordPress Core Align Classes */

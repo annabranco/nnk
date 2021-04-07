@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 20vh;
 
   @media all and (min-width: 768px) {
-    height: 300px;
+    height: 250px;
   }
 `;
 Container.displayName = 'Container';

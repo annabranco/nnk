@@ -1,5 +1,10 @@
 import { css, styled } from 'frontity';
-import { sizeMedium, sizeSmall } from '../../../setup/themes';
+import {
+  sizeMedium,
+  sizeSmall,
+  sizeSmallTitle,
+  sizeDefaultText
+} from '../../../setup/themes';
 import Link from '../../core/Link';
 
 // --- List Item
@@ -41,11 +46,11 @@ export const AuthorName = styled.span`
 export const Excerpt = styled.div`
   line-height: 1.6em;
   color: ${({ colors }) => colors && colors.primary};
-  text-align: justify;
+  text-align: left;
 
   & > p {
     color: ${({ colors }) => colors && colors.primary};
-    font-size: ${sizeMedium};
+    font-size: ${sizeDefaultText};
     padding: 5px 10px;
   }
 
@@ -74,13 +79,13 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Title = styled.h3`
-  font-size: 2rem;
+  font-size: ${sizeSmallTitle};
   margin: 0;
   padding: 5px 10px;
   padding-bottom: 5px;
   box-sizing: border-box;
   width: 100%;
-  text-align: justify;
+  text-align: left;
   color: ${({ colors }) => colors && colors.primary};
 
   ${({ read }) =>
