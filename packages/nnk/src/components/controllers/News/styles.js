@@ -9,6 +9,14 @@ export const NewsSection = styled.section`
   justify-content: center;
   margin: 0;
   background: ${({ colors }) => colors && colors.secondary};
+
+  @media all and (min-width: 768px) {
+    padding: 0 80px;
+  }
+
+  @media all and (min-width: 1200px) {
+    padding: 0 150px;
+  }
 `;
 NewsSection.displayName = 'NewsSection';
 
@@ -23,8 +31,9 @@ export const NewsWrapper = styled.div`
   @media all and (min-width: 768px) {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 24px;
+    grid-gap: 10px;
   }
 `;
 NewsWrapper.displayName = 'NewsWrapper';
