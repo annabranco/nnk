@@ -1,5 +1,6 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import config from '../../../setup/config';
 import { getMediaQuery } from '../../../utils';
 import {
   HOMEPAGE_TEXTS,
@@ -14,7 +15,7 @@ import PageSection from '../../views/HomePageModules';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
 import { StatePropType } from '../../../types';
 import { MainContainer, SubscriptionButton } from './styles';
-import SubscriptionArea from '../../views/Subscribe';
+import ExternalForm from '../../views/ExternalFrame';
 import AppModal from '../../core/AppModal';
 
 const MainPage = ({ state }) => {
@@ -54,9 +55,12 @@ const MainPage = ({ state }) => {
       </SubscriptionButton>
       {displayModal && (
         <AppModal closeAction={() => toggleModal(false)}>
-          <SubscriptionArea
+          <ExternalForm
             colors={colors}
-            size={getMediaQuery() === MOBILE ? 'small' : 'large'}
+            width={getMediaQuery() === MOBILE ? 340 : 640}
+            height={800}
+            src={config.subscriptionEndpoint}
+            title="subscription"
           />
         </AppModal>
       )}

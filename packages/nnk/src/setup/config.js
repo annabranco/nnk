@@ -34,6 +34,10 @@ export default {
       hide: false
     }
   ],
+  subscriptionEndpoint:
+    'https://docs.google.com/forms/d/e/1FAIpQLSfDAwap34je_R2Kt-H3QvK6tLAxRB3TMNGFmmo3_Yn5Xd3IPg/viewform?embedded=true',
+  volunteerForm:
+    'https://docs.google.com/forms/d/e/1FAIpQLSe4TmEylSelfV1GJQLBURdP2Swp0mYTWAVZuehZzK6bgffbXg/viewform?embedded=true',
   partnersEmail: 'partners@nonamekitchen.org',
   account: {
     name: 'NO NAME KITCHEN',
