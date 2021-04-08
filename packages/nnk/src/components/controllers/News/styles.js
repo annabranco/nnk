@@ -1,6 +1,4 @@
-import { css, styled } from 'frontity';
-import { sizeMedium } from '../../../setup/themes';
-import Link from '../../core/Link';
+import { styled } from 'frontity';
 
 export const NewsSection = styled.section`
   display: flex;
@@ -30,7 +28,7 @@ export const NewsWrapper = styled.div`
 
   @media all and (min-width: 768px) {
     display: grid;
-
+    grid-auto-flow: dense;
     grid-template-columns: repeat(3, 1fr);
     padding: 24px;
     grid-gap: 10px;

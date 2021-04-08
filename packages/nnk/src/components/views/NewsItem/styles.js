@@ -6,9 +6,7 @@ import {
   sizeDefaultText,
   fontTitleNews,
   fontTitle,
-  sizeSmallestTitle,
-  sizeLarge,
-  sizeMediumTitle
+  sizeLarge
 } from '../../../setup/themes';
 import Link from '../../core/Link';
 
