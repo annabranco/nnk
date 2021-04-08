@@ -14,11 +14,9 @@ import { StatePropType, ActionsPropType } from '../../../types';
 import { HeaderContainer, Logo } from './styles';
 
 const Header = ({ state, actions }) => {
-  // eslint-disable-next-line no-unused-vars
   const [activeLanguage, changeLanguage] = useState('es');
   const { colors } = state.theme;
-  // eslint-disable-next-line no-unused-vars
-  const { changeTheme } = actions.theme;
+  // const { changeTheme } = actions.theme;
   const MOBILE_VERSION = getMediaQuery() === MOBILE;
 
   // const onClickFlag = () => {
@@ -53,5 +51,4 @@ Header.propTypes = {
   actions: ActionsPropType.isRequired
 };
 
-// Connect the Header component to get access to the `state` in it's `props`
 export default connect(Header);

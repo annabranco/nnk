@@ -10,7 +10,11 @@ export const Title = styled(BaseTitle)`
   color: ${({ colors }) => colors && colors.secondary};
   width: fit-content;
 
-  @media only screen and (min-width: 375px) {
+  /* @media only screen and (min-width: 375px) {
+    font-size: ${sizeHugeTitle};
+  } */
+
+  @media all and (min-width: 768px) {
     font-size: ${sizeHugeTitle};
   }
 `;
