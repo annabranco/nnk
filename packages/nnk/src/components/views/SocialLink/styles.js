@@ -36,3 +36,8 @@ export const SocialLogo = styled.div`
   }
 `;
 SocialLogo.displayName = 'SocialLogo';
+
+export const SocialLinkButton = styled.a`
+  text-decoration: none;
+  color: black;
+`;

@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { string } from 'prop-types';
+import { number, string } from 'prop-types';
 import React, { useRef, useState } from 'react';
 import { ColorsPropType } from '../../../types';
 import { Loading } from '../../../assets/images';
 import { LoadingSpinner, SubscribeContainer, SubscribeFrame } from './styles';
 
-const SubscriptionArea = ({ colors, size }) => {
+const ExternalForm = ({ colors, height, src, title, width }) => {
   const [pageLoaded, toggleLoaded] = useState(false);
   const FrameElement = useRef();
 
@@ -18,8 +18,8 @@ const SubscriptionArea = ({ colors, size }) => {
   const onLoad = () => {
     toggleLoaded(true);
     setAttributes({
-      width: size === 'small' ? 340 : 640,
-      height: 800,
+      width,
+      height,
       frameborder: 0,
       marginheight: 0,
       marginwidth: 0
@@ -32,9 +32,9 @@ const SubscriptionArea = ({ colors, size }) => {
         <LoadingSpinner src={`${Loading}?${Math.random()}`} alt="Loading" />
       )}
       <SubscribeFrame
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfDAwap34je_R2Kt-H3QvK6tLAxRB3TMNGFmmo3_Yn5Xd3IPg/viewform?embedded=true"
+        src={src}
         frameBorder="0"
-        title="subscription"
+        title={title}
         ref={FrameElement}
         onLoad={onLoad}
       >
@@ -44,13 +44,16 @@ const SubscriptionArea = ({ colors, size }) => {
   );
 };
 
-SubscriptionArea.propTypes = {
+ExternalForm.propTypes = {
   colors: ColorsPropType.isRequired,
-  size: string
+  height: number.isRequired,
+  src: string.isRequired,
+  title: string.isRequired,
+  width: number.isRequired
 };
 
-SubscriptionArea.defaultProps = {
+ExternalForm.defaultProps = {
   size: 'large'
 };
 
-export default SubscriptionArea;
+export default ExternalForm;

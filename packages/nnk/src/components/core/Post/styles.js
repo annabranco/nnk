@@ -6,7 +6,8 @@ import {
   sizeSmall,
   sizeSmallTitle,
   sizeMediumTitle,
-  fontTitleNews
+  fontTitleNews,
+  sizeXLarge
 } from '../../../setup/themes';
 import Link from '../Link';
 
@@ -52,17 +53,19 @@ export const StyledLink = styled(Link)`
 StyledLink.displayName = 'StyledLink';
 
 export const BackToReports = styled.p`
+  z-index: 50;
   position: fixed;
-  bottom: 10%;
-  left: 10%;
+  bottom: 50px;
+  height: 20px;
+  left: 0;
   border: ${({ colors }) => `2px solid ${colors.terciary}`};
   border-radius: 5px;
   padding: 5px 10px;
   background: ${({ colors }) => colors && colors.terciary};
   text-transform: uppercase;
   font-weight: 700;
-  font-size: ${sizeMedium};
-  width: 15%;
+  font-size: ${sizeMediumTitle};
+  width: 100%;
   cursor: pointer;
 
   &:hover {
@@ -72,6 +75,14 @@ export const BackToReports = styled.p`
       transform: translate(-5px, 0);
       transition: transform ease 0.5s;
     }
+  }
+
+  @media all and (min-width: 768px) {
+    width: 15%;
+    bottom: 10%;
+    left: 10%;
+    height: auto;
+    font-size: ${sizeMedium};
   }
 `;
 BackToReports.displayName = 'BackToReports';

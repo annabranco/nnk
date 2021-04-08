@@ -6,11 +6,14 @@ import Link from '../../core/Link';
 import FeaturedMedia from '../../core/FeaturedMedia';
 import { ItemPropType, StatePropType, TextsNewsPropType } from '../../../types';
 import { ArticleWrapper, Excerpt, PublishDate, Title, InfoBox } from './styles';
-import { getFormatedDate } from '../../../utils';
+import { getFormatedDate, getMediaQuery } from '../../../utils';
+import { MOBILE } from '../../../constants/devices';
 
 const NewsItem = ({ state, item, read, texts }) => {
   const { colors, language } = state.theme;
   const date = new Date(item.date);
+  const MOBILE_VERSION = getMediaQuery() === MOBILE;
+
   const clearOriginalLink = excerpt => {
     return excerpt.split('<p class="link-more">')[0];
   };
@@ -29,8 +32,10 @@ const NewsItem = ({ state, item, read, texts }) => {
           </Link>
 
           <InfoBox>
-            <PublishDate colors={colors}>
-              {`${texts.publishedOn} ${getFormatedDate(date, language)}`}
+            <PublishDate colors={colors} mobile={MOBILE_VERSION}>
+              {MOBILE_VERSION
+                ? getFormatedDate(date, language)
+                : `${texts.publishedOn} ${getFormatedDate(date, language)}`}
             </PublishDate>
           </InfoBox>
 

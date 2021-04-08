@@ -5,7 +5,8 @@ import {
   sizeSmallTitle,
   sizeDefaultText,
   fontTitleNews,
-  fontTitle
+  fontTitle,
+  sizeLarge
 } from '../../../setup/themes';
 import Link from '../../core/Link';
 
@@ -52,8 +53,14 @@ export const Excerpt = styled.div`
 
   & > p {
     color: ${({ colors }) => colors && colors.primary};
-    font-size: ${sizeDefaultText};
+    font-size: ${sizeLarge};
     padding: 5px 10px;
+  }
+
+  @media all and (min-width: 768px) {
+    & > p {
+      font-size: ${sizeDefaultText};
+    }
   }
 `;
 
@@ -66,6 +73,7 @@ export const PublishDate = styled.span`
   padding-right: 5px;
   font-size: 0.9em;
   color: darkgrey;
+  font-size: ${({ mobile }) => (mobile ? sizeLarge : sizeSmall)};
 `;
 
 export const StyledLink = styled(Link)`

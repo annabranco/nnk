@@ -102,6 +102,12 @@ export const globalStyles = css`
   button {
     outline: none;
   }
+  a {
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
   html {
     font-size: 10px;
 

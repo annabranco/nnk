@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { string, func } from 'prop-types';
 import Link from '../../core/Link';
-import { SocialLogo } from './styles';
+import { SocialLinkButton, SocialLogo } from './styles';
 
 const SocialLink = ({ link = '', onClick, type }) => {
   let socialClassName;
@@ -27,9 +27,9 @@ const SocialLink = ({ link = '', onClick, type }) => {
 
   return (
     <SocialLogo onClick={onClick}>
-      <Link href={link}>
+      <SocialLinkButton href={link}>
         <i aria-hidden className={socialClassName} />
-      </Link>
+      </SocialLinkButton>
     </SocialLogo>
   );
 };
