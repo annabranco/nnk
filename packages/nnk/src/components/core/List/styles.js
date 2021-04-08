@@ -1,5 +1,10 @@
 import { css, styled } from 'frontity';
-import { sizeMedium, sizeSmall } from '../../../setup/themes';
+import {
+  sizeLarge,
+  sizeMedium,
+  sizeSmall,
+  sizeSmallestTitle
+} from '../../../setup/themes';
 import Link from '../Link';
 import { BackToReports, BackToReportsArrow } from '../Post/styles';
 
@@ -114,12 +119,16 @@ ButtonsWrapper.displayName = 'ButtonsWrapper';
 
 export const PageButton = styled.p`
   text-align: center;
-  font-size: ${sizeMedium};
+  font-size: ${sizeLarge};
   text-transform: uppercase;
   font-weight: 700;
   margin-top: -15px;
 
   color: ${({ colors }) => colors && colors.terciary};
+
+  @media all and (min-width: 768px) {
+    font-size: ${sizeMedium};
+  }
 
   @media all and (min-width: 1200px) {
     font-size: 0.8rem;
@@ -156,7 +165,11 @@ PageButton.displayName = 'PageButton';
 
 export const PageButtonArrow = styled(BackToReportsArrow)`
   margin: ${({ right }) => (right ? '0 0 0 5px' : '0 5px 0 0')};
-  font-size: 0.9rem;
+  font-size: ${sizeLarge};
+
+  @media all and (min-width: 768px) {
+    font-size: ${sizeSmallestTitle};
+  }
 
   @media all and (min-width: 1200px) {
     font-size: ${sizeMedium};

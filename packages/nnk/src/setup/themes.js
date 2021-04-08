@@ -38,6 +38,7 @@ export const sizeLarge = '1.3rem';
 export const sizeXLarge = '2.8rem';
 export const sizeXXLarge = '3.4rem';
 
+export const sizeSmallestTitle = '0.9rem';
 export const sizeSmallTitle = '1.6rem';
 export const sizeMediumTitle = '2rem';
 export const sizeLargeTitle = '2.6rem';
