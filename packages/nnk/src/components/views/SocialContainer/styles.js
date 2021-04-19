@@ -26,7 +26,7 @@ export const SocialContainer = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
-    margin: 80px 40px;
+    margin: 40px 40px 80px;
 
     ${({ size }) =>
       size === 'small' &&
