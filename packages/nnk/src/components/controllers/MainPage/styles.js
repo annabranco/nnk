@@ -1,5 +1,5 @@
 import { styled } from 'frontity';
-import { fontTitle, sizeLarge } from '../../../setup/themes';
+import { fontTitle, sizeMediumTitle } from '../../../setup/themes';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -13,13 +13,13 @@ export const MainContainer = styled.div`
 MainContainer.displayName = 'MainContainer';
 
 export const SubscriptionButton = styled.button`
-  margin: -20px auto 10px;
-  height: 40px;
-  width: 250px;
+  margin: -30px auto 30px;
+  height: 60px;
+  width: 450px;
   color: ${({ colors }) => colors && colors.secondary};
   background-color: ${({ colors }) => colors && colors.terciary};
   text-transform: uppercase;
-  font-size: ${sizeLarge};
+  font-size: ${sizeMediumTitle};
   font-family: ${fontTitle};
   cursor: pointer;
   border-radius: 5px;
