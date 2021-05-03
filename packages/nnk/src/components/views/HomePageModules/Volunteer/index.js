@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { VolunteersInAction } from '../../../../assets/images';
+import { JoinUs } from '../../../../assets/images';
 import { getMediaQuery } from '../../../../utils';
 import Link from '../../../core/Link';
 import { MOBILE } from '../../../../constants/devices';
@@ -30,9 +30,9 @@ const VolunteerModule = ({ colors, texts }) => {
       <Link link="/join-us/">{styleTitle(texts.question)}</Link>
       <ImgLink link="/join-us/">
         {getMediaQuery() === MOBILE ? (
-          <MainImageAsBg img={VolunteersInAction} alt={texts.altMainImage} />
+          <MainImageAsBg img={JoinUs} alt={texts.altMainImage} />
         ) : (
-          <MainImage src={VolunteersInAction} alt={texts.altMainImage} />
+          <MainImage src={JoinUs} alt={texts.altMainImage} />
         )}
       </ImgLink>
     </ModuleWrapper>

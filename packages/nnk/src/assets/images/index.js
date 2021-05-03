@@ -9,6 +9,7 @@ export const Logo = require('./logos/logo.png');
 // Main
 export const HomeBG = require('./bgs/homeBg.jpg');
 export const Home = require('./bgs/home.jpg');
+export const JoinUs = require('./spots/volunteers.jpeg');
 export const Photo01 = require('./spots/our-projects.jpeg');
 export const Photo02 = require('./spots/base02.jpeg');
 export const Photo03 = require('./spots/base03.jpeg');

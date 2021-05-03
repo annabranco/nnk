@@ -5,6 +5,7 @@ import {
   sizeMediumTitle,
   sizeSmallTitle
 } from '../../../../setup/themes';
+import { SubscriptionButton } from '../../../controllers/MainPage/styles';
 
 export const MainText = styled(BaseText)`
   position: absolute;
@@ -107,3 +108,23 @@ export const PhotoContainer = styled.div`
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';
+
+export const VideoButton = styled(SubscriptionButton)`
+  position: relative;
+  top: -40vh;
+  right: -25vw;
+  border-radius: 25px;
+  box-shadow: 5px 0 20px 7px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 1px black;
+`;
+VideoButton.displayName = 'VideoButton';
+
+export const VideoElement = styled.iframe`
+  position: relative;
+  top: 0;
+  height: 90%;
+  width: 80%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 0 50px 50px rgba(0, 0, 0, 0.8);
+`;
+VideoElement.displayName = 'VideoElement';
