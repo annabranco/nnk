@@ -1,21 +1,22 @@
 {
   "en": {
     "title": "Donate",
+    "description": "Your help is needed to provide food, shelter, lifesaving medical care and legal support to people who have been through so much across the Balkans and Mediterranean routes. Check our campaigns and choose which one fits better with your values and interests.",
     "values": [
       {
         "title": "100% INDEPENDENT",
-        "description": "Nobody´s agenda influences our freedom to act and to denounce the injustice."
+        "description": "We keep our freedom to claim justice and to fight the negligent violation of human rights at the EU borders."
       },
       {
-        "title": "HIGH IMPACT",
-        "description": "Each donation is needed to boost our actions and to provide a rapid response for emergencies."
+        "title": "IMPACTFUL",
+        "description": "NNK teams work on the field to identify needs and solutions 365 days per year."
       },
       {
-        "title": "FULL TRANSPARENCY",
-        "description": "Our accountability is open and free-access. Feel free to ask how we spend each euro. For more info, please contact $[mail]."
+        "title": "TRANSPARENCY",
+        "description": "Our accountability is free-access for everyone who wants to know the final use of their donations."
       }
     ],
-    "transfer": "If you prefer it, make a bank transfer to:",
+    "transfer": "If can donate by bank transfer or PayPal. For more info:",
     "accountName": "Account Name:",
     "address": "Address:",
     "iban": "IBAN:",

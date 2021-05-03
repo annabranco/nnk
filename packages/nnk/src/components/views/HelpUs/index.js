@@ -1,44 +1,51 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
 import { getSocialLinks } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
-import { Photo09 } from '../../../assets/images';
+import {
+  CAMPAIGN_PHOTOS,
+  Photo09,
+  Triodos,
+  PayPal
+} from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import {
+  CampaignPhoto,
   Content,
-  Instructions,
-  ItemDescription,
-  ItemTitle,
+  Info,
+  Intro,
+  Logo,
   Section,
   SubsectionWrapper,
-  TransferInfo,
   ValueDescription,
   ValueItem,
   ValueTitle,
-  Values
+  Values,
+  Text,
+  PartnersLogos,
+  Title
 } from './styles';
-import ExternalForm from '../ExternalFrame';
+import DonorBox from '../DonorBox';
+import Link from '../../core/Link';
+import { Mail } from '../PrivacyDeclaration/styles';
 
 const HelpUs = ({ state }) => {
+  const [selectedCampaign, changeSelectedCampaign] = useState(
+    config.campaigns.mainCampaing
+  );
   const { colors, language } = state.theme;
   let texts = DONATION_TEXTS[language];
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
 
+  const onClickCampaign = ({ currentTarget: { id } }) =>
+    changeSelectedCampaign(id);
+
   useEffect(() => {
     texts = DONATION_TEXTS[language];
   }, [language]);
-
-  const updtateWildcardsInfo = text => {
-    switch (true) {
-      case text.includes('$[mail]'):
-        return text.replace('$[mail]', config.partnersEmail);
-      default:
-        return text;
-    }
-  };
 
   return (
     <Section colors={colors}>
@@ -51,47 +58,49 @@ const HelpUs = ({ state }) => {
       />
       <Content>
         <SubsectionWrapper>
-          <Values colors={colors}>
-            {texts.values.map(value => (
-              <ValueItem key={value.title}>
-                <ValueDescription>
-                  <ValueTitle>{value.title}</ValueTitle>
-                  {updtateWildcardsInfo(value.description)}
-                </ValueDescription>
-              </ValueItem>
-            ))}
-          </Values>
-          <TransferInfo colors={colors}>
-            <Instructions>{texts.transfer}</Instructions>
-            <ItemTitle>
-              {texts.accountName}
-              <ItemDescription>{config.account.name}</ItemDescription>
-            </ItemTitle>
-            <ItemTitle>
-              {texts.address}
-              <ItemDescription>{config.account.address}</ItemDescription>
-            </ItemTitle>
-            <ItemTitle>
-              {texts.iban}
-              <ItemDescription>{config.account.iban}</ItemDescription>
-            </ItemTitle>
-            <ItemTitle>
-              {texts.swift}
-              <ItemDescription>{config.account.swift}</ItemDescription>
-            </ItemTitle>
-          </TransferInfo>
+          <DonorBox campaign={selectedCampaign} />
         </SubsectionWrapper>
         <SubsectionWrapper>
-          <ExternalForm
-            colors={colors}
-            width={340}
-            height={800}
-            src={config.subscriptionEndpoint}
-            title="subscription"
-          />
-          {/* <DonorBox>DonorBox</DonorBox> */}
+          <Title colors={colors}>On-going campaigns</Title>
+          {config.campaigns.activeCampaigns
+            .filter(campgn => campgn !== selectedCampaign)
+            .sort(
+              (a, b) =>
+                config.campaigns.details[a].order -
+                config.campaigns.details[b].order
+            )
+            .map(campgn => (
+              <CampaignPhoto
+                alt={config.campaigns.details[campgn].name}
+                key={campgn}
+                onClick={onClickCampaign}
+                src={CAMPAIGN_PHOTOS[campgn]}
+                id={campgn}
+              />
+            ))}
         </SubsectionWrapper>
       </Content>
+      <Info>
+        <Intro>{texts.description}</Intro>
+        <Values colors={colors}>
+          {texts.values.map(value => (
+            <ValueItem key={value.title}>
+              <ValueTitle>{value.title}</ValueTitle>
+              <ValueDescription>{value.description}</ValueDescription>
+            </ValueItem>
+          ))}
+        </Values>
+        <PartnersLogos>
+          <Text>
+            {texts.transfer}{' '}
+            <Mail href="mailto:partners@nonamekitchen.com">
+              partners@nonamekitchen.com
+            </Mail>
+          </Text>
+          <Logo src={Triodos} alt="Triodos" />
+          <Logo src={PayPal} alt="Paypal" />
+        </PartnersLogos>
+      </Info>
     </Section>
   );
 };

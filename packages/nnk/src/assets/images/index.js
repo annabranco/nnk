@@ -23,9 +23,8 @@ export const CrossedFork = require('./icons/crossedFork.png');
 
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
-export const GoFundMe = require('./logos/gofundme.png');
+export const Triodos = require('./logos/triodos.jpg');
 export const PayPal = require('./logos/paypal.png');
-export const Teaming = require('./logos/teaming.png');
 
 // What
 export const HeroWhat = require('./spots/base01.jpeg');
@@ -48,3 +47,14 @@ export const BlackBook = require('./icons/black-book.png');
 
 // JTTF
 export const VolunteersInAction = require('./spots/logistics.jpeg');
+
+// Campaigns
+const emergencyInNorthBosnia = require('./spots/donate-bosnia.jpg');
+const supportPeopleInSerbia = require('./spots/donate-serbia.jpg');
+const foodHealthInGreece = require('./spots/donate-patras.jpg');
+
+export const CAMPAIGN_PHOTOS = {
+  supportPeopleInSerbia,
+  emergencyInNorthBosnia,
+  foodHealthInGreece
+};

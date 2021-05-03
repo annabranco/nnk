@@ -10,6 +10,42 @@ export default {
   buttonsHighlight: THEMES[DARK].terciary,
   latestReportsNum: 9,
   dateFormat: 'mMmm D yyyy', // mMm keeps the default month format
+  campaigns: {
+    mainCampaing: 'weAreAllMigrantSouls',
+    activeCampaigns: [
+      'weAreAllMigrantSouls',
+      'emergencyInNorthBosnia',
+      'supportPeopleInSerbia',
+      'foodHealthInGreece'
+    ],
+    details: {
+      weAreAllMigrantSouls: {
+        id: 'no-name-kitchen',
+        name: 'WE ARE ALL MIGRANT SOULS',
+        order: 0
+      },
+      emergencyInNorthBosnia: {
+        id: 'emergency-in-northern-bosnia',
+        name: 'EMERGENCY IN NORTHERN BOSNIA',
+        order: 1
+      },
+      supportPeopleInSerbia: {
+        id: 'supportingnnkinserbia',
+        name: 'SUPPORTING PEOPLE ON THE MOVE IN SERBIA',
+        order: 2
+      },
+      foodHealthInGreece: {
+        id: 'food-health-for-refugees-in-patras',
+        name: 'FOOD & HEALTH FOR REFUGEES IN PATRAS',
+        order: 3
+      },
+      openTheBorders: {
+        id: 'open-the-borders',
+        name: 'OPEN THE BORDERS',
+        order: 4
+      }
+    }
+  },
   socialLinks: [
     {
       type: 'Facebook',

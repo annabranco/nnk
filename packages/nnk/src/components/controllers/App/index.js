@@ -47,6 +47,7 @@ const App = ({ state, actions }) => {
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700"
           rel="stylesheet"
         />
+        <script src="https://donorbox.org/widget.js" paypalExpress="true" />
         <script
           src="https://kit.fontawesome.com/7d8d592f81.js"
           crossOrigin="anonymous"
