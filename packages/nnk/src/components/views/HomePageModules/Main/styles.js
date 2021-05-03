@@ -44,7 +44,7 @@ export const MainText = styled(BaseText)`
   }
 
   @media only screen and (min-width: 1024px) {
-    bottom: 15vh;
+    bottom: 20vh;
     font-size: ${sizeMediumTitle};
   }
 `;
@@ -120,7 +120,14 @@ export const VideoButton = styled(SubscriptionButton)`
   width: 60%;
 
   @media all and (min-width: 1200px) {
-    top: -40vh;
+    top: 0;
+    right: -20vw;
+    height: 60px;
+    width: 350px;
+  }
+
+  @media all and (min-width: 1400px) {
+    top: -5vh;
     right: -25vw;
     height: 60px;
     width: 450px;
