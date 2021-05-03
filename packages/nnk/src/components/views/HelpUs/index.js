@@ -61,11 +61,6 @@ const HelpUs = ({ state }) => {
               </ValueItem>
             ))}
           </Values>
-          {/* <PartnersLogos>
-            <Logo src={PayPal} />
-            <Logo src={GoFundMe} />
-            <Logo src={Teaming} />
-          </PartnersLogos> */}
           <TransferInfo colors={colors}>
             <Instructions>{texts.transfer}</Instructions>
             <ItemTitle>

@@ -37,6 +37,10 @@ const App = ({ state, actions }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
         <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link

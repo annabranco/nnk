@@ -9,7 +9,7 @@ import { StatePropType } from '../../../types';
 const AppModal = ({ children, closeButton, closeAction, state }) => {
   const { colors, language } = state.theme;
   return (
-    <ModalOverlay onClick={closeAction}>
+    <ModalOverlay onClick={closeButton ? () => null : () => closeAction()}>
       {closeAction && closeButton && (
         <CloseButton
           colors={colors}

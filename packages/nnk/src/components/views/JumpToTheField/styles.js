@@ -138,6 +138,12 @@ InfoTitle.displayName = 'InfoTitle';
 
 export const JoinButton = styled(SubscriptionButton)`
   margin: 60px auto;
+  width: 85vw;
+
+  @media all and (min-width: 1200px) {
+    height: 60px;
+    width: 450px;
+  }
 `;
 JoinButton.displayName = 'JoinButton';
 

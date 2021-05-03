@@ -1,7 +1,7 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import config from '../../../setup/config';
-import { getMediaQuery } from '../../../utils';
+import { getMediaQuery, toggleBodyScroll } from '../../../utils';
 import {
   HOMEPAGE_TEXTS,
   WHY_TEXTS,
@@ -25,6 +25,16 @@ const MainPage = ({ state }) => {
   let whyTexts = WHY_TEXTS[language];
   let volunteerTexts = VOLUNTEER_TEXTS[language];
   let donationTexts = DONATION_TEXTS[language];
+
+  const onToggleSubscription = () => {
+    if (displayModal) {
+      toggleModal(false);
+      toggleBodyScroll();
+    } else {
+      toggleModal(true);
+      toggleBodyScroll('hide');
+    }
+  };
 
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
@@ -50,11 +60,11 @@ const MainPage = ({ state }) => {
       <PageSection size="large" colors={colors}>
         <VolunteerModule texts={volunteerTexts} colors={colors} />
       </PageSection>
-      <SubscriptionButton colors={colors} onClick={toggleModal}>
+      <SubscriptionButton colors={colors} onClick={onToggleSubscription}>
         {donationTexts.subscribeTo} {donationTexts.noNameNews}
       </SubscriptionButton>
       {displayModal && (
-        <AppModal closeAction={() => toggleModal(false)}>
+        <AppModal closeAction={onToggleSubscription}>
           <ExternalForm
             colors={colors}
             width={getMediaQuery() === MOBILE ? 340 : 640}

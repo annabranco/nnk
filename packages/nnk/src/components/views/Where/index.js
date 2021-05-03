@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import { getSocialLinks } from '../../../utils';
+import { getSocialLinks, toggleBodyScroll } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
 import { Mapv1, Photo05 } from '../../../assets/images';
@@ -15,6 +15,16 @@ const WhereSection = ({ state }) => {
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
   let texts = WHERE_TEXTS[language];
 
+  const onToggleMap = () => {
+    if (displayModal) {
+      toggleModal(false);
+      toggleBodyScroll();
+    } else {
+      toggleModal(true);
+      toggleBodyScroll('hide');
+    }
+  };
+
   useEffect(() => {
     texts = WHERE_TEXTS[language];
   }, [language]);
@@ -23,11 +33,7 @@ const WhereSection = ({ state }) => {
     <Section colors={colors}>
       {displayModal && (
         <AppModal>
-          <ModalImage
-            src={Mapv1}
-            alt={texts.mapAlt}
-            onClick={() => toggleModal(false)}
-          />
+          <ModalImage src={Mapv1} alt={texts.mapAlt} onClick={onToggleMap} />
         </AppModal>
       )}
       <SectionHeader
@@ -38,7 +44,7 @@ const WhereSection = ({ state }) => {
         title={texts.title}
       />
       <Content>
-        <Map src={Mapv1} alt={texts.mapAlt} onClick={() => toggleModal(true)} />
+        <Map src={Mapv1} alt={texts.mapAlt} onClick={onToggleMap} />
       </Content>
     </Section>
   );

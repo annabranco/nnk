@@ -113,7 +113,7 @@ export const Instructions = styled(BaseText)`
   font-size: ${sizeLarge};
 
   @media only screen and (min-width: 375px) {
-    font-size: ${sizeLargeTitle};
+    font-size: ${sizeSmallTitle};
   }
 
   @media only screen and (min-width: 768px) {
@@ -139,7 +139,7 @@ export const ItemDescription = styled.span`
   font-weight: 400;
 
   @media only screen and (min-width: 375px) {
-    font-size: ${sizeLargeTitle};
+    font-size: ${sizeMediumTitle};
   }
 
   @media only screen and (min-width: 768px) {
@@ -385,7 +385,7 @@ TitleWrapper.displayName = 'TitleWrapper';
 
 export const TransferInfo = styled.div`
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   background: ${({ colors }) => colors && colors.terciary};
   padding: 10px;
   text-align: left;
@@ -393,6 +393,7 @@ export const TransferInfo = styled.div`
   border-radius: 10px;
 
   @media only screen and (min-width: 768px) {
+    width: 100%;
     text-align: center;
     border-radius: 5px;
   }

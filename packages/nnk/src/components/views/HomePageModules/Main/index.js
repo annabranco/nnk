@@ -1,6 +1,10 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { getMediaQuery, getSocialLinks } from '../../../../utils';
+import {
+  getMediaQuery,
+  getSocialLinks,
+  toggleBodyScroll
+} from '../../../../utils';
 import { DESKTOP } from '../../../../constants/devices';
 import { HOMEPAGE_TEXTS } from '../../../../db';
 import SocialModule from '../../SocialContainer';
@@ -16,9 +20,19 @@ const socialLinks =
 
 const MainModule = ({ state }) => {
   const { colors, language } = state.theme;
-  const [displayVideo, toggleVideo] = useState(false);
+  const [isVideoDisplayed, displayVideo] = useState(false);
 
   let homepageTexts = HOMEPAGE_TEXTS[language];
+
+  const onToggleVideo = () => {
+    if (isVideoDisplayed) {
+      displayVideo(false);
+      toggleBodyScroll();
+    } else {
+      displayVideo(true);
+      toggleBodyScroll('hide');
+    }
+  };
 
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
@@ -28,11 +42,11 @@ const MainModule = ({ state }) => {
     <PhotoContainer colors={colors} img={Home}>
       <MainText colors={colors}>{homepageTexts.mainText}</MainText>
       <SocialModule socialLinks={socialLinks} />
-      <VideoButton colors={colors} onClick={toggleVideo}>
+      <VideoButton colors={colors} onClick={onToggleVideo}>
         Watch video <i className="far fa-play-circle" />
       </VideoButton>
-      {displayVideo && (
-        <AppModal closeAction={() => toggleVideo(false)}>
+      {isVideoDisplayed && (
+        <AppModal closeAction={onToggleVideo}>
           <VideoElement
             src="https://www.youtube.com/embed/yfMWd8rLSEs?controls=0&autoplay=1"
             title="Wanna Join? youtube video"

@@ -3,7 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
 import SectionHeader from '../SectionHeader';
-import { getSocialLinks, getMediaQuery } from '../../../utils';
+import {
+  getSocialLinks,
+  getMediaQuery,
+  toggleBodyScroll
+} from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
 import { MOBILE, TABLET } from '../../../constants/devices';
 import { VolunteersInAction } from '../../../assets/images';
@@ -26,10 +30,19 @@ const DEVICE_VERSION = getMediaQuery() === MOBILE || getMediaQuery() === TABLET;
 
 const JumpToTheFieldSection = ({ state }) => {
   const [displayModal, toggleModal] = useState(false);
-
   const { colors, language } = state.theme;
   let texts = JTTF_TEXTS[language];
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
+
+  const onToggleForm = () => {
+    if (displayModal) {
+      toggleModal(false);
+      toggleBodyScroll();
+    } else {
+      toggleModal(true);
+      toggleBodyScroll('hide');
+    }
+  };
 
   useEffect(() => {
     texts = JTTF_TEXTS[language];
@@ -48,7 +61,7 @@ const JumpToTheFieldSection = ({ state }) => {
         <Text>{texts.text1}</Text>
         {texts.text2 && <Text>{texts.text2}</Text>}
         {texts.text3 && <Text>{texts.text3}</Text>}
-        <JoinButton colors={colors} onClick={toggleModal}>
+        <JoinButton colors={colors} onClick={onToggleForm}>
           {texts.form.joinUs}
         </JoinButton>
         <MoreInfo>
@@ -59,15 +72,12 @@ const JumpToTheFieldSection = ({ state }) => {
               <InfoDescription colors={colors}>
                 {item.description}
               </InfoDescription>
-              {/* <InfoDescription colors={colors} subItem>
-                {item.description2}
-              </InfoDescription> */}
             </Info>
           ))}
         </MoreInfo>
 
         {displayModal && (
-          <AppModal closeAction={() => toggleModal(false)}>
+          <AppModal closeAction={onToggleForm} closeButton>
             <ExternalForm
               colors={colors}
               width={getMediaQuery() === MOBILE ? 340 : 640}

@@ -111,20 +111,33 @@ PhotoContainer.displayName = 'PhotoContainer';
 
 export const VideoButton = styled(SubscriptionButton)`
   position: relative;
-  top: -40vh;
-  right: -25vw;
+  top: 10vh;
+  right: -10vh;
   border-radius: 25px;
-  box-shadow: 5px 0 20px 7px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 0 15px 3px rgba(0, 0, 0, 0.8);
   -webkit-text-stroke: 1px black;
+  height: 40px;
+  width: 60%;
+
+  @media all and (min-width: 1200px) {
+    top: -40vh;
+    right: -25vw;
+    height: 60px;
+    width: 450px;
+  }
 `;
 VideoButton.displayName = 'VideoButton';
 
 export const VideoElement = styled.iframe`
   position: relative;
   top: 0;
-  height: 90%;
   width: 80%;
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 0 50px 50px rgba(0, 0, 0, 0.8);
+
+  @media all and (min-width: 1200px) {
+    height: 90%;
+    width: 80%;
+  }
 `;
 VideoElement.displayName = 'VideoElement';
