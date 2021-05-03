@@ -9,7 +9,7 @@ export const Logo = require('./logos/logo.png');
 // Main
 export const HomeBG = require('./bgs/homeBg.jpg');
 export const Home = require('./bgs/home.jpg');
-export const Photo01 = require('./spots/base01.jpeg');
+export const Photo01 = require('./spots/our-projects.jpeg');
 export const Photo02 = require('./spots/base02.jpeg');
 export const Photo03 = require('./spots/base03.jpeg');
 
@@ -28,7 +28,7 @@ export const PayPal = require('./logos/paypal.png');
 export const Teaming = require('./logos/teaming.png');
 
 // What
-export const HeroWhat = require('./spots/logistics.jpeg');
+export const HeroWhat = require('./spots/base01.jpeg');
 export const Program01 = require('./spots/program01.jpeg');
 export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.jpeg');
