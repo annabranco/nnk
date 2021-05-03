@@ -37,10 +37,11 @@ export const Program03 = require('./spots/program03.jpeg');
 export const Mapv1 = require('./maps/mapv1.jpg');
 
 // Why
-export const HeroWhy = require('./spots/base07.jpg');
+export const HeroWhy = require('./spots/trainTracks.jpg');
 export const Testimony01 = require('./spots/testimony01.png');
 export const Testimony02 = require('./spots/testimony02.jpg');
 export const Testimony03 = require('./spots/testimony03.png');
 
 // Other
 export const Loading = require('./icons/loading.gif');
+export const BlackBook = require('./icons/black-book.png');

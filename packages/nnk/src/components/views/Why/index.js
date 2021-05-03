@@ -6,10 +6,13 @@ import { fetchData, getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { HeroWhy } from '../../../assets/images';
+import { BlackBook, HeroWhy } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
 import {
+  BlackBookContainer,
+  BlackBookPhoto,
+  BlackBookVolumesWrapper,
   BorderViolenceArea,
   Content,
   Intro,
@@ -75,6 +78,28 @@ const WhySection = ({ state }) => {
           <Link link={`${BORDER_VIOLENCE_URL}/category/monthly-report/`}>
             <Title colors={colors}>{texts.borderViolence}</Title>
           </Link>
+          <Intro>{texts.borderViolenceIntro}</Intro>
+          <BlackBookContainer>
+            <BlackBookPhoto src={BlackBook} alt="The Black Book cover" />
+            <Intro>{texts.blackBook}</Intro>
+            <Intro>{texts.blackBookDownload}</Intro>
+            <BlackBookVolumesWrapper>
+              <Link
+                link="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:b10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
+                target="_blank"
+              >
+                <Intro>{texts.blackBookVolumes[0]}</Intro>
+              </Link>
+              <Link
+                link="https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Ab10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
+                target="_blank"
+              >
+                <Intro>{texts.blackBookVolumes[1]}</Intro>
+              </Link>
+            </BlackBookVolumesWrapper>
+          </BlackBookContainer>
+          <Intro>{texts.borderViolence}</Intro>
+
           {latestReports.length > 0 && (
             <>
               <LatestReportsArea items={config.latestReportsNum}>
