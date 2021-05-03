@@ -18,7 +18,6 @@ export const Photo05 = require('./spots/base05.jpg');
 export const Photo06 = require('./spots/base06.jpeg');
 export const Photo08 = require('./spots/base08.png');
 export const Photo09 = require('./spots/base09.jpeg');
-export const VolunteersInAction = require('./spots/volunteers.jpeg');
 export const CrossedFork = require('./icons/crossedFork.png');
 
 // Partners
@@ -45,3 +44,6 @@ export const Testimony03 = require('./spots/testimony03.png');
 // Other
 export const Loading = require('./icons/loading.gif');
 export const BlackBook = require('./icons/black-book.png');
+
+// JTTF
+export const VolunteersInAction = require('./spots/logistics.jpeg');

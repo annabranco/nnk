@@ -1,28 +1,24 @@
 {
   "en": {
-    "title": "Jump To The Field",
+    "title": "Volunteer",
     "titleAlt": "Join us",
-    "text1": "Our action takes place in sensitive environments where frustration often derived in tensions among refugees and locals. Conditions might be stressful and the work requires self-responsibility and maturity. Everything that NNK members do on the field affects how locals and refugees perceive NNK overall.",
-    "text2": "NNK offers internships on the field by providing free accommodation, a basket with food and cleaning products, legal and psychological support, and a real humanitarian experience. If you feel ready to join the move, please check the requirements below and fulfill the form. Be patient. We´ll contact you soon.",
+    "text1": "Our action takes place in sensitive environments where frustration could derive in tensions between people migrating and the local community. Conditions might be stressful and the work requires self-responsibility and maturity since volunteering means to represent NNK on the field.",
+    "text2": "NNK offers internships on the field by providing free accommodation, a basket with food and cleaning products, legal and psychological support, and a real humanitarian experience. If you feel ready to join the move, please check the requirements below and fulfill the form. Be patient. We'll contact you soon.",
     "infoIcons": [
       {
         "icon": "fas fa-comment",
         "title": "Language",
-        "description": "English",
-        "description2": "Spanish for Morocco border"
+        "description": "English"
       },
       {
         "icon": "far fa-calendar-alt",
         "title": "Minimum Period",
-        "description": "3 weeks",
-        "description2": "6 weeks for reporters"
-
+        "description": "6 weeks"
       },
       {
         "icon": "fas fa-atom",
         "title": "Flexibility",
-        "description": "Teamwork",
-        "description2": "+18 years old"
+        "description": "Teamwork"
       }
     ],
     "form": {
@@ -30,7 +26,7 @@
       "email": "E-Mail",
       "message": "Message",
       "send": "Send",
-      "joinUs": "Contact form"
+      "joinUs": "Click here to join us"
     },
     "messageSent": {
       "title": "You message has been sent",

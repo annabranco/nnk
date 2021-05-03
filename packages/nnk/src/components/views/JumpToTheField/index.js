@@ -40,7 +40,7 @@ const JumpToTheFieldSection = ({ state }) => {
       <SectionHeader
         colors={colors}
         img={VolunteersInAction}
-        position="50% 20%"
+        position="50% 50%"
         socialLinks={socialLinks}
         title={DEVICE_VERSION ? texts.titleAlt : texts.title}
       />
@@ -48,6 +48,9 @@ const JumpToTheFieldSection = ({ state }) => {
         <Text>{texts.text1}</Text>
         {texts.text2 && <Text>{texts.text2}</Text>}
         {texts.text3 && <Text>{texts.text3}</Text>}
+        <JoinButton colors={colors} onClick={toggleModal}>
+          {texts.form.joinUs}
+        </JoinButton>
         <MoreInfo>
           {texts.infoIcons.map(item => (
             <Info colors={colors} key={item.icon}>
@@ -56,13 +59,13 @@ const JumpToTheFieldSection = ({ state }) => {
               <InfoDescription colors={colors}>
                 {item.description}
               </InfoDescription>
-              <InfoDescription colors={colors} subItem>
+              {/* <InfoDescription colors={colors} subItem>
                 {item.description2}
-              </InfoDescription>
+              </InfoDescription> */}
             </Info>
           ))}
         </MoreInfo>
-        <JoinButton onClick={toggleModal}>{texts.form.joinUs}</JoinButton>
+
         {displayModal && (
           <AppModal closeAction={() => toggleModal(false)}>
             <ExternalForm
