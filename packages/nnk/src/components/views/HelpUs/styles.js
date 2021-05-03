@@ -210,11 +210,18 @@ export const ValueItem = styled.div`
 `;
 ValueItem.displayName = 'ValueItem';
 
+export const ValueVideo = styled.img`
+  margin: 20px auto 10px;
+  width: 90%;
+`;
+ValueVideo.displayName = 'ValueVideo';
+
 export const Values = styled.div`
-  display: flex;
-  flex-direction: rows;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin-bottom: 20px;
   border-bottom: ${({ colors }) => colors && `4px solid ${colors.terciary}`};
   color: ${({ colors }) => colors && colors.secondary};

@@ -24,7 +24,7 @@ export const CrossedFork = require('./icons/crossedFork.png');
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
 export const Triodos = require('./logos/triodos.jpg');
-export const PayPal = require('./logos/paypal.png');
+export const PayPal = require('./logos/paypal-alt.png');
 
 // What
 export const HeroWhat = require('./spots/base01.jpeg');

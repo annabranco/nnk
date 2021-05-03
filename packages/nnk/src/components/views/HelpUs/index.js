@@ -5,6 +5,7 @@ import config from '../../../setup/config';
 import { getSocialLinks } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
+import DonorBox from '../DonorBox';
 import {
   CAMPAIGN_PHOTOS,
   Photo09,
@@ -26,10 +27,9 @@ import {
   Values,
   Text,
   PartnersLogos,
-  Title
+  Title,
+  ValueVideo
 } from './styles';
-import DonorBox from '../DonorBox';
-import Link from '../../core/Link';
 import { Mail } from '../PrivacyDeclaration/styles';
 
 const HelpUs = ({ state }) => {
@@ -83,10 +83,15 @@ const HelpUs = ({ state }) => {
       <Info>
         <Intro>{texts.description}</Intro>
         <Values colors={colors}>
-          {texts.values.map(value => (
+          {texts.values.map((value, index) => (
             <ValueItem key={value.title}>
               <ValueTitle>{value.title}</ValueTitle>
               <ValueDescription>{value.description}</ValueDescription>
+              <ValueVideo
+                src={
+                  CAMPAIGN_PHOTOS[config.campaigns.activeCampaigns[index + 1]]
+                }
+              />
             </ValueItem>
           ))}
         </Values>
