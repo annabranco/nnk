@@ -21,5 +21,28 @@
         }
       ],
       "videoButton": "Wanna join?"
+    },
+      "es": {
+      "description": "No Name Kitchen es una organización de base independiente que trabaja en lugares próximos a pasos\nfronterizos en las rutas Balcánica y Mediterránea. Proporcionamos ayuda humanitaria y hacemos incidencia\npolítica para apoyar a las personas en el ejercicio de su derecho a migrar en busca de una vida mejor.",
+      "mainText": "\"Human beings shall be free to move\nsearching for a future where no war,\npoverty, or disease, ruins their hope\"",
+      "subItems": [
+        {
+          "title": "nuestros proyectos",
+          "link": "/what/",
+          "description": "Young male refugee making a heart sign with his hands"
+        },
+        {
+          "title": "haz una donación",
+          "link": "/help-us/",
+          "description": "Camping gear on the snow"
+
+        },
+        {
+          "title": "últimas noticias",
+          "link": "/news/",
+          "description": "Young Pakistani receiving food from volunteers"
+        }
+      ],
+      "videoButton": "Quieres unirte?"
     }
 }

@@ -115,6 +115,9 @@ const nnkTheme = {
       },
       updateRead: ({ state }) => postsArray => {
         state.theme.postsRead = postsArray;
+      },
+      changeLanguage: ({ state }) => activeLanguage => {
+        state.theme.language = activeLanguage;
       }
     }
   },

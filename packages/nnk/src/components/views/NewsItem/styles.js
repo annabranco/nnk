@@ -131,3 +131,15 @@ export const Text = styled.em`
   margin-top: 30px;
   color: ${({ colors }) => colors && colors.terciary};
 `;
+
+export const Tag = styled.p`
+  font-size: ${sizeMedium};
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: ${({ colors }) => colors && colors.terciary};
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2px 5px;
+  font-family: ${fontTitle};
+  border-radius: 0 0 0 5px;
+`;

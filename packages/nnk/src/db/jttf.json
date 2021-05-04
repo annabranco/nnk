@@ -17,16 +17,42 @@
       },
       {
         "icon": "fas fa-atom",
-        "title": "Flexibility",
-        "description": "Teamwork"
+        "title": "Teamwork",
+        "description": "+18 years old"
       }
     ],
     "form": {
-      "fullName": "Full Name",
-      "email": "E-Mail",
-      "message": "Message",
-      "send": "Send",
       "joinUs": "Click here to join us"
+    },
+    "messageSent": {
+      "title": "You message has been sent",
+      "msgSent": "Thank you for writing us.\nWe'll contact you as soon as possible."
+    }
+  },
+  "es": {
+    "title": "Voluntariado",
+    "titleAlt": "Únete a nosotros",
+    "text1": "Nuestras acciones se desarrollan en entornos especialmente sensibles, en los que la frustración puede derivar en tensiones entre las personas refugiadas y la población local. Las condiciones de trabajo pueden llegar a ser estresantes y se necesita responsabilidad y madurez, ya que estar en el equipo significa representar a NNK sobre el terreno. ",
+    "text2": "NNK ofrece a los y las voluntarias alojamiento (he pasado de lo de internship), una pequeña asignación para comida e higiene, apoyo legal y psicológico y una experiencia humanitaria auténtica. Si tienes ganas de unirte a NNK, comprueba que reúnes los requisitos y rellena el formulario. Nos pondremos en contacto contigo.",
+    "infoIcons": [
+      {
+        "icon": "fas fa-comment",
+        "title": "Idioma",
+        "description": "Inglés"
+      },
+      {
+        "icon": "far fa-calendar-alt",
+        "title": "Estancia mínima",
+        "description": "6 semanas"
+      },
+      {
+        "icon": "fas fa-atom",
+        "title": "Trabajo en equipo",
+        "description": "Mayor de 18 años"
+      }
+    ],
+    "form": {
+      "joinUs": "Clica aquí para unirte"
     },
     "messageSent": {
       "title": "You message has been sent",

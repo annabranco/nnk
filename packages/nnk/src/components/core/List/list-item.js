@@ -16,11 +16,16 @@ import { ArticleWrapper, Excerpt, PublishDate, Title, InfoBox } from './styles';
  */
 const Item = ({ state, item }) => {
   // const author = state.source.author[item.author];
-  const { colors } = state.theme;
+  const { colors, language } = state.theme;
   const date = new Date(item.date);
   const isReport = item.slug.includes('report');
   const clearOriginalLink = excerpt => {
     return excerpt.split('<p class="link-more">')[0];
+  };
+
+  const getTitle = () => {
+    const metaTitle = `_${language}_post_title`;
+    return item.meta[metaTitle] ?? item.title.rendered;
   };
 
   return (
@@ -28,7 +33,9 @@ const Item = ({ state, item }) => {
       <Link link={item.link}>
         <Title
           colors={colors}
-          dangerouslySetInnerHTML={{ __html: item.title.rendered }}
+          dangerouslySetInnerHTML={{
+            __html: getTitle()
+          }}
           isReport={isReport}
         />
       </Link>

@@ -4,5 +4,11 @@
       "backToReports": "Back to reports",
       "backToNews": "Back to No Name News",
       "close": "close"
+    },
+    "es": {
+      "back": "volver",
+      "backToReports": "Volver a los informes",
+      "backToNews": "Volver a No Name News",
+      "close": "cerrar"
     }
 }

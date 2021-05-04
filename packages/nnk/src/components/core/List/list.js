@@ -9,7 +9,6 @@ import { Container, Header } from './styles';
 const List = ({ state }) => {
   const { colors } = state.theme;
   const data = state.source.get(state.router.link);
-
   return (
     <Container>
       {/* If the list is a taxonomy, we render a title. */}

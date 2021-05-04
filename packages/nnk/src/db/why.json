@@ -3,7 +3,7 @@
     "title": "Why?",
     "intro": "Many people are forced to escape from armed conflicts, discrimination or poverty,\nfleeing to find  the peace and civil rights that they are missing at home. However,\nthere are no safe pathways and people are exposed to hunger, pain and trauma.",
     "fullInto": "Many people are forced to escape from poverty, armed conflicts, or prosecutions. Most of them flee to find in Europe the peace and civil rights that they are missing at home. However, there are no safe pathways to migrate and people are exposed to violent ilegal pushbacks instead of sustainable solutions.",
-    "blackBook": "The ‘Black Book of Pushbacks’ is a collection of hundreds of testimonies of migrants and asylum seekers who have experienced human rights violations at external borders. It includes 892 group testimonies detailing the experiences of 12,654 people, describing the violence many endured in Italy, Greece, Croatia, Slovenia and Hungary along the so-called ‘Balkan route’ including maps, data, photos and other key information. By bringing to light the suffering, NNK and our partners in the BVMN claim EU institutions and member state governments to be held accountable for the inhumane and degrading treatment of the people.",
+    "blackBook": "The \"Black Book of Pushbacks\" is a collection of hundreds of testimonies of migrants and asylum seekers who have experienced human rights violations at external borders. It includes 892 group testimonies detailing the experiences of 12,654 people, describing the violence many endured in Italy, Greece, Croatia, Slovenia and Hungary along the so-called \"Balkan route\" including maps, data, photos and other key information. By bringing to light the suffering, NNK and our partners in the BVMN claim EU institutions and member state governments to be held accountable for the inhumane and degrading treatment of the people.",
     "blackBookDownload": "You can download it here:",
     "blackBookVolumes": ["Volume I", "Volume II"],
     "borderViolence": "Illegal push-backs & border violence reports",
@@ -21,12 +21,42 @@
       },
       {
         "imageId": "Testimony03",
-        "text": "\"After [the electric shock], I don’t see anything. I was like sleep...like a dream. When I woke up, the police hit me in my hand and in my face. After the police hurt me, I can’t walk. I was crawling on the ground and when the police see me, they came to me and started kicking me in the legs\"",
+        "text": "\"After [the electric shock], I don’t see anything. I was like sleep...like a dream. When I woke up, the police hit me in my hand and in my face. After the police hurt me, I can’t walk. I was crawling on the ground and when the police see me, they came to me and started kicking me in the legs.\"",
         "victim": "Mohamed, 16, moving from Iraq to the Netherlands"
       }
     ],
 
     "recentTestimonials": "Recent testimonials",
     "moreReports": "Click here to find more reports"
+  },
+    "es": {
+    "title": "Por qué?",
+    "intro": "Muchas personas se ven obligadas a huir de conflictos armados, discriminación o pobreza.\nHuyen para encontrar la paz y los derechos sociales que no tienen en sus países. Sin embargo,\nno existen vías seguras y estas personas están expuestas a padecer hambre, sufrimiento y traumas.",
+    "fullInto": "Muchas personas se ven obligadas a huir de la pobreza, de conflictos armados o de persecuciones. Algunas  de ellas huyen hacia Europa para encontrar aquí la paz y los derechos sociales que no tienen en su  país. Sin embargo, no existen rutas migratorias seguras, y lejos de ofrecerles soluciones sostenibles, las personas se exponen a devoluciones en caliente violentas e ilegales",
+    "blackBook": "El \"Black Book of Pushbacks\" (el Libro Negro de las Devoluciones en Caliente) recoge cientos de testimonios de personas migrantes y solicitantes de asilo cuyos derechos han sido violados en las fronteras externas. Figuran los testimonios de 892 grupos, detallando las experiencias de 12.654 personas que describen la violencia de la que fueron víctimas en Italia, Grecia, Croacia, Eslovenia y Hungría, a lo largo de la llamada \"Ruta Balcánica\".  Incluye también mapas, datos, fotografías y otra información clave. El propósito de NNK y nuestros socios de la red BVMN al sacar a la luz el sufrimiento de estas personas es reclamar la rendición de cuentas por parte de las instituciones y los gobiernos de los estados miembros de la UE frente al trato inhumano y degradante a que han sido sometidas.",
+    "blackBookDownload": "Puedes descargártelo aquí:",
+    "blackBookVolumes": ["Volume I", "Volume II"],
+    "borderViolence": "Devoluciones en caliente e informes de violencia fronteriza",
+    "borderViolenceIntro": "Creemos que la ayuda humanitaria debe incluir acción política para generar un cambio. Esta es la razón por la que NNK recoge los testimonios de abusos y devoluciones en caliente y por la que cofundó la red Border Violence Monitoring Network. Para crear conciencia y abogar por la justicia y el respecto de los Derechos Humanos y del Derecho Internacional.",
+    "testimonials": [
+      {
+        "imageId": "Testimony01",
+        "text": "\"Era medianoche. Estábamos en el bosque, en Croacia, cuando la policía nos paró. Les dije, ‘Necesito asilo, porque mi vida está en peligro’, pero se rieron de mí y empezaron a pegarnos con sus porras...\"",
+        "victim": "Ava, 26 años, migrando de Irán a Alemania"
+      },
+      {
+        "imageId": "Testimony02",
+        "text": "\"Nos pegaron uno a uno y luego nos dijeron que nos fuéramos a Bosnia. Para entrar a Bosnia teníamos que cruzar un río, así que todos cruzamos el río después de que nos hubieran aporreado. A algunos les golpearon muy fuerte; a otros, menos. Yo era el último y me golpearon mucho. El primero y el último siempre son los que más reciben. Uno me agarró de la camiseta y otro me daba puñetazos. Así, no podía protegerme la cara. Cuando el policía se cansó de pegarme, el segundo me agarró por detrás. Les dije “¡Parad! Me estáis haciendo daño. No puedo respirar”. Me agarró por detrás y me dio dos patadas en  la cara con su pierna.\"",
+        "victim": "Khalida, 18 años, migrando de Argelia a Francia"
+      },
+      {
+        "imageId": "Testimony03",
+        "text": "\"Después (de la descarga eléctrica) no veía nada. Estaba como dormido... como en un sueño. Cuando me desperté, el policía me pegó en la mano y en la cara. Después de que me hicieran daño, no podía caminar. Gateaba por el suelo y cuando el policía me vio, empezó a darme patadas en las piernas.\"",
+        "victim": "Mohamed, 16 años, migrando de Irak a los Países Bajos"
+      }
+    ],
+
+    "recentTestimonials": "Testimonios recientes",
+    "moreReports": "Aquí encontrarás más informes"
   }
 }

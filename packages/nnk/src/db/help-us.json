@@ -19,19 +19,30 @@
       }
     ],
     "transfer": "If can donate by bank transfer or PayPal. For more info:",
-    "accountName": "Account Name:",
-    "address": "Address:",
-    "iban": "IBAN:",
-    "swift": "SWIFT Code / BIC:",
-    "justice": "Justice",
-    "hope": "Hope",
-    "dignity": "Dignity",
-    "subscribeTo": "Subscribe to",
-    "noNameNews": "No Name News",
-    "form": {
-      "name": "Your name",
-      "email": "Your email",
-      "send": "Subscribe"
-    }
+    "ongoing": "On-going campaigns",
+    "subscribeTo": "Get updated by signing up to our newsletter"
+  },
+    "es": {
+    "title": "Haz una donación",
+    "description": "Necesitamos tu ayuda para proporcionar alimentos, refugio, atención médica vital y apoyo legal a las personas que han tenido que pasar tantas dificultades a lo largo de las rutas balcánica y mediterránea.Conoce nuestras campañas y elige la que se adapte mejor a tus valores e intereses.",
+    "values": [
+      {
+        "title": "100% INDEPENDIENTES",
+        "description": "Mantenemos nuestra independencia para poder reclamar justicia y luchar contra la violación inaceptable de los derechos humanos en las fronteras de la UE.",
+        "video": "https://www.youtube.com/embed/eC-LQaOw6OM"
+      },
+      {
+        "title": "GRAN IMPACTO",
+        "description": "Los equipos de NNK sobre el terreno trabajan 24 horas al día, 7 días a la semana para identificar qué necesitan las personas y ofrecer soluciones."
+      },
+      {
+        "title": "TRANSPARENCIA",
+        "description": "Nuestra información financiera es de libre acceso y puede ser consultada por cualquier persona que quiera saber el destino final de sus donaciones.",
+        "video": "https://www.youtube.com/embed/H2nIyPDK408"
+      }
+    ],
+    "transfer": "Puedes hacer tu donación a través de una transferencia bancaria o por PayPal. Si deseas más información:",
+    "ongoing": "Campañas en marcha",
+    "subscribeTo": "Suscríbete a nuestra newsletter"
   }
 }

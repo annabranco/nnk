@@ -61,7 +61,7 @@ const HelpUs = ({ state }) => {
           <DonorBox campaign={selectedCampaign} />
         </SubsectionWrapper>
         <SubsectionWrapper>
-          <Title colors={colors}>On-going campaigns</Title>
+          <Title colors={colors}>{texts.ongoing}</Title>
           {config.campaigns.activeCampaigns
             .filter(campgn => campgn !== selectedCampaign)
             .sort(

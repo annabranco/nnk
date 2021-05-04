@@ -33,7 +33,7 @@ const Link = ({
       actions.theme.closeMobileMenu();
     }
   };
-  console.log('$$$ colors', colors);
+
   return (
     <StyledLink
       colors={colors}

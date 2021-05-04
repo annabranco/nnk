@@ -20,5 +20,27 @@
         "description": "NNK collects the testimonies of people who suffer abuses on the borders. As founders of the Border Violence Monitoring Network we work to raise awareness and to advocate for a change in policy making, publishing monthly and special reports on illegal push-backs and border violence."
         }
       ]
+    },
+  "es": {
+    "title": "Qué hacemos?",
+    "intro": "Nuestras acciones están dirigidas a apoyar a las personas en tránsito que se enfrentan a situaciones de violencia, fatiga y enfermedades a las puertas de la UE. NNK implementa sus actividades a través de tres proyectos que buscan garantizar que todas las personas tienen acceso a un trato igualitario, y abordar situaciones de vulnerabilidad con el fin de que ninguna injusticia permanece escondida.",
+    "programsTitle": "Nuestros programas para apoyar los derechos de las personas son los siguientes:",
+    "programs": [
+      {
+        "id": "healthProgram",
+        "title": "SALUD EN MOVIMIENTO",
+        "description": "NNK proporciona primeros auxilios sobre el terreno a las personas en tránsito que no pueden acceder a los sistemas de salud públicos. Asimismo, NNK distribuye kits de higiene y proporciona servicio de lavandería para promover prácticas saludables, y cubre también el tratamiento médico en aquellos casos que requieren médicos especialistas, como dentistas u oftalmólogos."
+      },
+      {
+        "id": "foodProgram",
+        "title": "COMIDA Y MÁS",
+        "description": "NNK distribuye paquetes de alimentos y ropa de abrigo (entre la cual también zapatos, mantas  y sacos de dormir) para proporcionar a las personas en tránsito medios que les permitan protegerse. Además, NNK ha puesto en marcha un programa de cupones por comida con los supermercados locales en Bosnia con la intención de que las personas tengan la oportunidad de escoger las cosas que necesitan en cada momento."
+      },
+      {
+        "id": "advocacyProgram",
+        "title": "TRABAJAR ACTIVAMENTE PARA RECLAMAR JUSTICIA",
+        "description": "NNK recoge los testimonios de personas que son víctimas de abusos en las fronteras. Como cofundadores de la red Border Violence Monitoring Network, trabajamos para crear conciencia y para abogar por un cambio en el diseño de políticas con la publicación de informes mensuales e informes de última hora sobre devoluciones en caliente ilegales y violencia fronteriza."
+        }
+      ]
     }
 }

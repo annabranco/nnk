@@ -1,6 +1,12 @@
 {
   "en": {
-      "publishedOn": "Published on",
-      "read": "already read"
-    }
+    "publishedOn": "Published on",
+    "read": "already read",
+    "only": "in Spanish"
+  },
+  "es": {
+    "publishedOn": "Publicada em",
+    "read": "ya leída",
+    "only": "en inglés"
+  }
 }

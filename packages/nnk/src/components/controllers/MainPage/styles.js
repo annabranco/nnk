@@ -30,7 +30,7 @@ export const SubscriptionButton = styled.button`
 
   @media all and (min-width: 768px) {
     height: 60px;
-    width: 450px;
+    width: 550px;
   }
 `;
 SubscriptionButton.displayName = 'SubscriptionButton';

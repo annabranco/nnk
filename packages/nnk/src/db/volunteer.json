@@ -1,6 +1,10 @@
 {
   "en": {
-      "question": "Do you want to join us",
-      "altMainImage": "Three NNK volunteers preparing a meal and smiling at the camera"
-    }
+    "question": "Do you want to join us",
+    "altMainImage": "Three NNK volunteers preparing a meal and smiling at the camera"
+  },
+  "es": {
+    "question": "Quieres unirte",
+    "altMainImage": "Three NNK volunteers preparing a meal and smiling at the camera"
+  }
 }

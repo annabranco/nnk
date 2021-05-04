@@ -75,7 +75,7 @@ const ItemLinksPropType = shape({
 });
 
 const ItemMetaPropType = shape({
-  _coblocks_attr: string.isRequired,
+  _coblocks_attr: string,
   _coblocks_dimensions: string.isRequired,
   _coblocks_responsive_height: string.isRequired,
   _coblocks_accordion_ie_support: string.isRequired,

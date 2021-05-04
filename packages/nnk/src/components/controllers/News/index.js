@@ -16,8 +16,6 @@ const News = ({ state }) => {
     newsSection = NEWS_SECTIONS[language];
   }, [language]);
 
-  console.log('$$$ data', data);
-
   return (
     <NewsSection colors={colors}>
       <NewsWrapper colors={colors}>
