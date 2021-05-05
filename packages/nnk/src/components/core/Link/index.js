@@ -10,8 +10,11 @@ const Link = ({
   link,
   className,
   children,
-  'aria-current': ariaCurrent
+  'aria-current': ariaCurrent,
+  target
 }) => {
+  const { colors } = state.theme;
+
   const onClick = event => {
     // Do nothing if it's an external link
     if (link.startsWith('https')) {
@@ -33,10 +36,12 @@ const Link = ({
 
   return (
     <StyledLink
+      colors={colors}
       href={link}
       onClick={onClick}
       className={className}
       aria-current={ariaCurrent}
+      target={target}
     >
       {children}
     </StyledLink>
@@ -49,13 +54,15 @@ Link.propTypes = {
   link: string,
   className: string,
   children: node.isRequired,
-  'aria-current': string
+  'aria-current': string,
+  target: string
 };
 
 Link.defaultProps = {
   className: null,
   link: null,
-  'aria-current': null
+  'aria-current': null,
+  target: null
 };
 
 export default connect(Link);

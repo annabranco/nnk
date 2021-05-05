@@ -12,6 +12,7 @@ import {
   sizeXLargeTitle,
   sizeXXLarge
 } from '../../../setup/themes';
+import { SubscriptionButton } from '../../controllers/MainPage/styles';
 
 export const Container = styled.div`
   display: flex;
@@ -135,17 +136,14 @@ export const InfoTitle = styled(BaseTitle)`
 `;
 InfoTitle.displayName = 'InfoTitle';
 
-export const JoinButton = styled.button`
-  margin: 10px auto;
-  height: 40px;
-  width: 200px;
-  color: white;
-  background: green;
-  text-transform: uppercase;
-  font-size: ${sizeLarge};
-  font-family: ${fontTitle};
-  cursor: pointer;
-  border-radius: 5px;
+export const JoinButton = styled(SubscriptionButton)`
+  margin: 60px auto;
+  width: 85vw;
+
+  @media all and (min-width: 1200px) {
+    height: 60px;
+    width: 450px;
+  }
 `;
 JoinButton.displayName = 'JoinButton';
 

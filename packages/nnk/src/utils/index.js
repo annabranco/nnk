@@ -182,3 +182,7 @@ export const updatedReadPosts = id => {
   }
   return postsRead;
 };
+
+export const toggleBodyScroll = action => {
+  document.body.style.overflow = action === 'hide' ? 'hidden' : 'auto';
+};

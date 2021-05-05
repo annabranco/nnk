@@ -56,8 +56,8 @@ export const Image = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
-    height: 160px;
-    width: 300px;
+    height: 320px;
+    width: 600px;
   }
 
   ${({ img }) =>
@@ -101,7 +101,8 @@ export const Program = styled.div`
 
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 80%;
   }
 `;
 Program.displayName = 'Program';

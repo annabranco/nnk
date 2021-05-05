@@ -37,12 +37,17 @@ const App = ({ state, actions }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
         <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700"
           rel="stylesheet"
         />
+        <script src="https://donorbox.org/widget.js" paypalExpress="true" />
         <script
           src="https://kit.fontawesome.com/7d8d592f81.js"
           crossOrigin="anonymous"

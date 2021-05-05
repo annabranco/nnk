@@ -34,5 +34,41 @@
         }
       ]
     }
+  ],
+  "es": [
+    {
+      "title": "nuestros 3Ws",
+      "subItems": [
+        {
+          "title": "Qué [ What ]",
+          "link": "/what/"
+        },
+        {
+          "title": "Por qué [ Why ]",
+          "link": "/why/"
+        },
+        {
+          "title": "Dónde [ Where ]",
+          "link": "/where/"
+        }
+      ]
+    },
+    {
+      "title": "No Name News",
+      "link": "/news/"
+    },
+    {
+      "title": "Apoya al movimiento",
+      "subItems": [
+        {
+          "title": "Haz una donación",
+          "link": "/help-us/"
+        },
+        {
+          "title": "Hazte voluntario",
+          "link": "/join-us/"
+        }
+      ]
+    }
   ]
 }

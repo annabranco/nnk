@@ -15,7 +15,7 @@ MainContainer.displayName = 'MainContainer';
 export const SubscriptionButton = styled.button`
   margin: -30px auto 30px;
   height: 60px;
-  width: 450px;
+  width: 90vw;
   color: ${({ colors }) => colors && colors.secondary};
   background-color: ${({ colors }) => colors && colors.terciary};
   text-transform: uppercase;
@@ -26,6 +26,11 @@ export const SubscriptionButton = styled.button`
 
   &:hover {
     filter: brightness(1.3);
+  }
+
+  @media all and (min-width: 768px) {
+    height: 60px;
+    width: 550px;
   }
 `;
 SubscriptionButton.displayName = 'SubscriptionButton';

@@ -32,23 +32,28 @@ const Post = ({ actions, libraries, state }) => {
   let texts = ACTIONS_TEXTS[language];
   let newsSection = NEWS_SECTIONS[language];
 
+  const onRead = () => {
+    toggleRead(true);
+  };
+
+  const getTitle = () => {
+    const metaTitle = `_${language}_post_title`;
+    return post.meta[metaTitle] || post.title.rendered;
+  };
+  const getNewsText = () => {
+    const metaContent = `_${language}_post_content`;
+    return post.meta[metaContent] || post.excerpt.rendered;
+  };
+
   useEffect(() => {
     newsSection = NEWS_SECTIONS[language];
     texts = ACTIONS_TEXTS[language];
   }, [language]);
-
-  console.log('$$$ data', data);
-  console.log('$$$ post: ', post);
-
   /**
    * Once the post has loaded in the DOM, prefetch both the
    * home posts and the list component so if the user visits
    * the home page, everything is ready and it loads instantly.
    */
-  const onRead = () => {
-    toggleRead(true);
-  };
-
   useEffect(() => {
     const onReadAll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -89,7 +94,7 @@ const Post = ({ actions, libraries, state }) => {
         <div>
           <Title
             colors={colors}
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            dangerouslySetInnerHTML={{ __html: getTitle() }}
             isReport={isReport}
           />
 
@@ -121,7 +126,7 @@ const Post = ({ actions, libraries, state }) => {
         {/* Render the content using the Html2React component so the HTML is processed
        by the processors we included in the libraries.html2react.processors array. */}
         <Content colors={colors} isReport={isReport}>
-          <Html2React html={post.content.rendered} />
+          <Html2React html={getNewsText()} />
         </Content>
       </Container>
     </PostWrapper>

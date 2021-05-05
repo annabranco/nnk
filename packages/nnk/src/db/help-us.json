@@ -1,34 +1,48 @@
 {
   "en": {
     "title": "Donate",
+    "description": "Your help is needed to provide food, shelter, lifesaving medical care and legal support to people who have been through so much across the Balkans and Mediterranean routes. Check our campaigns and choose which one fits better with your values and interests.",
     "values": [
       {
         "title": "100% INDEPENDENT",
-        "description": "Nobody´s agenda influences our freedom to act and to denounce the injustice."
+        "description": "We keep our freedom to claim justice and to fight the negligent violation of human rights at the EU borders.",
+        "video": "https://www.youtube.com/embed/eC-LQaOw6OM"
       },
       {
-        "title": "HIGH IMPACT",
-        "description": "Each donation is needed to boost our actions and to provide a rapid response for emergencies."
+        "title": "IMPACTFUL",
+        "description": "NNK teams work on the field to identify needs and solutions 365 days per year."
       },
       {
-        "title": "FULL TRANSPARENCY",
-        "description": "Our accountability is open and free-access. Feel free to ask how we spend each euro. For more info, please contact $[mail]."
+        "title": "TRANSPARENCY",
+        "description": "Our accountability is free-access for everyone who wants to know the final use of their donations.",
+        "video": "https://www.youtube.com/embed/H2nIyPDK408"
       }
     ],
-    "transfer": "If you prefer it, make a bank transfer to:",
-    "accountName": "Account Name:",
-    "address": "Address:",
-    "iban": "IBAN:",
-    "swift": "SWIFT Code / BIC:",
-    "justice": "Justice",
-    "hope": "Hope",
-    "dignity": "Dignity",
-    "subscribeTo": "Subscribe to",
-    "noNameNews": "No Name News",
-    "form": {
-      "name": "Your name",
-      "email": "Your email",
-      "send": "Subscribe"
-    }
+    "transfer": "If can donate by bank transfer or PayPal. For more info:",
+    "ongoing": "On-going campaigns",
+    "subscribeTo": "Get updated by signing up to our newsletter"
+  },
+    "es": {
+    "title": "Haz una donación",
+    "description": "Necesitamos tu ayuda para proporcionar alimentos, refugio, atención médica vital y apoyo legal a las personas que han tenido que pasar tantas dificultades a lo largo de las rutas balcánica y mediterránea.Conoce nuestras campañas y elige la que se adapte mejor a tus valores e intereses.",
+    "values": [
+      {
+        "title": "100% INDEPENDIENTES",
+        "description": "Mantenemos nuestra independencia para poder reclamar justicia y luchar contra la violación inaceptable de los derechos humanos en las fronteras de la UE.",
+        "video": "https://www.youtube.com/embed/eC-LQaOw6OM"
+      },
+      {
+        "title": "GRAN IMPACTO",
+        "description": "Los equipos de NNK sobre el terreno trabajan 24 horas al día, 7 días a la semana para identificar qué necesitan las personas y ofrecer soluciones."
+      },
+      {
+        "title": "TRANSPARENCIA",
+        "description": "Nuestra información financiera es de libre acceso y puede ser consultada por cualquier persona que quiera saber el destino final de sus donaciones.",
+        "video": "https://www.youtube.com/embed/H2nIyPDK408"
+      }
+    ],
+    "transfer": "Puedes hacer tu donación a través de una transferencia bancaria o por PayPal. Si deseas más información:",
+    "ongoing": "Campañas en marcha",
+    "subscribeTo": "Suscríbete a nuestra newsletter"
   }
 }

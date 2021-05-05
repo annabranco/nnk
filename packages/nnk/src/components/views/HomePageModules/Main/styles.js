@@ -5,6 +5,7 @@ import {
   sizeMediumTitle,
   sizeSmallTitle
 } from '../../../../setup/themes';
+import { SubscriptionButton } from '../../../controllers/MainPage/styles';
 
 export const MainText = styled(BaseText)`
   position: absolute;
@@ -43,7 +44,7 @@ export const MainText = styled(BaseText)`
   }
 
   @media only screen and (min-width: 1024px) {
-    bottom: 15vh;
+    bottom: 20vh;
     font-size: ${sizeMediumTitle};
   }
 `;
@@ -107,3 +108,43 @@ export const PhotoContainer = styled.div`
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';
+
+export const VideoButton = styled(SubscriptionButton)`
+  position: relative;
+  top: 10vh;
+  right: -10vh;
+  border-radius: 25px;
+  box-shadow: 5px 0 15px 3px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 1px black;
+  height: 40px;
+  width: 60%;
+
+  @media all and (min-width: 1200px) {
+    top: 0;
+    right: -20vw;
+    height: 60px;
+    width: 350px;
+  }
+
+  @media all and (min-width: 1400px) {
+    top: -5vh;
+    right: -25vw;
+    height: 60px;
+    width: 450px;
+  }
+`;
+VideoButton.displayName = 'VideoButton';
+
+export const VideoElement = styled.iframe`
+  position: relative;
+  top: 0;
+  width: 80%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 0 50px 50px rgba(0, 0, 0, 0.8);
+
+  @media all and (min-width: 1200px) {
+    height: 90%;
+    width: 80%;
+  }
+`;
+VideoElement.displayName = 'VideoElement';

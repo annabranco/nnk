@@ -16,13 +16,13 @@ export const Map = styled.img`
   border-radius: 5px;
   cursor: pointer;
 
-  @media (min-width: 1024px) and (max-height: 1000px) {
+  /* @media (min-width: 1024px) and (max-height: 1000px) {
     position: absolute;
     top: 10px;
     right: 5%;
     width: 40%;
     max-height: 87%;
-  }
+  } */
 `;
 Map.displayName = 'Map';
 

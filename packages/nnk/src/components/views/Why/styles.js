@@ -21,6 +21,31 @@ const WhyArea = styled.div`
   text-align: justify;
 `;
 
+export const BlackBookContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+`;
+BlackBookContainer.displayName = 'BlackBookContainer';
+
+export const BlackBookPhoto = styled.img`
+  display: inline-block;
+  width: 50%;
+`;
+BlackBookPhoto.displayName = 'BlackBookPhoto';
+
+export const BlackBookVolumesWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 60%;
+`;
+BlackBookContainer.displayName = 'BlackBookContainer';
+
 export const BorderViolenceArea = styled(WhyArea)`
   max-width: 100%;
 
