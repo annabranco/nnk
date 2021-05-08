@@ -50,16 +50,6 @@ export const Image = styled.div`
   height: 140px;
   width: 100%;
 
-  @media only screen and (min-width: 768px) {
-    height: 300px;
-    width: 100%;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    height: 320px;
-    width: 600px;
-  }
-
   ${({ img }) =>
     css`
       border-radius: 5px;
@@ -68,6 +58,17 @@ export const Image = styled.div`
       background-size: 100%;
       background-repeat: no-repeat;
     `}
+
+  @media only screen and (min-width: 768px) {
+    height: 300px;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    height: 320px;
+    width: 600px;
+    background-position: unset;
+  }
 `;
 Image.displayName = 'Image';
 
@@ -100,7 +101,6 @@ export const Program = styled.div`
   }
 
   @media only screen and (min-width: 1200px) {
-    flex-direction: row;
     margin: 30px auto;
     width: 80%;
   }
