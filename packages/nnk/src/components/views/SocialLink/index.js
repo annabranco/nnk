@@ -27,7 +27,7 @@ const SocialLink = ({ link = '', onClick, type }) => {
 
   return (
     <SocialLogo onClick={onClick}>
-      <SocialLinkButton href={link} target="_blank">
+      <SocialLinkButton href={link} rel="noreferrer" target="_blank">
         <i aria-hidden className={socialClassName} />
       </SocialLinkButton>
     </SocialLogo>
