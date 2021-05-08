@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
   padding-top: 20px;
 
   @media all and (min-width: 768px) {
-    padding: 0 100px;
+    padding: 80px 100px 30px;
   }
 `;
 FooterContainer.displayName = 'FooterContainer';
@@ -27,7 +27,8 @@ export const FooterText = styled.p`
   color: ${({ colors }) => colors && colors.secondary};
 
   @media all and (min-width: 768px) {
-    font-size: ${sizeLarge};
+    /* font-size: ${sizeLarge}; */
+    letter-spacing: 1px;
   }
 `;
 FooterText.displayName = 'FooterText';
