@@ -26,7 +26,7 @@ export const THEMES = {
 
 /* Fonts */
 export const fontTitle = "'Bebas Neue', sans-serif";
-export const fontTitleNews = "'Poppins', sans-serif";
+export const fontTitleNews = "'Bebas Neue', sans-serif";
 export const fontText = "'Century Gothic', sans-serif";
 
 /* Sizes */

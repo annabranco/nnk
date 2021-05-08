@@ -49,18 +49,16 @@ export const AuthorName = styled.span`
 export const Excerpt = styled.div`
   line-height: 1.6em;
   color: ${({ colors }) => colors && colors.primary};
+  font-size: ${sizeLarge};
+  padding: 5px 10px 10px;
   text-align: left;
 
   & > p {
     color: ${({ colors }) => colors && colors.primary};
-    font-size: ${sizeLarge};
-    padding: 5px 10px;
   }
 
   @media all and (min-width: 768px) {
-    & > p {
-      font-size: ${sizeDefaultText};
-    }
+    font-size: ${sizeDefaultText};
   }
 `;
 
