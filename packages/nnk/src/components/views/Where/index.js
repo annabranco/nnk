@@ -58,7 +58,11 @@ const WhereSection = ({ state }) => {
 };
 
 WhereSection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+WhereSection.defaultProps = {
+  state: null
 };
 
 export default connect(WhereSection);

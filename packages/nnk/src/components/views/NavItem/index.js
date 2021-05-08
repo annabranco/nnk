@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { string } from 'prop-types';
 import Link from '../../core/Link';
 import { ColorsPropType, NavSectionPropType } from '../../../types';
@@ -34,10 +34,10 @@ const NavItem = ({ colors, language, section }) => {
         const updatedSubItem = subitem.toLowerCase().split('w');
 
         updatedSubItem[1] = (
-          <>
+          <Fragment key={`sub-${subitem}`}>
             <SubItemRed colors={colors}>W</SubItemRed>
             {updatedSubItem[1]}
-          </>
+          </Fragment>
         );
         return updatedSubItem;
       }
@@ -47,7 +47,17 @@ const NavItem = ({ colors, language, section }) => {
 
   return (
     <Item onMouseOut={() => toggleIsActive(false)}>
-      <Link link={!section.subItems && section.link ? section.link : undefined}>
+      {!section.subItems && section.link ? (
+        <Link link={section.link}>
+          <Title
+            colors={colors}
+            isActive={isActive}
+            onMouseOver={() => toggleIsActive(true)}
+          >
+            {styleTitle(section.title)}
+          </Title>
+        </Link>
+      ) : (
         <Title
           colors={colors}
           isActive={isActive}
@@ -55,13 +65,17 @@ const NavItem = ({ colors, language, section }) => {
         >
           {styleTitle(section.title)}
         </Title>
-      </Link>
+      )}
       <CollapsableItems isActive={isActive}>
         <ItemsList colors={colors} onMouseOver={() => toggleIsActive(true)}>
           {section.subItems &&
             section.subItems.map(subItem => (
               <SubItem key={subItem.title} link={subItem.link}>
-                <ItemLink colors={colors} isLengthy={subItem.title.length > 7}>
+                <ItemLink
+                  colors={colors}
+                  key={`li-${subItem.title}`}
+                  isLengthy={subItem.title.length > 7}
+                >
                   {styleSubItems(subItem.title)}
                 </ItemLink>
               </SubItem>

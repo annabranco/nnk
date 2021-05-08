@@ -80,10 +80,14 @@ const NewsItem = ({ state, item, read, texts }) => {
 };
 
 NewsItem.propTypes = {
-  state: StatePropType.isRequired,
+  state: StatePropType,
   item: ItemPropType.isRequired,
   read: bool.isRequired,
   texts: TextsNewsPropType.isRequired
+};
+
+NewsItem.defaultProps = {
+  state: null
 };
 
 export default connect(NewsItem);

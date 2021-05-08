@@ -60,7 +60,11 @@ const WhatSection = ({ state }) => {
 };
 
 WhatSection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+WhatSection.defaultProps = {
+  state: null
 };
 
 export default connect(WhatSection);

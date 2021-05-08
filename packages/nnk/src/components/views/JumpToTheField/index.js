@@ -93,7 +93,11 @@ const JumpToTheFieldSection = ({ state }) => {
 };
 
 JumpToTheFieldSection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+JumpToTheFieldSection.defaultProps = {
+  state: null
 };
 
 export default connect(JumpToTheFieldSection);

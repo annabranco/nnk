@@ -44,7 +44,11 @@ const Title = ({ state }) => {
 };
 
 Title.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+Title.defaultProps = {
+  state: null
 };
 
 export default connect(Title);

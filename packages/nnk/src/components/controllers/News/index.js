@@ -37,7 +37,11 @@ const News = ({ state }) => {
 };
 
 News.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+News.defaultProps = {
+  state: null
 };
 
 export default connect(News);

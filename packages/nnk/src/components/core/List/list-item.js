@@ -76,8 +76,12 @@ const Item = ({ state, item }) => {
 };
 
 Item.propTypes = {
-  state: StatePropType.isRequired,
+  state: StatePropType,
   item: ItemPropType.isRequired
+};
+
+Item.defaultProps = {
+  state: null
 };
 
 // Connect the Item to gain access to `state` as a prop

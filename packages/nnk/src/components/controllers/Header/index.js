@@ -22,6 +22,7 @@ const Header = ({ state, actions }) => {
   const onClickFlag = flag => {
     changeActiveLanguage(flag);
     changeLanguage(flag);
+    localStorage.setItem('nnk-defaultLang', flag);
     // changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
   };
 
@@ -32,6 +33,15 @@ const Header = ({ state, actions }) => {
       config.theme = LIGHT;
     }
   }, [activeLanguage]);
+
+  useEffect(() => {
+    const language = localStorage.getItem('nnk-defaultLang');
+    if (language && language !== activeLanguage) {
+      localStorage.getItem('nnk-defaultLang');
+      changeActiveLanguage(language);
+      changeLanguage(language);
+    }
+  }, []);
 
   return (
     <HeaderContainer activeLanguage={activeLanguage} colors={colors}>
@@ -49,8 +59,13 @@ const Header = ({ state, actions }) => {
 };
 
 Header.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired
+  state: StatePropType,
+  actions: ActionsPropType
+};
+
+Header.defaultProps = {
+  state: null,
+  actions: null
 };
 
 export default connect(Header);

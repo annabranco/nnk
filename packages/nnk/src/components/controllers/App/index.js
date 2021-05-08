@@ -88,8 +88,13 @@ const App = ({ state, actions }) => {
 };
 
 App.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired
+  state: StatePropType,
+  actions: ActionsPropType
+};
+
+App.defaultProps = {
+  state: null,
+  actions: null
 };
 
 export default connect(App);

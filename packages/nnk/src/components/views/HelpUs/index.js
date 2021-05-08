@@ -154,7 +154,11 @@ const HelpUs = ({ state }) => {
 };
 
 HelpUs.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+HelpUs.defaultProps = {
+  state: null
 };
 
 export default connect(HelpUs);

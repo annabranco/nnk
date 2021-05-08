@@ -133,7 +133,11 @@ const WhySection = ({ state }) => {
 };
 
 WhySection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+WhySection.defaultProps = {
+  state: null
 };
 
 export default connect(WhySection);

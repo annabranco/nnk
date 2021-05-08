@@ -28,7 +28,11 @@ const Nav = ({ state }) => {
 };
 
 Nav.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+Nav.defaultProps = {
+  state: null
 };
 
 export default connect(Nav);

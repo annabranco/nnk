@@ -33,7 +33,11 @@ const List = ({ state }) => {
 };
 
 List.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+List.defaultProps = {
+  state: null
 };
 
 export default connect(List);
