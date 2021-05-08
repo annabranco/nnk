@@ -40,15 +40,15 @@
       "title": "nuestros 3Ws",
       "subItems": [
         {
-          "title": "Qué [ What ]",
+          "title": "What - ¿Qué?",
           "link": "/what/"
         },
         {
-          "title": "Por qué [ Why ]",
+          "title": "Why - ¿Por qué?",
           "link": "/why/"
         },
         {
-          "title": "Dónde [ Where ]",
+          "title": "Where - ¿Dónde?",
           "link": "/where/"
         }
       ]
@@ -58,14 +58,14 @@
       "link": "/news/"
     },
     {
-      "title": "Apoya al movimiento",
+      "title": "Únate al movimiento",
       "subItems": [
         {
           "title": "Haz una donación",
           "link": "/help-us/"
         },
         {
-          "title": "Hazte voluntario",
+          "title": "Voluntariado",
           "link": "/join-us/"
         }
       ]

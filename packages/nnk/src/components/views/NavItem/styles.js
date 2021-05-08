@@ -105,6 +105,11 @@ export const SubItem = styled(Link)`
 `;
 SubItem.displayName = 'SubItem';
 
+export const SubItemRed = styled.span`
+  color: ${({ colors }) => colors.terciary};
+`;
+SubItemRed.displayName = 'SubItemRed';
+
 export const Title = styled(BaseTitle)`
   margin-bottom: 0;
   color: ${({ isActive, colors }) =>

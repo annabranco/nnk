@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { string } from 'prop-types';
 import Link from '../../core/Link';
 import { ColorsPropType, NavSectionPropType } from '../../../types';
 import {
@@ -9,11 +10,13 @@ import {
   LittleSmaller,
   Smaller,
   SubItem,
+  SubItemRed,
   Title
 } from './styles';
 
-const NavItem = ({ colors, section }) => {
+const NavItem = ({ colors, language, section }) => {
   const [isActive, toggleIsActive] = useState(false);
+
   const styleTitle = title => {
     if (title === 'our 3Ws') {
       return (
@@ -23,6 +26,23 @@ const NavItem = ({ colors, section }) => {
       );
     }
     return title;
+  };
+
+  const styleSubItems = subitem => {
+    if (language !== 'en') {
+      if (subitem.toLowerCase().includes('w')) {
+        const updatedSubItem = subitem.toLowerCase().split('w');
+
+        updatedSubItem[1] = (
+          <>
+            <SubItemRed colors={colors}>W</SubItemRed>
+            {updatedSubItem[1]}
+          </>
+        );
+        return updatedSubItem;
+      }
+    }
+    return subitem;
   };
 
   return (
@@ -46,7 +66,7 @@ const NavItem = ({ colors, section }) => {
                   isLengthy={subItem.title.length > 7}
                   key={subItem.title}
                 >
-                  {subItem.title.toUpperCase()}
+                  {styleSubItems(subItem.title)}
                 </ItemLink>
               </SubItem>
             ))}
@@ -58,6 +78,7 @@ const NavItem = ({ colors, section }) => {
 
 NavItem.propTypes = {
   colors: ColorsPropType.isRequired,
+  language: string.isRequired,
   section: NavSectionPropType.isRequired
 };
 
