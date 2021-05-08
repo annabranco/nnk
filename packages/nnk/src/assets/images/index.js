@@ -34,6 +34,7 @@ export const Program03 = require('./spots/program03.jpeg');
 
 // Where
 export const Mapv1 = require('./maps/mapv1.jpg');
+export const Mapv1Es = require('./maps/mapv1-es.jpg');
 
 // Why
 export const HeroWhy = require('./spots/trainTracks.jpg');

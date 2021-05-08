@@ -61,11 +61,7 @@ const NavItem = ({ colors, language, section }) => {
           {section.subItems &&
             section.subItems.map(subItem => (
               <SubItem key={subItem.title} link={subItem.link}>
-                <ItemLink
-                  colors={colors}
-                  isLengthy={subItem.title.length > 7}
-                  key={subItem.title}
-                >
+                <ItemLink colors={colors} isLengthy={subItem.title.length > 7}>
                   {styleSubItems(subItem.title)}
                 </ItemLink>
               </SubItem>
