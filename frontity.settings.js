@@ -3,7 +3,7 @@ const settings = {
   state: {
     frontity: {
       url: 'https://www.nonamekitchen.org',
-      title: 'NNK',
+      title: 'No Name Kitchen',
       description: 'Supporting People on the Move'
     }
   },

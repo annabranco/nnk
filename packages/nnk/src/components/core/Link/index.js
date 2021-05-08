@@ -49,8 +49,8 @@ const Link = ({
 };
 
 Link.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired,
+  state: StatePropType,
+  actions: ActionsPropType,
   link: string,
   className: string,
   children: node.isRequired,
@@ -59,6 +59,8 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
+  state: null,
+  actions: null,
   className: null,
   link: null,
   'aria-current': null,

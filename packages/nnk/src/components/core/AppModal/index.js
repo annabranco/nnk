@@ -26,13 +26,14 @@ AppModal.propTypes = {
   children: node,
   closeAction: func,
   closeButton: bool,
-  state: StatePropType.isRequired
+  state: StatePropType
 };
 
 AppModal.defaultProps = {
   children: undefined,
   closeAction: null,
-  closeButton: false
+  closeButton: false,
+  state: null
 };
 
 export default connect(AppModal);

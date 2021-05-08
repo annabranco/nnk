@@ -6,11 +6,14 @@ import { getSocialLinks } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
 import DonorBox from '../DonorBox';
+import AppModal from '../../core/AppModal';
 import {
   CAMPAIGN_PHOTOS,
   Photo09,
   Triodos,
-  PayPal
+  PayPal,
+  Value0,
+  Value2
 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import {
@@ -28,20 +31,35 @@ import {
   Text,
   PartnersLogos,
   Title,
-  ValueVideo
+  ValueVideo,
+  Video
 } from './styles';
 import { Mail } from '../PrivacyDeclaration/styles';
+import BankDetails from '../BankDetails';
+import { VideoElement } from '../HomePageModules/Main/styles';
+
+const getVideoThumb = index => {
+  switch (index) {
+    case 0:
+      return Value0;
+    case 2:
+      return Value2;
+    default:
+      return null;
+  }
+};
 
 const HelpUs = ({ state }) => {
-  const [selectedCampaign, changeSelectedCampaign] = useState(
-    config.campaigns.mainCampaing
-  );
+  // const [selectedCampaign, changeSelectedCampaign] = useState(
+  //   config.campaigns.mainCampaing
+  // );
+  const [displayModal, toggleModal] = useState(false);
   const { colors, language } = state.theme;
   let texts = DONATION_TEXTS[language];
   const socialLinks = getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
 
-  const onClickCampaign = ({ currentTarget: { id } }) =>
-    changeSelectedCampaign(id);
+  // const onClickCampaign = ({ currentTarget: { id } }) =>
+  //   changeSelectedCampaign(id);
 
   useEffect(() => {
     texts = DONATION_TEXTS[language];
@@ -58,25 +76,30 @@ const HelpUs = ({ state }) => {
       />
       <Content>
         <SubsectionWrapper>
-          <DonorBox campaign={selectedCampaign} />
+          <DonorBox campaign={config.campaigns.mainCampaing} />
         </SubsectionWrapper>
         <SubsectionWrapper>
           <Title colors={colors}>{texts.ongoing}</Title>
           {config.campaigns.activeCampaigns
-            .filter(campgn => campgn !== selectedCampaign)
+            .filter(campgn => campgn !== config.campaigns.mainCampaing)
             .sort(
               (a, b) =>
                 config.campaigns.details[a].order -
                 config.campaigns.details[b].order
             )
             .map(campgn => (
-              <CampaignPhoto
-                alt={config.campaigns.details[campgn].name}
+              <a
+                href={config.campaigns.details[campgn].url}
                 key={campgn}
-                onClick={onClickCampaign}
-                src={CAMPAIGN_PHOTOS[campgn]}
-                id={campgn}
-              />
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CampaignPhoto
+                  alt={config.campaigns.details[campgn].name}
+                  src={CAMPAIGN_PHOTOS[campgn]}
+                  id={campgn}
+                />
+              </a>
             ))}
         </SubsectionWrapper>
       </Content>
@@ -87,11 +110,12 @@ const HelpUs = ({ state }) => {
             <ValueItem key={value.title}>
               <ValueTitle>{value.title}</ValueTitle>
               <ValueDescription>{value.description}</ValueDescription>
-              <ValueVideo
-                src={
-                  CAMPAIGN_PHOTOS[config.campaigns.activeCampaigns[index + 1]]
-                }
-              />
+              <Video>
+                <ValueVideo
+                  onClick={() => toggleModal(value.video)}
+                  src={getVideoThumb(index)}
+                />
+              </Video>
             </ValueItem>
           ))}
         </Values>
@@ -102,16 +126,39 @@ const HelpUs = ({ state }) => {
               partners@nonamekitchen.com
             </Mail>
           </Text>
-          <Logo src={Triodos} alt="Triodos" />
-          <Logo src={PayPal} alt="Paypal" />
+          <Logo
+            onClick={() => toggleModal('bank')}
+            src={Triodos}
+            alt="Triodos"
+          />
+          <Logo onClick={() => toggleModal('bank')} src={PayPal} alt="Paypal" />
         </PartnersLogos>
       </Info>
+      {displayModal === 'bank' && (
+        <AppModal closeAction={() => toggleModal(false)}>
+          <BankDetails colors={colors} language={language} />
+        </AppModal>
+      )}
+      {displayModal && displayModal !== 'bank' && (
+        <AppModal closeAction={() => toggleModal(false)}>
+          <VideoElement
+            src={displayModal}
+            title="Youtube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </AppModal>
+      )}
     </Section>
   );
 };
 
 HelpUs.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+HelpUs.defaultProps = {
+  state: null
 };
 
 export default connect(HelpUs);

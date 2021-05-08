@@ -4,7 +4,7 @@ import { connect } from 'frontity';
 import { getSocialLinks, toggleBodyScroll } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
-import { Mapv1, Photo05 } from '../../../assets/images';
+import { Mapv1, Mapv1Es, Photo05 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import { Content, Map, ModalImage, Section } from './styles';
 import AppModal from '../../core/AppModal';
@@ -25,6 +25,13 @@ const WhereSection = ({ state }) => {
     }
   };
 
+  const getMapImage = () => {
+    if (language === 'es') {
+      return Mapv1Es;
+    }
+    return Mapv1;
+  };
+
   useEffect(() => {
     texts = WHERE_TEXTS[language];
   }, [language]);
@@ -32,8 +39,8 @@ const WhereSection = ({ state }) => {
   return (
     <Section colors={colors}>
       {displayModal && (
-        <AppModal>
-          <ModalImage src={Mapv1} alt={texts.mapAlt} onClick={onToggleMap} />
+        <AppModal closeAction={onToggleMap}>
+          <ModalImage src={getMapImage()} alt={texts.mapAlt} />
         </AppModal>
       )}
       <SectionHeader
@@ -44,14 +51,18 @@ const WhereSection = ({ state }) => {
         title={texts.title}
       />
       <Content>
-        <Map src={Mapv1} alt={texts.mapAlt} onClick={onToggleMap} />
+        <Map src={getMapImage()} alt={texts.mapAlt} onClick={onToggleMap} />
       </Content>
     </Section>
   );
 };
 
 WhereSection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+WhereSection.defaultProps = {
+  state: null
 };
 
 export default connect(WhereSection);

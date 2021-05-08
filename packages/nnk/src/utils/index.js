@@ -16,9 +16,8 @@ export const getMediaQuery = () => {
     if (window.innerWidth < 1200) {
       return TABLET;
     }
-    return DESKTOP;
   }
-  return null;
+  return DESKTOP;
 };
 
 export const fetchData = URL => {

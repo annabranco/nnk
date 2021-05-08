@@ -28,13 +28,15 @@ const FeaturedMedia = ({ state, id, news }) => {
 
   useEffect(() => {
     if (!media && id !== 0) {
-      fetchData(`${MEDIA_PATH}/${id}`).then(response => {
-        if (response.post) {
-          updateMedia(response);
-        } else {
-          updateMedia('not_found');
-        }
-      });
+      fetchData(`${MEDIA_PATH}/${id}`)
+        .then(response => {
+          if (response.post) {
+            updateMedia(response);
+          } else {
+            updateMedia('not_found');
+          }
+        })
+        .catch(() => null);
     }
   }, [media]);
 
@@ -54,12 +56,13 @@ const FeaturedMedia = ({ state, id, news }) => {
 };
 
 FeaturedMedia.propTypes = {
-  state: StatePropType.isRequired,
+  state: StatePropType,
   id: number.isRequired,
   news: bool
 };
 
 FeaturedMedia.defaultProps = {
+  state: null,
   news: false
 };
 

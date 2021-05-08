@@ -35,7 +35,11 @@ export const Content = styled.div`
   }
 
   @media only screen and (min-width: 1200px) {
-    flex-direction: row;
+    width: 80%;
+    padding: 20px 40px;
+  }
+
+  @media only screen and (min-width: 1600px) {
     width: 75%;
     padding: 20px 80px;
   }
@@ -118,6 +122,7 @@ export const Logo = styled.img`
   @media only screen and (min-width: 768px) {
     margin: 20px 0;
     height: 70px;
+    cursor: pointer;
   }
 `;
 Logo.displayName = 'Logo';
@@ -213,6 +218,11 @@ ValueItem.displayName = 'ValueItem';
 export const ValueVideo = styled.img`
   margin: 20px auto 10px;
   width: 90%;
+  cursor: pointer;
+
+  &: hover {
+    filter: brightness(1.4);
+  }
 `;
 ValueVideo.displayName = 'ValueVideo';
 
@@ -220,7 +230,7 @@ export const Values = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  align-items: center;
+  align-items: baseline;
   justify-items: center;
   margin-bottom: 20px;
   border-bottom: ${({ colors }) => colors && `4px solid ${colors.terciary}`};
@@ -241,3 +251,8 @@ export const ValueTitle = styled.h3`
   }
 `;
 ValueTitle.displayName = 'ValueTitle';
+
+export const Video = styled.div`
+  margin: 20px 0 0;
+`;
+Video.displayName = 'Video';

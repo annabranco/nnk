@@ -12,18 +12,18 @@ const ReportItem = ({ colors, report }) => {
   const [featMedia, setFeatMedia] = useState();
 
   useEffect(() => {
-    try {
-      fetchData(`${MEDIA_PATH}/${report.featured_media}`).then(resp => {
-        setFeatMedia(resp);
-      });
-    } catch (error) {
-      console.error(
-        `Failed to get featured media from ${report.slug}. ${error}.`
-      );
+    if (report.featured_media) {
+      try {
+        fetchData(`${MEDIA_PATH}/${report.featured_media}`).then(resp => {
+          setFeatMedia(resp);
+        });
+      } catch (error) {
+        console.error(
+          `Failed to get featured media from ${report.slug}. ${error}.`
+        );
+      }
     }
   }, [report]);
-
-  // const transformLink = link => link.split('https://www.borderviolence.eu')[1];
 
   return (
     <>

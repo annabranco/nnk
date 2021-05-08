@@ -22,27 +22,32 @@ export default {
       weAreAllMigrantSouls: {
         id: 'no-name-kitchen',
         name: 'WE ARE ALL MIGRANT SOULS',
-        order: 0
+        order: 0,
+        url: 'https://donorbox.org/no-name-kitchen'
       },
       emergencyInNorthBosnia: {
         id: 'emergency-in-northern-bosnia',
         name: 'EMERGENCY IN NORTHERN BOSNIA',
-        order: 1
+        order: 1,
+        url: 'https://donorbox.org/emergency-in-northern-bosnia'
       },
       supportPeopleInSerbia: {
         id: 'supportingnnkinserbia',
         name: 'SUPPORTING PEOPLE ON THE MOVE IN SERBIA',
-        order: 2
+        order: 2,
+        url: 'https://donorbox.org/supportingnnkinserbia'
       },
       foodHealthInGreece: {
         id: 'food-health-for-refugees-in-patras',
         name: 'FOOD & HEALTH FOR REFUGEES IN PATRAS',
-        order: 3
+        order: 3,
+        url: 'https://donorbox.org/food-health-for-refugees-in-patras'
       },
       openTheBorders: {
         id: 'open-the-borders',
         name: 'OPEN THE BORDERS',
-        order: 4
+        order: 4,
+        url: 'https://donorbox.org/open-the-borders'
       }
     }
   },
@@ -77,8 +82,10 @@ export default {
   partnersEmail: 'partners@nonamekitchen.org',
   account: {
     name: 'NO NAME KITCHEN',
-    address: 'C/ Jovellanos 8 – Gijon (Spain)',
-    iban: 'ES90 0081 5155 7100 0198 4102',
-    swift: 'BSABESBBXXX'
+    address: 'C/ Leopoldo Alas 11-1 Gijon (Asturias) - Spain',
+    bank: 'Triodos Bank NV S.E.',
+    bankAddress: 'Calle Cabo Noval, 11 - 33007 Oviedo (Asturias) - Spain',
+    iban: 'ES19 1491 0001 2830 0013 6961',
+    swift: 'TRIOESMMXXX'
   }
 };

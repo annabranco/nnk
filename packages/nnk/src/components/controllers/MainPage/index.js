@@ -79,7 +79,11 @@ const MainPage = ({ state }) => {
 };
 
 MainPage.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+MainPage.defaultProps = {
+  state: null
 };
 
 export default connect(MainPage);

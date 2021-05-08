@@ -134,9 +134,15 @@ const Post = ({ actions, libraries, state }) => {
 };
 
 Post.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired,
-  libraries: LibrariesPropTypes.isRequired
+  state: StatePropType,
+  actions: ActionsPropType,
+  libraries: LibrariesPropTypes
+};
+
+Post.defaultProps = {
+  state: null,
+  actions: null,
+  libraries: null
 };
 
 export default connect(Post);

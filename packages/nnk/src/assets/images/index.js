@@ -34,6 +34,7 @@ export const Program03 = require('./spots/program03.jpeg');
 
 // Where
 export const Mapv1 = require('./maps/mapv1.jpg');
+export const Mapv1Es = require('./maps/mapv1-es.jpg');
 
 // Why
 export const HeroWhy = require('./spots/trainTracks.jpg');
@@ -47,6 +48,12 @@ export const BlackBook = require('./icons/black-book.png');
 
 // JTTF
 export const VolunteersInAction = require('./spots/logistics.jpeg');
+
+// Donate
+export const BankHeader = require('./others/bank-header.jpg');
+export const PaypalInfo = require('./others/paypal-info.jpg');
+export const Value0 = require('./others/value0.jpg');
+export const Value2 = require('./others/value2.jpg');
 
 // Campaigns
 const emergencyInNorthBosnia = require('./spots/donate-bosnia.jpg');

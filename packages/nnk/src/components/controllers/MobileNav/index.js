@@ -38,8 +38,13 @@ const MobileMenu = ({ state, actions }) => {
 };
 
 MobileMenu.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired
+  state: StatePropType,
+  actions: ActionsPropType
+};
+
+MobileMenu.defaultProps = {
+  state: null,
+  actions: null
 };
 
 export default connect(MobileMenu);

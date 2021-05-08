@@ -26,7 +26,11 @@ const Page404 = ({ state }) => {
 };
 
 Page404.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+Page404.defaultProps = {
+  state: null
 };
 
 export default connect(Page404);

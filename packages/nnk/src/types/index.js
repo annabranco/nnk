@@ -1,4 +1,12 @@
-import { arrayOf, bool, func, number, shape, string } from 'prop-types';
+import {
+  arrayOf,
+  bool,
+  func,
+  number,
+  oneOfType,
+  shape,
+  string
+} from 'prop-types';
 
 // --- Primary
 
@@ -76,14 +84,14 @@ const ItemLinksPropType = shape({
 
 const ItemMetaPropType = shape({
   _coblocks_attr: string,
-  _coblocks_dimensions: string.isRequired,
-  _coblocks_responsive_height: string.isRequired,
-  _coblocks_accordion_ie_support: string.isRequired,
-  advanced_seo_description: string.isRequired,
-  amp_status: string.isRequired,
-  spay_email: string.isRequired,
-  jetpack_publicize_message: string.isRequired,
-  jetpack_is_tweetstorm: bool.isRequired
+  _coblocks_dimensions: string,
+  _coblocks_responsive_height: string,
+  _coblocks_accordion_ie_support: string,
+  advanced_seo_description: string,
+  amp_status: string,
+  spay_email: string,
+  jetpack_publicize_message: string,
+  jetpack_is_tweetstorm: bool
 });
 
 const ItemMetaImgPropType = shape({
@@ -225,37 +233,37 @@ export const ConfigPropType = shape({
 });
 
 export const ItemPropType = shape({
-  id: number.isRequired,
-  date: string.isRequired,
-  date_gmt: string.isRequired,
-  guid: ItemDetailsPropType.isRequired,
-  modified: string.isRequired,
-  modified_gmt: string.isRequired,
-  slug: string.isRequired,
-  status: string.isRequired,
-  type: string.isRequired,
-  link: string.isRequired,
-  title: ItemDetailsPropType.isRequired,
-  content: ItemDetailsPropType.isRequired,
-  excerpt: ItemDetailsPropType.isRequired,
-  author: number.isRequired,
-  featured_media: number.isRequired,
-  comment_status: string.isRequired,
-  ping_status: string.isRequired,
-  sticky: bool.isRequired,
-  template: string.isRequired,
-  format: string.isRequired,
-  meta: ItemMetaPropType.isRequired,
-  categories: arrayOf(number).isRequired,
-  tags: arrayOf(number).isRequired,
+  id: number,
+  date: string,
+  date_gmt: string,
+  guid: ItemDetailsPropType,
+  modified: string,
+  modified_gmt: string,
+  slug: string,
+  status: string,
+  type: string,
+  link: string,
+  title: ItemDetailsPropType,
+  content: ItemDetailsPropType,
+  excerpt: ItemDetailsPropType,
+  author: number,
+  featured_media: number,
+  comment_status: string,
+  ping_status: string,
+  sticky: bool,
+  template: string,
+  format: string,
+  meta: oneOfType([ItemMetaPropType, arrayOf(ItemMetaPropType)]),
+  categories: arrayOf(number),
+  tags: arrayOf(number),
   'jetpack-related-posts': arrayOf(ItemMetaJetPackRelatedPostsPropType),
-  jetpack_featured_media_url: string.isRequired,
+  jetpack_featured_media_url: string,
   jetpack_publicize_connections: arrayOf(string),
-  jetpack_shortlink: string.isRequired,
-  jetpack_sharing_enabled: bool.isRequired,
-  jetpack_likes_enabled: bool.isRequired,
-  _links: ItemLinksPropType.isRequired,
-  _embedded: ItemEmbeddedPropType.isRequired
+  jetpack_shortlink: string,
+  jetpack_sharing_enabled: bool,
+  jetpack_likes_enabled: bool,
+  _links: ItemLinksPropType,
+  _embedded: ItemEmbeddedPropType
 });
 
 export const LibrariesPropTypes = shape({

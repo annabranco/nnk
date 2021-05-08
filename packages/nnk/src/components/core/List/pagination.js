@@ -30,7 +30,10 @@ const Pagination = ({ state, actions }) => {
       {previous && (
         <Link link={previous}>
           <PageButton colors={colors}>
-            <PageButtonArrow className="fas fa-chevron-circle-left" />
+            <PageButtonArrow
+              aria-hidden
+              className="fas fa-chevron-circle-left"
+            />
             Newer posts
           </PageButton>
         </Link>
@@ -39,7 +42,11 @@ const Pagination = ({ state, actions }) => {
         <Link link={next}>
           <PageButton alone={!previous} colors={colors} right>
             Older posts
-            <PageButtonArrow className="fas fa-chevron-circle-right" right />
+            <PageButtonArrow
+              aria-hidden
+              className="fas fa-chevron-circle-right"
+              right
+            />
           </PageButton>
         </Link>
       )}
@@ -48,8 +55,13 @@ const Pagination = ({ state, actions }) => {
 };
 
 Pagination.propTypes = {
-  state: StatePropType.isRequired,
-  actions: ActionsPropType.isRequired
+  state: StatePropType,
+  actions: ActionsPropType
+};
+
+Pagination.defaultProps = {
+  state: null,
+  actions: null
 };
 
 /**

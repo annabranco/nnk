@@ -6,7 +6,7 @@
       {
         "title": "100% INDEPENDENT",
         "description": "We keep our freedom to claim justice and to fight the negligent violation of human rights at the EU borders.",
-        "video": "https://www.youtube.com/embed/eC-LQaOw6OM"
+        "video": "https://www.youtube.com/embed/eC-LQaOw6OM?controls=0&autoplay=1"
       },
       {
         "title": "IMPACTFUL",
@@ -15,9 +15,17 @@
       {
         "title": "TRANSPARENCY",
         "description": "Our accountability is free-access for everyone who wants to know the final use of their donations.",
-        "video": "https://www.youtube.com/embed/H2nIyPDK408"
+        "video": "https://www.youtube.com/embed/H2nIyPDK408?controls=0&autoplay=1"
       }
     ],
+    "bankInfo": {
+      "orgName": "Organisation name",
+      "orgAddress": "Organisation address",
+      "bankName": "Bank name",
+      "accNumber": "Account number/IBAN",
+      "bankAddress": "Bank branch address",
+      "swift": "BIC/SWIFT code"
+    },
     "transfer": "If can donate by bank transfer or PayPal. For more info:",
     "ongoing": "On-going campaigns",
     "subscribeTo": "Get updated by signing up to our newsletter"
@@ -41,6 +49,14 @@
         "video": "https://www.youtube.com/embed/H2nIyPDK408"
       }
     ],
+    "bankInfo": {
+      "orgName": "Nombre de la organización",
+      "orgAddress": "Dirección de la organización",
+      "bankName": "Nombre del banco",
+      "accNumber": "Número de la cuenta/IBAN",
+      "bankAddress": "Dirección del banco",
+      "swift": "Código BIC/SWIFT"
+    },
     "transfer": "Puedes hacer tu donación a través de una transferencia bancaria o por PayPal. Si deseas más información:",
     "ongoing": "Campañas en marcha",
     "subscribeTo": "Suscríbete a nuestra newsletter"

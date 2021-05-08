@@ -86,12 +86,6 @@ const nnkTheme = {
           isReady: true,
           isFetching: false
         }
-        // '/news/': {
-        //   id: 262,
-        //   isReady: false,
-        //   isFetching: false,
-        //   type: 'category'
-        // }
         // '/store/': {
         //   isReady: true,
         //   isFetching: false

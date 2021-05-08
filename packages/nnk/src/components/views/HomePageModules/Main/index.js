@@ -60,7 +60,11 @@ const MainModule = ({ state }) => {
 };
 
 MainModule.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+MainModule.defaultProps = {
+  state: null
 };
 
 export default connect(MainModule);

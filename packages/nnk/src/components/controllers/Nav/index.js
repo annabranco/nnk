@@ -16,14 +16,23 @@ const Nav = ({ state }) => {
   return (
     <NavContainer>
       {navSections.map(section => (
-        <NavItem key={section.title} section={section} colors={colors} />
+        <NavItem
+          language={language}
+          key={section.title}
+          section={section}
+          colors={colors}
+        />
       ))}
     </NavContainer>
   );
 };
 
 Nav.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+Nav.defaultProps = {
+  state: null
 };
 
 export default connect(Nav);

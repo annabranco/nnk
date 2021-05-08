@@ -86,12 +86,14 @@ const WhySection = ({ state }) => {
             <BlackBookVolumesWrapper>
               <Link
                 link="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:b10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
+                rel="noreferrer"
                 target="_blank"
               >
                 <Intro>{texts.blackBookVolumes[0]}</Intro>
               </Link>
               <Link
                 link="https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Ab10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
+                rel="noreferrer"
                 target="_blank"
               >
                 <Intro>{texts.blackBookVolumes[1]}</Intro>
@@ -131,7 +133,11 @@ const WhySection = ({ state }) => {
 };
 
 WhySection.propTypes = {
-  state: StatePropType.isRequired
+  state: StatePropType
+};
+
+WhySection.defaultProps = {
+  state: null
 };
 
 export default connect(WhySection);
