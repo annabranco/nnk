@@ -11,6 +11,7 @@ const MobileMenu = ({ state, actions }) => {
   return (
     <>
       <MenuToggle
+        colors={colors}
         onClick={actions.theme.toggleMobileMenu}
         opened={isMobileMenuOpen}
       >
@@ -26,11 +27,7 @@ const MobileMenu = ({ state, actions }) => {
       {/* If the menu is open, render the menu modal */}
       {isMobileMenuOpen && (
         <>
-          <MenuModal
-            colors={colors}
-            currentPage={state.router.link}
-            language={language}
-          />
+          <MenuModal colors={colors} language={language} />
         </>
       )}
     </>

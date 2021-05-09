@@ -1,5 +1,10 @@
 import { styled, css } from 'frontity';
-import { fontText, sizeLarge, sizeMedium } from '../../../setup/themes';
+import {
+  fontText,
+  sizeLarge,
+  sizeMedium,
+  sizeMediumTitle
+} from '../../../setup/themes';
 
 export const CarrousselWrapper = styled.div`
   display: flex;
@@ -112,7 +117,10 @@ export const Text = styled.p`
   padding: 25px;
   border-radius: 10px;
   font-style: italic;
-  /* width: 300px; */
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Text.displayName = 'Text';
 
@@ -122,6 +130,10 @@ export const Victim = styled(Text)`
   margin-top: 5px;
   border: 0;
   text-align: center;
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Victim.displayName = 'Victim';
 

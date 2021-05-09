@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import config from '../../../setup/config';
-import { getMediaQuery } from '../../../utils';
+import { getDevice } from '../../../utils';
 import { MOBILE } from '../../../constants/devices';
 import Link from '../../core/Link';
 import MobileNav from '../MobileNav';
@@ -17,7 +17,7 @@ const Header = ({ state, actions }) => {
   const [activeLanguage, changeActiveLanguage] = useState('en');
   const { colors } = state.theme;
   const { changeLanguage } = actions.theme;
-  const MOBILE_VERSION = getMediaQuery() === MOBILE;
+  const MOBILE_VERSION = getDevice() === MOBILE;
 
   const onClickFlag = flag => {
     changeActiveLanguage(flag);

@@ -128,10 +128,15 @@ export const Logo = styled.img`
 Logo.displayName = 'Logo';
 
 export const PartnersLogos = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
+
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 PartnersLogos.displayName = 'PartnersLogos';
 
@@ -201,6 +206,9 @@ export const ValueDescription = styled(BaseText)`
     font-size: ${sizeMedium};
     text-align: center;
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 ValueDescription.displayName = 'ValueDescription';
 
@@ -227,14 +235,21 @@ export const ValueVideo = styled.img`
 ValueVideo.displayName = 'ValueVideo';
 
 export const Values = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  align-items: baseline;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   border-bottom: ${({ colors }) => colors && `4px solid ${colors.terciary}`};
   color: ${({ colors }) => colors && colors.secondary};
+
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: baseline;
+    justify-items: center;
+  }
 `;
 Values.displayName = 'Values';
 

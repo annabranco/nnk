@@ -5,6 +5,7 @@ import {
   fontText,
   sizeLarge,
   sizeLargeTitle,
+  sizeMediumTitle,
   sizeSmallTitle,
   sizeXLargeTitle,
   sizeXXLarge
@@ -71,6 +72,9 @@ export const Intro = styled(BaseText)`
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
   }
 `;
 Intro.displayName = 'Intro';
@@ -166,6 +170,9 @@ export const TextTestimonial = styled(Text)`
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Intro.displayName = 'Intro';
 
@@ -178,6 +185,9 @@ export const TextVictim = styled(Text)`
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Intro.displayName = 'Intro';
 
@@ -189,6 +199,9 @@ export const Title = styled(BaseTitle)`
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLargeTitle};
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeXLargeTitle};
   }
 `;
 Title.displayName = 'Title';

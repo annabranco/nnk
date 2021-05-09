@@ -36,6 +36,10 @@ const WhereSection = ({ state }) => {
     texts = WHERE_TEXTS[language];
   }, [language]);
 
+  useEffect(() => {
+    return () => toggleBodyScroll();
+  }, []);
+
   return (
     <Section colors={colors}>
       {displayModal && (

@@ -3,7 +3,9 @@ import {
   BaseText,
   sizeLarge,
   sizeMediumTitle,
-  sizeSmallTitle
+  sizeSmallTitle,
+  sizeXLarge,
+  sizeXLargeTitle
 } from '../../../../setup/themes';
 import { SubscriptionButton } from '../../../controllers/MainPage/styles';
 
@@ -46,6 +48,10 @@ export const MainText = styled(BaseText)`
   @media only screen and (min-width: 1024px) {
     bottom: 20vh;
     font-size: ${sizeMediumTitle};
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeXLarge};
   }
 `;
 MainText.displayName = 'MainText';
@@ -103,21 +109,25 @@ export const PhotoContainer = styled.div`
     height: 40vh;
   }
 
-  @media (min-height: 1024px) and (min-width: 1300px) {
-    height: 780vh;
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    height: 90vh;
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';
 
 export const VideoButton = styled(SubscriptionButton)`
   position: relative;
-  top: 10vh;
+  top: 12vh;
   right: -10vh;
   border-radius: 25px;
   box-shadow: 5px 0 15px 3px rgba(0, 0, 0, 0.8);
   -webkit-text-stroke: 1px black;
   height: 40px;
   width: 60%;
+
+  @media all and (min-width: 768px) {
+    top: 10vh;
+  }
 
   @media all and (min-width: 1200px) {
     top: 0;
@@ -131,6 +141,14 @@ export const VideoButton = styled(SubscriptionButton)`
     right: -25vw;
     height: 60px;
     width: 450px;
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    border-radius: 50px;
+    right: -30vw;
+    height: 100px;
+    width: 600px;
+    font-size: ${sizeXLargeTitle};
   }
 `;
 VideoButton.displayName = 'VideoButton';

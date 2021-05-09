@@ -34,6 +34,13 @@ export const SocialLogo = styled.div`
     height: 60px;
     width: 60px;
   }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    margin: 20px;
+    font-size: 3.5rem;
+    height: 80px;
+    width: 80px;
+  }
 `;
 SocialLogo.displayName = 'SocialLogo';
 

@@ -1,5 +1,11 @@
 import { styled } from 'frontity';
-import { fontTitle, sizeMediumTitle } from '../../../setup/themes';
+import {
+  fontTitle,
+  sizeLargeTitle,
+  sizeMediumTitle,
+  sizeXLarge,
+  sizeXLargeTitle
+} from '../../../setup/themes';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -31,6 +37,12 @@ export const SubscriptionButton = styled.button`
   @media all and (min-width: 768px) {
     height: 60px;
     width: 550px;
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    height: 90px;
+    width: 800px;
+    font-size: ${sizeXLarge};
+    border-radius: 30px;
   }
 `;
 SubscriptionButton.displayName = 'SubscriptionButton';

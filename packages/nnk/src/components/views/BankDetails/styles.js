@@ -1,19 +1,27 @@
 import { styled } from 'frontity';
 import { fontTitle, sizeLarge, sizeMedium } from '../../../setup/themes';
 
+export const BankDetailsImages = styled.img`
+  width: 100%;
+  @media all and (min-width: 768px) {
+    width: auto;
+  }
+`;
+BankDetailsImages.displayName = 'BankDetailsImages';
+
 export const BankDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({ colors }) => colors && colors.secondary};
-  /* height: 55px;
-  padding: 0;
-  padding-top: 20px;
+  background: white;
+  padding: 0 20px;
+  height: 100%;
 
   @media all and (min-width: 768px) {
-    padding: 80px 100px 30px;
-  } */
+    height: auto;
+    margin-top: 120px;
+  }
 `;
 BankDetailsWrapper.displayName = 'BankDetailsWrapper';
 
@@ -26,7 +34,7 @@ export const BankInfoWrapper = styled.div`
 BankInfoWrapper.displayName = 'BankInfoWrapper';
 
 export const BankInfoItem = styled.p`
-  margin: 20px 0;
+  margin: 10px 0;
   color: gray;
   text-transform: uppercase;
   font-family: ${fontTitle};
@@ -36,6 +44,15 @@ export const BankInfoItem = styled.p`
   & span {
     font-weight: 700;
     color: ${({ colors }) => colors && colors.primary};
+    display: block;
+  }
+
+  @media all and (min-width: 768px) {
+    margin: 20px 0;
+
+    & span {
+      display: inline;
+    }
   }
 `;
 BankDetailsWrapper.displayName = 'BankDetailsWrapper';

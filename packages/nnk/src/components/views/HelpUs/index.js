@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
-import { getSocialLinks } from '../../../utils';
+import { getDevice, getSocialLinks } from '../../../utils';
 import { DONATION_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
 import DonorBox from '../DonorBox';
@@ -37,6 +37,7 @@ import {
 import { Mail } from '../PrivacyDeclaration/styles';
 import BankDetails from '../BankDetails';
 import { VideoElement } from '../HomePageModules/Main/styles';
+import { DESKTOP } from '../../../constants/devices';
 
 const getVideoThumb = index => {
   switch (index) {
@@ -76,7 +77,7 @@ const HelpUs = ({ state }) => {
       />
       <Content>
         <SubsectionWrapper>
-          <DonorBox campaign={config.campaigns.mainCampaing} />
+          <DonorBox campaign={config.campaigns.mainCampaing} colors={colors} />
         </SubsectionWrapper>
         <SubsectionWrapper>
           <Title colors={colors}>{texts.ongoing}</Title>
@@ -135,7 +136,10 @@ const HelpUs = ({ state }) => {
         </PartnersLogos>
       </Info>
       {displayModal === 'bank' && (
-        <AppModal closeAction={() => toggleModal(false)}>
+        <AppModal
+          closeAction={() => toggleModal(false)}
+          closeButton={getDevice() !== DESKTOP}
+        >
           <BankDetails colors={colors} language={language} />
         </AppModal>
       )}

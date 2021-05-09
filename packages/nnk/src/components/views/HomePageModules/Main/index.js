@@ -1,10 +1,6 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import {
-  getMediaQuery,
-  getSocialLinks,
-  toggleBodyScroll
-} from '../../../../utils';
+import { getDevice, getSocialLinks, toggleBodyScroll } from '../../../../utils';
 import { DESKTOP } from '../../../../constants/devices';
 import { HOMEPAGE_TEXTS } from '../../../../db';
 import SocialModule from '../../SocialContainer';
@@ -14,7 +10,7 @@ import { MainText, PhotoContainer, VideoButton, VideoElement } from './styles';
 import AppModal from '../../../core/AppModal';
 
 const socialLinks =
-  getMediaQuery() === DESKTOP
+  getDevice() === DESKTOP
     ? getSocialLinks(['Facebook', 'Twitter', 'Instagram', 'Youtube', 'Email'])
     : getSocialLinks(['Facebook', 'Twitter', 'Instagram']);
 
@@ -37,6 +33,10 @@ const MainModule = ({ state }) => {
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
   }, [language]);
+
+  useEffect(() => {
+    return () => toggleBodyScroll();
+  }, []);
 
   return (
     <PhotoContainer colors={colors} img={Home}>

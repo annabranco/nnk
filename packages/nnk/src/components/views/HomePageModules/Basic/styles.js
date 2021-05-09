@@ -2,6 +2,7 @@ import { css, styled } from 'frontity';
 import {
   BaseText,
   BaseTitle,
+  sizeMediumTitle,
   sizeSmallTitle,
   sizeXLarge
 } from '../../../../setup/themes';
@@ -65,6 +66,12 @@ export const Image = styled.img`
     margin: 0 10px 10px;
     height: 190px;
     width: 300px;
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    margin: 0 10px 10px;
+    height: 300px;
+    width: 500px;
   }
 `;
 

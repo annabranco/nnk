@@ -15,7 +15,9 @@ const AppModal = ({ children, closeButton, closeAction, state }) => {
           colors={colors}
           text={ACTIONS_TEXTS[language].close}
           onClick={closeAction}
-        />
+        >
+          {ACTIONS_TEXTS[language].close}
+        </CloseButton>
       )}
       {children}
     </ModalOverlay>

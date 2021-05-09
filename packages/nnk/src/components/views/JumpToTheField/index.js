@@ -3,11 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
 import SectionHeader from '../SectionHeader';
-import {
-  getSocialLinks,
-  getMediaQuery,
-  toggleBodyScroll
-} from '../../../utils';
+import { getSocialLinks, getDevice, toggleBodyScroll } from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
 import { MOBILE, TABLET } from '../../../constants/devices';
 import { VolunteersInAction } from '../../../assets/images';
@@ -26,7 +22,7 @@ import {
 import AppModal from '../../core/AppModal';
 import ExternalForm from '../ExternalFrame';
 
-const DEVICE_VERSION = getMediaQuery() === MOBILE || getMediaQuery() === TABLET;
+const DEVICE_VERSION = getDevice() === MOBILE || getDevice() === TABLET;
 
 const JumpToTheFieldSection = ({ state }) => {
   const [displayModal, toggleModal] = useState(false);
@@ -47,6 +43,10 @@ const JumpToTheFieldSection = ({ state }) => {
   useEffect(() => {
     texts = JTTF_TEXTS[language];
   }, [language]);
+
+  useEffect(() => {
+    return () => toggleBodyScroll();
+  }, []);
 
   return (
     <JTTFSection colors={colors}>
@@ -80,7 +80,7 @@ const JumpToTheFieldSection = ({ state }) => {
           <AppModal closeAction={onToggleForm} closeButton>
             <ExternalForm
               colors={colors}
-              width={getMediaQuery() === MOBILE ? 340 : 640}
+              width={getDevice() === MOBILE ? 340 : 640}
               height={2930}
               src={config.volunteerForm}
               title="contact"

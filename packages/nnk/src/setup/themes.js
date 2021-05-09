@@ -59,4 +59,7 @@ export const BaseText = styled.p`
   font-weight: normal;
   line-height: 2.2;
   white-space: normal;
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
