@@ -1,14 +1,14 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import config from '../../../setup/config';
-import { getMediaQuery, toggleBodyScroll } from '../../../utils';
+import { getDevice, toggleBodyScroll } from '../../../utils';
 import {
   HOMEPAGE_TEXTS,
   WHY_TEXTS,
   VOLUNTEER_TEXTS,
   DONATION_TEXTS
 } from '../../../db';
-import { MOBILE } from '../../../constants/devices';
+import { DESKTOP, MOBILE } from '../../../constants/devices';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
 import PageSection from '../../views/HomePageModules';
@@ -43,13 +43,17 @@ const MainPage = ({ state }) => {
     donationTexts = DONATION_TEXTS[language];
   }, [language]);
 
+  useEffect(() => {
+    return () => toggleBodyScroll();
+  }, []);
+
   return (
     <MainContainer colors={colors}>
       <MainModule />
       <PageSection
         colors={colors}
         noBorder
-        size={getMediaQuery() === MOBILE ? 'full' : 'large'}
+        size={getDevice() === MOBILE ? 'full' : 'large'}
       >
         <BasicModule
           texts={homepageTexts}
@@ -64,10 +68,13 @@ const MainPage = ({ state }) => {
         {donationTexts.subscribeTo} {donationTexts.noNameNews}
       </SubscriptionButton>
       {displayModal && (
-        <AppModal closeAction={onToggleSubscription}>
+        <AppModal
+          closeAction={onToggleSubscription}
+          closeButton={getDevice() !== DESKTOP}
+        >
           <ExternalForm
             colors={colors}
-            width={getMediaQuery() === MOBILE ? 340 : 640}
+            width={getDevice() === MOBILE ? 340 : 640}
             height={800}
             src={config.subscriptionEndpoint}
             title="subscription"

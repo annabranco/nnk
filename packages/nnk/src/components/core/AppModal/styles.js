@@ -13,22 +13,21 @@ import Link from '../Link';
 export const CloseButton = styled.p`
   z-index: 100;
   position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  color: red;
+  top: 10px;
+  right: 10px;
   color: ${({ colors }) => colors.terciary};
   background: ${({ colors }) => colors && colors.primary};
   cursor: pointer;
   border-radius: 5px;
   padding: 5px 10px;
+  text-transform: uppercase;
 
   &:hover {
     box-shadow: 0 0 2px 2px white;
   }
 
   ${({ text }) =>
-    text &&
+    !text &&
     css`
       &::before {
         content: 'x';

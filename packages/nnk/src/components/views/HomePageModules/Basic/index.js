@@ -1,6 +1,6 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { MOBILE } from '../../../../constants/devices';
-import { getMediaQuery } from '../../../../utils';
+import { getDevice } from '../../../../utils';
 import Link from '../../../core/Link';
 import { Photo01, Photo02, Photo03 } from '../../../../assets/images';
 import {
@@ -27,7 +27,7 @@ const BasicModule = ({ colors, texts, whyTexts }) => (
     </DescriptionWrapper>
 
     <ImagesWrapper>
-      {getMediaQuery() === MOBILE ? (
+      {getDevice() === MOBILE ? (
         <>
           {texts.subItems.map((item, index) => (
             <Link link={item.link} key={item.link}>

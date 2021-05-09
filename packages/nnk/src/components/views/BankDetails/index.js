@@ -5,7 +5,12 @@ import { DONATION_TEXTS } from '../../../db';
 import { BankHeader, PaypalInfo } from '../../../assets/images';
 import config from '../../../setup/config';
 import { ColorsPropType } from '../../../types';
-import { BankDetailsWrapper, BankInfoWrapper, BankInfoItem } from './styles';
+import {
+  BankDetailsWrapper,
+  BankInfoWrapper,
+  BankInfoItem,
+  BankDetailsImages
+} from './styles';
 
 const BankDetails = ({ colors, language }) => {
   let texts = DONATION_TEXTS[language];
@@ -15,8 +20,8 @@ const BankDetails = ({ colors, language }) => {
   }, [language]);
 
   return (
-    <BankDetailsWrapper colors={colors}>
-      <img src={BankHeader} alt="" />
+    <BankDetailsWrapper colors={colors} onClick={e => e.stopPropagation()}>
+      <BankDetailsImages src={BankHeader} alt="" />
       <BankInfoWrapper>
         <BankInfoItem colors={colors}>
           {texts.bankInfo.orgName}: <span>{config.account.name}</span>
@@ -38,7 +43,7 @@ const BankDetails = ({ colors, language }) => {
           {texts.bankInfo.swift}: <span>{config.account.swift}</span>
         </BankInfoItem>
       </BankInfoWrapper>
-      <img src={PaypalInfo} alt="" />
+      <BankDetailsImages src={PaypalInfo} alt="" />
     </BankDetailsWrapper>
   );
 };

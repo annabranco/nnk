@@ -4,7 +4,7 @@ import { connect } from 'frontity';
 import { bool } from 'prop-types';
 import Link from '../../core/Link';
 import FeaturedMedia from '../../core/FeaturedMedia';
-import { getFormatedDate, getMediaQuery } from '../../../utils';
+import { getFormatedDate, getDevice } from '../../../utils';
 import { MOBILE } from '../../../constants/devices';
 import { ItemPropType, StatePropType, TextsNewsPropType } from '../../../types';
 import {
@@ -19,7 +19,7 @@ import {
 const NewsItem = ({ state, item, read, texts }) => {
   const { colors, language } = state.theme;
   const date = new Date(item.date);
-  const MOBILE_VERSION = getMediaQuery() === MOBILE;
+  const MOBILE_VERSION = getDevice() === MOBILE;
 
   const clearOriginalLink = excerpt => {
     return excerpt.split('<p class="link-more">')[0];

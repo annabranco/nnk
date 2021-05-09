@@ -8,7 +8,7 @@ export const getSocialLinks = linksToDisplay => {
   return socialLinks.filter(link => linksToDisplay.includes(link.type));
 };
 
-export const getMediaQuery = () => {
+export const getDevice = () => {
   if (process.browser && window.innerWidth) {
     if (window.innerWidth < 768) {
       return MOBILE;

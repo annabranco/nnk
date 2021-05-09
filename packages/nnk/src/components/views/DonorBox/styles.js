@@ -13,9 +13,15 @@ DonorBoxArea.displayName = 'DonorBoxArea';
 export const DonorBoxFrame = styled.iframe`
   height: 900px;
   min-width: 250px;
-  width: 120%;
+  width: 100%;
   max-height: none;
   margin: 0 auto;
+
+  @media all and (min-width: 768px) {
+    height: 900px;
+    min-width: 250px;
+    width: 120%;
+  }
 `;
 DonorBoxFrame.displayName = 'DonorBoxFrame';
 

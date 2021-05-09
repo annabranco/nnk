@@ -2,11 +2,11 @@ import { styled } from 'frontity';
 
 export const MenuToggle = styled.button`
   z-index: 11;
-  position: ${({ opened }) => (opened ? 'fixed' : 'absolute')};
+  position: fixed;
   right: 15px;
   margin-top: 20px;
   border: 0;
-  background: transparent;
+  background: ${({ colors }) => colors && colors.primary};
   color: white;
 `;
 MenuToggle.displayName = 'MenuToggle';

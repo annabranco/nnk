@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+import React, { Fragment, useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import { string } from 'prop-types';
 import { ACTIONS_TEXTS, MAIN_SECTIONS } from '../../../db';
@@ -16,8 +16,9 @@ import {
   Item,
   BackTitle
 } from './styles';
+import { SubItemRed } from '../NavItem/styles';
 
-const MenuModal = ({ colors, currentPage, language }) => {
+const MenuModal = ({ colors, language }) => {
   let navSections = MAIN_SECTIONS[language];
   const backText = ACTIONS_TEXTS[language].back;
   const [currentTree, changeTree] = useState(navSections);
@@ -32,6 +33,23 @@ const MenuModal = ({ colors, currentPage, language }) => {
       );
     }
     return title;
+  };
+
+  const styleSubItems = subitem => {
+    if (language !== 'en' && subitem.toLowerCase() !== 'no name news') {
+      if (subitem.toLowerCase().includes('w')) {
+        const updatedSubItem = subitem.toLowerCase().split('w');
+
+        updatedSubItem[1] = (
+          <Fragment key={`sub-${subitem}`}>
+            <SubItemRed colors={colors}>W</SubItemRed>
+            {updatedSubItem[1]}
+          </Fragment>
+        );
+        return updatedSubItem;
+      }
+    }
+    return subitem;
   };
 
   const onClickItem = ({ subItems, title }) => {
@@ -65,13 +83,13 @@ const MenuModal = ({ colors, currentPage, language }) => {
       <MenuContent>
         {currentTree.map(section => (
           <Item key={section.title} onClick={() => onClickItem(section)}>
-            <Link
-              link={
-                !section.subItems && section.link ? section.link : undefined
-              }
-            >
+            {!section.subItems && section.link ? (
+              <Link link={section.link}>
+                <Title colors={colors}>{styleSubItems(section.title)}</Title>
+              </Link>
+            ) : (
               <Title colors={colors}>{styleTitle(section.title)}</Title>
-            </Link>
+            )}
           </Item>
         ))}
       </MenuContent>
@@ -81,7 +99,6 @@ const MenuModal = ({ colors, currentPage, language }) => {
 
 MenuModal.propTypes = {
   colors: ColorsPropType.isRequired,
-  currentPage: string.isRequired,
   language: string.isRequired
 };
 

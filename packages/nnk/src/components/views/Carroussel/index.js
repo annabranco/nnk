@@ -14,7 +14,7 @@ import {
   Marker
 } from './styles';
 import { TestimonialPropType } from '../../../types';
-import { getMediaQuery } from '../../../utils';
+import { getDevice } from '../../../utils';
 import { MOBILE, TABLET } from '../../../constants/devices';
 
 const testimonialPhotos = {
@@ -35,7 +35,7 @@ const testimonialPhotos = {
   }
 };
 
-const DEVICE_VERSION = getMediaQuery() === MOBILE || getMediaQuery() === TABLET;
+const DEVICE_VERSION = getDevice() === MOBILE || getDevice() === TABLET;
 
 const Carroussel = ({ items }) => {
   const [updatedItems, updateItems] = useState();

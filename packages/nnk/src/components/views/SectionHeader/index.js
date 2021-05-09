@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
-import { getMediaQuery } from '../../../utils';
+import { getDevice } from '../../../utils';
 import { DESKTOP } from '../../../constants/devices';
 import SocialModule from '../SocialContainer';
 import { ColorsPropType, ConfigSocialLinksPropType } from '../../../types';
 import { PhotoContainer } from '../HomePageModules/Main/styles';
 import { Title, TitleWrapper } from './styles';
 
-const IS_DESKTOP = getMediaQuery() === DESKTOP;
+const IS_DESKTOP = getDevice() === DESKTOP;
 
 const SectionHeader = ({ colors, img, position, socialLinks, title }) => (
   <PhotoContainer colors={colors} img={img} position={position} section>
