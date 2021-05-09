@@ -1,12 +1,11 @@
 import { styled, css } from 'frontity';
-import { BaseTitle, fontTitle } from '../../../setup/themes';
+import { BaseTitle, fontTitle, sizeLargeTitle } from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const CollapsableItems = styled.div`
   z-index: 900;
   position: relative;
   visibility: ${({ isActive }) => (isActive ? 'visible' : 'hidden')};
-  background: yellow;
   width: auto;
   transition: visibility ease 0.3s;
 `;
@@ -38,6 +37,12 @@ export const ItemLink = styled.li`
         color: ${colors.terciary};
       }
     `}
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeLargeTitle};
+    width: auto;
+    margin: 10px;
+  }
 `;
 ItemLink.displayName = 'ItemLink';
 
@@ -50,6 +55,10 @@ export const ItemsList = styled.ul`
   min-width: 130px;
   padding: 12px 0 0;
   font-size: 1.6rem;
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    width: 300px;
+  }
 `;
 ItemsList.displayName = 'ItemsList';
 
@@ -116,5 +125,9 @@ export const Title = styled(BaseTitle)`
     isActive ? colors.terciary : colors.secondary};
   cursor: pointer;
   transition: color ease 0.3s;
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeLargeTitle};
+  }
 `;
 Title.displayName = 'Title';

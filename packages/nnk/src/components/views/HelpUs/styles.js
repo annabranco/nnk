@@ -206,6 +206,9 @@ export const ValueDescription = styled(BaseText)`
     font-size: ${sizeMedium};
     text-align: center;
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 ValueDescription.displayName = 'ValueDescription';
 

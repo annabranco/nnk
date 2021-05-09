@@ -28,6 +28,10 @@ export const HeaderContainer = styled.header`
   @media only screen and (min-width: 1200px) {
     padding: 2px 80px;
   }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    height: 120px;
+  }
 `;
 HeaderContainer.displayName = 'HeaderContainer';
 
@@ -44,6 +48,9 @@ export const Logo = styled.img`
   @media only screen and (min-width: 768px) {
     width: 110px;
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    width: 120px;
+  }
 `;
 Logo.displayName = 'Logo';
 
@@ -55,6 +62,11 @@ export const LanguageFlag = styled.img`
 
   @media only screen and (min-width: 768px) {
     display: block;
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    width: 60px;
+    transform: translate(0, 15px);
   }
 `;
 LanguageFlag.displayName = 'LanguageFlag';

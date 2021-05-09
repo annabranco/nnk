@@ -29,7 +29,7 @@ export const Container = styled.div`
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
 
   @media only screen and (min-width: 768px) {
-    width: 800px;
+    width: 70vw;
   }
 `;
 Container.displayName = 'Container';

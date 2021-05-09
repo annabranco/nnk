@@ -43,6 +43,10 @@ export const DescriptionTitle = styled(BaseTitle)`
     margin: 0;
     font-size: ${sizeMediumTitle};
   }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeLargeTitle};
+  }
 `;
 DescriptionTitle.displayName = 'DescriptionTitle';
 
@@ -80,6 +84,9 @@ export const Intro = styled(BaseText)`
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Intro.displayName = 'Intro';
 
@@ -104,6 +111,10 @@ export const Program = styled.div`
     margin: 30px auto;
     width: 80%;
   }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    margin: 150px auto;
+  }
 `;
 Program.displayName = 'Program';
 
@@ -121,6 +132,9 @@ export const SubTitle = styled(BaseTitle)`
   @media only screen and (min-width: 768px) {
     margin: 50px auto;
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeXLargeTitle};
+  }
 `;
 SubTitle.displayName = 'SubTitle';
 
@@ -131,6 +145,9 @@ export const Text = styled(BaseText)`
 
   @media only screen and (min-width: 1024px) {
     font-size: ${sizeMedium};
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
   }
 `;
 Text.displayName = 'Text';

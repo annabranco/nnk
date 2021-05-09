@@ -10,7 +10,8 @@ import {
   sizeSmallTitle,
   sizeXLarge,
   sizeXLargeTitle,
-  sizeXXLarge
+  sizeXXLarge,
+  sizeXXLargeTitle
 } from '../../../setup/themes';
 import { SubscriptionButton } from '../../controllers/MainPage/styles';
 
@@ -97,6 +98,9 @@ export const Icon = styled.i`
         font-size: ${sizeXLarge};
       }
     `}
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeXXLargeTitle};
+  }
 `;
 Icon.displayName = 'Icon';
 
@@ -123,6 +127,9 @@ export const InfoDescription = styled(BaseTitle)`
   @media only screen and (min-width: 768px) {
     font-size: ${({ subItem }) => (subItem ? sizeSmallTitle : sizeLargeTitle)};
   }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${({ subItem }) => (subItem ? sizeLargeTitle : sizeXLargeTitle)};
+  }
 `;
 InfoDescription.displayName = 'InfoDescription';
 
@@ -132,6 +139,9 @@ export const InfoTitle = styled(BaseTitle)`
 
   @media only screen and (min-width: 768px) {
     font-size: ${sizeLarge};
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeLargeTitle};
   }
 `;
 InfoTitle.displayName = 'InfoTitle';
@@ -143,6 +153,12 @@ export const JoinButton = styled(SubscriptionButton)`
   @media all and (min-width: 1200px) {
     height: 60px;
     width: 450px;
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    height: 90px;
+    width: 800px;
+    font-size: ${sizeXLarge};
+    border-radius: 30px;
   }
 `;
 JoinButton.displayName = 'JoinButton';
@@ -225,6 +241,9 @@ export const Text = styled(BaseText)`
     margin: 20px auto;
     width: 80%;
     font-size: ${sizeLarge};
+  }
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
   }
 `;
 Text.displayName = 'Text';
