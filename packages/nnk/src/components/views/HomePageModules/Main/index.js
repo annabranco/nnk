@@ -43,7 +43,8 @@ const MainModule = ({ state }) => {
       <MainText colors={colors}>{homepageTexts.mainText}</MainText>
       <SocialModule socialLinks={socialLinks} />
       <VideoButton colors={colors} onClick={onToggleVideo}>
-        {homepageTexts.videoButton} <i className="far fa-play-circle" />
+        {homepageTexts.videoButton}
+        <i aria-hidden className="far fa-play-circle" />
       </VideoButton>
       {isVideoDisplayed && (
         <AppModal closeAction={onToggleVideo}>
