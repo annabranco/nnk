@@ -39,12 +39,6 @@ export const Logo = styled.img`
   width: 80px;
   transform: translate(0, 10px);
 
-  ${({ activeLanguage }) =>
-    activeLanguage === 'en' &&
-    css`
-      transform: translate(0, 7px);
-    `}
-
   @media only screen and (min-width: 768px) {
     width: 110px;
   }
