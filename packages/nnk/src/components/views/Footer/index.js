@@ -9,7 +9,7 @@ import AppModal from '../../core/AppModal';
 import PrivacyDeclaration from '../PrivacyDeclaration';
 
 const Footer = ({ colors, language }) => {
-  const [displayModal, toggleModal] = useState(false);
+  const [displayModal, toggleModal] = useState(true);
   let texts = FOOTER_TEXTS[language];
 
   useEffect(() => {

@@ -20,11 +20,11 @@
           "description": "Young Pakistani receiving food from volunteers"
         }
       ],
-      "videoButton": "Wanna join?"
+      "videoButton": "Do you have 1 minute?"
     },
       "es": {
-      "description": "No Name Kitchen es una organización de base independiente que trabaja en lugares próximos a pasos\nfronterizos en las rutas Balcánica y Mediterránea. Proporcionamos ayuda humanitaria y hacemos incidencia\npolítica para apoyar a las personas en el ejercicio de su derecho a migrar en busca de una vida mejor.",
-      "mainText": "\"Human beings shall be free to move\nsearching for a future where no war,\npoverty, or disease, ruins their hope\"",
+      "description": "No Name Kitchen es una organización de base independiente que trabaja en lugares\npróximos a pasos fronterizos en las rutas Balcánica y Mediterránea.\nProporcionamos ayuda humanitaria y hacemos incidencia política para apoyar\na las personas en el ejercicio de su derecho a migrar en busca de una vida mejor.",
+      "mainText": "\"Toda persona debe ser libre de migrar\nbuscando un futuro donde ni la guerra, ni la\npobreza, ni la enfermedad, arruinen su esperanza\"",
       "subItems": [
         {
           "title": "nuestros proyectos",
@@ -43,6 +43,6 @@
           "description": "Young Pakistani receiving food from volunteers"
         }
       ],
-      "videoButton": "Quieres unirte?"
+      "videoButton": "¿Tienes un minuto?"
     }
 }

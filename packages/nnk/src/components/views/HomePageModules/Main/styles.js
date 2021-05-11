@@ -125,6 +125,10 @@ export const VideoButton = styled(SubscriptionButton)`
   height: 40px;
   width: 60%;
 
+  & i {
+    margin-left: 10px;
+  }
+
   @media all and (min-width: 768px) {
     top: 10vh;
   }
