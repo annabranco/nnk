@@ -28,7 +28,7 @@ DonorBoxFrame.displayName = 'DonorBoxFrame';
 export const Title = styled(BaseTitle)`
   margin-bottom: 20px;
   font-size: ${sizeLargeTitle};
-  color: ${({ colors }) => colors && colors.primary};
+  color: ${({ colors }) => colors && colors.secondary};
   text-align: center;
 `;
 Title.displayName = 'Title';
