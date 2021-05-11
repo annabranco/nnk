@@ -1,4 +1,4 @@
-import { styled } from 'frontity';
+import { css, styled } from 'frontity';
 import {
   fontText,
   fontTitle,
@@ -13,8 +13,20 @@ export const DeclarationTitle = styled.h2`
   font-size: ${sizeMediumTitle};
   color: ${({ colors }) => colors.terciary};
 `;
+
 export const DeclarationText = styled.p`
   margin: 10px 10px;
+
+  span {
+    font-weight: 700;
+    color: crimson;
+  }
+
+  & a {
+    font-weight: 700;
+    color: crimson;
+    text-decoration: none;
+  }
 `;
 DeclarationText.displayName = 'DeclarationText';
 
@@ -34,12 +46,6 @@ export const Mail = styled.a`
 `;
 Mail.displayName = 'Mail';
 
-export const Highlight = styled.span`
-  font-weight: 700;
-  color: crimson;
-`;
-Highlight.displayName = 'Highlight';
-
 export const DeclarationList = styled.ul`
   margin: 10px 0;
   list-style-type: disc;
@@ -48,6 +54,12 @@ DeclarationList.displayName = 'DeclarationList';
 
 export const DeclarationListItem = styled.li`
   margin: 5px 30px;
+
+  a {
+    font-weight: 700;
+    color: red;
+    text-decoration: none;
+  }
 `;
 DeclarationListItem.displayName = 'DeclarationListItem';
 
