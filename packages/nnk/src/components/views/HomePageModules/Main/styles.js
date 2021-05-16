@@ -2,6 +2,7 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   sizeLarge,
+  sizeMedium,
   sizeMediumTitle,
   sizeSmallTitle,
   sizeXLarge,
@@ -10,26 +11,15 @@ import {
 import { SubscriptionButton } from '../../../controllers/MainPage/styles';
 
 export const MainText = styled(BaseText)`
-  position: absolute;
-  bottom: 0;
-  right: 4vw;
-  white-space: pre;
   font-size: ${sizeLarge};
   font-style: italic;
   font-weight: 900;
   line-height: 1.5;
-  border-radius: 10px;
-  padding: 5px 10px;
   text-shadow: -2px -2px 2px black, -2px 0 2px black, -2px 2px 2px black,
     0 -2px 2px black, 0 0 2px black, 0 2px 2px black, 2px -2px 2px black,
     2px 0 2px black, 2px 2px 2px black;
   letter-spacing: -0.1rem;
   color: ${({ colors }) => colors && colors.secondary};
-  text-align: center;
-
-  @media only screen and (min-height: 400px) {
-    bottom: 10px;
-  }
 
   @media only screen and (min-width: 375px) {
     font-size: 1.45rem;
@@ -40,13 +30,17 @@ export const MainText = styled(BaseText)`
   }
 
   @media only screen and (min-width: 768px) {
-    font-size: ${sizeMediumTitle};
-    bottom: 50px;
-    right: 6vw;
+    font-size: ${sizeLarge};
+    white-space: unset;
   }
 
   @media only screen and (min-width: 1024px) {
-    bottom: 20vh;
+    white-space: pre;
+
+    font-size: ${sizeSmallTitle};
+  }
+
+  @media only screen and (min-width: 1600px) {
     font-size: ${sizeMediumTitle};
   }
 
@@ -55,7 +49,36 @@ export const MainText = styled(BaseText)`
   }
 `;
 MainText.displayName = 'MainText';
-// white-space forces line breaks \n
+
+export const MainTextWrapper = styled.div`
+  position: absolute;
+  bottom: 20px;
+  right: 3vw;
+  text-align: center;
+  width: 65vw;
+
+  @media only screen and (min-width: 768px) {
+    width: 75vw;
+    bottom: 50px;
+    right: 4vw;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 45vw;
+    right: 2vw;
+    bottom: 20vh;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    right: 3vw;
+    bottom: 20vh;
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    right: 6vw;
+  }
+`;
+MainText.displayName = 'MainText';
 
 export const PhotoContainer = styled.div`
   position: relative;
@@ -116,40 +139,53 @@ export const PhotoContainer = styled.div`
 PhotoContainer.displayName = 'PhotoContainer';
 
 export const VideoButton = styled(SubscriptionButton)`
-  position: relative;
-  top: 12vh;
-  right: -10vh;
+  position: absolute;
+  bottom: -25vw;
+  right: 3vw;
   border-radius: 25px;
   box-shadow: 5px 0 15px 3px rgba(0, 0, 0, 0.8);
   -webkit-text-stroke: 1px black;
   height: 40px;
-  width: 60%;
+  width: 100%;
 
   & i {
     margin-left: 10px;
   }
 
+  @media all and (min-width: 360px) {
+    bottom: -21vw;
+    width: 80%;
+  }
+
+  @media all and (min-width: 400px) {
+    bottom: -18vw;
+  }
+
   @media all and (min-width: 768px) {
-    top: 10vh;
+    bottom: -17vw;
+    width: 60%;
+  }
+
+  @media all and (min-width: 1024px) {
+    right: 2vw;
   }
 
   @media all and (min-width: 1200px) {
-    top: 0;
-    right: -20vw;
+    bottom: -9vw;
+    right: 8vw;
     height: 60px;
     width: 350px;
   }
 
-  @media all and (min-width: 1400px) {
-    top: -5vh;
-    right: -25vw;
+  @media all and (min-width: 1600px) {
+    bottom: -7vw;
+    right: 9vw;
     height: 60px;
     width: 450px;
   }
 
   @media (min-height: 1400px) and (min-width: 2000px) {
     border-radius: 50px;
-    right: -30vw;
     height: 100px;
     width: 600px;
     font-size: ${sizeXLargeTitle};
