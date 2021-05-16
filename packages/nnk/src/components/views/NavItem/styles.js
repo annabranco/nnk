@@ -1,5 +1,11 @@
 import { styled, css } from 'frontity';
-import { BaseTitle, fontTitle, sizeLargeTitle } from '../../../setup/themes';
+import {
+  BaseTitle,
+  fontTitle,
+  sizeLargeTitle,
+  sizeMediumTitle,
+  sizeSmallTitle
+} from '../../../setup/themes';
 import Link from '../../core/Link';
 
 export const CollapsableItems = styled.div`
@@ -125,6 +131,14 @@ export const Title = styled(BaseTitle)`
     isActive ? colors.terciary : colors.secondary};
   cursor: pointer;
   transition: color ease 0.3s;
+
+  @media all and (min-width: 768px) {
+    font-size: ${sizeSmallTitle};
+  }
+
+  @media all and (min-width: 1200px) {
+    font-size: ${sizeMediumTitle};
+  }
 
   @media (min-height: 1400px) and (min-width: 2000px) {
     font-size: ${sizeLargeTitle};

@@ -1,11 +1,12 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect, Global } from 'frontity';
+import { func } from 'prop-types';
 import { CloseIcon, HamburgerIcon } from '../Header/MenuIcon';
 import MenuModal from '../../views/MenuModal';
 import { ActionsPropType, StatePropType } from '../../../types';
 import { MenuToggle } from './styles';
 
-const MobileMenu = ({ state, actions }) => {
+const MobileMenu = ({ state, actions, onClickFlag }) => {
   const { colors, isMobileMenuOpen, language } = state.theme;
 
   return (
@@ -27,7 +28,11 @@ const MobileMenu = ({ state, actions }) => {
       {/* If the menu is open, render the menu modal */}
       {isMobileMenuOpen && (
         <>
-          <MenuModal colors={colors} language={language} />
+          <MenuModal
+            colors={colors}
+            language={language}
+            onClickFlag={onClickFlag}
+          />
         </>
       )}
     </>
@@ -36,7 +41,8 @@ const MobileMenu = ({ state, actions }) => {
 
 MobileMenu.propTypes = {
   state: StatePropType,
-  actions: ActionsPropType
+  actions: ActionsPropType,
+  onClickFlag: func.isRequired
 };
 
 MobileMenu.defaultProps = {

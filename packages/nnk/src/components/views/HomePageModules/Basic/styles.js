@@ -117,10 +117,7 @@ export const TextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 90%;
-  padding: 20px 0;
-  border-top: 6px solid ${({ colors }) => colors && colors.terciary};
-  border-radius: 2px;
-  padding-top: 30px;
+  padding: 30px 0 20px;
 
   @media only screen and (min-width: 768px) {
     margin-top: 20px;

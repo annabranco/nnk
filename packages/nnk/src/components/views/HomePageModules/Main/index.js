@@ -6,7 +6,13 @@ import { HOMEPAGE_TEXTS } from '../../../../db';
 import SocialModule from '../../SocialContainer';
 import { Home } from '../../../../assets/images';
 import { StatePropType } from '../../../../types';
-import { MainText, PhotoContainer, VideoButton, VideoElement } from './styles';
+import {
+  MainText,
+  MainTextWrapper,
+  PhotoContainer,
+  VideoButton,
+  VideoElement
+} from './styles';
 import AppModal from '../../../core/AppModal';
 
 const socialLinks =
@@ -40,12 +46,14 @@ const MainModule = ({ state }) => {
 
   return (
     <PhotoContainer colors={colors} img={Home}>
-      <MainText colors={colors}>{homepageTexts.mainText}</MainText>
+      <MainTextWrapper>
+        <MainText colors={colors}>{homepageTexts.mainText}</MainText>
+        <VideoButton colors={colors} onClick={onToggleVideo}>
+          {homepageTexts.videoButton}
+          <i aria-hidden className="far fa-play-circle" />
+        </VideoButton>
+      </MainTextWrapper>
       <SocialModule socialLinks={socialLinks} />
-      <VideoButton colors={colors} onClick={onToggleVideo}>
-        {homepageTexts.videoButton}
-        <i aria-hidden className="far fa-play-circle" />
-      </VideoButton>
       {isVideoDisplayed && (
         <AppModal closeAction={onToggleVideo}>
           <VideoElement
