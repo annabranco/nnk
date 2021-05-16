@@ -24,9 +24,18 @@ const PrivacyDeclaration = ({ state }) => {
         'info@noamekitchen.org',
         '<a href="mailto:info@noamekitchen.org">info@noamekitchen.org</a>'
       )
+      .replace('the Website', '<span>the Website</span>')
       .replace(
         'http://nonamekitchen.org',
         '<span>http://nonamekitchen.org</span>'
+      )
+      .replace(
+        'Spanish Data Protection Agency',
+        '<a href="https://www.aepd.es/es" rel="noreferrer" target="_blank" noreferrer>Spanish Data Protection Agency</a>'
+      )
+      .replace(
+        'Agencia Española de  Protección de Datos',
+        '<a href="https://www.aepd.es/es" rel="noreferrer" target="_blank" noreferrer>Agencia Española de  Protección de Datos</a>'
       );
     return updatedText;
   };
