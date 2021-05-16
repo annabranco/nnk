@@ -2,10 +2,11 @@
 import React from 'react';
 import { bool, node, string } from 'prop-types';
 import { ColorsPropType } from '../../../types';
-import { SectionContainer } from './styles';
+import { SectionContainer, SeparatorBar } from './styles';
 
 const PageSection = ({ children, colors, noBorder, size }) => (
-  <SectionContainer noBorder={noBorder} size={size} colors={colors}>
+  <SectionContainer colors={colors} noBorder={noBorder} size={size}>
+    {!noBorder && <SeparatorBar colors={colors} size={size} />}
     {children}
   </SectionContainer>
 );

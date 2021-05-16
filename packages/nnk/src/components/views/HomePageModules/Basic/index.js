@@ -17,6 +17,7 @@ import {
   Text,
   TextWrapper
 } from './styles';
+import { SeparatorBar } from '../styles';
 
 const photos = [Photo01, Photo02, Photo03];
 
@@ -47,6 +48,7 @@ const BasicModule = ({ colors, texts, whyTexts }) => (
         </>
       )}
     </ImagesWrapper>
+    <SeparatorBar adjust="0, 20px" colors={colors} size="large" />
     <TextWrapper colors={colors}>
       <Text colors={colors}>{whyTexts.intro}</Text>
     </TextWrapper>
