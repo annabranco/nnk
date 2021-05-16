@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
-import { string } from 'prop-types';
+import { func, string } from 'prop-types';
 import { ACTIONS_TEXTS, MAIN_SECTIONS } from '../../../db';
 import Link from '../../core/Link';
+import EnglishFlag from '../../../assets/images/icons/uk.png';
+import SpanishFlag from '../../../assets/images/icons/es.png';
 import { ColorsPropType } from '../../../types';
 import {
   Title,
@@ -17,8 +19,9 @@ import {
   BackTitle
 } from './styles';
 import { SubItemRed } from '../NavItem/styles';
+import { LanguageFlag } from '../../controllers/Header/styles';
 
-const MenuModal = ({ colors, language }) => {
+const MenuModal = ({ colors, language, onClickFlag }) => {
   let navSections = MAIN_SECTIONS[language];
   const backText = ACTIONS_TEXTS[language].back;
   const [currentTree, changeTree] = useState(navSections);
@@ -66,6 +69,7 @@ const MenuModal = ({ colors, language }) => {
 
   useEffect(() => {
     navSections = MAIN_SECTIONS[language];
+    changeTree(navSections);
   }, [language, parentName]);
 
   return (
@@ -93,13 +97,19 @@ const MenuModal = ({ colors, language }) => {
           </Item>
         ))}
       </MenuContent>
+      <LanguageFlag
+        src={language === 'es' ? EnglishFlag : SpanishFlag}
+        id={language === 'en' ? 'es' : 'en'}
+        onClick={() => onClickFlag(language === 'en' ? 'es' : 'en')}
+      />
     </ModalWindow>
   );
 };
 
 MenuModal.propTypes = {
   colors: ColorsPropType.isRequired,
-  language: string.isRequired
+  language: string.isRequired,
+  onClickFlag: func.isRequired
 };
 
 export default connect(MenuModal);

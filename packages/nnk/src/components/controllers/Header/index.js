@@ -48,12 +48,14 @@ const Header = ({ state, actions }) => {
       <Link link="/">
         <Logo activeLanguage={activeLanguage} src={LogoSmall} />
       </Link>
-      {MOBILE_VERSION ? <MobileNav /> : <Nav />}
-      <LanguageFlag
-        src={activeLanguage === 'es' ? EnglishFlag : SpanishFlag}
-        id={activeLanguage === 'en' ? 'es' : 'en'}
-        onClick={() => onClickFlag(activeLanguage === 'en' ? 'es' : 'en')}
-      />
+      {MOBILE_VERSION ? <MobileNav onClickFlag={onClickFlag} /> : <Nav />}
+      {!MOBILE_VERSION && (
+        <LanguageFlag
+          src={activeLanguage === 'es' ? EnglishFlag : SpanishFlag}
+          id={activeLanguage === 'en' ? 'es' : 'en'}
+          onClick={() => onClickFlag(activeLanguage === 'en' ? 'es' : 'en')}
+        />
+      )}
     </HeaderContainer>
   );
 };
