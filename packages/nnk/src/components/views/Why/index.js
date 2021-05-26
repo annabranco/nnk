@@ -51,6 +51,27 @@ const WhySection = ({ state }) => {
     }
   };
 
+  const insertHyperlinkOnTexts = text => {
+    const updatedText = text
+      .replace(
+        'devoluciones en caliente violentas e ilegales',
+        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>devoluciones en caliente violentas e ilegales</a>'
+      )
+      .replace(
+        'violent and ilegal pushbacks',
+        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>violent and ilegal pushbacks</a>'
+      )
+      .replace(
+        'Black Book of Pushbacks',
+        '<span>Black Book of Pushbacks</span>'
+      )
+      .replace(
+        'Libro Negro de las Devoluciones en Caliente',
+        '<span>Libro Negro de las Devoluciones en Caliente</span>'
+      );
+    return updatedText;
+  };
+
   useEffect(() => {
     texts = WHY_TEXTS[language];
   }, [language]);
@@ -69,38 +90,49 @@ const WhySection = ({ state }) => {
         title={texts.title}
       />
       <Content>
-        <Intro>{texts.fullInto}</Intro>
+        <Intro
+          colors={colors}
+          dangerouslySetInnerHTML={{
+            __html: insertHyperlinkOnTexts(texts.fullInto)
+          }}
+        />
         <SubTitle colors={colors}>{texts.programsTitle}</SubTitle>
         <TestimonialArea colors={colors}>
           <Carroussel items={texts.testimonials} />
         </TestimonialArea>
         <BorderViolenceArea>
-          <Link link={`${BORDER_VIOLENCE_URL}/category/monthly-report/`}>
-            <Title colors={colors}>{texts.borderViolence}</Title>
-          </Link>
+          <Title colors={colors}>{texts.fightingInjustice}</Title>
+
           <Intro>{texts.borderViolenceIntro}</Intro>
           <BlackBookContainer>
             <BlackBookPhoto src={BlackBook} alt="The Black Book cover" />
-            <Intro>{texts.blackBook}</Intro>
-            <Intro>{texts.blackBookDownload}</Intro>
+            <Intro
+              colors={colors}
+              dangerouslySetInnerHTML={{
+                __html: insertHyperlinkOnTexts(texts.blackBook)
+              }}
+            />
             <BlackBookVolumesWrapper>
               <Link
                 link="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:b10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
                 rel="noreferrer"
                 target="_blank"
               >
-                <Intro>{texts.blackBookVolumes[0]}</Intro>
+                <Intro volumes>{texts.blackBookVolumes[0]}</Intro>
               </Link>
               <Link
                 link="https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Ab10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
                 rel="noreferrer"
                 target="_blank"
               >
-                <Intro>{texts.blackBookVolumes[1]}</Intro>
+                <Intro volumes>{texts.blackBookVolumes[1]}</Intro>
               </Link>
             </BlackBookVolumesWrapper>
           </BlackBookContainer>
-          <Intro>{texts.borderViolence}</Intro>
+
+          <Link link={`${BORDER_VIOLENCE_URL}/category/monthly-report/`}>
+            <Title colors={colors}>{texts.borderViolence}</Title>
+          </Link>
 
           {latestReports.length > 0 && (
             <>
