@@ -177,6 +177,10 @@ SubsectionWrapper.displayName = 'SubsectionWrapper';
 export const Text = styled(BaseText)`
   text-align: center;
   color: ${({ colors }) => colors && colors.secondary};
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    font-size: ${sizeMediumTitle};
+  }
 `;
 Text.displayName = 'Text';
 
@@ -197,10 +201,10 @@ export const TitleWrapper = styled.div`
 TitleWrapper.displayName = 'TitleWrapper';
 
 export const ValueDescription = styled(BaseText)`
-  font-size: ${sizeSmallTitle};
+  font-size: ${sizeLarge};
   text-align: left;
   line-height: 2;
-  text-align: center;
+  text-align: justify;
 
   @media only screen and (min-width: 768px) {
     font-size: ${sizeMedium};

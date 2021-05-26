@@ -154,7 +154,7 @@ export const VideoButton = styled(SubscriptionButton)`
 
   @media all and (min-width: 360px) {
     bottom: -21vw;
-    width: 80%;
+    width: 95%;
   }
 
   @media all and (min-width: 400px) {
