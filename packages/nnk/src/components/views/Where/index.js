@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import { getDevice, getSocialLinks, toggleBodyScroll } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
+import AppModal from '../../core/AppModal';
 import SectionHeader from '../SectionHeader';
+import { MOBILE, TABLET } from '../../../constants/devices';
 import {
   HeroWhereMedium,
   HeroWhereSmall,
@@ -14,8 +16,6 @@ import {
 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import { Content, MapImage, ModalImage, Section } from './styles';
-import AppModal from '../../core/AppModal';
-import { MOBILE, TABLET } from '../../../constants/devices';
 
 const WhereSection = ({ state }) => {
   const [displayModal, toggleModal] = useState(false);
@@ -66,9 +66,9 @@ const WhereSection = ({ state }) => {
       />
       <Content>
         <MapImage
-          src={getMapImage()}
           alt={texts.mapAlt}
           onClick={onToggleMap}
+          src={getMapImage()}
         />
       </Content>
     </Section>

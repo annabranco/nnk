@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import { func, string } from 'prop-types';
 import { ACTIONS_TEXTS, MAIN_SECTIONS } from '../../../db';
@@ -6,6 +7,8 @@ import Link from '../../core/Link';
 import EnglishFlag from '../../../assets/images/icons/uk.png';
 import SpanishFlag from '../../../assets/images/icons/es.png';
 import { ColorsPropType } from '../../../types';
+import { SubItemRed } from '../NavItem/styles';
+import { LanguageFlag } from '../../controllers/Header/styles';
 import {
   Title,
   Smaller,
@@ -18,8 +21,6 @@ import {
   Item,
   BackTitle
 } from './styles';
-import { SubItemRed } from '../NavItem/styles';
-import { LanguageFlag } from '../../controllers/Header/styles';
 
 const MenuModal = ({ colors, language, onClickFlag }) => {
   let navSections = MAIN_SECTIONS[language];

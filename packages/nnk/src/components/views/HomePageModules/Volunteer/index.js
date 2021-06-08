@@ -13,7 +13,6 @@ import {
   ImgLink,
   MainImage,
   MainImageAsBg,
-  MainImageSource,
   ModuleWrapper,
   Title
 } from './styles';

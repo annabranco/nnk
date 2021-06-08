@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import config from '../../../setup/config';
-import { DonorBoxArea, DonorBoxFrame, Title } from './styles';
 import { ColorsPropType } from '../../../types';
+import { DonorBoxArea, DonorBoxFrame, Title } from './styles';
 
 const DonorBox = ({ campaign, colors }) => {
   const [selectedCampaign, changeCampaign] = useState({ name: '', id: '' });

@@ -4,12 +4,12 @@ import React, { useEffect } from 'react';
 import { PRIVACY_TEXTS } from '../../../db';
 import { StatePropType } from '../../../types';
 import {
-  PrivacyContainer,
-  DeclarationTitle,
-  DeclarationText,
-  DeclarationSection,
   DeclarationList,
-  DeclarationListItem
+  DeclarationListItem,
+  DeclarationSection,
+  DeclarationText,
+  DeclarationTitle,
+  PrivacyContainer
 } from './styles';
 
 const PrivacyDeclaration = ({ state }) => {

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useEffect } from 'react';
 import { string } from 'prop-types';
 import { DONATION_TEXTS } from '../../../db';
 import { BankHeader, PaypalInfo } from '../../../assets/images';

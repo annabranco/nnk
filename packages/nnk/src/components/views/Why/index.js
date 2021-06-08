@@ -14,6 +14,7 @@ import {
 } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
+import Carroussel from '../Carroussel';
 import {
   BlackBookContainer,
   BlackBookPhoto,
@@ -28,7 +29,6 @@ import {
   TestimonialArea,
   Title
 } from './styles';
-import Carroussel from '../Carroussel';
 
 const BORDER_VIOLENCE_URL = 'https://www.borderviolence.eu';
 const MONTHLY_REPORTS_URL = `${BORDER_VIOLENCE_URL}/wp-json/wp/v2/posts?categories=28`;

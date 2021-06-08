@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
+import { getFormatedDate, updatedReadPosts } from '../../../utils';
 import { ACTIONS_TEXTS, NEWS_SECTIONS } from '../../../db';
 import FeaturedMedia from '../FeaturedMedia';
+import Link from '../Link';
 import List from '../List';
 import {
   ActionsPropType,
@@ -17,8 +19,6 @@ import {
   PostWrapper,
   BackToReportsArrow
 } from './styles';
-import { getFormatedDate, updatedReadPosts } from '../../../utils';
-import Link from '../Link';
 
 const Post = ({ actions, libraries, state }) => {
   const [read, toggleRead] = useState(false);
@@ -49,11 +49,7 @@ const Post = ({ actions, libraries, state }) => {
     newsSection = NEWS_SECTIONS[language];
     texts = ACTIONS_TEXTS[language];
   }, [language]);
-  /**
-   * Once the post has loaded in the DOM, prefetch both the
-   * home posts and the list component so if the user visits
-   * the home page, everything is ready and it loads instantly.
-   */
+
   useEffect(() => {
     const onReadAll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -118,13 +114,10 @@ const Post = ({ actions, libraries, state }) => {
           )}
         </div>
 
-        {/* Look at the settings to see if we should include the featured image */}
         {state.theme.featured.showOnPost && (
           <FeaturedMedia id={post.featured_media} />
         )}
 
-        {/* Render the content using the Html2React component so the HTML is processed
-       by the processors we included in the libraries.html2react.processors array. */}
         <Content colors={colors} isReport={isReport}>
           <Html2React html={getNewsText()} />
         </Content>
@@ -134,15 +127,15 @@ const Post = ({ actions, libraries, state }) => {
 };
 
 Post.propTypes = {
-  state: StatePropType,
   actions: ActionsPropType,
-  libraries: LibrariesPropTypes
+  libraries: LibrariesPropTypes,
+  state: StatePropType
 };
 
 Post.defaultProps = {
-  state: null,
   actions: null,
-  libraries: null
+  libraries: null,
+  state: null
 };
 
 export default connect(Post);

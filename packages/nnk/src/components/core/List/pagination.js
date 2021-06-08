@@ -5,20 +5,10 @@ import Link from '../Link';
 import { ActionsPropType, StatePropType } from '../../../types';
 import { PageButton, PageButtonArrow, ButtonsWrapper } from './styles';
 
-/**
- * Pagination Component
- *
- * It's used to allow the user to paginate between a list of posts.
- *
- * The `state`, `actions`, `libraries` props are provided by the global context,
- * when we wrap this component in `connect(...)`
- */
 const Pagination = ({ state, actions }) => {
   const { colors } = state.theme;
-  // Get the total posts to be displayed based for the current link
   const { next, previous } = state.source.get(state.router.link);
 
-  // Pre-fetch the the next page if it hasn't been fetched yet.
   useEffect(() => {
     if (next) {
       actions.source.fetch(next);
@@ -55,17 +45,13 @@ const Pagination = ({ state, actions }) => {
 };
 
 Pagination.propTypes = {
-  state: StatePropType,
-  actions: ActionsPropType
+  actions: ActionsPropType,
+  state: StatePropType
 };
 
 Pagination.defaultProps = {
-  state: null,
-  actions: null
+  actions: null,
+  state: null
 };
 
-/**
- * Connect Pagination to global context to give it access to
- * `state`, `actions`, `libraries` via props
- */
 export default connect(Pagination);

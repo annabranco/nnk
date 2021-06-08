@@ -1,4 +1,5 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { arrayOf, string } from 'prop-types';
 import SocialLink from '../SocialLink';
 import { SocialContainer } from './styles';

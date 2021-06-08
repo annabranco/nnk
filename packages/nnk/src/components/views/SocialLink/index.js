@@ -1,6 +1,6 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { string, func } from 'prop-types';
-import Link from '../../core/Link';
 import { SocialLinkButton, SocialLogo } from './styles';
 
 const SocialLink = ({ link = '', onClick, type }) => {

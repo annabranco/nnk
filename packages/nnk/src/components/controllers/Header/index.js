@@ -51,9 +51,9 @@ const Header = ({ state, actions }) => {
       {MOBILE_VERSION ? <MobileNav onClickFlag={onClickFlag} /> : <Nav />}
       {!MOBILE_VERSION && (
         <LanguageFlag
-          src={activeLanguage === 'es' ? EnglishFlag : SpanishFlag}
           id={activeLanguage === 'en' ? 'es' : 'en'}
           onClick={() => onClickFlag(activeLanguage === 'en' ? 'es' : 'en')}
+          src={activeLanguage === 'es' ? EnglishFlag : SpanishFlag}
         />
       )}
     </HeaderContainer>
@@ -61,13 +61,13 @@ const Header = ({ state, actions }) => {
 };
 
 Header.propTypes = {
-  state: StatePropType,
-  actions: ActionsPropType
+  actions: ActionsPropType,
+  state: StatePropType
 };
 
 Header.defaultProps = {
-  state: null,
-  actions: null
+  actions: null,
+  state: null
 };
 
 export default connect(Header);

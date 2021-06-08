@@ -56,13 +56,6 @@ export const MainImageAsBg = styled.div`
 `;
 MainImage.displayName = 'MainImage';
 
-export const MainImageSource = styled.source`
-  border-radius: 4px;
-  width: 100%;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-`;
-MainImageSource.displayName = 'MainImageSource';
-
 export const ModuleWrapper = styled.div`
   display: flex;
   flex-direction: column;

@@ -18,11 +18,11 @@ const ExternalForm = ({ colors, height, src, title, width }) => {
   const onLoad = () => {
     toggleLoaded(true);
     setAttributes({
-      width,
-      height,
       frameborder: 0,
+      height,
       marginheight: 0,
-      marginwidth: 0
+      marginwidth: 0,
+      width
     });
   };
 
@@ -32,11 +32,11 @@ const ExternalForm = ({ colors, height, src, title, width }) => {
         <LoadingSpinner src={`${Loading}?${Math.random()}`} alt="Loading" />
       )}
       <SubscribeFrame
-        src={src}
         frameBorder="0"
-        title={title}
-        ref={FrameElement}
         onLoad={onLoad}
+        ref={FrameElement}
+        src={src}
+        title={title}
       >
         Loading…
       </SubscribeFrame>
@@ -50,10 +50,6 @@ ExternalForm.propTypes = {
   src: string.isRequired,
   title: string.isRequired,
   width: number.isRequired
-};
-
-ExternalForm.defaultProps = {
-  size: 'large'
 };
 
 export default ExternalForm;

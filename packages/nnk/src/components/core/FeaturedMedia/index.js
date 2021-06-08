@@ -56,14 +56,14 @@ const FeaturedMedia = ({ state, id, news }) => {
 };
 
 FeaturedMedia.propTypes = {
-  state: StatePropType,
   id: number.isRequired,
-  news: bool
+  news: bool,
+  state: StatePropType
 };
 
 FeaturedMedia.defaultProps = {
-  state: null,
-  news: false
+  news: false,
+  state: null
 };
 
 export default connect(FeaturedMedia);

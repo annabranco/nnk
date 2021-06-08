@@ -80,9 +80,9 @@ const NewsItem = ({ state, item, read, texts }) => {
 };
 
 NewsItem.propTypes = {
-  state: StatePropType,
   item: ItemPropType.isRequired,
   read: bool.isRequired,
+  state: StatePropType,
   texts: TextsNewsPropType.isRequired
 };
 

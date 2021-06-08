@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
 import config from '../../../setup/config';
 import SectionHeader from '../SectionHeader';
+import AppModal from '../../core/AppModal';
+import ExternalForm from '../ExternalFrame';
 import { getSocialLinks, getDevice, toggleBodyScroll } from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
 import { MOBILE, TABLET } from '../../../constants/devices';
@@ -19,8 +21,6 @@ import {
   JTTFSection,
   Text
 } from './styles';
-import AppModal from '../../core/AppModal';
-import ExternalForm from '../ExternalFrame';
 
 const DEVICE_VERSION = getDevice() === MOBILE || getDevice() === TABLET;
 
@@ -80,10 +80,10 @@ const JumpToTheFieldSection = ({ state }) => {
           <AppModal closeAction={onToggleForm} closeButton>
             <ExternalForm
               colors={colors}
-              width={getDevice() === MOBILE ? 340 : 640}
               height={2930}
               src={config.volunteerForm}
               title="contact"
+              width={getDevice() === MOBILE ? 340 : 640}
             />
           </AppModal>
         )}

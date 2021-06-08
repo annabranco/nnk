@@ -3,6 +3,7 @@ import { Global, connect, Head } from 'frontity';
 // eslint-disable-next-line import/no-unresolved
 import Switch from '@frontity/components/switch';
 import { fontText, fontTitle } from '../../../setup/themes';
+import { updatedReadPosts } from '../../../utils';
 import Footer from '../../views/Footer';
 import Header from '../Header';
 import HelpUs from '../../views/HelpUs';
@@ -10,6 +11,7 @@ import JumpToTheFieldSection from '../../views/JumpToTheField';
 import List from '../../core/List';
 import Loading from '../../core/Loading';
 import MainPage from '../MainPage';
+import News from '../News';
 import PageError from '../../core/ErrorComponent';
 import Post from '../../core/Post';
 import Title from '../../core/HtmlTitle';
@@ -20,8 +22,6 @@ import Favicon from '../../../assets/images/favicon.png';
 import { ActionsPropType, StatePropType } from '../../../types';
 import { globalStyles } from '../../../setup/globalStyles';
 import { MainArea } from './styles';
-import News from '../News';
-import { updatedReadPosts } from '../../../utils';
 
 const App = ({ state, actions }) => {
   const { colors, language } = state.theme;
