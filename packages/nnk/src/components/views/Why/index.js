@@ -6,7 +6,12 @@ import { fetchData, getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { BlackBook, HeroWhy } from '../../../assets/images';
+import {
+  BlackBook,
+  HeroWhyBig,
+  HeroWhyMedium,
+  HeroWhySmall
+} from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
 import {
@@ -84,7 +89,7 @@ const WhySection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={HeroWhy}
+        imgs={[HeroWhySmall, HeroWhyMedium, HeroWhyBig]}
         position="0 70%"
         socialLinks={socialLinks}
         title={texts.title}

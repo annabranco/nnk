@@ -23,10 +23,10 @@ export const Photo03 = require('./spots/photo03.jpg');
 // export const Photo03B = require('./spots/base03.jpeg');
 
 // export const Photo04 = require('./spots/base04.jpg');
-// export const Photo05 = require('./spots/base05.jpg');
+export const Photo05 = require('./spots/base05.jpg');
 // export const Photo06 = require('./spots/base06.jpeg');
 // export const Photo08 = require('./spots/base08.png');
-// export const Photo09 = require('./spots/base09.jpeg');
+export const Photo09 = require('./spots/base09.jpeg');
 
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
@@ -46,10 +46,12 @@ export const MapSmall = require('./maps/mapv1.jpg');
 export const MapEsSmall = require('./maps/mapv1-es_small.jpg');
 
 // Why
-export const HeroWhy = require('./spots/trainTracks.jpg');
-export const Testimony01 = require('./spots/testimony01.png');
+export const HeroWhyBig = require('./spots/trainTracks_big.jpg');
+export const HeroWhyMedium = require('./spots/trainTracks_medium.jpg');
+export const HeroWhySmall = require('./spots/trainTracks_small.jpg');
+export const Testimony01 = require('./spots/testimony01.jpg');
 export const Testimony02 = require('./spots/testimony02.jpg');
-export const Testimony03 = require('./spots/testimony03.png');
+export const Testimony03 = require('./spots/testimony03.jpg');
 
 // Other
 export const Loading = require('./icons/loading.gif');
