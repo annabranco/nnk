@@ -92,7 +92,7 @@ export const PhotoContainer = styled.div`
   border-bottom: 4px solid ${({ colors }) => colors && colors.terciary};
 
   ${({ img, section }) => css`
-    background-image: ${`url(${img})`};
+    background-image: ${`url(${img[0]})`};
     background-size: ${section ? '100%' : '200%'};
     background-repeat: no-repeat;
   `}
@@ -126,6 +126,10 @@ export const PhotoContainer = styled.div`
       background-position: ${position};
       background-size: 100%;
     `}
+
+    ${({ img }) => css`
+      background-image: ${`url(${img[1]})`};
+    `}
   }
 
   @media (min-width: 1024px) and (min-height: 1300px) {
@@ -134,6 +138,12 @@ export const PhotoContainer = styled.div`
 
   @media (min-height: 1400px) and (min-width: 2000px) {
     height: 90vh;
+  }
+
+  @media only screen and (min-width: 2400px) {
+    ${({ img }) => css`
+      background-image: ${`url(${img[2]})`};
+    `}
   }
 `;
 PhotoContainer.displayName = 'PhotoContainer';

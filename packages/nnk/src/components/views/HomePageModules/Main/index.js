@@ -1,10 +1,15 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { getDevice, getSocialLinks, toggleBodyScroll } from '../../../../utils';
+import {
+  getDevice,
+  getImageSize,
+  getSocialLinks,
+  toggleBodyScroll
+} from '../../../../utils';
 import { DESKTOP } from '../../../../constants/devices';
 import { HOMEPAGE_TEXTS } from '../../../../db';
 import SocialModule from '../../SocialContainer';
-import { Home } from '../../../../assets/images';
+import { HomeBig, HomeMedium, HomeSmall } from '../../../../assets/images';
 import { StatePropType } from '../../../../types';
 import {
   MainText,
@@ -36,6 +41,18 @@ const MainModule = ({ state }) => {
     }
   };
 
+  const getImgSrc = () => {
+    console.log('$$$ hello');
+    const size = getImageSize();
+    if (width > 2400) {
+      return HomeBig;
+    }
+    if (width > 1000) {
+      return HomeMedium;
+    }
+    return HomeSmall;
+  };
+
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
   }, [language]);
@@ -45,7 +62,7 @@ const MainModule = ({ state }) => {
   }, []);
 
   return (
-    <PhotoContainer colors={colors} img={Home}>
+    <PhotoContainer colors={colors} img={[HomeSmall, HomeMedium, HomeBig]}>
       <MainTextWrapper>
         <MainText colors={colors}>{homepageTexts.mainText}</MainText>
         <VideoButton colors={colors} onClick={onToggleVideo}>

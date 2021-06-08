@@ -3,23 +3,30 @@
 // Header
 export const IconES = require('./icons/es.png');
 export const IconUK = require('./icons/uk.png');
-export const LogoSmall = require('./logos/logo-small-alt.png');
+export const LogoSmall = require('./logos/logo-small.png');
 export const Logo = require('./logos/logo.png');
 
 // Main
-export const HomeBG = require('./bgs/homeBg.jpg');
-export const Home = require('./bgs/home.jpg');
-export const JoinUs = require('./spots/volunteers.jpeg');
-export const Photo01 = require('./spots/our-projects.jpeg');
-export const Photo02 = require('./spots/base02.jpeg');
-export const Photo03 = require('./spots/base03.jpeg');
+export const HomeBig = require('./bgs/home_big.jpg');
+export const HomeMedium = require('./bgs/home_medium.jpg');
+export const HomeSmall = require('./bgs/home_small.jpg');
+
+export const JoinUsBig = require('./spots/volunteers_big.jpg');
+export const JoinUsMedium = require('./spots/volunteers_medium.jpg');
+export const JoinUsSmall = require('./spots/volunteers_small.jpg');
+export const Photo01 = require('./spots/photo01.jpg');
+export const Photo02 = require('./spots/photo02.jpg');
+export const Photo03 = require('./spots/photo03.jpg');
+
+export const Photo01B = require('./spots/our-projects.jpeg');
+export const Photo02B = require('./spots/base02.jpeg');
+export const Photo03B = require('./spots/base03.jpeg');
 
 export const Photo04 = require('./spots/base04.jpg');
 export const Photo05 = require('./spots/base05.jpg');
 export const Photo06 = require('./spots/base06.jpeg');
 export const Photo08 = require('./spots/base08.png');
 export const Photo09 = require('./spots/base09.jpeg');
-export const CrossedFork = require('./icons/crossedFork.png');
 
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
@@ -33,8 +40,10 @@ export const Program02 = require('./spots/program02.jpeg');
 export const Program03 = require('./spots/program03.jpeg');
 
 // Where
-export const Mapv1 = require('./maps/mapv1.jpg');
-export const Mapv1Es = require('./maps/mapv1-es.jpg');
+export const Map = require('./maps/mapv1.jpg');
+export const MapEs = require('./maps/mapv1-es.jpg');
+export const MapSmall = require('./maps/mapv1.jpg');
+export const MapEsSmall = require('./maps/mapv1-es_small.jpg');
 
 // Why
 export const HeroWhy = require('./spots/trainTracks.jpg');

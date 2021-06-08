@@ -47,10 +47,21 @@ export const MainImageAsBg = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 90%;
+    width: 500px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 700px;
   }
 `;
 MainImage.displayName = 'MainImage';
+
+export const MainImageSource = styled.source`
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+`;
+MainImageSource.displayName = 'MainImageSource';
 
 export const ModuleWrapper = styled.div`
   display: flex;

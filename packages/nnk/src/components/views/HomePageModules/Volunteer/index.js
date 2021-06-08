@@ -1,5 +1,9 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import { JoinUs } from '../../../../assets/images';
+import {
+  JoinUsBig,
+  JoinUsMedium,
+  JoinUsSmall
+} from '../../../../assets/images';
 import { getDevice } from '../../../../utils';
 import Link from '../../../core/Link';
 import { MOBILE } from '../../../../constants/devices';
@@ -9,6 +13,7 @@ import {
   ImgLink,
   MainImage,
   MainImageAsBg,
+  MainImageSource,
   ModuleWrapper,
   Title
 } from './styles';
@@ -30,9 +35,14 @@ const VolunteerModule = ({ colors, texts }) => {
       <Link link="/join-us/">{styleTitle(texts.question)}</Link>
       <ImgLink link="/join-us/">
         {getDevice() === MOBILE ? (
-          <MainImageAsBg img={JoinUs} alt={texts.altMainImage} />
+          <MainImageAsBg img={JoinUsSmall} alt={texts.altMainImage} />
         ) : (
-          <MainImage src={JoinUs} alt={texts.altMainImage} />
+          <picture>
+            <MainImage
+              src={JoinUsMedium}
+              srcset={`${JoinUsSmall} 320w, ${JoinUsMedium} 1024w, ${JoinUsBig} 2400w`}
+            />
+          </picture>
         )}
       </ImgLink>
     </ModuleWrapper>
