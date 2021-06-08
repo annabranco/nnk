@@ -18,14 +18,6 @@ export const Photo01 = require('./spots/photo01.jpg');
 export const Photo02 = require('./spots/photo02.jpg');
 export const Photo03 = require('./spots/photo03.jpg');
 
-// export const Photo01B = require('./spots/our-projects.jpeg');
-// export const Photo02B = require('./spots/base02.jpeg');
-// export const Photo03B = require('./spots/base03.jpeg');
-
-// export const Photo04 = require('./spots/base04.jpg');
-// export const Photo06 = require('./spots/base06.jpeg');
-// export const Photo08 = require('./spots/base08.png');
-
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
 export const Triodos = require('./logos/triodos.jpg');
@@ -58,7 +50,8 @@ export const Loading = require('./icons/loading.gif');
 export const BlackBook = require('./icons/black-book.png');
 
 // JTTF
-export const VolunteersInAction = require('./spots/logistics.jpeg');
+export const HeroJoinMedium = require('./spots/logistics_medium.jpg');
+export const HeroJoinSmall = require('./spots/logistics_small.jpg');
 
 // HelpUs
 export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');

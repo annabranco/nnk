@@ -6,7 +6,7 @@ import SectionHeader from '../SectionHeader';
 import { getSocialLinks, getDevice, toggleBodyScroll } from '../../../utils';
 import { JTTF_TEXTS } from '../../../db';
 import { MOBILE, TABLET } from '../../../constants/devices';
-import { VolunteersInAction } from '../../../assets/images';
+import { HeroJoinMedium, HeroJoinSmall } from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import {
   Content,
@@ -52,7 +52,7 @@ const JumpToTheFieldSection = ({ state }) => {
     <JTTFSection colors={colors}>
       <SectionHeader
         colors={colors}
-        img={VolunteersInAction}
+        imgs={[HeroJoinSmall, HeroJoinMedium, HeroJoinMedium]}
         position="50% 50%"
         socialLinks={socialLinks}
         title={DEVICE_VERSION ? texts.titleAlt : texts.title}
