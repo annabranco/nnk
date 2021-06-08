@@ -18,15 +18,15 @@ export const Photo01 = require('./spots/photo01.jpg');
 export const Photo02 = require('./spots/photo02.jpg');
 export const Photo03 = require('./spots/photo03.jpg');
 
-export const Photo01B = require('./spots/our-projects.jpeg');
-export const Photo02B = require('./spots/base02.jpeg');
-export const Photo03B = require('./spots/base03.jpeg');
+// export const Photo01B = require('./spots/our-projects.jpeg');
+// export const Photo02B = require('./spots/base02.jpeg');
+// export const Photo03B = require('./spots/base03.jpeg');
 
-export const Photo04 = require('./spots/base04.jpg');
-export const Photo05 = require('./spots/base05.jpg');
-export const Photo06 = require('./spots/base06.jpeg');
-export const Photo08 = require('./spots/base08.png');
-export const Photo09 = require('./spots/base09.jpeg');
+// export const Photo04 = require('./spots/base04.jpg');
+// export const Photo05 = require('./spots/base05.jpg');
+// export const Photo06 = require('./spots/base06.jpeg');
+// export const Photo08 = require('./spots/base08.png');
+// export const Photo09 = require('./spots/base09.jpeg');
 
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
@@ -35,9 +35,9 @@ export const PayPal = require('./logos/paypal-alt.png');
 
 // What
 export const HeroWhat = require('./spots/base01.jpeg');
-export const Program01 = require('./spots/program01.jpeg');
-export const Program02 = require('./spots/program02.jpeg');
-export const Program03 = require('./spots/program03.jpeg');
+export const Program01 = require('./spots/program01.jpg');
+export const Program02 = require('./spots/program02.jpg');
+export const Program03 = require('./spots/program03.jpg');
 
 // Where
 export const Map = require('./maps/mapv1.jpg');

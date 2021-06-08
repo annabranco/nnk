@@ -37,12 +37,10 @@ const VolunteerModule = ({ colors, texts }) => {
         {getDevice() === MOBILE ? (
           <MainImageAsBg img={JoinUsSmall} alt={texts.altMainImage} />
         ) : (
-          <picture>
-            <MainImage
-              src={JoinUsMedium}
-              srcset={`${JoinUsSmall} 320w, ${JoinUsMedium} 1024w, ${JoinUsBig} 2400w`}
-            />
-          </picture>
+          <MainImage
+            src={JoinUsMedium}
+            srcset={`${JoinUsSmall} 320w, ${JoinUsMedium} 1024w, ${JoinUsBig} 2400w`}
+          />
         )}
       </ImgLink>
     </ModuleWrapper>

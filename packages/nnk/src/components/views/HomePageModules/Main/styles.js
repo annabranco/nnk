@@ -91,8 +91,8 @@ export const PhotoContainer = styled.div`
   background-position: 20% 8%;
   border-bottom: 4px solid ${({ colors }) => colors && colors.terciary};
 
-  ${({ img, section }) => css`
-    background-image: ${`url(${img[0]})`};
+  ${({ img, imgs, section }) => css`
+    background-image: ${imgs ? `url(${imgs[0]})` : `url(${img})`};
     background-size: ${section ? '100%' : '200%'};
     background-repeat: no-repeat;
   `}
@@ -127,8 +127,8 @@ export const PhotoContainer = styled.div`
       background-size: 100%;
     `}
 
-    ${({ img }) => css`
-      background-image: ${`url(${img[1]})`};
+    ${({ img, imgs }) => css`
+      background-image: ${imgs ? `url(${imgs[1]})` : `url(${img})`};
     `}
   }
 
@@ -141,8 +141,8 @@ export const PhotoContainer = styled.div`
   }
 
   @media only screen and (min-width: 2400px) {
-    ${({ img }) => css`
-      background-image: ${`url(${img[2]})`};
+    ${({ img, imgs }) => css`
+      background-image: ${imgs ? `url(${imgs[2]})` : `url(${img})`};
     `}
   }
 `;

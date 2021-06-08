@@ -41,18 +41,6 @@ const MainModule = ({ state }) => {
     }
   };
 
-  const getImgSrc = () => {
-    console.log('$$$ hello');
-    const size = getImageSize();
-    if (width > 2400) {
-      return HomeBig;
-    }
-    if (width > 1000) {
-      return HomeMedium;
-    }
-    return HomeSmall;
-  };
-
   useEffect(() => {
     homepageTexts = HOMEPAGE_TEXTS[language];
   }, [language]);
@@ -62,7 +50,7 @@ const MainModule = ({ state }) => {
   }, []);
 
   return (
-    <PhotoContainer colors={colors} img={[HomeSmall, HomeMedium, HomeBig]}>
+    <PhotoContainer colors={colors} imgs={[HomeSmall, HomeMedium, HomeBig]}>
       <MainTextWrapper>
         <MainText colors={colors}>{homepageTexts.mainText}</MainText>
         <VideoButton colors={colors} onClick={onToggleVideo}>
