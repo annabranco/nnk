@@ -25,7 +25,6 @@ export const Photo03 = require('./spots/photo03.jpg');
 // export const Photo04 = require('./spots/base04.jpg');
 // export const Photo06 = require('./spots/base06.jpeg');
 // export const Photo08 = require('./spots/base08.png');
-export const Photo09 = require('./spots/base09.jpeg');
 
 // Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
@@ -61,7 +60,9 @@ export const BlackBook = require('./icons/black-book.png');
 // JTTF
 export const VolunteersInAction = require('./spots/logistics.jpeg');
 
-// Donate
+// HelpUs
+export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');
+export const HeroHelpSmall = require('./spots/helpUs_small.jpg');
 export const BankHeader = require('./others/bank-header.jpg');
 export const PaypalInfo = require('./others/paypal-info.jpg');
 export const Value0 = require('./others/value0.jpg');

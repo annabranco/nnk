@@ -9,7 +9,8 @@ import DonorBox from '../DonorBox';
 import AppModal from '../../core/AppModal';
 import {
   CAMPAIGN_PHOTOS,
-  Photo09,
+  HeroHelpSmall,
+  HeroHelpMedium,
   Triodos,
   PayPal,
   Value0,
@@ -70,7 +71,7 @@ const HelpUs = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={Photo09}
+        imgs={[HeroHelpSmall, HeroHelpMedium, HeroHelpMedium]}
         position="100% 30%"
         socialLinks={socialLinks}
         title={texts.title}
