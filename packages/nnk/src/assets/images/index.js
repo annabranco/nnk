@@ -23,7 +23,6 @@ export const Photo03 = require('./spots/photo03.jpg');
 // export const Photo03B = require('./spots/base03.jpeg');
 
 // export const Photo04 = require('./spots/base04.jpg');
-export const Photo05 = require('./spots/base05.jpg');
 // export const Photo06 = require('./spots/base06.jpeg');
 // export const Photo08 = require('./spots/base08.png');
 export const Photo09 = require('./spots/base09.jpeg');
@@ -40,6 +39,8 @@ export const Program02 = require('./spots/program02.jpg');
 export const Program03 = require('./spots/program03.jpg');
 
 // Where
+export const HeroWhereMedium = require('./spots/somewhere_medium.jpg');
+export const HeroWhereSmall = require('./spots/somewhere_small.jpg');
 export const Map = require('./maps/mapv1.jpg');
 export const MapEs = require('./maps/mapv1-es.jpg');
 export const MapSmall = require('./maps/mapv1.jpg');
