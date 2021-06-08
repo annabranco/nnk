@@ -10,7 +10,6 @@ import {
   sizeXLargeTitle,
   sizeXXLarge
 } from '../../../setup/themes';
-import Link from '../../core/Link';
 
 const WhyArea = styled.div`
   display: flex;

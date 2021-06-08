@@ -6,14 +6,6 @@ import FeaturedMedia from '../FeaturedMedia';
 import { ItemPropType, StatePropType } from '../../../types';
 import { ArticleWrapper, Excerpt, PublishDate, Title, InfoBox } from './styles';
 
-/**
- * Item Component
- *
- * It renders the preview of a blog post. Each blog post contains
- * - Title: clickable title of the post
- * - Author: name of author and published date
- * - FeaturedMedia: the featured image/video of the post
- */
 const Item = ({ state, item }) => {
   // const author = state.source.author[item.author];
   const { colors, language } = state.theme;
@@ -59,7 +51,6 @@ const Item = ({ state, item }) => {
         </Link>
       )}
 
-      {/* If the post has an excerpt (short summary text), we render it */}
       {item.excerpt && (
         <Link link={item.link}>
           <Excerpt
@@ -76,13 +67,12 @@ const Item = ({ state, item }) => {
 };
 
 Item.propTypes = {
-  state: StatePropType,
-  item: ItemPropType.isRequired
+  item: ItemPropType.isRequired,
+  state: StatePropType
 };
 
 Item.defaultProps = {
   state: null
 };
 
-// Connect the Item to gain access to `state` as a prop
 export default connect(Item);

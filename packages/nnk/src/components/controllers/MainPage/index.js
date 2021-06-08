@@ -9,14 +9,14 @@ import {
   DONATION_TEXTS
 } from '../../../db';
 import { DESKTOP, MOBILE } from '../../../constants/devices';
+import AppModal from '../../core/AppModal';
+import ExternalForm from '../../views/ExternalFrame';
 import BasicModule from '../../views/HomePageModules/Basic';
 import MainModule from '../../views/HomePageModules/Main';
 import PageSection from '../../views/HomePageModules';
 import VolunteerModule from '../../views/HomePageModules/Volunteer';
 import { StatePropType } from '../../../types';
 import { MainContainer, SubscriptionButton } from './styles';
-import ExternalForm from '../../views/ExternalFrame';
-import AppModal from '../../core/AppModal';
 
 const MainPage = ({ state }) => {
   const [displayModal, toggleModal] = useState(false);
@@ -56,9 +56,9 @@ const MainPage = ({ state }) => {
         size={getDevice() === MOBILE ? 'full' : 'large'}
       >
         <BasicModule
+          colors={colors}
           texts={homepageTexts}
           whyTexts={whyTexts}
-          colors={colors}
         />
       </PageSection>
       <PageSection size="large" colors={colors}>
@@ -74,10 +74,10 @@ const MainPage = ({ state }) => {
         >
           <ExternalForm
             colors={colors}
-            width={getDevice() === MOBILE ? 340 : 640}
             height={800}
             src={config.subscriptionEndpoint}
             title="subscription"
+            width={getDevice() === MOBILE ? 340 : 640}
           />
         </AppModal>
       )}

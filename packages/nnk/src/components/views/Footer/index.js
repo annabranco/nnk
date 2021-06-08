@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-// import InDevelopment from '../InDevelopment';
 import { FOOTER_TEXTS } from '../../../db';
-import { ColorsPropType } from '../../../types';
-import { FooterContainer, FooterLink, FooterText } from './styles';
 import AppModal from '../../core/AppModal';
 import PrivacyDeclaration from '../PrivacyDeclaration';
+import { ColorsPropType } from '../../../types';
+import { FooterContainer, FooterLink, FooterText } from './styles';
 
 const Footer = ({ colors, language }) => {
   const [displayModal, toggleModal] = useState(false);

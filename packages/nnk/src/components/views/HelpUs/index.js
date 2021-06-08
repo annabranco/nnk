@@ -7,37 +7,38 @@ import { DONATION_TEXTS } from '../../../db';
 import SectionHeader from '../SectionHeader';
 import DonorBox from '../DonorBox';
 import AppModal from '../../core/AppModal';
+import BankDetails from '../BankDetails';
 import {
   CAMPAIGN_PHOTOS,
-  Photo09,
+  HeroHelpSmall,
+  HeroHelpMedium,
   Triodos,
   PayPal,
   Value0,
   Value2
 } from '../../../assets/images';
+import { DESKTOP } from '../../../constants/devices';
 import { StatePropType } from '../../../types';
+import { Mail } from '../PrivacyDeclaration/styles';
+import { VideoElement } from '../HomePageModules/Main/styles';
 import {
   CampaignPhoto,
   Content,
   Info,
   Intro,
   Logo,
+  PartnersLogos,
   Section,
   SubsectionWrapper,
+  Text,
+  Title,
   ValueDescription,
   ValueItem,
   ValueTitle,
-  Values,
-  Text,
-  PartnersLogos,
-  Title,
   ValueVideo,
+  Values,
   Video
 } from './styles';
-import { Mail } from '../PrivacyDeclaration/styles';
-import BankDetails from '../BankDetails';
-import { VideoElement } from '../HomePageModules/Main/styles';
-import { DESKTOP } from '../../../constants/devices';
 
 const getVideoThumb = index => {
   switch (index) {
@@ -70,7 +71,7 @@ const HelpUs = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={Photo09}
+        imgs={[HeroHelpSmall, HeroHelpMedium, HeroHelpMedium]}
         position="100% 30%"
         socialLinks={socialLinks}
         title={texts.title}
@@ -128,9 +129,9 @@ const HelpUs = ({ state }) => {
             </Mail>
           </Text>
           <Logo
+            alt="Triodos"
             onClick={() => toggleModal('bank')}
             src={Triodos}
-            alt="Triodos"
           />
           <Logo onClick={() => toggleModal('bank')} src={PayPal} alt="Paypal" />
         </PartnersLogos>
@@ -146,10 +147,10 @@ const HelpUs = ({ state }) => {
       {displayModal && displayModal !== 'bank' && (
         <AppModal closeAction={() => toggleModal(false)}>
           <VideoElement
-            src={displayModal}
-            title="Youtube video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            src={displayModal}
+            title="Youtube video"
           />
         </AppModal>
       )}

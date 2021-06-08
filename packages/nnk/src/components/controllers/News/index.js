@@ -1,11 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
+import { NEWS_SECTIONS } from '../../../db';
 import Pagination from '../../core/List/pagination';
+import NewsItem from '../../views/NewsItem';
 import { StatePropType } from '../../../types';
 import { NewsSection, NewsWrapper } from './styles';
-import { NEWS_SECTIONS } from '../../../db';
-import NewsItem from '../../views/NewsItem';
 
 const News = ({ state }) => {
   const { colors, language, postsRead } = state.theme;
@@ -23,8 +23,8 @@ const News = ({ state }) => {
           const item = state.source[type][id];
           return (
             <NewsItem
-              key={item.id}
               item={item}
+              key={item.id}
               read={postsRead.includes(item.id)}
               texts={newsSection}
             />

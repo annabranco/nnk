@@ -16,19 +16,15 @@ const Link = ({
   const { colors } = state.theme;
 
   const onClick = event => {
-    // Do nothing if it's an external link
     if (link.startsWith('https')) {
       return;
     }
 
     event.preventDefault();
-    // Set the router to the new url.
     actions.router.set(link);
 
-    // Scroll the page to the top
     window.scrollTo(0, 0);
 
-    // if the menu modal is open, close it so it doesn't block rendering
     if (state.theme.isMobileMenuOpen) {
       actions.theme.closeMobileMenu();
     }
@@ -36,11 +32,11 @@ const Link = ({
 
   return (
     <StyledLink
+      aria-current={ariaCurrent}
+      className={className}
       colors={colors}
       href={link}
       onClick={onClick}
-      className={className}
-      aria-current={ariaCurrent}
       target={target}
     >
       {children}
@@ -49,21 +45,21 @@ const Link = ({
 };
 
 Link.propTypes = {
-  state: StatePropType,
-  actions: ActionsPropType,
-  link: string,
-  className: string,
-  children: node.isRequired,
   'aria-current': string,
+  actions: ActionsPropType,
+  children: node.isRequired,
+  className: string,
+  link: string,
+  state: StatePropType,
   target: string
 };
 
 Link.defaultProps = {
-  state: null,
+  'aria-current': null,
   actions: null,
   className: null,
   link: null,
-  'aria-current': null,
+  state: null,
   target: null
 };
 

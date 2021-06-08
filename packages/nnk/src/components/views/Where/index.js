@@ -1,13 +1,21 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import { getSocialLinks, toggleBodyScroll } from '../../../utils';
+import { getDevice, getSocialLinks, toggleBodyScroll } from '../../../utils';
 import { WHERE_TEXTS } from '../../../db';
-import SectionHeader from '../SectionHeader';
-import { Mapv1, Mapv1Es, Photo05 } from '../../../assets/images';
-import { StatePropType } from '../../../types';
-import { Content, Map, ModalImage, Section } from './styles';
 import AppModal from '../../core/AppModal';
+import SectionHeader from '../SectionHeader';
+import { MOBILE, TABLET } from '../../../constants/devices';
+import {
+  HeroWhereMedium,
+  HeroWhereSmall,
+  Map,
+  MapEs,
+  MapEsSmall,
+  MapSmall
+} from '../../../assets/images';
+import { StatePropType } from '../../../types';
+import { Content, MapImage, ModalImage, Section } from './styles';
 
 const WhereSection = ({ state }) => {
   const [displayModal, toggleModal] = useState(false);
@@ -26,10 +34,12 @@ const WhereSection = ({ state }) => {
   };
 
   const getMapImage = () => {
+    const DEVICE_VERSION = getDevice() === MOBILE || getDevice() === TABLET;
+
     if (language === 'es') {
-      return Mapv1Es;
+      return DEVICE_VERSION ? MapEsSmall : MapEs;
     }
-    return Mapv1;
+    return DEVICE_VERSION ? MapSmall : Map;
   };
 
   useEffect(() => {
@@ -49,13 +59,17 @@ const WhereSection = ({ state }) => {
       )}
       <SectionHeader
         colors={colors}
-        img={Photo05}
+        imgs={[HeroWhereSmall, HeroWhereMedium, HeroWhereMedium]}
         position="0 30%"
         socialLinks={socialLinks}
         title={texts.title}
       />
       <Content>
-        <Map src={getMapImage()} alt={texts.mapAlt} onClick={onToggleMap} />
+        <MapImage
+          alt={texts.mapAlt}
+          onClick={onToggleMap}
+          src={getMapImage()}
+        />
       </Content>
     </Section>
   );

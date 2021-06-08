@@ -10,8 +10,14 @@ import { Title, TitleWrapper } from './styles';
 
 const IS_DESKTOP = getDevice() === DESKTOP;
 
-const SectionHeader = ({ colors, img, position, socialLinks, title }) => (
-  <PhotoContainer colors={colors} img={img} position={position} section>
+const SectionHeader = ({ colors, img, imgs, position, socialLinks, title }) => (
+  <PhotoContainer
+    colors={colors}
+    img={img}
+    imgs={imgs}
+    position={position}
+    section
+  >
     {IS_DESKTOP && <SocialModule socialLinks={socialLinks} />}
 
     <TitleWrapper colors={colors}>
@@ -22,13 +28,16 @@ const SectionHeader = ({ colors, img, position, socialLinks, title }) => (
 
 SectionHeader.propTypes = {
   colors: ColorsPropType.isRequired,
-  img: string.isRequired,
+  img: string,
+  imgs: arrayOf(string),
   position: string,
   socialLinks: arrayOf(ConfigSocialLinksPropType).isRequired,
   title: string.isRequired
 };
 
 SectionHeader.defaultProps = {
+  img: null,
+  imgs: null,
   position: 'center 15%'
 };
 

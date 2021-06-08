@@ -1,13 +1,14 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { string } from 'prop-types';
 
 export const HamburgerIcon = ({ size, color }) => {
   return (
     <svg
-      height={size}
-      width={size}
       color={color}
+      height={size}
       viewBox="0 0 24 24"
+      width={size}
       xmlns="https://www.w3.org/2000/svg"
     >
       <title>Open menu</title>
@@ -20,17 +21,17 @@ export const HamburgerIcon = ({ size, color }) => {
   );
 };
 HamburgerIcon.propTypes = {
-  size: string.isRequired,
-  color: string.isRequired
+  color: string.isRequired,
+  size: string.isRequired
 };
 
 export const CloseIcon = ({ size, color }) => {
   return (
     <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
       color={color}
+      height={size}
+      viewBox="0 0 24 24"
+      width={size}
       xmlns="https://www.w3.org/2000/svg"
     >
       <title>Close Menu</title>
@@ -41,6 +42,6 @@ export const CloseIcon = ({ size, color }) => {
   );
 };
 CloseIcon.propTypes = {
-  size: string.isRequired,
-  color: string.isRequired
+  color: string.isRequired,
+  size: string.isRequired
 };

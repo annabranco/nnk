@@ -17,10 +17,10 @@ const Nav = ({ state }) => {
     <NavContainer>
       {navSections.map(section => (
         <NavItem
-          language={language}
-          key={section.title}
-          section={section}
           colors={colors}
+          key={section.title}
+          language={language}
+          section={section}
         />
       ))}
     </NavContainer>

@@ -3,8 +3,8 @@ import React from 'react';
 import { node, func, bool } from 'prop-types';
 import { connect } from 'frontity';
 import { ACTIONS_TEXTS } from '../../../db';
-import { CloseButton, ModalOverlay } from './styles';
 import { StatePropType } from '../../../types';
+import { CloseButton, ModalOverlay } from './styles';
 
 const AppModal = ({ children, closeButton, closeAction, state }) => {
   const { colors, language } = state.theme;
@@ -13,8 +13,8 @@ const AppModal = ({ children, closeButton, closeAction, state }) => {
       {closeAction && closeButton && (
         <CloseButton
           colors={colors}
-          text={ACTIONS_TEXTS[language].close}
           onClick={closeAction}
+          text={ACTIONS_TEXTS[language].close}
         >
           {ACTIONS_TEXTS[language].close}
         </CloseButton>

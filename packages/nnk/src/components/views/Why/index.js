@@ -6,9 +6,15 @@ import { fetchData, getSocialLinks } from '../../../utils';
 import { WHY_TEXTS } from '../../../db';
 import ReportItem from '../ReportItem';
 import SectionHeader from '../SectionHeader';
-import { BlackBook, HeroWhy } from '../../../assets/images';
+import {
+  BlackBook,
+  HeroWhyBig,
+  HeroWhyMedium,
+  HeroWhySmall
+} from '../../../assets/images';
 import { StatePropType } from '../../../types';
 import Link from '../../core/Link';
+import Carroussel from '../Carroussel';
 import {
   BlackBookContainer,
   BlackBookPhoto,
@@ -23,7 +29,6 @@ import {
   TestimonialArea,
   Title
 } from './styles';
-import Carroussel from '../Carroussel';
 
 const BORDER_VIOLENCE_URL = 'https://www.borderviolence.eu';
 const MONTHLY_REPORTS_URL = `${BORDER_VIOLENCE_URL}/wp-json/wp/v2/posts?categories=28`;
@@ -84,7 +89,7 @@ const WhySection = ({ state }) => {
     <Section colors={colors}>
       <SectionHeader
         colors={colors}
-        img={HeroWhy}
+        imgs={[HeroWhySmall, HeroWhyMedium, HeroWhyBig]}
         position="0 70%"
         socialLinks={socialLinks}
         title={texts.title}

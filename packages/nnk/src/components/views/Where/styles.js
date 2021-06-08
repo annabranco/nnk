@@ -9,7 +9,7 @@ export const Content = styled.div`
 `;
 Content.displayName = 'Content';
 
-export const Map = styled.img`
+export const MapImage = styled.img`
   width: 100%;
   border: 2px solid black;
   box-shadow: 0 0 40px 60px rgba(0, 0, 0, 0.5), inset 2px 2px 10px red;

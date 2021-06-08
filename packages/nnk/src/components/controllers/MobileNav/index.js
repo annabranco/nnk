@@ -1,4 +1,5 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { connect, Global } from 'frontity';
 import { func } from 'prop-types';
 import { CloseIcon, HamburgerIcon } from '../Header/MenuIcon';
@@ -40,14 +41,14 @@ const MobileMenu = ({ state, actions, onClickFlag }) => {
 };
 
 MobileMenu.propTypes = {
-  state: StatePropType,
   actions: ActionsPropType,
-  onClickFlag: func.isRequired
+  onClickFlag: func.isRequired,
+  state: StatePropType
 };
 
 MobileMenu.defaultProps = {
-  state: null,
-  actions: null
+  actions: null,
+  state: null
 };
 
 export default connect(MobileMenu);

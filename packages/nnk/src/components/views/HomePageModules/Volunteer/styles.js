@@ -47,7 +47,11 @@ export const MainImageAsBg = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 90%;
+    width: 500px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 700px;
   }
 `;
 MainImage.displayName = 'MainImage';

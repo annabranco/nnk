@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
 import { node } from 'prop-types';
 import { InDevelopmentContainer } from './styles';

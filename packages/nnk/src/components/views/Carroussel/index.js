@@ -1,7 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useState } from 'react';
 import { arrayOf } from 'prop-types';
+import { getDevice } from '../../../utils';
+import { MOBILE, TABLET } from '../../../constants/devices';
 import { Testimony01, Testimony02, Testimony03 } from '../../../assets/images';
+import { TestimonialPropType } from '../../../types';
 import {
   CarrousselWrapper,
   CurrentTestimonial,
@@ -13,9 +16,6 @@ import {
   LineMarker,
   Marker
 } from './styles';
-import { TestimonialPropType } from '../../../types';
-import { getDevice } from '../../../utils';
-import { MOBILE, TABLET } from '../../../constants/devices';
 
 const testimonialPhotos = {
   Testimony01: {
@@ -61,10 +61,10 @@ const Carroussel = ({ items }) => {
           <PreviousTestimonial device={DEVICE_VERSION}>
             <Photo
               img={testimonialPhotos[updatedItems[1].imageId].img}
+              onClick={() => sortItems(1)}
+              position={testimonialPhotos[updatedItems[1].imageId].position}
               size={testimonialPhotos[updatedItems[1].imageId].size}
               small
-              position={testimonialPhotos[updatedItems[1].imageId].position}
-              onClick={() => sortItems(1)}
             />
             {!DEVICE_VERSION && (
               <LineMarker>
@@ -75,8 +75,8 @@ const Carroussel = ({ items }) => {
           <CurrentTestimonial>
             <Photo
               img={testimonialPhotos[updatedItems[0].imageId].img}
-              size={testimonialPhotos[updatedItems[0].imageId].size}
               position={testimonialPhotos[updatedItems[0].imageId].position}
+              size={testimonialPhotos[updatedItems[0].imageId].size}
             />
             <Text>{updatedItems[0].text}</Text>
             <Victim>{updatedItems[0].victim}</Victim>
@@ -84,10 +84,10 @@ const Carroussel = ({ items }) => {
           <NextTestimonial device={DEVICE_VERSION}>
             <Photo
               img={testimonialPhotos[updatedItems[2].imageId].img}
+              onClick={() => sortItems(2)}
+              position={testimonialPhotos[updatedItems[2].imageId].position}
               size={testimonialPhotos[updatedItems[2].imageId].size}
               small
-              position={testimonialPhotos[updatedItems[2].imageId].position}
-              onClick={() => sortItems(2)}
             />
             {!DEVICE_VERSION && (
               <LineMarker right>
