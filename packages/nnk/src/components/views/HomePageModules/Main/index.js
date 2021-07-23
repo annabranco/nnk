@@ -62,7 +62,11 @@ const MainModule = ({ state }) => {
       {isVideoDisplayed && (
         <AppModal closeAction={onToggleVideo}>
           <VideoElement
-            src="https://www.youtube.com/embed/yfMWd8rLSEs?controls=0&autoplay=1"
+            src={
+              language === 'en'
+                ? 'https://www.youtube.com/embed/66a90C8uRGk?controls=0&autoplay=1'
+                : 'https://www.youtube.com/embed/6di5EoncfV4?controls=0&autoplay=1'
+            }
             title="Wanna Join? youtube video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
