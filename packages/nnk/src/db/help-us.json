@@ -28,7 +28,7 @@
     },
     "transfer": "If can donate by bank transfer or PayPal. For more info:",
     "ongoing": "On-going campaigns",
-    "subscribeTo": "Get updated by signing up to our newsletter"
+    "subscribeTo": "Sign up to our Newsletter"
   },
     "es": {
     "title": "Donaciones",
@@ -59,6 +59,6 @@
     },
     "transfer": "Puedes hacer tu donación a través de una transferencia bancaria o por PayPal. Si deseas más información:",
     "ongoing": "Campañas en marcha",
-    "subscribeTo": "Suscríbete a nuestra newsletter"
+    "subscribeTo": "Suscríbete a nuestra Newsletter"
   }
 }

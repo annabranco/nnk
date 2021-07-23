@@ -2,8 +2,8 @@
   "en": {
     "title": "Volunteer",
     "titleAlt": "Join us",
-    "text1": "Our action takes place in sensitive environments where frustration could derive in tensions between people migrating and the local community. Conditions might be stressful and the work requires self-responsibility and maturity since volunteering means to represent NNK on the field.",
-    "text2": "NNK offers internships on the field by providing free accommodation, a basket with food and cleaning products, legal and psychological support, and a real humanitarian experience. If you feel ready to join the move, please check the requirements below and fulfill the form. Be patient. We'll contact you soon.",
+    "text1": "Our action takes place in sensitive environments where frustration could derive in tensions between people migrating and locals. Conditions might be stressful and the work requires self-responsibility and maturity to represent NNK on the field.",
+    "text2": "NNK offers internships by providing accommodation, some allowance for food and hygiene, legal services, psychological support and a real humanitarian experience. If you feel ready to join,please check the requirements and fulfill the form. We´ll contact you soon.",
     "infoIcons": [
       {
         "icon": "fas fa-comment",
@@ -13,7 +13,7 @@
       {
         "icon": "far fa-calendar-alt",
         "title": "Minimum Period",
-        "description": "6 weeks"
+        "description": "4 weeks"
       },
       {
         "icon": "fas fa-atom",
@@ -32,8 +32,8 @@
   "es": {
     "title": "Voluntariado",
     "titleAlt": "Únete a nosotros",
-    "text1": "Nuestras acciones se desarrollan en entornos especialmente sensibles, en los que la frustración puede derivar en tensiones entre las personas refugiadas y la población local. Las condiciones de trabajo pueden llegar a ser estresantes y se necesita responsabilidad y madurez, ya que estar en el equipo significa representar a NNK sobre el terreno. ",
-    "text2": "NNK ofrece a los y las voluntarias alojamiento (he pasado de lo de internship), una pequeña asignación para comida e higiene, apoyo legal y psicológico y una experiencia humanitaria auténtica. Si tienes ganas de unirte a NNK, comprueba que reúnes los requisitos y rellena el formulario. Nos pondremos en contacto contigo.",
+    "text1": "Nuestras acciones se desarrollan en entornos sensibles donde la frustración puede provocar tensiones entre las personas migrantes y la población local. Las condiciones de trabajo pueden resultar estresantes y requieren un alto grado de responsabilidad y madurez para representar a NNK sobre el terreno.",
+    "text2": "NNK ofrece períodos de voluntariado y prácticas incluyendo alojamiento, una asignación para comida e higiene, apoyo legal y psicológico, y una experiencia humanitaria auténtica. Si tienes ganas de unirte al equipo, comprueba los requisitos y rellena el formulario. Pronto te contactaremos.",
     "infoIcons": [
       {
         "icon": "fas fa-comment",
@@ -43,7 +43,7 @@
       {
         "icon": "far fa-calendar-alt",
         "title": "Estancia mínima",
-        "description": "6 semanas"
+        "description": "4 semanas"
       },
       {
         "icon": "fas fa-atom",

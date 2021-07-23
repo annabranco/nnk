@@ -59,20 +59,28 @@ const WhySection = ({ state }) => {
   const insertHyperlinkOnTexts = text => {
     const updatedText = text
       .replace(
-        'devoluciones en caliente violentas e ilegales',
-        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>devoluciones en caliente violentas e ilegales</a>'
+        'devoluciones violentas',
+        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>devoluciones violentas</a>'
       )
       .replace(
-        'violent and ilegal pushbacks',
-        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>violent and ilegal pushbacks</a>'
+        'violent pushbacks',
+        '<a href="https://www.youtube.com/watch?v=eC-LQaOw6OM" rel="noreferrer" target="_blank" noreferrer>violent pushbacks</a>'
       )
       .replace(
         'Black Book of Pushbacks',
-        '<span>Black Book of Pushbacks</span>'
+        '<a href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:3f809f15-bada-4d3f-adab-f14d9489275a#pageNum=1" rel="noreferrer" target="_blank" noreferrer>Black Book of Pushbacks</a>'
       )
       .replace(
-        'Libro Negro de las Devoluciones en Caliente',
-        '<span>Libro Negro de las Devoluciones en Caliente</span>'
+        'Libro Negro de las Devoluciones',
+        '<span>Libro Negro de las Devoluciones</span>'
+      )
+      .replace(
+        'Border Violence Monitoring Network',
+        '<a href="ttps://www.borderviolence.eu/" rel="noreferrer" target="_blank" noreferrer>Border Violence Monitoring Network</a>'
+      )
+      .replace(
+        'BVMN',
+        '<a href="ttps://www.borderviolence.eu/" rel="noreferrer" target="_blank" noreferrer>BVMN</a>'
       );
     return updatedText;
   };
@@ -108,7 +116,12 @@ const WhySection = ({ state }) => {
         <BorderViolenceArea>
           <Title colors={colors}>{texts.fightingInjustice}</Title>
 
-          <Intro>{texts.borderViolenceIntro}</Intro>
+          <Intro
+            colors={colors}
+            dangerouslySetInnerHTML={{
+              __html: insertHyperlinkOnTexts(texts.borderViolenceIntro)
+            }}
+          />
           <BlackBookContainer>
             <BlackBookPhoto src={BlackBook} alt="The Black Book cover" />
             <Intro

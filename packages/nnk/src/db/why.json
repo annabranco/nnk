@@ -1,18 +1,18 @@
 {
   "en": {
     "title": "Why?",
-    "intro": "Many people are forced to escape from armed conflicts, discrimination or poverty,\nfleeing to find  the peace and civil rights that they are missing at home. However,\nthere are no safe pathways and people are exposed to hunger, pain and trauma.",
-    "fullInto": "Many people are forced to escape from poverty, armed conflicts, or prosecutions. Most of them flee to find in Europe the peace and civil rights that they are missing at home. However, there are no safe pathways to migrate and people are exposed to violent and ilegal pushbacks instead of sustainable solutions.",
-    "blackBook": "The \"Black Book of Pushbacks\" was published in December 2020, compiling hundreds of testimonies of people who have experienced human rights violations at external borders. It includes the experiences of 12,654 people, describing the violence many endured in Italy, Greece, Croatia, Slovenia or Hungary along the so-called ‘Balkan route’. By bringing to light the suffering, NNK and our partners in the BVMN claim EU institutions and member state governments to be held accountable for the inhumane and degrading treatment of the people.",
+    "intro": "Many people are forced to escape from armed conflicts, discrimination or poverty,\nfleeing to find the peace and civil rights that they are missing at home. However,\nthere are no safe and legal pathways and people are exposed to life-threatening risks.",
+    "fullInto": "By winter 2017, a group of volunteers arrived at the “Barracks” of Belgrade where thousands of people were fending for themselves after the closure of the Serbo-Hungarian border. Many were beaten and traumatized. The volunteers started cooking with them. In that moment, No Name Kitchen was born. Since then, thousands of people have been forced to escape from poverty, wars and prosecutions.     Most of them flee to find the peace and civil rights that they are missing at home. However, there are no safe and legal pathways for everybody and people are exposed to violent pushbacks. ",
+    "blackBook": "The result of our work is compiled in the \"Black Book of Pushbacks\" (December, 2020), describing the experiences of 12,654 people who have experienced human rights violations at external borders in Greece, Italy, Croatia, Slovenia or Hungary along the so-called ‘Balkan route’. By bringing to light the suffering, NNK and our partners in the BVMN claim EU institutions and member state governments to be held accountable for the inhumane and degrading treatment of the people.",
     "blackBookDownload": "You can download it here:",
     "blackBookVolumes": ["Volume I", "Volume II"],
-    "borderViolence": "Illegal push-backs & border violence reports",
+    "borderViolence": "Illegal push-backs & violence reports",
     "borderViolenceIntro": "We believe humanitarian aid must include political action to provoke a change. For this reason, NNK collects testimonies of abuses and push-backs and co-founded the Border Violence Monitoring Network to raise awareness and advocate for justice and respect to the Human Rights and International Laws.",
-    "fightingInjustice": "Fighting Injustice Since We Were Born",
+    "fightingInjustice": "Disobey injustice",
     "testimonials": [
       {
         "imageId": "Testimony01",
-        "text": "\"It was midnight. We were in the forest in Croatia when the police stopped us. I told them I need asylum, because my life is in danger, but they laugh at me and started to hit us with their sticks...\"",
+        "text": "\"It was midnight. We were in the forest in Croatia when the police stopped us. I told them I need asylum, because my life is in danger, but they laughed at me and started to hit us with their sticks...\"",
         "victim": "Ava, 26, moving from Iran to Germany"
       },
       {
@@ -22,7 +22,7 @@
       },
       {
         "imageId": "Testimony03",
-        "text": "\"After [the electric shock], I don’t see anything. I was like sleep… like a dream. When I woke up, the police hit me in my hand and in my face. After the police hurt me, I can’t walk. I was crawling on the ground and when the police see me, they came to me and started kicking me in the legs.\"",
+        "text": "\"After [the electric shock], I don’t see anything. I was asleep… like a dream. When I woke up, the police hit me in my hand and in my face. After the police hurt me, I can’t walk. I was crawling on the ground and when the police see me, they came to me and started kicking me in the legs.\"",
         "victim": "Mohamed, 16, moving from Iraq to the Netherlands"
       }
     ],
@@ -32,14 +32,14 @@
   },
     "es": {
     "title": "¿Por qué?",
-    "intro": "Muchas personas se ven obligadas a huir de conflictos armados, discriminación o pobreza.\nHuyen para encontrar la paz y los derechos sociales que no tienen en sus países. Sin embargo,\nno existen vías seguras y estas personas están expuestas a padecer hambre, sufrimiento y traumas.",
-    "fullInto": "Muchas personas se ven forzadas a huir de la pobreza, de conflictos armados o de persecuciones políticias, tratando de encontrar en Europa la paz y los derechos civiles que nadie puede garantizar en sus lugares de origen. Sin embargo, no existen rutas migratorias seguras, y lejos de ofrecerles soluciones sostenibles, las personas se ven expuestas a devoluciones en caliente violentas e ilegales.",
-    "blackBook": "El \"Black Book of Pushbacks\"  (en español: el Libro Negro de las Devoluciones en Caliente) fue publicado en diciembre de 2020, y compila cientos de testimonios de personas cuyos derechos han sido violados en zonas de frontera. Describe las experiencias de 12.654 personas que narran la violencia sufrida en  Italia, Grecia, Croacia, Eslovenia o Hungría, a lo largo de la llamada “Ruta de los Balcanes”. El propósito de NNK al sacar a la luz el sufrimiento de estas personas es reclamar mayor rendición de cuentas por parte de las instituciones europeas y de los gobiernos de los estados miembros de la UE frente al trato inhumano y degradante al que tantas personas siguen siendo sometidas.",
+    "intro": "Muchas personas se ven obligadas a huir de conflictos armados, de la discriminación o\nla pobreza, para encontrar la paz y los derechos civiles que merecen; sin embargo,\nno existen vías seguras y legales para quienes arriesgan su vida intentando migrar.",
+    "fullInto": "En el invierno de 2017, un grupo de personas voluntarias llegaron a las Barracas de Belgrado, donde miles de personas sobrevivian dificultosamente tras el cierre del borde serbo-hungaro. Muchas estaban heridas y traumatizadas. Ambos grupos decidieron juntarse y cocinar. Así nació No Name KItchen. Desde entonces, muchas personas se han visto forzadas a huir de la pobreza, la guerra y la persecución. La mayoría trata de encontrar la paz y los derechos civiles que nadie garantiza en sus lugares de origen. Sin embargo, no hay rutas migratorias legales y seguras, y muchas se exponen a devoluciones violentas.",
+    "blackBook": "El resultado de nuestro trabajo se plasma en el \"Black Book of Pushbacks\" (en español: el Libro Negro de las Devoluciones. Diciembre, 2020), donde se describen las experiencias de 12.654 personas cuyos derechos han sido violados en fronteras de Grecia, Italia, Croacia, Eslovenia o Hungría, a lo largo de la llamada “Ruta de los Balcanes”. El propósito de sacar a la luz estos testimonios es reclamar mayor rendición de cuentas por parte de las instituciones europeas y de los estados miembros de la UE frente al trato inhumano y degradante al que tantas personas siguen siendo sometidas.",
     "blackBookDownload": "Aquí encontrarás más informes:",
     "blackBookVolumes": ["Volume I", "Volume II"],
-    "borderViolence": "Informes de violencia fronteriza y devoluciones ilegales",
-    "borderViolenceIntro": "Creemos que la ayuda humanitaria debe incluir acción política para generar un cambio. Esta es la razón por la que NNK recoge testimonios de abusos y devoluciones ilegales, y por la que cofundó la red Border Violence Monitoring Network para crear conciencia y abogar por la justicia y el respeto a los Derechos Humanos y el Derecho Internacional.",
-    "fightingInjustice": "Luchando contra la injusticia desde el inicio",
+    "borderViolence": "Informes de violencia y devoluciones ilegales",
+    "borderViolenceIntro": "Creemos que la ayuda humanitaria debe complementarse a la acción política para generar un cambio. Por ello, NNK cofundó la red Border Violence Monitoring Network y recoge testimonios de violencia  para crear conciencia y abogar por el respeto a los Derechos Humanos y el Derecho Internacional.",
+    "fightingInjustice": "Desobedecer a la injusticia",
     "testimonials": [
       {
         "imageId": "Testimony01",
