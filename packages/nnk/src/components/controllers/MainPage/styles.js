@@ -1,11 +1,5 @@
 import { styled } from 'frontity';
-import {
-  fontTitle,
-  sizeLargeTitle,
-  sizeMediumTitle,
-  sizeXLarge,
-  sizeXLargeTitle
-} from '../../../setup/themes';
+import { fontTitle, sizeMediumTitle, sizeXLarge } from '../../../setup/themes';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -14,7 +8,6 @@ export const MainContainer = styled.div`
   align-items: center;
   background-color: ${({ colors }) => colors && colors.primary};
   width: 100%;
-  overflow-y: hidden;
 `;
 MainContainer.displayName = 'MainContainer';
 
