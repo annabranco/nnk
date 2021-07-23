@@ -52,7 +52,7 @@ export const LanguageFlag = styled.img`
   z-index: 10;
   position: fixed;
   bottom: 10vh;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 50px;
   cursor: pointer;
 
