@@ -29,18 +29,16 @@ const NavItem = ({ colors, language, section }) => {
   };
 
   const styleSubItems = subitem => {
-    if (language !== 'en') {
-      if (subitem.toLowerCase().includes('w')) {
-        const updatedSubItem = subitem.toLowerCase().split('w');
+    if (subitem.toLowerCase().includes('w')) {
+      const updatedSubItem = subitem.toLowerCase().split('w');
 
-        updatedSubItem[1] = (
-          <Fragment key={`sub-${subitem}`}>
-            <SubItemRed colors={colors}>W</SubItemRed>
-            {updatedSubItem[1]}
-          </Fragment>
-        );
-        return updatedSubItem;
-      }
+      updatedSubItem[1] = (
+        <Fragment key={`sub-${subitem}`}>
+          <SubItemRed colors={colors}>W</SubItemRed>
+          {updatedSubItem[1]}
+        </Fragment>
+      );
+      return updatedSubItem;
     }
     return subitem;
   };
