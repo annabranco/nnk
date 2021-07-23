@@ -52,7 +52,10 @@ const Post = ({ actions, libraries, state }) => {
 
   useEffect(() => {
     const onReadAll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight / 2
+      ) {
         setTimeout(() => {
           onRead();
         }, 1000);

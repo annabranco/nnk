@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
   padding-top: 20px;
 
   @media all and (min-width: 768px) {
-    padding: 80px 100px 30px;
+    padding: 30px 100px 30px;
   }
 `;
 FooterContainer.displayName = 'FooterContainer';
