@@ -2,11 +2,11 @@
   "en": {
     "publishedOn": "Published on",
     "read": "already read",
-    "only": "in Spanish"
+    "only": "Spanish only"
   },
   "es": {
     "publishedOn": "Publicada em",
     "read": "ya leída",
-    "only": "en inglés"
+    "only": "English only"
   }
 }
