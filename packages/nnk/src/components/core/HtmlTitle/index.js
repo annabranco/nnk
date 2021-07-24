@@ -1,8 +1,10 @@
 import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { Head, connect, decode } from 'frontity';
 import { StatePropType } from '../../../types';
+import { PAGES_SEO } from '../../../db';
 
 const Title = ({ state }) => {
+  const { language } = state.theme;
   const data = state.source.get(state.router.link);
   let { title } = state.frontity;
 
@@ -20,11 +22,21 @@ const Title = ({ state }) => {
     title = `${cleanTitle} - ${state.frontity.title}`;
   } else if (data.is404) {
     title = `404 Not Found - ${state.frontity.title}`;
+  } else if (state.router.link === '/') {
+    title = `${state.frontity.title} - ${
+      PAGES_SEO[language][state.router.link]
+    }`;
+  } else {
+    title = `${PAGES_SEO[language][state.router.link]} - ${
+      state.frontity.title
+    }`;
   }
 
   return (
     <Head>
       <title>{title}</title>
+      <meta name="DC.title" lang={language} content={title} />
+      <meta name="og:title" content={title} />
     </Head>
   );
 };

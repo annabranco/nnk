@@ -26,7 +26,9 @@ import { MainArea } from './styles';
 const App = ({ state, actions }) => {
   const { colors, language } = state.theme;
   const data = state.source.get(state.router.link);
-
+  const now = new Date();
+  const parsedNowISOString = now.toISOString();
+  const locale = `${language}_${language.toUpperCase()}`;
   useEffect(() => {
     actions.theme.updateRead(updatedReadPosts());
   }, []);
@@ -35,12 +37,53 @@ const App = ({ state, actions }) => {
     <>
       <Title />
       <Head>
+        <html lang={language} />
+        <meta charset="UTF-8" />
+        <meta content="global" name="distribution" />
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <meta name="article:author" content="No Name Kitchen" />
+        <meta name="lang" content={language} />
+        <meta name="theme-color" content="#0c0c0c" />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         />
+
+        <meta name="DC.creator" content="No Name Kitchen" />
+        <meta
+          name="DC.description"
+          lang={language}
+          content={state.frontity.description}
+        />
+        <meta name="DC.date" scheme="W3CDTF" content={parsedNowISOString} />
+        <meta name="DC.date.issue" content={parsedNowISOString} />
+        <meta name="DC.language" scheme="RFC1766" content={locale} />
+        <meta name="DC.publisher" content="No Name Kitchen" />
+        <meta
+          name="DC.subject"
+          lang={language}
+          content={state.frontity.description}
+        />
+
+        <meta name="date" scheme="W3CDTF" content={parsedNowISOString} />
+        <meta itemProp="datePublished" content={parsedNowISOString} />
+        <meta name="last-modified" content={parsedNowISOString} />
+        <meta name="pageDate" content={parsedNowISOString} />
+        <meta name="pageRender" content={parsedNowISOString} />
+
+        <meta name="og:description" content={state.frontity.description} />
+        <meta property="og:locale" content={locale} />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="http://www.nonamekitchen.org/" />
+        <meta property="og:site_name" content="No Name Kitchen" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="No Name Kitchen" />
+
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
         <link rel="icon" type="image/png" href={Favicon} sizes="32x32" />
         <link

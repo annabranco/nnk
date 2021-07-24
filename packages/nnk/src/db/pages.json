@@ -1,0 +1,20 @@
+{
+  "en": {
+    "/": "Supporting people on the move",
+    "/help-us/": "Support the movement",
+    "/join-us/": "Volunteer - Jump to the field",
+    "/news/": "No Name News",
+    "/what/": "What? Our projects to fight injustice",
+    "/where/": "Where? Where we are",
+    "/why/": "Why? Disobey injustice"
+  },
+  "es": {
+    "/": "Supporting people on the move",
+    "/help-us/": "Apoya el movimiento",
+    "/join-us/": "Voluntariado - Yendo al terreno",
+    "/news/": "No Name News - Noticias",
+    "/what/": "¿Qué? Nuestros programas contra la injusticia",
+    "/where/": "¿Dónde? Dónde estamos",
+    "/why/": "¿Por qué? Desobedecer a la injusticia"
+  }
+}
