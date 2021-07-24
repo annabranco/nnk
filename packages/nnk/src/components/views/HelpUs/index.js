@@ -16,10 +16,15 @@ import {
   Triodos,
   PayPal,
   Value0,
+  Value1,
   Value2
 } from '../../../assets/images';
 import { DESKTOP } from '../../../constants/devices';
+import { LEFT, RIGHT } from '../../../constants/positions';
+import { LARGE } from '../../../constants/sizes';
+import { BANK, REPORT, YOUTUBE_VIDEO } from '../../../constants/modals';
 import { StatePropType } from '../../../types';
+import { SeparatorBar } from '../HomePageModules/styles';
 import { Mail } from '../PrivacyDeclaration/styles';
 import { VideoElement } from '../HomePageModules/Main/styles';
 import {
@@ -42,17 +47,13 @@ import {
   DownloadReportButton,
   ReportImage
 } from './styles';
-import { LEFT, RIGHT } from '../../../constants/positions';
-import { SeparatorBar } from '../HomePageModules/styles';
-import { LARGE } from '../../../constants/sizes';
-import { BANK, REPORT, YOUTUBE_VIDEO } from '../../../constants/modals';
 
 const getVideoThumb = index => {
   switch (index) {
     case 0:
       return Value0;
     case 1:
-      return Value0;
+      return Value1;
     case 2:
       return Value2;
     default:

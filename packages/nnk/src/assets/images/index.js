@@ -51,6 +51,7 @@ export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');
 export const HeroHelpSmall = require('./spots/helpUs_small.jpg');
 export const PaypalInfo = require('./others/paypal-info.jpg');
 export const Value0 = require('./others/value0.jpg');
+export const Value1 = require('./others/value1.jpg');
 export const Value2 = require('./others/value2.jpg');
 
 // --- Partners

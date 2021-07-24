@@ -303,5 +303,6 @@ ValueTitle.displayName = 'ValueTitle';
 
 export const Video = styled.div`
   margin: 20px 0 0;
+  cursor: pointer;
 `;
 Video.displayName = 'Video';
