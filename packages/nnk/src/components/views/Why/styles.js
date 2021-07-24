@@ -28,17 +28,25 @@ export const BlackBookContainer = styled.div`
   justify-content: center;
   margin: 50px auto;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0 60px;
+  padding: 0 10px;
   border-radius: 5px;
   width: 100%;
   background: ${({ colors }) => colors && colors.secondary};
+
+  @media all and (min-width: 768px) {
+    padding: 0 60px;
+  }
 `;
 BlackBookContainer.displayName = 'BlackBookContainer';
 
 export const BlackBookPhoto = styled.img`
   display: inline-block;
-  width: 50%;
+  width: 100%;
   margin: 0 auto 30px;
+
+  @media all and (min-width: 768px) {
+    width: 50%;
+  }
 `;
 BlackBookPhoto.displayName = 'BlackBookPhoto';
 
@@ -48,7 +56,11 @@ export const BlackBookVolumesWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   margin: 20px auto;
-  width: 60%;
+  width: 90%;
+
+  @media all and (min-width: 768px) {
+    width: 60%;
+  }
 `;
 BlackBookContainer.displayName = 'BlackBookContainer';
 
@@ -71,11 +83,14 @@ export const Content = styled.div`
 Content.displayName = 'Content';
 
 export const Intro = styled(BaseText)`
-  max-width: 90%;
   text-align: center;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
   font-weight: ${({ volumes }) => volumes && 700};
+
+  @media only screen and (min-width: 768px) {
+    max-width: 90%;
+  }
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};

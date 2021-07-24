@@ -71,7 +71,7 @@ const MenuModal = ({ colors, language, onClickFlag }) => {
   useEffect(() => {
     navSections = MAIN_SECTIONS[language];
     changeTree(navSections);
-  }, [language, parentName]);
+  }, [language]);
 
   return (
     <ModalWindow>
