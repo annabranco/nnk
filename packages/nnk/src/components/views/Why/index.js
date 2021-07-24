@@ -22,12 +22,14 @@ import {
   BorderViolenceArea,
   Content,
   Intro,
+  BlackBookIntro,
   LatestReportsArea,
   ReportLink,
   Section,
   SubTitle,
   TestimonialArea,
-  Title
+  Title,
+  BlackBookTitle
 } from './styles';
 
 const BORDER_VIOLENCE_URL = 'https://www.borderviolence.eu';
@@ -122,9 +124,13 @@ const WhySection = ({ state }) => {
               __html: insertHyperlinkOnTexts(texts.borderViolenceIntro)
             }}
           />
-          <BlackBookContainer>
+          <BlackBookContainer colors={colors}>
+            <BlackBookTitle colors={colors}>
+              {texts.blackBookName}
+            </BlackBookTitle>
+
             <BlackBookPhoto src={BlackBook} alt="The Black Book cover" />
-            <Intro
+            <BlackBookIntro
               colors={colors}
               dangerouslySetInnerHTML={{
                 __html: insertHyperlinkOnTexts(texts.blackBook)
@@ -136,14 +142,18 @@ const WhySection = ({ state }) => {
                 rel="noreferrer"
                 target="_blank"
               >
-                <Intro volumes>{texts.blackBookVolumes[0]}</Intro>
+                <BlackBookIntro colors={colors} volumes>
+                  {texts.blackBookVolumes[0]}
+                </BlackBookIntro>
               </Link>
               <Link
                 link="https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Ab10a04a4-25dd-45f1-8b2d-e9c25946cb44#pageNum=1"
                 rel="noreferrer"
                 target="_blank"
               >
-                <Intro volumes>{texts.blackBookVolumes[1]}</Intro>
+                <BlackBookIntro colors={colors} volumes>
+                  {texts.blackBookVolumes[1]}
+                </BlackBookIntro>
               </Link>
             </BlackBookVolumesWrapper>
           </BlackBookContainer>

@@ -30,7 +30,8 @@ export const BlackBookContainer = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 0 60px;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
+  background: ${({ colors }) => colors && colors.secondary};
 `;
 BlackBookContainer.displayName = 'BlackBookContainer';
 
@@ -55,7 +56,7 @@ export const BorderViolenceArea = styled(WhyArea)`
   max-width: 100%;
 
   @media only screen and (min-width: 1200px) {
-    width: 80%;
+    width: 70%;
   }
 `;
 BorderViolenceArea.displayName = 'BorderViolenceArea';
@@ -70,7 +71,8 @@ export const Content = styled.div`
 Content.displayName = 'Content';
 
 export const Intro = styled(BaseText)`
-  text-align: justify;
+  max-width: 90%;
+  text-align: center;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
   font-weight: ${({ volumes }) => volumes && 700};
@@ -95,6 +97,12 @@ export const Intro = styled(BaseText)`
   }
 `;
 Intro.displayName = 'Intro';
+
+export const BlackBookIntro = styled(Intro)`
+  max-width: 100%;
+  color: ${({ colors }) => colors && colors.primary};
+`;
+Intro.displayName = 'BlackBookIntro';
 
 export const LatestReportsArea = styled.div`
   display: flex;
@@ -222,3 +230,8 @@ export const Title = styled(BaseTitle)`
   }
 `;
 Title.displayName = 'Title';
+
+export const BlackBookTitle = styled(Title)`
+  color: ${({ colors }) => colors && colors.primary};
+`;
+Intro.displayName = 'BlackBookTitle';
