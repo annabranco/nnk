@@ -16,7 +16,10 @@ export default {
       'weAreAllMigrantSouls',
       'emergencyInNorthBosnia',
       'supportPeopleInSerbia',
-      'foodHealthInGreece'
+      'foodHealthInGreece',
+      'crisisInCeuta',
+      'healthOnTheMove',
+      'nobodyNeedsCharity'
     ],
     details: {
       weAreAllMigrantSouls: {
@@ -29,25 +32,43 @@ export default {
         id: 'emergency-in-northern-bosnia',
         name: 'EMERGENCY IN NORTHERN BOSNIA',
         order: 1,
+        side: 'left',
         url: 'https://donorbox.org/emergency-in-northern-bosnia'
       },
       supportPeopleInSerbia: {
         id: 'supportingnnkinserbia',
         name: 'SUPPORTING PEOPLE ON THE MOVE IN SERBIA',
         order: 2,
+        side: 'right',
         url: 'https://donorbox.org/supportingnnkinserbia'
       },
       foodHealthInGreece: {
         id: 'food-health-for-refugees-in-patras',
         name: 'FOOD & HEALTH FOR REFUGEES IN PATRAS',
         order: 3,
+        side: 'left',
         url: 'https://donorbox.org/food-health-for-refugees-in-patras'
       },
-      openTheBorders: {
-        id: 'open-the-borders',
-        name: 'OPEN THE BORDERS',
+      crisisInCeuta: {
+        id: 'humanitarian-crisis-in-ceuta',
+        name: 'HUMAN RIGHTS CRISIS IN CEUTA',
         order: 4,
-        url: 'https://donorbox.org/open-the-borders'
+        side: 'right',
+        url: 'https://donorbox.org/humanitarian-crisis-in-ceuta'
+      },
+      healthOnTheMove: {
+        id: 'health-on-the-move',
+        name: 'HEALTH ON THE MOVE',
+        order: 5,
+        side: 'left',
+        url: 'https://donorbox.org/health-on-the-move'
+      },
+      nobodyNeedsCharity: {
+        id: 'nobody-needs-charity',
+        name: 'NOBODY NEEDS CHARITY WHEN THERE IS JUSTICE',
+        order: 6,
+        side: 'right',
+        url: 'https://donorbox.org/no-name-kitchen'
       }
     }
   },

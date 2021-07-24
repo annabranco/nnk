@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import config from '../../../setup/config';
-import { ColorsPropType } from '../../../types';
-import { DonorBoxArea, DonorBoxFrame, Title } from './styles';
+import { DonorBoxArea, DonorBoxFrame } from './styles';
 
-const DonorBox = ({ campaign, colors }) => {
+const DonorBox = ({ campaign }) => {
   const [selectedCampaign, changeCampaign] = useState({ name: '', id: '' });
 
   useEffect(() => {
@@ -16,7 +15,6 @@ const DonorBox = ({ campaign, colors }) => {
 
   return (
     <DonorBoxArea>
-      <Title colors={colors}>{selectedCampaign.name}</Title>
       {selectedCampaign.id && (
         <DonorBoxFrame
           allowpaymentrequest=""
@@ -32,8 +30,7 @@ const DonorBox = ({ campaign, colors }) => {
 };
 
 DonorBox.propTypes = {
-  campaign: string.isRequired,
-  colors: ColorsPropType.isRequired
+  campaign: string.isRequired
 };
 
 export default DonorBox;

@@ -1,11 +1,7 @@
 import { connect } from 'frontity';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
-import {
-  getDevice,
-  getImageSize,
-  getSocialLinks,
-  toggleBodyScroll
-} from '../../../../utils';
+import { getDevice, getSocialLinks, toggleBodyScroll } from '../../../../utils';
+import AppModal from '../../../core/AppModal';
 import { DESKTOP } from '../../../../constants/devices';
 import { HOMEPAGE_TEXTS } from '../../../../db';
 import SocialModule from '../../SocialContainer';
@@ -18,7 +14,6 @@ import {
   VideoButton,
   VideoElement
 } from './styles';
-import AppModal from '../../../core/AppModal';
 
 const socialLinks =
   getDevice() === DESKTOP

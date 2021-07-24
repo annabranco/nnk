@@ -1,4 +1,5 @@
 import { styled, css } from 'frontity';
+import { FULL, LARGE, MEDIUM, SMALL, XSMALL } from '../../../constants/sizes';
 
 export const SectionContainer = styled.div`
   display: flex;
@@ -14,19 +15,19 @@ export const SectionContainer = styled.div`
 
   ${({ size }) => {
     let margins = '100px';
-    if (size === 'xsmall') {
+    if (size === XSMALL) {
       margins = '800px';
     }
-    if (size === 'small') {
+    if (size === SMALL) {
       margins = '600px';
     }
-    if (size === 'medium') {
+    if (size === MEDIUM) {
       margins = '400px';
     }
-    if (size === 'large') {
+    if (size === LARGE) {
       margins = '100px';
     }
-    if (size === 'full') {
+    if (size === FULL) {
       margins = '0px';
     }
     return css`
@@ -54,19 +55,19 @@ export const SeparatorBar = styled.div`
 
   ${({ size }) => {
     let widthSize = '100vw';
-    if (size === 'xsmall') {
+    if (size === XSMALL) {
       widthSize = '40vw';
     }
-    if (size === 'small') {
+    if (size === SMALL) {
       widthSize = '50vw';
     }
-    if (size === 'medium') {
+    if (size === MEDIUM) {
       widthSize = '60vw';
     }
-    if (size === 'large') {
+    if (size === LARGE) {
       widthSize = '80vw';
     }
-    if (size === 'full') {
+    if (size === FULL) {
       widthSize = '100vw';
     }
     return css`

@@ -5,16 +5,17 @@
     "values": [
       {
         "title": "100% INDEPENDENT",
-        "description": "We keep our freedom to claim justice and to fight the negligent violation of human rights at the EU borders.",
+        "description": " We are free to claim justice\nand to fight against the violation\nof  human rights at the borders.",
         "video": "https://www.youtube.com/embed/eC-LQaOw6OM?controls=0&autoplay=1"
       },
       {
         "title": "IMPACTFUL",
-        "description": "NNK teams work on the field to identify needs and solutions 365 days per year."
+        "description": "NNK teams work to identify\npeople's needs and to provide\ncreative sustainable solutions.",
+        "video": "https://www.youtube.com/embed/mlTWCMhOjcg?controls=0&autoplay=1"
       },
       {
         "title": "TRANSPARENCY",
-        "description": "Our accountability is free-access for everyone who wants to know the final use of their donations.",
+        "description": "Our accountability is free-access\nfor all donors who guess the final\nuse of their contribution.",
         "video": "https://www.youtube.com/embed/H2nIyPDK408?controls=0&autoplay=1"
       }
     ],
@@ -26,26 +27,28 @@
       "bankAddress": "Bank branch address",
       "swift": "BIC/SWIFT code"
     },
-    "transfer": "If can donate by bank transfer or PayPal. For more info:",
+    "transfer": "You can also donate through bank transfer or PayPal. Click here to find more details.",
+    "certificate": "NNK supporters can request a certificate of their contribution by email:",
+    "downloadReport": "Click to download \"Reporting the Kitchen: 2020 in figures\"",
     "ongoing": "On-going campaigns",
     "subscribeTo": "Sign up to our Newsletter"
   },
     "es": {
-    "title": "Donaciones",
-    "description": "Necesitamos tu ayuda para proporcionar alimentos, refugio, atención médica vital y apoyo legal a las personas que han tenido que pasar tantas dificultades a lo largo de las rutas balcánica y mediterránea.Conoce nuestras campañas y elige la que se adapte mejor a tus valores e intereses.",
+    "title": "Apoya",
+    "description": "Tu ayuda es necesaria para proporcionar alimentos, ropa, atención médica vital y apoyo legal a las personas que han tenido que pasar tantas dificultades a lo largo de las rutas de los Balcanes y del Mediterráneo. Conoce nuestras campañas y elige cuál apoyar. ¡Gracias por hacer la diferencia!",
     "values": [
       {
         "title": "100% INDEPENDIENTES",
-        "description": "Mantenemos nuestra independencia para poder reclamar justicia y luchar contra la violación inaceptable de los derechos humanos en las fronteras de la UE.",
+        "description": "Libres para seguir reclamando justicia y luchar contra\nla violación de derechos humanos en fronteras. ",
         "video": "https://www.youtube.com/embed/eC-LQaOw6OM"
       },
       {
-        "title": "GRAN IMPACTO",
-        "description": "Los equipos de NNK sobre el terreno trabajan 24 horas al día, 7 días a la semana para identificar qué necesitan las personas y ofrecer soluciones."
+        "title": "IMPACTO",
+        "description": "Los equipos de NNK trabajan para identificar\nnecesidades y aplicar soluciones originales y sostenibles."
       },
       {
         "title": "TRANSPARENCIA",
-        "description": "Nuestra información financiera es de libre acceso y puede ser consultada por cualquier persona que quiera saber el destino final de sus donaciones.",
+        "description": "Nuestra contabilidad es de libre acceso para quienes\nse preguntan el destino final de sus donaciones.",
         "video": "https://www.youtube.com/embed/H2nIyPDK408"
       }
     ],
@@ -57,7 +60,9 @@
       "bankAddress": "Dirección del banco",
       "swift": "Código BIC/SWIFT"
     },
-    "transfer": "Puedes hacer tu donación a través de una transferencia bancaria o por PayPal. Si deseas más información:",
+    "transfer": "También puedes hacer tu donación a través de transferencia bancaria o PayPal. Haz click para ver más detalles.",
+    "certificate": "Cada donante puede solicitar vía email un certificado de su contribución en:",
+    "downloadReport": "Click para descargar \"Reporting the Kitchen: 2020 in figures\"",
     "ongoing": "Campañas en marcha",
     "subscribeTo": "Suscríbete a nuestra Newsletter"
   }

@@ -9,6 +9,7 @@ import {
   DONATION_TEXTS
 } from '../../../db';
 import { DESKTOP, MOBILE } from '../../../constants/devices';
+import { FULL, LARGE } from '../../../constants/sizes';
 import AppModal from '../../core/AppModal';
 import ExternalForm from '../../views/ExternalFrame';
 import BasicModule from '../../views/HomePageModules/Basic';
@@ -53,7 +54,7 @@ const MainPage = ({ state }) => {
       <PageSection
         colors={colors}
         noBorder
-        size={getDevice() === MOBILE ? 'full' : 'large'}
+        size={getDevice() === MOBILE ? FULL : LARGE}
       >
         <BasicModule
           colors={colors}

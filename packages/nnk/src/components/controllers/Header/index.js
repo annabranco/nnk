@@ -23,7 +23,6 @@ const Header = ({ state, actions }) => {
     changeActiveLanguage(flag);
     changeLanguage(flag);
     localStorage.setItem('nnk-defaultLang', flag);
-    // changeTheme(activeLanguage === 'en' ? DARK : LIGHT);
   };
 
   useEffect(() => {

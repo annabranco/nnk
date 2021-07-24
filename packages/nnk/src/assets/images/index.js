@@ -46,6 +46,7 @@ export const HeroJoinSmall = require('./spots/logistics_small.jpg');
 
 // HelpUs
 export const BankHeader = require('./others/bank-header.jpg');
+export const FiguresReport = require('./others/figures2020.jpg');
 export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');
 export const HeroHelpSmall = require('./spots/helpUs_small.jpg');
 export const PaypalInfo = require('./others/paypal-info.jpg');
@@ -58,14 +59,20 @@ export const Triodos = require('./logos/triodos.jpg');
 export const PayPal = require('./logos/paypal-alt.png');
 
 // --- Campaigns
-const emergencyInNorthBosnia = require('./spots/donate-bosnia.jpg');
-const supportPeopleInSerbia = require('./spots/donate-serbia.jpg');
-const foodHealthInGreece = require('./spots/donate-patras.jpg');
+const emergencyInNorthBosnia = require('./campaigns/donate-bosnia.jpg');
+const supportPeopleInSerbia = require('./campaigns/donate-serbia.jpg');
+const foodHealthInGreece = require('./campaigns/donate-patras.jpg');
+const crisisInCeuta = require('./campaigns/donate-ceuta.jpg');
+const healthOnTheMove = require('./campaigns/donate-health.jpg');
+const nobodyNeedsCharity = require('./campaigns/donate-justice.jpg');
 
 export const CAMPAIGN_PHOTOS = {
   supportPeopleInSerbia,
   emergencyInNorthBosnia,
-  foodHealthInGreece
+  foodHealthInGreece,
+  crisisInCeuta,
+  healthOnTheMove,
+  nobodyNeedsCharity
 };
 
 // Other

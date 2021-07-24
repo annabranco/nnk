@@ -1,4 +1,5 @@
 import { styled, css } from 'frontity';
+import { SMALL } from '../../../constants/sizes';
 
 export const SocialContainer = styled.div`
   position: absolute;
@@ -18,7 +19,7 @@ export const SocialContainer = styled.div`
     margin: 20px 40px;
 
     ${({ size }) =>
-      size === 'small' &&
+      size === SMALL &&
       css`
         position: normal;
         margin: 30px 15px;
@@ -29,7 +30,7 @@ export const SocialContainer = styled.div`
     margin: 40px 40px 80px;
 
     ${({ size }) =>
-      size === 'small' &&
+      size === SMALL &&
       css`
         position: normal;
         margin: 10px 20px;
