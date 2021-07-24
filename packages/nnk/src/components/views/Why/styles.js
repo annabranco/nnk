@@ -37,8 +37,8 @@ BlackBookContainer.displayName = 'BlackBookContainer';
 
 export const BlackBookPhoto = styled.img`
   display: inline-block;
-  width: 60%;
-  margin: -30px auto -50px;
+  width: 50%;
+  margin: 0 auto 30px;
 `;
 BlackBookPhoto.displayName = 'BlackBookPhoto';
 
