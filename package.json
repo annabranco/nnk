@@ -2,14 +2,22 @@
   "name": "nnk",
   "version": "0.11.0",
   "private": true,
-  "description": "No Named Kitchen: Supporting People on the Move",
-  "repository": "https://github.com/annabranco/nnk",
-  "author": "Anna Branco <anna.branco@outlook.com>",
+  "description": "No Name Kitchen: Supporting People on the Move",
+  "repository": "github:annabranco/nnk",
+  "homepage": "https://www.nonamekitchen.org/",
+  "author": "Anna Branco <https://github.com/annabranco/>",
   "license": "MIT",
   "keywords": [
     "nnk",
-    "frontity"
+    "frontity",
+    "ngo",
+    "refugees",
+    "humanitarian",
+    "help"
   ],
+  "bugs": {
+    "url": "https://github.com/annabranco/nnk/issues"
+  },
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
