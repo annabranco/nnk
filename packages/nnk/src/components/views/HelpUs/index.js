@@ -184,7 +184,7 @@ const HelpUs = ({ state }) => {
         </AppModal>
       )}
       {displayModal && displayModal !== BANK && displayModal !== REPORT && (
-        <AppModal closeAction={() => toggleModal(false)}>
+        <AppModal closeAction={() => toggleModal(false)} closeButton>
           <VideoElement
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

@@ -55,7 +55,7 @@ const MainModule = ({ state }) => {
       </MainTextWrapper>
       <SocialModule socialLinks={socialLinks} />
       {isVideoDisplayed && (
-        <AppModal closeAction={onToggleVideo}>
+        <AppModal closeAction={onToggleVideo} closeButton>
           <VideoElement
             src={
               language === 'en'
