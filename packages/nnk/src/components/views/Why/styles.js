@@ -30,8 +30,9 @@ export const BlackBookContainer = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 0 10px;
   border-radius: 5px;
-  width: 100%;
+  width: 70%;
   background: ${({ colors }) => colors && colors.secondary};
+  text-align: justify;
 
   @media all and (min-width: 768px) {
     padding: 0 60px;
@@ -68,7 +69,7 @@ export const BorderViolenceArea = styled(WhyArea)`
   max-width: 100%;
 
   @media only screen and (min-width: 1200px) {
-    width: 70%;
+    width: 100%;
   }
 `;
 BorderViolenceArea.displayName = 'BorderViolenceArea';
@@ -83,7 +84,7 @@ export const Content = styled.div`
 Content.displayName = 'Content';
 
 export const Intro = styled(BaseText)`
-  text-align: center;
+  text-align: justify;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
   font-weight: ${({ volumes }) => volumes && 700};
@@ -116,6 +117,11 @@ Intro.displayName = 'Intro';
 export const BlackBookIntro = styled(Intro)`
   max-width: 100%;
   color: ${({ colors }) => colors && colors.primary};
+  ${({ volumes }) =>
+    volumes &&
+    css`
+      text-align: center;
+    `};
 `;
 Intro.displayName = 'BlackBookIntro';
 

@@ -1,8 +1,8 @@
 {
   "en": {
     "title": "What?",
-    "intro": "NNK actions are oriented to guarantee that equal treatment is a resource available to everyone, while addressing specific vulnerabilities to support people who are facing violence, fatigue and sickness at the stepdoor of the EU.  Our interventions include  healthcare, distributions of food and clothes, legal support and the denunciation of abuses happening at the borders.",
-    "programsTitle": "Our Projects To Fight Injustice",
+    "intro": "Our actions include medical care, distributions of food and clothes, legal support\nand the denunciation of abuses at the borders, where thousands of human beings\nkeep suffering violence, fatigue and sickness during their migratory procceses. ",
+    "programsTitle": "Our Actions for People's Rights",
     "programs": [
       {
         "id": "healthProgram",
@@ -23,8 +23,8 @@
     },
   "es": {
     "title": "¿Qué?",
-    "intro": "Las acciones de NNK están orientadas a asegurar que todas las personas acceden a los mismos derechos,  enfocándonos en responder a las vulnerabilidades específicas que muchas personas enfrentan a causa de la violencia, la fatiga y la falta de refugio. Nuestras actividades incluyen asistencia médica, distribuciones de ropa y comida, apoyo legal y denuncia política de los abusos en zonas fronterizas.",
-    "programsTitle": "Nuestros programas contra la injusticia",
+    "intro": "Nuestras acciones incluyen asistencia médica, distribuciones de ropa y comida, apoyo legal\ny la denuncia de abusos en zonas fronterizas, donde miles de seres humanos continuan\nsufriendo agresiones, enfermades y falta de servicios básicos durante sus procesos migratorios.",
+    "programsTitle": "Nuestras acciones por los derechos de las personas",
     "programs": [
       {
         "id": "healthProgram",

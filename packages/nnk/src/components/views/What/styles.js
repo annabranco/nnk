@@ -77,9 +77,10 @@ export const Image = styled.div`
 Image.displayName = 'Image';
 
 export const Intro = styled(BaseText)`
-  text-align: justify;
+  text-align: center;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
+  white-space: pre;
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
