@@ -80,10 +80,10 @@ export const Intro = styled(BaseText)`
   text-align: center;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
-  white-space: pre;
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
+    white-space: pre;
   }
   @media (min-height: 1400px) and (min-width: 2000px) {
     font-size: ${sizeMediumTitle};

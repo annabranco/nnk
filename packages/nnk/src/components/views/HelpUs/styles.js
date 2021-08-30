@@ -27,19 +27,20 @@ CampaignPhoto.displayName = 'CampaignPhoto';
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin-top: 40px;
 
   @media only screen and (min-width: 768px) {
-    flex-direction: row;
     width: 100%;
     /* padding: 20px; */
   }
 
   @media only screen and (min-width: 1200px) {
     /* width: 80%; */
+    flex-direction: row;
+    align-items: flex-start;
     padding: 20px 0;
   }
 
@@ -157,7 +158,7 @@ Intro.displayName = 'Intro';
 
 export const Logo = styled.img`
   margin: 20px;
-  height: 60px;
+  height: 30px;
 
   @media only screen and (min-width: 768px) {
     margin: 20px 0;
@@ -174,7 +175,7 @@ export const PartnersLogos = styled.div`
   justify-items: center;
   margin: 30px 0;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -207,12 +208,14 @@ export const SubsectionWrapper = styled.div`
   width: 100%;
 
   @media only screen and (min-width: 768px) {
-    width: 50%;
+    width: 80%;
     margin: 20px;
   }
 
   @media only screen and (min-width: 1200px) {
+    width: 50%;
     margin: 0 30px;
+    padding: inherit;
 
     &:nth-of-type(2) {
       justify-content: flex-start;
@@ -269,12 +272,13 @@ export const ValueDescription = styled(BaseText)`
   text-align: left;
   line-height: 2;
   text-align: justify;
-  white-space: pre;
 
   @media only screen and (min-width: 768px) {
     font-size: ${sizeMedium};
     text-align: center;
+    white-space: pre;
   }
+
   @media (min-height: 1400px) and (min-width: 2000px) {
     font-size: ${sizeMediumTitle};
   }
@@ -313,7 +317,7 @@ export const Values = styled.div`
   border-bottom: ${({ colors }) => colors && `4px solid ${colors.terciary}`};
   color: ${({ colors }) => colors && colors.secondary};
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;

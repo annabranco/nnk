@@ -21,7 +21,7 @@ import {
   Value1,
   Value2
 } from '../../../assets/images';
-import { DESKTOP } from '../../../constants/devices';
+import { DESKTOP, MOBILE, TABLET } from '../../../constants/devices';
 import { LARGE } from '../../../constants/sizes';
 import { BANK, REPORT, YOUTUBE_VIDEO } from '../../../constants/modals';
 import { StatePropType } from '../../../types';
@@ -131,7 +131,7 @@ const HelpUs = ({ state }) => {
           <HelpUsImage imgs={[HelpUsTrailsSmall, HelpUsTrailsMedium]} />
         </SubsectionWrapper>
       </Content>
-      <HelpUsButton colors={colors} onClick={() => toggleModal(REPORT)}>
+      <HelpUsButton colors={colors} onClick={() => toggleModal(BANK)}>
         {texts.clickToDonate}
       </HelpUsButton>
 
@@ -164,17 +164,11 @@ const HelpUs = ({ state }) => {
           />
           <Logo onClick={() => toggleModal(BANK)} src={PayPal} alt="Paypal" />
         </PartnersLogos>
-        <TextSmall>
-          {texts.certificate}{' '}
-          <Mail href="mailto:partners@nonamekitchen.com">
-            partners@nonamekitchen.com
-          </Mail>
-        </TextSmall>
       </Info>
       {displayModal === BANK && (
         <AppModal
           closeAction={() => toggleModal(false)}
-          closeButton={getDevice() !== DESKTOP}
+          closeButton={getDevice() === MOBILE}
         >
           <BankDetails colors={colors} language={language} />
         </AppModal>
@@ -185,7 +179,10 @@ const HelpUs = ({ state }) => {
         </AppModal>
       )}
       {displayModal && displayModal !== BANK && displayModal !== REPORT && (
-        <AppModal closeAction={() => toggleModal(false)} closeButton>
+        <AppModal
+          closeAction={() => toggleModal(false)}
+          closeButton={getDevice() !== TABLET}
+        >
           <VideoElement
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

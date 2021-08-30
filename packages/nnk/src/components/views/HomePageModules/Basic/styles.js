@@ -83,6 +83,10 @@ export const ImageTitle = styled(BaseTitle)`
 
   @media only screen and (min-width: 768px) {
     margin-bottom: 0;
+    font-size: ${sizeMediumTitle};
+  }
+  @media only screen and (min-width: 1200px) {
+    font-size: ${sizeXLarge};
   }
 `;
 ImageTitle.displayName = 'ImageTitle';

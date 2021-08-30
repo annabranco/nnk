@@ -27,7 +27,6 @@
       "bankAddress": "Bank branch address",
       "swift": "BIC/SWIFT code"
     },
-    "certificate": "NNK supporters can request a certificate of their contribution by email:",
     "clickToDonate": "Click here to donate by bank transfer or PayPal",
     "downloadReport": "Download our 2020 Annual Report: \"No Name Kitchen in figures\"",
     "ongoing": "On-going campaigns",
@@ -63,7 +62,6 @@
       "bankAddress": "Dirección del banco",
       "swift": "Código BIC/SWIFT"
     },
-    "certificate": "Cada donante puede solicitar vía email un certificado de su contribución en:",
     "clickToDonate": "Pincha aquí para donar mediante transferencia bancaria o  PayPal",
     "downloadReport": "Descargar informe anual 2020: \"No Name Kitchen en cifras\"",
     "ongoing": "Campañas en marcha",

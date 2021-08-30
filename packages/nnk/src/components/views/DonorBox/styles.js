@@ -6,6 +6,14 @@ export const DonorBoxArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media all and (min-width: 768px) {
+    margin-left: -20%;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin-left: inherit;
+  }
 `;
 DonorBoxArea.displayName = 'DonorBoxArea';
 

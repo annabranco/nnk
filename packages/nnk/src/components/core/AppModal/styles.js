@@ -27,16 +27,25 @@ export const CloseButton = styled.p`
   }
 
   ${({ text }) =>
-    !text &&
-    css`
-      &::before {
-        content: 'x';
-        text-transform: uppercase;
-        font-weight: 900;
-        font-family: ${fontText};
-        font-size: ${sizeSmallTitle};
-      }
-    `};
+    !text
+      ? css`
+          &::before {
+            content: 'x';
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: ${fontText};
+            font-size: ${sizeSmallTitle};
+          }
+        `
+      : css`
+          &::before {
+            content: '${text}';
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: ${fontText};
+            font-size: ${sizeSmallTitle};
+          }
+        `};
 
   @media all and (min-width: 768px) {
     ${({ colors, text }) =>
