@@ -53,7 +53,8 @@ export const PaypalInfo = require('./others/paypal-info.jpg');
 export const Value0 = require('./others/value0.jpg');
 export const Value1 = require('./others/value1.jpg');
 export const Value2 = require('./others/value2.jpg');
-export const HelpUsTrails = require('./spots/helpUsTrails.jpg');
+export const HelpUsTrailsMedium = require('./spots/helpUsTrails_medium.jpg');
+export const HelpUsTrailsSmall = require('./spots/helpUsTrails_small.jpg');
 
 // --- Partners
 export const BorderViolence = require('./icons/border-violence.jpg');

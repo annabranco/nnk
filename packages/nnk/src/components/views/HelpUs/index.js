@@ -11,11 +11,12 @@ import BankDetails from '../BankDetails';
 import {
   DonorBoxLogo,
   FiguresReport,
-  HelpUsTrails,
-  HeroHelpSmall,
+  HelpUsTrailsMedium,
+  HelpUsTrailsSmall,
   HeroHelpMedium,
-  Triodos,
+  HeroHelpSmall,
   PayPal,
+  Triodos,
   Value0,
   Value1,
   Value2
@@ -127,7 +128,7 @@ const HelpUs = ({ state }) => {
           <SeparatorBar colors={colors} size="small" />
           <Intro>{texts.description}</Intro>
           <ThankYouText>{texts.thankU}</ThankYouText>
-          <HelpUsImage img={HelpUsTrails} />
+          <HelpUsImage imgs={[HelpUsTrailsSmall, HelpUsTrailsMedium]} />
         </SubsectionWrapper>
       </Content>
       <HelpUsButton colors={colors} onClick={() => toggleModal(REPORT)}>

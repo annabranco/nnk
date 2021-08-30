@@ -126,10 +126,14 @@ HelpUsButton.displayName = 'HelpUsButton';
 export const HelpUsImage = styled.div`
   height: 42%;
   width: 100%;
-  background-image: ${({ img }) => `url(${img})`};
+  background-image: ${({ imgs }) => `url(${imgs[0]})`};
   background-position: 10% 20%;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media only screen and (min-width: 1024px) {
+    background-image: ${({ imgs }) => `url(${imgs[1]})`};
+  }
 `;
 HelpUsImage.displayName = 'HelpUsImage';
 
