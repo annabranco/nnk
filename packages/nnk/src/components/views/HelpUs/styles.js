@@ -1,18 +1,15 @@
-import { styled, css } from 'frontity';
+import { styled } from 'frontity';
 import {
   BaseText,
   BaseTitle,
   fontTitle,
-  sizeHugeTitle,
   sizeLarge,
   sizeLargeTitle,
   sizeMedium,
   sizeMediumTitle,
-  sizeSmall,
   sizeSmallTitle,
   sizeXLarge,
-  sizeXLargeTitle,
-  sizeXXLarge
+  sizeXLargeTitle
 } from '../../../setup/themes';
 import { SubscriptionButton } from '../../controllers/MainPage/styles';
 
@@ -33,21 +30,22 @@ export const Content = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  margin-top: 40px;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   @media only screen and (min-width: 1200px) {
-    width: 80%;
-    padding: 20px 40px;
+    /* width: 80%; */
+    padding: 20px 0;
   }
 
   @media only screen and (min-width: 1600px) {
     width: 75%;
-    padding: 20px 80px;
+    padding: 20px 0;
   }
 `;
 Content.displayName = 'Content';
@@ -72,12 +70,6 @@ export const DonorBox = styled.div`
   width: 100%;
 `;
 DonorBox.displayName = 'DonorBox';
-
-export const DownloadReportButton = styled(SubscriptionButton)`
-  margin: 20px auto;
-  width: 200px;
-  font-size: ${sizeSmallTitle};
-`;
 
 export const FormArea = styled.form`
   display: flex;
@@ -111,6 +103,36 @@ export const FooterSeparator = styled.img`
 `;
 FooterSeparator.displayName = 'FooterSeparator';
 
+export const HelpUsButton = styled(SubscriptionButton)`
+  margin: 20px auto 40px;
+  height: 60px;
+  width: 80%;
+  font-size: ${sizeSmallTitle};
+
+  @media all and (min-width: 768px) {
+    height: 70px;
+    width: 65vw;
+  }
+
+  @media (min-height: 1400px) and (min-width: 2000px) {
+    height: 90px;
+    width: 65vw;
+    font-size: ${sizeXLarge};
+    border-radius: 30px;
+  }
+`;
+HelpUsButton.displayName = 'HelpUsButton';
+
+export const HelpUsImage = styled.div`
+  height: 42%;
+  width: 100%;
+  background-image: ${({ img }) => `url(${img})`};
+  background-position: 10% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+HelpUsImage.displayName = 'HelpUsImage';
+
 export const Info = styled.div`
   padding: 20px;
   text-align: center;
@@ -122,6 +144,7 @@ export const Info = styled.div`
 Info.displayName = 'Info';
 
 export const Intro = styled(BaseText)`
+  margin-top: 20px;
   text-align: justify;
   font-size: ${sizeLarge};
   color: ${({ colors }) => colors && colors.secondary};
@@ -149,7 +172,7 @@ export const PartnersLogos = styled.div`
 
   @media all and (min-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 PartnersLogos.displayName = 'PartnersLogos';
@@ -185,12 +208,13 @@ export const SubsectionWrapper = styled.div`
   }
 
   @media only screen and (min-width: 1200px) {
-    width: 30%;
     margin: 0 30px;
 
     &:nth-of-type(2) {
-      width: 40%;
-      margin: 20px 30px 0 -30px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 60%;
+      margin: 0 130px 0 50px;
     }
   }
 `;
@@ -213,10 +237,17 @@ export const TextSmall = styled(BaseText)`
 `;
 TextSmall.displayName = 'TextSmall';
 
+export const ThankYouText = styled(Intro)`
+  margin: 40px 0 20px;
+  text-align: left;
+`;
+ThankYouText.displayName = 'ThankYouText';
+
 export const Title = styled(BaseTitle)`
-  margin-bottom: 10px;
-  font-size: ${sizeLargeTitle};
-  color: ${({ colors }) => colors && colors.terciary};
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: ${sizeXLargeTitle};
+  color: #17bc9d;
   width: fit-content;
 `;
 Title.displayName = 'Title';
@@ -252,7 +283,8 @@ export const ValueItem = styled.div`
   text-align: center;
 
   @media only screen and (min-width: 768px) {
-    margin: 10px auto;
+    margin: 0 auto 10px;
+    padding: 0 10px 10px;
   }
 `;
 ValueItem.displayName = 'ValueItem';
@@ -283,6 +315,7 @@ export const Values = styled.div`
     grid-gap: 20px;
     align-items: baseline;
     justify-items: center;
+    padding-bottom: 20px;
   }
 `;
 Values.displayName = 'Values';

@@ -1,4 +1,4 @@
-import { styled, css } from 'frontity';
+import { styled } from 'frontity';
 import { BaseTitle, sizeLargeTitle } from '../../../setup/themes';
 
 export const DonorBoxArea = styled.div`
@@ -6,7 +6,6 @@ export const DonorBoxArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
 `;
 DonorBoxArea.displayName = 'DonorBoxArea';
 
@@ -20,7 +19,7 @@ export const DonorBoxFrame = styled.iframe`
   @media all and (min-width: 768px) {
     height: 900px;
     min-width: 250px;
-    width: 120%;
+    width: 180%;
   }
 `;
 DonorBoxFrame.displayName = 'DonorBoxFrame';

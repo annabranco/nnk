@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Donate",
-    "description": "Your help is needed to provide food, shelter, lifesaving medical care and legal support to people who have been through so much across the Balkans and Mediterranean routes. Check our campaigns and choose which one fits better with your values and interests.",
+    "description": "Your help is needed to provide food, clothes, medical care and legal support to thousands of people people who suffer the fatigue, trauma and violence of a borders´ system without solidarity and safe routes for those who escape from war, fear and poverty.",
     "values": [
       {
         "title": "100% INDEPENDENT",
@@ -27,15 +27,17 @@
       "bankAddress": "Bank branch address",
       "swift": "BIC/SWIFT code"
     },
-    "transfer": "You can also donate through bank transfer or PayPal. Click here to find more details.",
     "certificate": "NNK supporters can request a certificate of their contribution by email:",
-    "downloadReport": "Click to download \"Reporting the Kitchen: 2020 in figures\"",
+    "clickToDonate": "Click here to donate by bank transfer or PayPal",
+    "downloadReport": "Download our 2020 Annual Report: \"No Name Kitchen in figures\"",
     "ongoing": "On-going campaigns",
-    "subscribeTo": "Sign up to our Newsletter"
+    "subscribeTo": "Sign up to our Newsletter",
+    "support": "Support this campaign",
+    "thankU": "Thank you for making a difference!"
   },
     "es": {
     "title": "Apoya",
-    "description": "Tu ayuda es necesaria para proporcionar alimentos, ropa, atención médica vital y apoyo legal a las personas que han tenido que pasar tantas dificultades a lo largo de las rutas de los Balcanes y del Mediterráneo. Conoce nuestras campañas y elige cuál apoyar. ¡Gracias por hacer la diferencia!",
+    "description": "Tu ayuda es necesaria para proporcionar alimentos, ropa, atención médica y apoyo legal a  miles de personas que sufren la fatiga, el trauma y la violencia de un sistema fronterizo insolidario y sin rutas seguras para quienes huyen de la guerra, el miedo y la pobreza.",
     "values": [
       {
         "title": "100% INDEPENDIENTES",
@@ -60,10 +62,12 @@
       "bankAddress": "Dirección del banco",
       "swift": "Código BIC/SWIFT"
     },
-    "transfer": "También puedes hacer tu donación a través de transferencia bancaria o PayPal. Haz click para ver más detalles.",
     "certificate": "Cada donante puede solicitar vía email un certificado de su contribución en:",
-    "downloadReport": "Click para descargar \"Reporting the Kitchen: 2020 in figures\"",
+    "clickToDonate": "Pincha aquí para donar mediante transferencia bancaria o  PayPal",
+    "downloadReport": "Descargar informe anual 2020: \"No Name Kitchen en cifras\"",
     "ongoing": "Campañas en marcha",
-    "subscribeTo": "Suscríbete a nuestra Newsletter"
+    "subscribeTo": "Suscríbete a nuestra Newsletter",
+    "support": "Apoya esa campaña",
+    "thankU": "¡Gracias por hacer la diferencia!"
   }
 }
