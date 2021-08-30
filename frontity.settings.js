@@ -24,7 +24,9 @@ const settings = {
       name: '@frontity/wp-source',
       state: {
         source: {
-          api: 'https://www.nonamekitchen.org/wp-json/'
+          api:
+            'https://public-api.wordpress.com/wp/v2/sites/threebunniesfc.wordpress.com'
+          // api: 'https://www.nonamekitchen.org/wp-json/'
         }
       }
     },
