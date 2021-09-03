@@ -11,6 +11,7 @@ import BankDetails from '../BankDetails';
 import {
   DonorBoxLogo,
   FiguresReport,
+  FiguresReportSpanish,
   HelpUsTrailsMedium,
   HelpUsTrailsSmall,
   HeroHelpMedium,
@@ -21,12 +22,11 @@ import {
   Value1,
   Value2
 } from '../../../assets/images';
-import { DESKTOP, MOBILE, TABLET } from '../../../constants/devices';
+import { MOBILE, TABLET } from '../../../constants/devices';
 import { LARGE } from '../../../constants/sizes';
 import { BANK, REPORT, YOUTUBE_VIDEO } from '../../../constants/modals';
 import { StatePropType } from '../../../types';
 import { SeparatorBar } from '../HomePageModules/styles';
-import { Mail } from '../PrivacyDeclaration/styles';
 import { VideoElement } from '../HomePageModules/Main/styles';
 import {
   Content,
@@ -42,7 +42,6 @@ import {
   ValueVideo,
   Values,
   Video,
-  TextSmall,
   HelpUsButton,
   ReportImage,
   Title,
@@ -177,7 +176,9 @@ const HelpUs = ({ state }) => {
       )}
       {displayModal === REPORT && (
         <AppModal closeAction={() => toggleModal(false)}>
-          <ReportImage src={FiguresReport} />
+          <ReportImage
+            src={language === 'es' ? FiguresReportSpanish : FiguresReport}
+          />
         </AppModal>
       )}
       {displayModal && displayModal !== BANK && displayModal !== REPORT && (
