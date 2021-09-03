@@ -157,11 +157,13 @@ const HelpUs = ({ state }) => {
         </HelpUsButton>
         <PartnersLogos>
           <Logo alt="Triodos" onClick={() => toggleModal(BANK)} src={Triodos} />
-          <Logo
-            onClick={() => toggleModal(BANK)}
-            src={DonorBoxLogo}
-            alt="DonorBox"
-          />
+          <a
+            href="https://donorbox.org/no-name-kitchen"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Logo src={DonorBoxLogo} alt="DonorBox" />
+          </a>
           <Logo onClick={() => toggleModal(BANK)} src={PayPal} alt="Paypal" />
         </PartnersLogos>
       </Info>
