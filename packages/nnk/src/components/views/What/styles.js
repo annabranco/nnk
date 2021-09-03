@@ -34,9 +34,16 @@ export const DescriptionTitle = styled(BaseTitle)`
   margin: -10px auto 10px;
   font-size: ${sizeLargeTitle};
 
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5), -1px 0 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5), 1px 0 1px rgba(0, 0, 0, 0.5),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+
   @media only screen and (min-width: 768px) {
     margin: -20px auto 10px;
     font-size: ${sizeXLargeTitle};
+    text-shadow: none;
   }
 
   @media only screen and (min-width: 1024px) {

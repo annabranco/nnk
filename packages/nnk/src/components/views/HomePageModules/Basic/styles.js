@@ -107,10 +107,11 @@ ImagesWrapper.displayName = 'ImagesWrapper';
 export const Text = styled(BaseText)`
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
-  text-align: center;
+  text-align: justify;
 
   @media only screen and (min-width: 1200px) {
     white-space: pre;
+    text-align: justify;
   }
 `;
 Text.displayName = 'Text';
