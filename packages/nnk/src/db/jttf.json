@@ -2,7 +2,8 @@
   "en": {
     "title": "Volunteer",
     "titleAlt": "Join us",
-    "text1": "NNK offers in-field internships by providing free accommodation, partial allowance, legal services and psychological support for a real humanitarian experience. Conditions might be stressful and the work requires emotional maturity and self-responsibility. If you feel ready to join us, please check the requirements and fulfill the form. We´ll contact you soon!",
+    "text1": "NNK offers in-field internships by providing free accommodation, partial allowance, legal services and psychological support for a real humanitarian experience. Conditions might be stressful and the work requires emotional maturity and self-responsibility. If you feel ready to join us, please check the requirements and fulfill the form.",
+    "text2": "We'll contact you soon!",
     "infoIcons": [
       {
         "icon": "fas fa-comment",
@@ -31,7 +32,8 @@
   "es": {
     "title": "Voluntariado",
     "titleAlt": "Únete a nosotros",
-    "text1": "NNK ofrece períodos de voluntariado y prácticas en terreno incluyendo alojamiento gratuito, manutención parcial, servicios legales y apoyo psicológico, para una experiencia humanitaria auténtica. Las condiciones de trabajo pueden resultar estresantes y requieren un alto grado de responsabilidad y madurez emocional. Si tienes ganas de unirte al equipo, comprueba los requisitos y rellena el formulario. ¡Muy pronto te contactaremos!",
+    "text1": "NNK ofrece períodos de voluntariado y prácticas en terreno incluyendo alojamiento gratuito, manutención parcial, servicios legales y apoyo psicológico, para una experiencia humanitaria auténtica. Las condiciones de trabajo pueden resultar estresantes y requieren un alto grado de responsabilidad y madurez emocional. Si tienes ganas de unirte al equipo, comprueba los requisitos y rellena el formulario.",
+    "text2": "¡Muy pronto te contactaremos!",
     "infoIcons": [
       {
         "icon": "fas fa-comment",
