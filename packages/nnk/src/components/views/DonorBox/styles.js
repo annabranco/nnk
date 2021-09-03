@@ -29,6 +29,24 @@ export const DonorBoxFrame = styled.iframe`
     min-width: 250px;
     width: 180%;
   }
+
+  @media all and (min-width: 1200px) {
+    height: 600px;
+    min-width: 250px;
+    width: 140%;
+  }
+
+  @media all and (min-width: 1600px) {
+    height: 700px;
+    min-width: 250px;
+    width: 160%;
+  }
+
+  @media all and (min-width: 2500px) {
+    height: 1800px;
+    min-width: 250px;
+    width: 220%;
+  }
 `;
 DonorBoxFrame.displayName = 'DonorBoxFrame';
 

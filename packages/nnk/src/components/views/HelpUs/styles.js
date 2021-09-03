@@ -34,18 +34,17 @@ export const Content = styled.div`
 
   @media only screen and (min-width: 768px) {
     width: 100%;
-    /* padding: 20px; */
   }
 
   @media only screen and (min-width: 1200px) {
-    /* width: 80%; */
+    width: 90%;
     flex-direction: row;
     align-items: flex-start;
     padding: 20px 0;
   }
 
   @media only screen and (min-width: 1600px) {
-    width: 75%;
+    width: 100%;
     padding: 20px 0;
   }
 `;
@@ -135,6 +134,14 @@ export const HelpUsImage = styled.div`
   @media only screen and (min-width: 1024px) {
     background-image: ${({ imgs }) => `url(${imgs[1]})`};
   }
+
+  @media only screen and (min-width: 1600px) {
+    background-position: 10% 35%;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    background-position: 10% 43%;
+  }
 `;
 HelpUsImage.displayName = 'HelpUsImage';
 
@@ -214,14 +221,30 @@ export const SubsectionWrapper = styled.div`
 
   @media only screen and (min-width: 1200px) {
     width: 50%;
-    margin: 0 30px;
+    margin: 0 20px;
     padding: inherit;
 
     &:nth-of-type(2) {
       justify-content: flex-start;
       align-items: flex-start;
-      width: 60%;
-      margin: 0 130px 0 50px;
+      width: 50%;
+      margin: 0 5vw 0 10vw;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    &:nth-of-type(2) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 50%;
+      margin: 0 10vw 0 5vw;
+    }
+  }
+  @media only screen and (min-width: 1900px) {
+    &:nth-of-type(2) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 50%;
+      margin: 0 15vw 0 5vw;
     }
   }
 `;
