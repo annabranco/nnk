@@ -71,7 +71,7 @@ const MainPage = ({ state }) => {
       {displayModal && (
         <AppModal
           closeAction={onToggleSubscription}
-          closeButton={getDevice() !== DESKTOP}
+          closeButton={onToggleSubscription}
         >
           <ExternalForm
             colors={colors}

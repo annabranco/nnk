@@ -28,13 +28,17 @@ export const BlackBookContainer = styled.div`
   justify-content: center;
   margin: 50px auto;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0 10px;
+  padding: 0 30px;
   border-radius: 5px;
-  width: 100%;
   background: ${({ colors }) => colors && colors.secondary};
+  text-align: justify;
 
   @media all and (min-width: 768px) {
     padding: 0 60px;
+  }
+
+  @media all and (min-width: 1200px) {
+    width: 70%;
   }
 `;
 BlackBookContainer.displayName = 'BlackBookContainer';
@@ -58,18 +62,14 @@ export const BlackBookVolumesWrapper = styled.div`
   margin: 20px auto;
   width: 90%;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 1200px) {
     width: 60%;
   }
 `;
 BlackBookContainer.displayName = 'BlackBookContainer';
 
 export const BorderViolenceArea = styled(WhyArea)`
-  max-width: 100%;
-
-  @media only screen and (min-width: 1200px) {
-    width: 70%;
-  }
+  width: 100%;
 `;
 BorderViolenceArea.displayName = 'BorderViolenceArea';
 
@@ -77,20 +77,20 @@ export const Content = styled.div`
   padding: 20px;
 
   @media only screen and (min-width: 768px) {
+    padding: 20px 60px;
+  }
+
+  @media only screen and (min-width: 1200px) {
     padding: 20px 80px;
   }
 `;
 Content.displayName = 'Content';
 
 export const Intro = styled(BaseText)`
-  text-align: center;
+  text-align: justify;
   font-size: ${sizeSmallTitle};
   color: ${({ colors }) => colors && colors.secondary};
   font-weight: ${({ volumes }) => volumes && 700};
-
-  @media only screen and (min-width: 768px) {
-    max-width: 90%;
-  }
 
   @media only screen and (min-width: 1200px) {
     font-size: ${sizeLarge};
@@ -116,6 +116,11 @@ Intro.displayName = 'Intro';
 export const BlackBookIntro = styled(Intro)`
   max-width: 100%;
   color: ${({ colors }) => colors && colors.primary};
+  ${({ volumes }) =>
+    volumes &&
+    css`
+      text-align: center;
+    `};
 `;
 Intro.displayName = 'BlackBookIntro';
 

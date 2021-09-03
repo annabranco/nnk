@@ -100,7 +100,7 @@ const WhySection = ({ state }) => {
       <SectionHeader
         colors={colors}
         imgs={[HeroWhySmall, HeroWhyMedium, HeroWhyBig]}
-        position="0 70%"
+        position="0 50%"
         socialLinks={socialLinks}
         title={texts.title}
       />

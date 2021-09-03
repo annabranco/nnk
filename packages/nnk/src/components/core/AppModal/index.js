@@ -5,6 +5,8 @@ import { connect } from 'frontity';
 import { ACTIONS_TEXTS } from '../../../db';
 import { StatePropType } from '../../../types';
 import { CloseButton, ModalOverlay } from './styles';
+import { getDevice } from '../../../utils';
+import { DESKTOP } from '../../../constants/devices';
 
 const AppModal = ({ children, closeButton, closeAction, state }) => {
   const { colors, language } = state.theme;
@@ -14,7 +16,7 @@ const AppModal = ({ children, closeButton, closeAction, state }) => {
         <CloseButton
           colors={colors}
           onClick={closeAction}
-          text={ACTIONS_TEXTS[language].close}
+          text={getDevice() === DESKTOP && ACTIONS_TEXTS[language].close}
         />
       )}
       {children}

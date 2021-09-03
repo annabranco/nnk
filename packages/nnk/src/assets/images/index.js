@@ -47,34 +47,38 @@ export const HeroJoinSmall = require('./spots/logistics_small.jpg');
 // HelpUs
 export const BankHeader = require('./others/bank-header.jpg');
 export const FiguresReport = require('./others/figures2020.jpg');
+export const FiguresReportSpanish = require('./others/figures2020-es.jpg');
 export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');
 export const HeroHelpSmall = require('./spots/helpUs_small.jpg');
 export const PaypalInfo = require('./others/paypal-info.jpg');
 export const Value0 = require('./others/value0.jpg');
 export const Value1 = require('./others/value1.jpg');
 export const Value2 = require('./others/value2.jpg');
+export const HelpUsTrailsMedium = require('./spots/helpUsTrails_medium.jpg');
+export const HelpUsTrailsSmall = require('./spots/helpUsTrails_small.jpg');
 
 // --- Partners
 export const BorderViolence = require('./icons/border-violence.jpg');
 export const Triodos = require('./logos/triodos.jpg');
 export const PayPal = require('./logos/paypal-alt.png');
+export const DonorBoxLogo = require('./logos/donorbox.png');
 
 // --- Campaigns
-const emergencyInNorthBosnia = require('./campaigns/donate-bosnia.jpg');
-const supportPeopleInSerbia = require('./campaigns/donate-serbia.jpg');
-const foodHealthInGreece = require('./campaigns/donate-patras.jpg');
-const crisisInCeuta = require('./campaigns/donate-ceuta.jpg');
-const healthOnTheMove = require('./campaigns/donate-health.jpg');
-const nobodyNeedsCharity = require('./campaigns/donate-justice.jpg');
+// const emergencyInNorthBosnia = require('./campaigns/donate-bosnia.jpg');
+// const supportPeopleInSerbia = require('./campaigns/donate-serbia.jpg');
+// const foodHealthInGreece = require('./campaigns/donate-patras.jpg');
+// const crisisInCeuta = require('./campaigns/donate-ceuta.jpg');
+// const healthOnTheMove = require('./campaigns/donate-health.jpg');
+// const nobodyNeedsCharity = require('./campaigns/donate-justice.jpg');
 
-export const CAMPAIGN_PHOTOS = {
-  supportPeopleInSerbia,
-  emergencyInNorthBosnia,
-  foodHealthInGreece,
-  crisisInCeuta,
-  healthOnTheMove,
-  nobodyNeedsCharity
-};
+// export const CAMPAIGN_PHOTOS = {
+//   supportPeopleInSerbia,
+//   emergencyInNorthBosnia,
+//   foodHealthInGreece,
+//   crisisInCeuta,
+//   healthOnTheMove,
+//   nobodyNeedsCharity
+// };
 
 // Other
 export const Loading = require('./icons/loading.gif');

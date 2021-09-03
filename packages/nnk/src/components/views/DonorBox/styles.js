@@ -1,4 +1,4 @@
-import { styled, css } from 'frontity';
+import { styled } from 'frontity';
 import { BaseTitle, sizeLargeTitle } from '../../../setup/themes';
 
 export const DonorBoxArea = styled.div`
@@ -6,7 +6,14 @@ export const DonorBoxArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+
+  @media all and (min-width: 768px) {
+    margin-left: -20%;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin-left: inherit;
+  }
 `;
 DonorBoxArea.displayName = 'DonorBoxArea';
 
@@ -20,7 +27,25 @@ export const DonorBoxFrame = styled.iframe`
   @media all and (min-width: 768px) {
     height: 900px;
     min-width: 250px;
-    width: 120%;
+    width: 180%;
+  }
+
+  @media all and (min-width: 1200px) {
+    height: 600px;
+    min-width: 250px;
+    width: 140%;
+  }
+
+  @media all and (min-width: 1600px) {
+    height: 700px;
+    min-width: 250px;
+    width: 160%;
+  }
+
+  @media all and (min-width: 2500px) {
+    height: 1800px;
+    min-width: 250px;
+    width: 220%;
   }
 `;
 DonorBoxFrame.displayName = 'DonorBoxFrame';

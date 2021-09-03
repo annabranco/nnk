@@ -17,6 +17,8 @@ const Link = ({
 
   const onClick = event => {
     if (link.startsWith('https')) {
+      window.open(link, '_blank').focus();
+      event.preventDefault();
       return;
     }
 

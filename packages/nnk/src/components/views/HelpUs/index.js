@@ -9,26 +9,26 @@ import DonorBox from '../DonorBox';
 import AppModal from '../../core/AppModal';
 import BankDetails from '../BankDetails';
 import {
-  CAMPAIGN_PHOTOS,
+  DonorBoxLogo,
   FiguresReport,
-  HeroHelpSmall,
+  FiguresReportSpanish,
+  HelpUsTrailsMedium,
+  HelpUsTrailsSmall,
   HeroHelpMedium,
-  Triodos,
+  HeroHelpSmall,
   PayPal,
+  Triodos,
   Value0,
   Value1,
   Value2
 } from '../../../assets/images';
-import { DESKTOP } from '../../../constants/devices';
-import { LEFT, RIGHT } from '../../../constants/positions';
+import { MOBILE, TABLET } from '../../../constants/devices';
 import { LARGE } from '../../../constants/sizes';
 import { BANK, REPORT, YOUTUBE_VIDEO } from '../../../constants/modals';
 import { StatePropType } from '../../../types';
 import { SeparatorBar } from '../HomePageModules/styles';
-import { Mail } from '../PrivacyDeclaration/styles';
 import { VideoElement } from '../HomePageModules/Main/styles';
 import {
-  CampaignPhoto,
   Content,
   Info,
   Intro,
@@ -36,16 +36,17 @@ import {
   PartnersLogos,
   Section,
   SubsectionWrapper,
-  Text,
   ValueDescription,
   ValueItem,
   ValueTitle,
   ValueVideo,
   Values,
   Video,
-  TextSmall,
-  DownloadReportButton,
-  ReportImage
+  HelpUsButton,
+  ReportImage,
+  Title,
+  ThankYouText,
+  HelpUsImage
 } from './styles';
 
 const getVideoThumb = index => {
@@ -77,31 +78,31 @@ const HelpUs = ({ state }) => {
     }
   };
 
-  const renderCampaigns = side =>
-    config.campaigns.activeCampaigns
-      .filter(
-        campgn =>
-          campgn !== config.campaigns.mainCampaing &&
-          config.campaigns.details[campgn].side === side
-      )
-      .sort(
-        (a, b) =>
-          config.campaigns.details[a].order - config.campaigns.details[b].order
-      )
-      .map(campgn => (
-        <a
-          href={config.campaigns.details[campgn].url}
-          key={campgn}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CampaignPhoto
-            alt={config.campaigns.details[campgn].name}
-            src={CAMPAIGN_PHOTOS[campgn]}
-            id={campgn}
-          />
-        </a>
-      ));
+  // const renderCampaigns = side =>
+  //   config.campaigns.activeCampaigns
+  //     .filter(
+  //       campgn =>
+  //         campgn !== config.campaigns.mainCampaing &&
+  //         config.campaigns.details[campgn].side === side
+  //     )
+  //     .sort(
+  //       (a, b) =>
+  //         config.campaigns.details[a].order - config.campaigns.details[b].order
+  //     )
+  //     .map(campgn => (
+  //       <a
+  //         href={config.campaigns.details[campgn].url}
+  //         key={campgn}
+  //         target="_blank"
+  //         rel="noopener noreferrer"
+  //       >
+  //         <CampaignPhoto
+  //           alt={config.campaigns.details[campgn].name}
+  //           src={CAMPAIGN_PHOTOS[campgn]}
+  //           id={campgn}
+  //         />
+  //       </a>
+  //     ));
 
   useEffect(() => {
     texts = DONATION_TEXTS[language];
@@ -116,22 +117,22 @@ const HelpUs = ({ state }) => {
         socialLinks={socialLinks}
         title={texts.title}
       />
+
       <Content>
-        <Intro>{texts.description}</Intro>
-      </Content>
-      <Content>
-        <SubsectionWrapper>
-          {/* <Title colors={colors}>{texts.ongoing}</Title> */}
-          {renderCampaigns(LEFT)}
-        </SubsectionWrapper>
         <SubsectionWrapper>
           <DonorBox campaign={config.campaigns.mainCampaing} colors={colors} />
         </SubsectionWrapper>
         <SubsectionWrapper>
-          {/* <Title colors={colors}>{texts.ongoing}</Title> */}
-          {renderCampaigns(RIGHT)}
+          <Title colors={colors}>{texts.support}</Title>
+          <SeparatorBar colors={colors} size="small" />
+          <Intro>{texts.description}</Intro>
+          <ThankYouText>{texts.thankU}</ThankYouText>
+          <HelpUsImage imgs={[HelpUsTrailsSmall, HelpUsTrailsMedium]} />
         </SubsectionWrapper>
       </Content>
+      <HelpUsButton colors={colors} onClick={() => toggleModal(BANK)}>
+        {texts.clickToDonate}
+      </HelpUsButton>
 
       <SeparatorBar colors={colors} size={LARGE} />
 
@@ -150,39 +151,41 @@ const HelpUs = ({ state }) => {
             </ValueItem>
           ))}
         </Values>
-        <Text onClick={() => toggleModal(BANK)}>{texts.transfer}</Text>
+        <HelpUsButton colors={colors} onClick={() => toggleModal(REPORT)}>
+          {texts.downloadReport}
+        </HelpUsButton>
         <PartnersLogos>
           <Logo alt="Triodos" onClick={() => toggleModal(BANK)} src={Triodos} />
+          <a
+            href="https://donorbox.org/no-name-kitchen"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Logo src={DonorBoxLogo} alt="DonorBox" />
+          </a>
           <Logo onClick={() => toggleModal(BANK)} src={PayPal} alt="Paypal" />
         </PartnersLogos>
-        <DownloadReportButton
-          colors={colors}
-          onClick={() => toggleModal(REPORT)}
-        >
-          {texts.downloadReport}
-        </DownloadReportButton>
-        <TextSmall>
-          {texts.certificate}{' '}
-          <Mail href="mailto:partners@nonamekitchen.com">
-            partners@nonamekitchen.com
-          </Mail>
-        </TextSmall>
       </Info>
       {displayModal === BANK && (
         <AppModal
           closeAction={() => toggleModal(false)}
-          closeButton={getDevice() !== DESKTOP}
+          closeButton={getDevice() === MOBILE}
         >
           <BankDetails colors={colors} language={language} />
         </AppModal>
       )}
       {displayModal === REPORT && (
         <AppModal closeAction={() => toggleModal(false)}>
-          <ReportImage src={FiguresReport} />
+          <ReportImage
+            src={language === 'es' ? FiguresReportSpanish : FiguresReport}
+          />
         </AppModal>
       )}
       {displayModal && displayModal !== BANK && displayModal !== REPORT && (
-        <AppModal closeAction={() => toggleModal(false)}>
+        <AppModal
+          closeAction={() => toggleModal(false)}
+          closeButton={getDevice() !== TABLET}
+        >
           <VideoElement
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

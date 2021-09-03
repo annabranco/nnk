@@ -2,7 +2,6 @@ import { styled, css } from 'frontity';
 import {
   BaseText,
   BaseTitle,
-  fontTitle,
   sizeLarge,
   sizeLargeTitle,
   sizeMedium,

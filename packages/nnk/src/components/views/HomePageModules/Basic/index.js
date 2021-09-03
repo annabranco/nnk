@@ -24,7 +24,7 @@ const photos = [Photo01, Photo02, Photo03];
 const BasicModule = ({ colors, texts, whyTexts }) => (
   <BasicModuleWrapper>
     <DescriptionWrapper colors={colors}>
-      <Text colors={colors}>{texts.description}</Text>
+      <Text colors={colors}>{whyTexts.intro}</Text>
     </DescriptionWrapper>
 
     <ImagesWrapper>
@@ -50,7 +50,7 @@ const BasicModule = ({ colors, texts, whyTexts }) => (
     </ImagesWrapper>
     <SeparatorBar adjust="0, 20px" colors={colors} size="large" />
     <TextWrapper colors={colors}>
-      <Text colors={colors}>{whyTexts.intro}</Text>
+      <Text colors={colors}>{texts.description}</Text>
     </TextWrapper>
   </BasicModuleWrapper>
 );
