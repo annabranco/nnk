@@ -27,8 +27,8 @@
       "bankAddress": "Bank branch address",
       "swift": "BIC/SWIFT code"
     },
-    "clickToDonate": "Click here to donate by bank transfer or PayPal",
-    "downloadReport": "Download our 2020 Annual Report: \"No Name Kitchen in figures\"",
+    "clickToDonate": "IBAN: ES19 1491 0001 2830 0013 6961 Click here to donate by bank transfer or PayPal",
+    "downloadReport": "Download our 2021 Annual Report: \"No Name Kitchen in figures\"",
     "ongoing": "On-going campaigns",
     "subscribeTo": "Sign up to our Newsletter",
     "support": "Support this campaign",
@@ -62,8 +62,8 @@
       "bankAddress": "Dirección del banco",
       "swift": "Código BIC/SWIFT"
     },
-    "clickToDonate": "Pincha aquí para donar mediante transferencia bancaria o  PayPal",
-    "downloadReport": "Descargar informe anual 2020: \"No Name Kitchen en cifras\"",
+    "clickToDonate": "IBAN: ES19 1491 0001 2830 0013 6961 Pincha aquí para donar mediante transferencia bancaria o  PayPal",
+    "downloadReport": "Descargar informe anual 2021: \"No Name Kitchen en cifras\"",
     "ongoing": "Campañas en marcha",
     "subscribeTo": "Suscríbete a nuestra Newsletter",
     "support": "Apoya esa campaña",

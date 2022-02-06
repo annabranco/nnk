@@ -26,7 +26,7 @@ const settings = {
         source: {
           api:
             'https://public-api.wordpress.com/wp/v2/sites/threebunniesfc.wordpress.com'
-          // api: 'https://www.nonamekitchen.com/wp-json/'
+          // api: 'https://c0560251.ferozo.com/wp-json/'
         }
       }
     },

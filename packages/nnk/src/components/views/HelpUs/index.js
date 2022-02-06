@@ -78,31 +78,12 @@ const HelpUs = ({ state }) => {
     }
   };
 
-  // const renderCampaigns = side =>
-  //   config.campaigns.activeCampaigns
-  //     .filter(
-  //       campgn =>
-  //         campgn !== config.campaigns.mainCampaing &&
-  //         config.campaigns.details[campgn].side === side
-  //     )
-  //     .sort(
-  //       (a, b) =>
-  //         config.campaigns.details[a].order - config.campaigns.details[b].order
-  //     )
-  //     .map(campgn => (
-  //       <a
-  //         href={config.campaigns.details[campgn].url}
-  //         key={campgn}
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         <CampaignPhoto
-  //           alt={config.campaigns.details[campgn].name}
-  //           src={CAMPAIGN_PHOTOS[campgn]}
-  //           id={campgn}
-  //         />
-  //       </a>
-  //     ));
+  const formatButtonText = text => {
+    const updatedText = text
+      .replace('Click here to donate', '<span>Click here to donate</span>')
+      .replace('Pincha aquí para donar', '<span>Pincha aquí para donar</span>')
+    return updatedText;
+  };
 
   useEffect(() => {
     texts = DONATION_TEXTS[language];
@@ -130,9 +111,7 @@ const HelpUs = ({ state }) => {
           <HelpUsImage imgs={[HelpUsTrailsSmall, HelpUsTrailsMedium]} />
         </SubsectionWrapper>
       </Content>
-      <HelpUsButton colors={colors} onClick={() => toggleModal(BANK)}>
-        {texts.clickToDonate}
-      </HelpUsButton>
+      <HelpUsButton colors={colors}  dangerouslySetInnerHTML={{ __html: formatButtonText(texts.clickToDonate) }} onClick={() => toggleModal(BANK)} />
 
       <SeparatorBar colors={colors} size={LARGE} />
 

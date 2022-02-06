@@ -46,8 +46,8 @@ export const HeroJoinSmall = require('./spots/logistics_small.jpg');
 
 // HelpUs
 export const BankHeader = require('./others/bank-header.jpg');
-export const FiguresReport = require('./others/figures2020.jpg');
-export const FiguresReportSpanish = require('./others/figures2020-es.jpg');
+export const FiguresReport = require('./others/figures2021.jpg');
+export const FiguresReportSpanish = require('./others/figures2021-es.jpg');
 export const HeroHelpMedium = require('./spots/helpUs_medium.jpg');
 export const HeroHelpSmall = require('./spots/helpUs_small.jpg');
 export const PaypalInfo = require('./others/paypal-info.jpg');
