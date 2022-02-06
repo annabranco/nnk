@@ -190,7 +190,7 @@ export const PartnersLogos = styled.div`
 PartnersLogos.displayName = 'PartnersLogos';
 
 export const ReportImage = styled.img`
-  margin-top: 100%;
+  margin-top: 20%;
   width: 100%;
 `;
 ReportImage.displayName = 'ReportImage';

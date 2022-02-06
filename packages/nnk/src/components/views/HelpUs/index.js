@@ -78,32 +78,6 @@ const HelpUs = ({ state }) => {
     }
   };
 
-  // const renderCampaigns = side =>
-  //   config.campaigns.activeCampaigns
-  //     .filter(
-  //       campgn =>
-  //         campgn !== config.campaigns.mainCampaing &&
-  //         config.campaigns.details[campgn].side === side
-  //     )
-  //     .sort(
-  //       (a, b) =>
-  //         config.campaigns.details[a].order - config.campaigns.details[b].order
-  //     )
-  //     .map(campgn => (
-  //       <a
-  //         href={config.campaigns.details[campgn].url}
-  //         key={campgn}
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         <CampaignPhoto
-  //           alt={config.campaigns.details[campgn].name}
-  //           src={CAMPAIGN_PHOTOS[campgn]}
-  //           id={campgn}
-  //         />
-  //       </a>
-  //     ));
-
   useEffect(() => {
     texts = DONATION_TEXTS[language];
   }, [language]);
