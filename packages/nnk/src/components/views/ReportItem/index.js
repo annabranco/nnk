@@ -33,10 +33,9 @@ const ReportItem = ({ colors, report }) => {
             <ReportTitle
               colors={colors}
               dangerouslySetInnerHTML={{
-                __html: report.title.rendered.replace(
-                  'Balkan Region Report &#8211; ',
-                  ''
-                )
+                __html: report.title.rendered
+                  .replace('Balkan Region Report &#8211; ', '')
+                  .replace('Balkan Regional Report &#8211; ', '')
               }}
             />
             {true && (
