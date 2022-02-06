@@ -78,6 +78,13 @@ const HelpUs = ({ state }) => {
     }
   };
 
+  const formatButtonText = text => {
+    const updatedText = text
+      .replace('Click here to donate', '<span>Click here to donate</span>')
+      .replace('Pincha aquí para donar', '<span>Pincha aquí para donar</span>')
+    return updatedText;
+  };
+
   useEffect(() => {
     texts = DONATION_TEXTS[language];
   }, [language]);
@@ -104,9 +111,7 @@ const HelpUs = ({ state }) => {
           <HelpUsImage imgs={[HelpUsTrailsSmall, HelpUsTrailsMedium]} />
         </SubsectionWrapper>
       </Content>
-      <HelpUsButton colors={colors} onClick={() => toggleModal(BANK)}>
-        {texts.clickToDonate}
-      </HelpUsButton>
+      <HelpUsButton colors={colors}  dangerouslySetInnerHTML={{ __html: formatButtonText(texts.clickToDonate) }} onClick={() => toggleModal(BANK)} />
 
       <SeparatorBar colors={colors} size={LARGE} />
 
