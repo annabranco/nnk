@@ -21,7 +21,7 @@ const Footer = ({ colors, language }) => {
         {texts.privacyInfo}
       </FooterLink>
       <FooterText colors={colors} link="">
-        NO NAME KITCHEN © 2021
+        NO NAME KITCHEN©
       </FooterText>
       {displayModal && (
         <AppModal closeAction={() => toggleModal(false)}>
