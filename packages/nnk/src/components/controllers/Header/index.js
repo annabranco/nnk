@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line import/no-extraneous-dependencies
 import { connect } from 'frontity';
 import config from '../../../setup/config';
-import { getDevice } from '../../../utils';
-import { MOBILE } from '../../../constants/devices';
 import Link from '../../core/Link';
 import MobileNav from '../MobileNav';
 import Nav from '../Nav';
@@ -17,7 +15,6 @@ const Header = ({ state, actions }) => {
   const [activeLanguage, changeActiveLanguage] = useState('en');
   const { colors } = state.theme;
   const { changeLanguage } = actions.theme;
-  const MOBILE_VERSION = getDevice() === MOBILE;
 
   const onClickFlag = flag => {
     changeActiveLanguage(flag);
@@ -47,14 +44,12 @@ const Header = ({ state, actions }) => {
       <Link link="/">
         <Logo activeLanguage={activeLanguage} src={LogoSmall} />
       </Link>
-      {MOBILE_VERSION ? <MobileNav onClickFlag={onClickFlag} /> : <Nav />}
-      {!MOBILE_VERSION && (
-        <LanguageFlag
+      <MobileNav onClickFlag={onClickFlag} /> : <Nav />
+      <LanguageFlag
           id={activeLanguage === 'en' ? 'es' : 'en'}
           onClick={() => onClickFlag(activeLanguage === 'en' ? 'es' : 'en')}
           src={activeLanguage === 'es' ? EnglishFlag : SpanishFlag}
         />
-      )}
     </HeaderContainer>
   );
 };
