@@ -80,8 +80,7 @@ const HelpUs = ({ state }) => {
 
   const formatButtonText = text => {
     const updatedText = text
-      .replace('Click here to donate', '<span>Click here to donate</span>')
-      .replace('Pincha aquí para donar', '<span>Pincha aquí para donar</span>')
+      .replace('IBAN: ES19 1491 0001 2830 0013 6961', '<span>IBAN: ES19 1491 0001 2830 0013 6961</span>')
     return updatedText;
   };
 

@@ -10,10 +10,6 @@ export const Title = styled(BaseTitle)`
   color: ${({ colors }) => colors && colors.secondary};
   width: fit-content;
 
-  /* @media only screen and (min-width: 375px) {
-    font-size: ${sizeHugeTitle};
-  } */
-
   @media all and (min-width: 768px) {
     font-size: ${sizeHugeTitle};
   }
@@ -28,11 +24,6 @@ export const TitleWrapper = styled.div`
   min-width: 120px;
   background: ${({ colors }) => colors && colors.primary};
   padding: 10px 20px 0px;
-
-  /* @media only screen and (min-height: 400px) {
-    left: unset;
-    right: 0;
-  } */
 
   @media only screen and (min-width: 375px) {
     left: 0;

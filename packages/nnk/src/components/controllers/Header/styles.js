@@ -49,6 +49,7 @@ export const Logo = styled.img`
 Logo.displayName = 'Logo';
 
 export const LanguageFlag = styled.img`
+  display: none;
   z-index: 10;
   position: fixed;
   bottom: 10vh;
@@ -57,6 +58,7 @@ export const LanguageFlag = styled.img`
   cursor: pointer;
 
   @media only screen and (min-width: 768px) {
+    display: block;
     position: initial;
     width: 30px;
   }

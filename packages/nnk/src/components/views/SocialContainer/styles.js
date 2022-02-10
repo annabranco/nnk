@@ -36,5 +36,12 @@ export const SocialContainer = styled.div`
         margin: 10px 20px;
       `}
   }
+
+  ${({ inHeader }) => inHeader && css`
+    display: none;
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
+  `}
 `;
 SocialContainer.displayName = 'SocialContainer';

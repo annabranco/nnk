@@ -8,5 +8,9 @@ export const MenuToggle = styled.button`
   border: 0;
   background: ${({ colors }) => colors && colors.primary};
   color: white;
+
+  @media all and (min-width: 768px) {
+    display: none;
+  }
 `;
 MenuToggle.displayName = 'MenuToggle';

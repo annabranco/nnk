@@ -122,12 +122,12 @@ export const HelpUsButton = styled(SubscriptionButton)`
   }
 
   & > span {
-    margin: 0 2px 0 10px;
+    margin-left: 10px;
     color: ${({ colors }) => colors && colors.primary};
     -webkit-text-stroke: 1px black;
 
   @media all and (min-width: 768px) {
-    margin: 0 2px 0 40px;
+    margin-left: 20px;
   }
   }
 
